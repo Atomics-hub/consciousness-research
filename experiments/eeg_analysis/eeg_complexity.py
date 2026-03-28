@@ -38,22 +38,56 @@ import mne
 
 # -- Data Loading --
 
-def load_openbci_csv(filepath, sfreq=250.0, ch_names=None):
+def load_openbci_csv(filepath, sfreq=250.0, ch_names=None, n_channels=None):
     """Load OpenBCI data from CSV format.
 
-    OpenBCI default CSV has columns: sample_index, ch1..ch8, accel_x/y/z, timestamp.
-    Data is in microvolts. Standard 8-channel setup uses Fp1, Fp2, C3, C4, P7, P8, O1, O2.
+    OpenBCI CSV: sample_index, ch1..chN, accel_x/y/z, timestamp (or similar).
+    Data is in microvolts. Auto-detects 8 or 16 channel boards.
+
+    16-channel default montage (standard 10-20):
+      Fp1, Fp2, F3, F4, F7, F8, C3, C4, T3, T4, P3, P4, T5, T6, O1, O2
+    8-channel default:
+      Fp1, Fp2, C3, C4, P7, P8, O1, O2
     """
     filepath = Path(filepath)
-    data = np.loadtxt(filepath, delimiter=",", skiprows=5, usecols=range(1, 9))
-    # OpenBCI outputs in microvolts, MNE expects volts
-    data = data * 1e-6
+
+    # Auto-detect channel count from first data row
+    with open(filepath) as f:
+        header_lines = 0
+        for line in f:
+            if line.startswith("%") or line.startswith("#") or line.strip() == "":
+                header_lines += 1
+            else:
+                # First data line — count comma-separated values
+                n_cols = len(line.strip().split(","))
+                break
+
+    if n_channels is None:
+        # OpenBCI format: sample_index + N channels + extras (accel, timestamp)
+        # 8ch board: ~13 columns, 16ch board: ~21 columns
+        if n_cols >= 18:
+            n_channels = 16
+        else:
+            n_channels = 8
+
+    data = np.loadtxt(
+        filepath, delimiter=",", skiprows=max(header_lines, 5),
+        usecols=range(1, n_channels + 1)
+    )
+    data = data * 1e-6  # microvolts -> volts
 
     if ch_names is None:
-        ch_names = ["Fp1", "Fp2", "C3", "C4", "P7", "P8", "O1", "O2"]
+        if n_channels == 16:
+            ch_names = [
+                "Fp1", "Fp2", "F3", "F4", "F7", "F8", "C3", "C4",
+                "T3", "T4", "P3", "P4", "T5", "T6", "O1", "O2",
+            ]
+        else:
+            ch_names = ["Fp1", "Fp2", "C3", "C4", "P7", "P8", "O1", "O2"]
 
+    ch_names = ch_names[:n_channels]
     info = mne.create_info(ch_names=ch_names, sfreq=sfreq, ch_types="eeg")
-    raw = mne.io.RawArray(data.T, info)
+    raw = mne.io.RawArray(data.T, info, verbose=False)
     raw.set_montage("standard_1020", on_missing="ignore")
     return raw
 
@@ -111,48 +145,41 @@ def _binarize(signal_1d, threshold="median"):
 
 
 def lempel_ziv_complexity(binary_seq):
-    """Compute Lempel-Ziv complexity of a binary sequence.
+    """Compute normalized Lempel-Ziv complexity of a binary sequence.
 
-    Counts the number of distinct "words" found when parsing the sequence
-    left to right. Normalized by the theoretical maximum for a random binary
-    sequence of the same length: n / log2(n).
+    Uses the Kaspar & Schuster (1987) algorithm: scan left to right,
+    count distinct substrings not seen as part of the existing dictionary.
 
-    Returns a value in [0, 1] where:
-      ~0.0 = perfectly regular (e.g., 010101...)
+    Normalized by n / log2(n) so output is in [0, ~1]:
+      ~0.0 = perfectly regular (e.g., 000000...)
       ~1.0 = maximally complex (random)
       0.3-0.5 = typical for waking EEG
       0.1-0.2 = typical for deep anesthesia
     """
     n = len(binary_seq)
-    if n == 0:
+    if n <= 1:
         return 0.0
 
-    s = binary_seq.tolist()
-    i = 0
+    s = "".join(str(int(x)) for x in binary_seq)
     complexity = 1
-    prefix_len = 1
-    component_len = 1
+    i = 0  # start of current component
+    k = 1  # length of current component
+    l = 1  # length of prefix (everything before current component)
 
-    while prefix_len + component_len <= n:
-        # Check if current component is in the prefix
-        if s[i + component_len - 1] == s[prefix_len + component_len - 1]:
-            component_len += 1
+    while l + k <= n:
+        # Check if s[l:l+k] is a substring of s[0:l+k-1]
+        component = s[l:l + k]
+        prefix = s[i:l + k - 1]
+        if component in prefix:
+            k += 1
         else:
-            # New word found — max of prefix extension
             complexity += 1
-            i += 1
-            if i == prefix_len:
-                prefix_len += component_len
-                component_len = 1
-                i = 0
-            else:
-                component_len = 1
+            l += k
+            k = 1
+            i = 0
 
-    if component_len > 1:
-        complexity += 1
-
-    # Normalize by theoretical maximum for random binary sequence
-    max_complexity = n / np.log2(n) if n > 1 else 1
+    # Normalize
+    max_complexity = n / np.log2(n)
     return complexity / max_complexity
 
 
@@ -457,7 +484,9 @@ def generate_synthetic_eeg(duration_sec=30, sfreq=250, n_channels=8, state="awak
       - "anesthesia": dominated by delta/slow oscillations, low complexity
       - "sleep": alpha dropout, theta/delta increase
     """
-    ch_names = ["Fp1", "Fp2", "C3", "C4", "P7", "P8", "O1", "O2"][:n_channels]
+    all_ch = ["Fp1", "Fp2", "F3", "F4", "F7", "F8", "C3", "C4",
+               "T3", "T4", "P3", "P4", "T5", "T6", "O1", "O2"]
+    ch_names = all_ch[:n_channels]
     n_samples = int(duration_sec * sfreq)
     t = np.arange(n_samples) / sfreq
     rng = np.random.default_rng(42)
