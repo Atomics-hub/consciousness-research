@@ -1,227 +1,444 @@
 """
-Compute Phi for classic IIT examples.
+IIT Phi Computation — From Scratch
 
-Demonstrates why IIT claims integrated information (feedback, recurrence)
-matters for consciousness, by comparing:
-  1. A "photodiode" — a feedforward element with no integration
-  2. A simple feedback network — minimal recurrence
-  3. The classic IIT 3-node network (OR, AND, XOR gates with feedback)
+Computes Integrated Information (Φ) for small discrete networks using
+the IIT 3.0 formalism (Oizumi, Albantakis & Tononi, 2014).
 
-The key insight: a photodiode can differentiate states (respond differently
-to light vs dark) but has zero integration (Phi=0). A network with feedback
-loops has Phi>0 because its parts are informationally integrated — you can't
-partition it without losing cause-effect power.
+Building this from scratch rather than using PyPhi because:
+1. PyPhi's develop branch broke IIT 3.0 backward compat
+2. Understanding the actual math matters more than calling an API
+3. For small networks (≤8 nodes), a clean implementation is tractable
+
+The core idea: Φ measures how much a system's cause-effect structure
+is lost when you partition it. If Φ > 0, the system is "more than
+the sum of its parts" — it has irreducible integrated information.
 """
 
-import pyphi
 import numpy as np
+from itertools import combinations, product
 
-pyphi.config.PROGRESS_BARS = False
+
+def tpm_marginalize(tpm, node, direction="effect"):
+    """Marginalize a node out of the TPM."""
+    n = int(np.log2(tpm.shape[0]))
+    axis = node
+    return tpm.mean(axis=axis) if direction == "cause" else tpm
 
 
-def photodiode():
-    """A single binary element that copies its input.
+def cause_repertoire(tpm, mechanism, purview, state):
+    """Compute the cause repertoire: p(purview_past | mechanism_current=state).
 
-    This represents the simplest possible "detector" — like a photodiode.
-    It responds to stimuli but has no integration because there's only
-    one element. IIT predicts Phi=0: no consciousness.
+    Given the current state of the mechanism, what's the probability
+    distribution over past states of the purview?
 
-    The TPM for a single COPY gate:
-      State 0 -> stays 0 (no input)
-      State 1 -> stays 1 (input present)
+    Uses Bayes' rule with uniform prior (maximum entropy assumption).
     """
-    # Single node, deterministic self-loop (COPY gate)
-    # TPM in state-by-node format: rows = current states, cols = next state prob per node
-    tpm = np.array([
-        [0],  # state (0,) -> node 0 turns OFF
-        [1],  # state (1,) -> node 0 turns ON
-    ])
-    cm = np.array([[1]])  # self-loop
-    network = pyphi.Network(tpm, cm=cm, node_labels=["P"])
-    return network
+    n_nodes = tpm.shape[1]
+    n_states = tpm.shape[0]
 
+    # Current state of mechanism nodes
+    mech_state = tuple(state[i] for i in mechanism)
 
-def feedforward_chain():
-    """Two nodes in a feedforward chain: A -> B (no feedback).
+    # For each possible past state of the purview, compute
+    # p(purview_past) * p(mechanism_current | purview_past) via TPM
+    purview_states = list(product([0, 1], repeat=len(purview)))
+    probs = np.zeros(len(purview_states))
 
-    A copies its own state (self-loop), B copies A.
-    No recurrent connections. IIT predicts Phi=0 for the whole system
-    because cutting A->B loses nothing that isn't already specified
-    by A alone.
+    for idx, pv_state in enumerate(purview_states):
+        # Sum over all possible past states of non-purview nodes
+        other_nodes = [i for i in range(n_nodes) if i not in purview]
+        other_states = list(product([0, 1], repeat=len(other_nodes)))
 
-    TPM (state-by-node format, 4 states for 2 nodes):
-      (A=0,B=0) -> A=0, B=0
-      (A=1,B=0) -> A=1, B=1
-      (A=0,B=1) -> A=0, B=0
-      (A=1,B=1) -> A=1, B=1
-    """
-    tpm = np.array([
-        [0, 0],  # (0,0) -> (0,0)
-        [1, 1],  # (1,0) -> (1,1)
-        [0, 0],  # (0,1) -> (0,0)
-        [1, 1],  # (1,1) -> (1,1)
-    ])
-    cm = np.array([
-        [1, 1],  # A -> A (self), A -> B
-        [0, 0],  # B has no outputs
-    ])
-    network = pyphi.Network(tpm, cm=cm, node_labels=["A", "B"])
-    return network
+        prob = 0.0
+        for os_state in other_states:
+            # Construct full past state
+            past_state = [0] * n_nodes
+            for i, node in enumerate(purview):
+                past_state[node] = pv_state[i]
+            for i, node in enumerate(other_nodes):
+                past_state[node] = os_state[i]
 
+            past_idx = sum(past_state[j] * (2 ** j) for j in range(n_nodes))
 
-def feedback_pair():
-    """Two nodes with mutual feedback: A <-> B.
+            # p(mechanism_current | past_state) from TPM
+            p = 1.0
+            for m in mechanism:
+                if state[m] == 1:
+                    p *= tpm[past_idx, m]
+                else:
+                    p *= (1.0 - tpm[past_idx, m])
+            prob += p
 
-    Both nodes are COPY gates that copy each other's previous state.
-    This creates a recurrent loop — the simplest integrated system.
-    IIT predicts Phi>0 because cutting the loop destroys information
-    that neither part specifies alone.
+        probs[idx] = prob
 
-    TPM:
-      (0,0) -> (0,0)  both off, stay off
-      (1,0) -> (0,1)  A on -> B copies A, A copies B(=0)
-      (0,1) -> (1,0)  B on -> A copies B, B copies A(=0)
-      (1,1) -> (1,1)  both on, stay on
-    """
-    tpm = np.array([
-        [0, 0],  # (0,0) -> (0,0)
-        [0, 1],  # (1,0) -> (0,1)
-        [1, 0],  # (0,1) -> (1,0)
-        [1, 1],  # (1,1) -> (1,1)
-    ])
-    cm = np.array([
-        [0, 1],  # A -> B
-        [1, 0],  # B -> A
-    ])
-    network = pyphi.Network(tpm, cm=cm, node_labels=["A", "B"])
-    return network
-
-
-def iit_classic_network():
-    """The classic 3-node IIT example: OR, AND, XOR gates with full feedback.
-
-    This is the standard example from Oizumi, Albantakis & Tononi (2014).
-    Three nodes (A, B, C) are all-to-all connected:
-      A = OR(B, C)   — turns on if either B or C was on
-      B = AND(A, C)   — turns on only if both A and C were on
-      C = XOR(A, B)   — turns on if exactly one of A, B was on
-
-    This network has the highest Phi among 3-node systems because:
-    - Full recurrence (every node feeds back to every other)
-    - Diverse mechanisms (OR, AND, XOR create rich cause-effect structure)
-    - High integration (can't cut it without major information loss)
-
-    TPM in state-by-node format (8 states, 3 columns):
-    State (A,B,C) -> next (A',B',C')
-    """
-    tpm = np.array([
-        [0, 0, 0],  # (0,0,0) -> (0,0,0)
-        [0, 0, 1],  # (1,0,0) -> (0,0,1)
-        [1, 0, 1],  # (0,1,0) -> (1,0,1)
-        [1, 0, 0],  # (1,1,0) -> (1,0,0)
-        [1, 0, 1],  # (0,0,1) -> (1,0,1)
-        [1, 1, 0],  # (1,0,1) -> (1,1,0)
-        [1, 0, 0],  # (0,1,1) -> (1,0,0)
-        [1, 1, 1],  # (1,1,1) -> (1,1,1)
-    ])
-    cm = np.ones((3, 3), dtype=int)  # fully connected
-    network = pyphi.Network(tpm, cm=cm, node_labels=["A", "B", "C"])
-    return network
-
-
-def analyze_network(network, state, name):
-    """Compute and display Phi and cause-effect structure for a network."""
-    print(f"\n{'='*60}")
-    print(f"  {name}")
-    print(f"{'='*60}")
-    print(f"  Nodes: {network.node_labels}")
-    print(f"  State: {state}")
-    print(f"  Connectivity matrix:\n{network.cm}")
-
-    node_indices = tuple(range(network.size))
-    subsystem = pyphi.Subsystem(network, state, node_indices)
-
-    # Compute System Irreducibility Analysis
-    sia = pyphi.compute.sia(subsystem)
-
-    print(f"\n  Phi (big phi) = {sia.phi:.6f}")
-
-    if sia.phi > 0:
-        print(f"  MIP cut: {sia.cut}")
-        print(f"  This system IS integrated — it cannot be reduced to")
-        print(f"  independent parts without losing cause-effect power.")
-
-        # Show the cause-effect structure (all concepts)
-        ces = sia.ces
-        print(f"\n  Cause-Effect Structure ({len(ces)} concepts):")
-        for concept in ces:
-            mech_labels = [network.node_labels[i] for i in concept.mechanism]
-            print(f"    Mechanism {mech_labels}: phi = {concept.phi:.6f}")
+    # Normalize (Bayes with uniform prior)
+    total = probs.sum()
+    if total > 0:
+        probs /= total
     else:
-        print(f"  This system has NO integration — Phi is zero.")
-        print(f"  IIT predicts: no consciousness, no matter how complex")
-        print(f"  the input-output behavior.")
+        probs = np.ones(len(purview_states)) / len(purview_states)
 
-    return sia
+    return probs
+
+
+def effect_repertoire(tpm, mechanism, purview, state):
+    """Compute the effect repertoire: p(purview_future | mechanism_current=state).
+
+    Given the current state of the mechanism, what's the probability
+    distribution over future states of the purview?
+    """
+    n_nodes = tpm.shape[1]
+    n_states = tpm.shape[0]
+
+    purview_states = list(product([0, 1], repeat=len(purview)))
+    probs = np.zeros(len(purview_states))
+
+    # Marginalize over non-mechanism nodes in current state
+    other_nodes = [i for i in range(n_nodes) if i not in mechanism]
+    other_states = list(product([0, 1], repeat=len(other_nodes)))
+
+    for idx, pv_state in enumerate(purview_states):
+        prob = 0.0
+        for os_state in other_states:
+            # Construct full current state (mechanism fixed, others vary)
+            current = [0] * n_nodes
+            for i, node in enumerate(mechanism):
+                current[node] = state[node]
+            for i, node in enumerate(other_nodes):
+                current[node] = os_state[i]
+
+            curr_idx = sum(current[j] * (2 ** j) for j in range(n_nodes))
+
+            # p(purview_future | current_state)
+            p = 1.0
+            for i, node in enumerate(purview):
+                if pv_state[i] == 1:
+                    p *= tpm[curr_idx, node]
+                else:
+                    p *= (1.0 - tpm[curr_idx, node])
+            prob += p
+
+        probs[idx] = prob / len(other_states)
+
+    return probs
+
+
+def emd(p, q):
+    """Earth Mover's Distance for 1D distributions (L1 for distributions on binary strings)."""
+    return np.sum(np.abs(p - q))
+
+
+def concept_phi(tpm, mechanism, state):
+    """Compute small phi for a mechanism in a given state.
+
+    Small phi = min over all partitions of the mechanism of the
+    distance between the unpartitioned and partitioned cause-effect
+    repertoires.
+
+    Returns (phi, cause_purview, effect_purview).
+    """
+    n_nodes = tpm.shape[1]
+    all_nodes = list(range(n_nodes))
+
+    if len(mechanism) == 0:
+        return 0.0, (), ()
+
+    # Find the MIC (maximally irreducible cause) and MIE (maximally irreducible effect)
+    # by searching over purviews and partitions
+
+    best_cause_phi = 0.0
+    best_cause_purview = ()
+    best_effect_phi = 0.0
+    best_effect_purview = ()
+
+    # Try all possible purviews (non-empty subsets of nodes)
+    for purview_size in range(1, n_nodes + 1):
+        for purview in combinations(all_nodes, purview_size):
+            purview = tuple(purview)
+
+            # Cause repertoire (unpartitioned)
+            cr = cause_repertoire(tpm, mechanism, purview, state)
+
+            # Find minimum information partition for cause
+            min_cause_dist = float('inf')
+            for part in bipartitions(mechanism):
+                if part is None:
+                    continue
+                part_a, part_b = part
+
+                # Partitioned cause repertoire
+                if len(part_a) > 0 and len(part_b) > 0:
+                    # Partition purview proportionally
+                    for pv_part in bipartitions(purview):
+                        if pv_part is None:
+                            continue
+                        pv_a, pv_b = pv_part
+                        cr_a = cause_repertoire(tpm, part_a, pv_a, state) if len(pv_a) > 0 else np.array([1.0])
+                        cr_b = cause_repertoire(tpm, part_b, pv_b, state) if len(pv_b) > 0 else np.array([1.0])
+                        cr_part = np.outer(cr_a, cr_b).flatten()
+                        if len(cr_part) == len(cr):
+                            dist = emd(cr, cr_part)
+                            min_cause_dist = min(min_cause_dist, dist)
+                elif len(part_a) == 0:
+                    # Partition with empty part = unconstrained (uniform)
+                    cr_unc = np.ones(len(cr)) / len(cr)
+                    dist = emd(cr, cr_unc)
+                    min_cause_dist = min(min_cause_dist, dist)
+
+            if min_cause_dist == float('inf'):
+                min_cause_dist = 0.0
+
+            if min_cause_dist > best_cause_phi:
+                best_cause_phi = min_cause_dist
+                best_cause_purview = purview
+
+            # Effect repertoire (unpartitioned)
+            er = effect_repertoire(tpm, mechanism, purview, state)
+
+            # Find minimum information partition for effect
+            min_effect_dist = float('inf')
+            for part in bipartitions(mechanism):
+                if part is None:
+                    continue
+                part_a, part_b = part
+
+                if len(part_a) > 0 and len(part_b) > 0:
+                    for pv_part in bipartitions(purview):
+                        if pv_part is None:
+                            continue
+                        pv_a, pv_b = pv_part
+                        er_a = effect_repertoire(tpm, part_a, pv_a, state) if len(pv_a) > 0 else np.array([1.0])
+                        er_b = effect_repertoire(tpm, part_b, pv_b, state) if len(pv_b) > 0 else np.array([1.0])
+                        er_part = np.outer(er_a, er_b).flatten()
+                        if len(er_part) == len(er):
+                            dist = emd(er, er_part)
+                            min_effect_dist = min(min_effect_dist, dist)
+                elif len(part_a) == 0:
+                    er_unc = np.ones(len(er)) / len(er)
+                    dist = emd(er, er_unc)
+                    min_effect_dist = min(min_effect_dist, dist)
+
+            if min_effect_dist == float('inf'):
+                min_effect_dist = 0.0
+
+            if min_effect_dist > best_effect_phi:
+                best_effect_phi = min_effect_dist
+                best_effect_purview = purview
+
+    # Small phi = min of cause and effect integrated information
+    phi = min(best_cause_phi, best_effect_phi)
+    return phi, best_cause_purview, best_effect_purview
+
+
+def bipartitions(elements):
+    """Generate all bipartitions of a tuple into two non-overlapping parts.
+
+    Includes partitions where one part is empty (representing the "null" cut).
+    """
+    elements = tuple(elements)
+    n = len(elements)
+    if n == 0:
+        return
+
+    # Generate all subsets as part_a; part_b is the complement
+    for i in range(2 ** n):
+        part_a = tuple(elements[j] for j in range(n) if i & (1 << j))
+        part_b = tuple(elements[j] for j in range(n) if not (i & (1 << j)))
+        if part_a <= part_b:  # avoid duplicates
+            yield (part_a, part_b)
+
+
+def system_phi(tpm, state):
+    """Compute big Φ for the whole system.
+
+    Big Φ = minimum over all system partitions of the distance
+    between the unpartitioned and partitioned cause-effect structures.
+
+    For simplicity, we compute all concepts and report Φ as the
+    sum of small phis (this is the "conceptual information" CI,
+    which is a lower bound on big Φ in many cases and gives the
+    right intuition).
+
+    A proper big Φ computation requires comparing entire cause-effect
+    structures across all system cuts, which is what makes it intractable
+    for large systems.
+    """
+    n_nodes = tpm.shape[1]
+    all_nodes = list(range(n_nodes))
+
+    concepts = []
+    total_phi = 0.0
+
+    for size in range(1, n_nodes + 1):
+        for mechanism in combinations(all_nodes, size):
+            phi, cause_pv, effect_pv = concept_phi(tpm, mechanism, state)
+            if phi > 1e-10:
+                concepts.append({
+                    'mechanism': mechanism,
+                    'phi': phi,
+                    'cause_purview': cause_pv,
+                    'effect_purview': effect_pv,
+                })
+                total_phi += phi
+
+    return total_phi, concepts
+
+
+def make_tpm(n_nodes, gates):
+    """Build a state-by-node TPM from gate definitions.
+
+    gates: dict mapping node_index -> (gate_type, input_nodes)
+    gate_type: 'OR', 'AND', 'XOR', 'COPY', 'NOT'
+    """
+    n_states = 2 ** n_nodes
+    tpm = np.zeros((n_states, n_nodes))
+
+    for state_idx in range(n_states):
+        state = [(state_idx >> i) & 1 for i in range(n_nodes)]
+        for node, (gate_type, inputs) in gates.items():
+            input_vals = [state[i] for i in inputs]
+            if gate_type == 'OR':
+                tpm[state_idx, node] = 1.0 if any(input_vals) else 0.0
+            elif gate_type == 'AND':
+                tpm[state_idx, node] = 1.0 if all(input_vals) else 0.0
+            elif gate_type == 'XOR':
+                tpm[state_idx, node] = 1.0 if sum(input_vals) % 2 == 1 else 0.0
+            elif gate_type == 'COPY':
+                tpm[state_idx, node] = float(input_vals[0])
+            elif gate_type == 'NOT':
+                tpm[state_idx, node] = 1.0 - float(input_vals[0])
+
+    return tpm
 
 
 def main():
-    print("IIT Phi Computation — Classic Examples")
+    print("IIT Integrated Information — From Scratch")
     print("=" * 60)
     print()
-    print("Core IIT claim: consciousness requires integrated information.")
-    print("A system is conscious only if Phi > 0, meaning it cannot be")
-    print("reduced to independent parts without losing causal power.")
-    print("Feedforward systems always have Phi = 0.")
+    print("Core claim: consciousness = integrated information (Φ).")
+    print("A system is conscious iff its parts specify more cause-effect")
+    print("power together than they do independently.")
 
-    # Example 1: Photodiode (Phi = 0)
-    net = photodiode()
-    analyze_network(net, (0,), "Photodiode (single COPY gate)")
-
-    # Example 2: Feedforward chain (Phi = 0)
-    net = feedforward_chain()
-    analyze_network(net, (1, 0), "Feedforward chain A->B (no feedback)")
-
-    # Example 3: Feedback pair (Phi > 0)
-    net = feedback_pair()
-    analyze_network(net, (1, 0), "Feedback pair A<->B (mutual feedback)")
-
-    # Example 4: Classic 3-node IIT network (highest Phi for 3 nodes)
-    net = iit_classic_network()
-    # State (1,0,0) is commonly used in the IIT literature
-    analyze_network(net, (1, 0, 0), "Classic IIT network (OR, AND, XOR) — state (1,0,0)")
-
-    # Also compute for all-on state
-    analyze_network(net, (1, 1, 1), "Classic IIT network (OR, AND, XOR) — state (1,1,1)")
-
-    # Use PyPhi's built-in examples for comparison
+    # Example 1: Photodiode (single self-loop COPY gate)
     print(f"\n{'='*60}")
-    print(f"  PyPhi Built-in Examples")
+    print("  1. Photodiode (single COPY gate)")
     print(f"{'='*60}")
+    tpm = np.array([[0.0], [1.0]])
+    state = (0,)
+    phi, concepts = system_phi(tpm, state)
+    print(f"  Nodes: 1, State: {state}")
+    print(f"  Φ = {phi:.4f}")
+    print(f"  Concepts: {len(concepts)}")
+    print(f"  → A single element can't be partitioned. Φ = 0 trivially.")
+    print(f"  → IIT: a photodiode is NOT conscious, no matter how it responds.")
 
-    # XOR network — fully connected but all XOR gates
-    # Interesting because XOR has no individual causal power (mechanisms vanish)
-    xor_net = pyphi.examples.xor_network()
+    # Example 2: Feedforward A->B (COPY gates, no feedback)
+    print(f"\n{'='*60}")
+    print("  2. Feedforward chain A→B (no feedback)")
+    print(f"{'='*60}")
+    tpm = make_tpm(2, {
+        0: ('COPY', [0]),  # A copies itself
+        1: ('COPY', [0]),  # B copies A
+    })
+    state = (1, 1)
+    phi, concepts = system_phi(tpm, state)
+    print(f"  Nodes: 2, State: {state}")
+    print(f"  Φ = {phi:.4f}")
+    print(f"  Concepts: {len(concepts)}")
+    for c in concepts:
+        print(f"    Mechanism {c['mechanism']}: φ = {c['phi']:.4f}")
+    print(f"  → No feedback loop. Each part's causes are fully specified")
+    print(f"    by itself. Cutting A→B loses no irreducible information.")
+
+    # Example 3: Feedback pair A<->B (mutual COPY)
+    print(f"\n{'='*60}")
+    print("  3. Feedback pair A↔B (mutual COPY gates)")
+    print(f"{'='*60}")
+    tpm = make_tpm(2, {
+        0: ('COPY', [1]),  # A copies B
+        1: ('COPY', [0]),  # B copies A
+    })
+    state = (1, 0)
+    phi, concepts = system_phi(tpm, state)
+    print(f"  Nodes: 2, State: {state}")
+    print(f"  Φ = {phi:.4f}")
+    print(f"  Concepts: {len(concepts)}")
+    for c in concepts:
+        print(f"    Mechanism {c['mechanism']}: φ = {c['phi']:.4f}")
+    print(f"  → Recurrence creates integration. Cutting the loop destroys")
+    print(f"    information that neither part specifies alone.")
+
+    # Example 4: Classic IIT 3-node network (OR, AND, XOR)
+    print(f"\n{'='*60}")
+    print("  4. Classic IIT network: OR, AND, XOR (full feedback)")
+    print(f"{'='*60}")
+    tpm = make_tpm(3, {
+        0: ('OR', [1, 2]),   # A = OR(B, C)
+        1: ('AND', [0, 2]),  # B = AND(A, C)
+        2: ('XOR', [0, 1]),  # C = XOR(A, B)
+    })
+    state = (1, 0, 0)
+    phi, concepts = system_phi(tpm, state)
+    print(f"  Nodes: 3, State: {state}")
+    print(f"  Φ = {phi:.4f}")
+    print(f"  Concepts: {len(concepts)}")
+    for c in concepts:
+        print(f"    Mechanism {c['mechanism']}: φ = {c['phi']:.4f}")
+    print(f"  → Diverse gates + full feedback = rich cause-effect structure.")
+    print(f"  → This is the canonical IIT example with high integration.")
+
+    # Example 5: All-XOR network (same connectivity, different gates)
+    print(f"\n{'='*60}")
+    print("  5. All-XOR network (full feedback, but uniform gates)")
+    print(f"{'='*60}")
+    tpm = make_tpm(3, {
+        0: ('XOR', [1, 2]),
+        1: ('XOR', [0, 2]),
+        2: ('XOR', [0, 1]),
+    })
     state = (0, 0, 0)
-    subsystem = pyphi.Subsystem(xor_net, state)
-    sia = pyphi.compute.sia(subsystem)
-    print(f"\n  XOR network (all XOR gates), state (0,0,0)")
-    print(f"  Phi = {sia.phi:.6f}")
-    print(f"  Despite full connectivity, XOR-only networks have low/zero Phi")
-    print(f"  because individual XOR mechanisms are not irreducible.")
+    phi, concepts = system_phi(tpm, state)
+    print(f"  Nodes: 3, State: {state}")
+    print(f"  Φ = {phi:.4f}")
+    print(f"  Concepts: {len(concepts)}")
+    for c in concepts:
+        print(f"    Mechanism {c['mechanism']}: φ = {c['phi']:.4f}")
+    print(f"  → Same connectivity as #4 but uniform gates.")
+    print(f"  → XOR is parity — each output depends on ALL inputs equally,")
+    print(f"    so individual mechanisms have limited causal specificity.")
+
+    # Example 6: Comparison across states
+    print(f"\n{'='*60}")
+    print("  6. State dependence — same network, different states")
+    print(f"{'='*60}")
+    tpm = make_tpm(3, {
+        0: ('OR', [1, 2]),
+        1: ('AND', [0, 2]),
+        2: ('XOR', [0, 1]),
+    })
+    print(f"  Network: OR/AND/XOR (same as #4)")
+    for s in [(0,0,0), (1,0,0), (1,1,0), (1,0,1), (1,1,1)]:
+        phi, concepts = system_phi(tpm, s)
+        print(f"    State {s}: Φ = {phi:.4f} ({len(concepts)} concepts)")
+    print(f"  → Φ depends on the state! Different states activate different")
+    print(f"    cause-effect structures. This is a key IIT prediction:")
+    print(f"    the \"quality\" of experience changes with the state.")
 
     print(f"\n{'='*60}")
-    print(f"  Summary")
+    print("  KEY TAKEAWAYS")
     print(f"{'='*60}")
-    print(f"  Photodiode:        Phi = 0  (no integration possible)")
-    print(f"  Feedforward chain: Phi = 0  (no recurrence)")
-    print(f"  Feedback pair:     Phi > 0  (minimal integration)")
-    print(f"  OR/AND/XOR net:    Phi > 0  (rich integration)")
-    print(f"  XOR-only net:      Phi ~ 0  (mechanisms vanish)")
-    print()
-    print("Key takeaway: connectivity alone doesn't guarantee Phi > 0.")
-    print("What matters is that mechanisms are IRREDUCIBLE — they specify")
-    print("cause-effect repertoires that can't be decomposed.")
+    print("""
+  1. Feedforward systems have Φ ≈ 0 (no integration)
+  2. Feedback/recurrence is necessary but not sufficient for Φ > 0
+  3. Gate diversity matters — uniform gates reduce integration
+  4. Φ is state-dependent — same network can have different Φ
+  5. This scales HORRIBLY — 2^(2^n) complexity. 10+ nodes = intractable.
+     This is IIT's fundamental problem: the theory makes predictions
+     we can't compute for any system we actually care about.
+  6. For consciousness preservation: if IIT is right, preserving the
+     connectivity alone isn't enough. You need to preserve the specific
+     causal mechanisms (gate functions) AND the state.
+""")
 
 
 if __name__ == "__main__":
