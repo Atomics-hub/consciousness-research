@@ -1,6 +1,6 @@
 # What Must Be Preserved? Mapping Theories of Consciousness to Engineering Requirements for Mind Preservation
 
-**Authors:** [Name Redacted]
+**Author:** Thomas Ryan
 
 **Date:** March 2026
 
@@ -10,15 +10,15 @@
 
 ## Abstract
 
-The engineering of consciousness preservation — whether through whole-brain emulation, cryonic revival, or brain-computer interfaces — proceeds largely without reference to theories of consciousness. This is a remarkable omission. The choice of what must be preserved in a brain depends entirely on what generates consciousness, and the major theories disagree on this question by many orders of magnitude in their engineering implications. We evaluate eight empirically active theories of consciousness — Integrated Information Theory (IIT 4.0), Global Neuronal Workspace Theory (GNWT), Higher-Order Thought theory (HOT), Predictive Processing / Free Energy Principle, Recurrent Processing Theory (RPT), Biological Computationalism, Orchestrated Objective Reduction (Orch OR), and Attention Schema Theory (AST) — against nine preservation-relevant criteria, and derive specific engineering requirements from each theory's core postulates. We find that the theories split 4-3-1 on substrate independence, the single most consequential question for preservation. Required information content ranges from approximately 1-10 TB under AST to physically impossible under Orch OR. Required compute spans from 10^15 FLOPS (achievable today) to formally uncomputable. Despite these disagreements, all eight theories converge on three requirements: temporal dynamics must be preserved, integration across components is necessary, and feedforward-only architectures are ruled out. Cross-theory risk analysis reveals that gradual biological replacement is the only preservation strategy that no theory definitively excludes, though it remains technologically distant. We identify a "deflation paradox": theories most favorable to preservation (AST, HOT) are those that deflate consciousness to a functional property, while theories that take phenomenal experience most seriously (IIT, Orch OR) make preservation hardest or impossible. We argue that the primary bottleneck for consciousness preservation is not engineering but theory — resolving which theory of consciousness is correct would collapse the engineering requirements to a tractable problem.
+The engineering of consciousness preservation — whether through whole-brain emulation, cryonic revival, or brain-computer interfaces — proceeds largely without reference to theories of consciousness. This is a remarkable omission. The choice of what must be preserved in a brain depends entirely on what generates consciousness, and the major theories disagree on this question by many orders of magnitude in their engineering implications. I evaluate eight empirically active theories of consciousness — Integrated Information Theory (IIT 4.0), Global Neuronal Workspace Theory (GNWT), Higher-Order Thought theory (HOT), Predictive Processing / Free Energy Principle, Recurrent Processing Theory (RPT), Biological Computationalism, Orchestrated Objective Reduction (Orch OR), and Attention Schema Theory (AST) — against nine preservation-relevant criteria, and derive specific engineering requirements from each theory's core postulates. The theories split 4-3-1 on substrate independence, the single most consequential question for preservation. Required information content ranges from approximately 1-10 TB under AST to physically impossible under Orch OR. Required compute spans from 10^15 FLOPS (achievable today) to formally uncomputable. Despite these disagreements, all eight theories converge on three requirements: temporal dynamics must be preserved, integration across components is necessary, and feedforward-only architectures are ruled out. Cross-theory risk analysis reveals that gradual biological replacement is the only preservation strategy that no theory definitively excludes, though it remains technologically distant. I identify a "deflation paradox": theories most favorable to preservation (AST, HOT) are those that deflate consciousness to a functional property, while theories that take phenomenal experience most seriously (IIT, Orch OR) make preservation hardest or impossible. I argue that the primary bottleneck for consciousness preservation is not engineering but theory — resolving which theory of consciousness is correct would collapse the engineering requirements to a tractable problem.
 
 ---
 
 ## 1. Introduction
 
-Consciousness preservation is an engineering problem with a philosophical dependency. We are building toward whole-brain emulation (Sandberg and Bostrom, 2008), developing brain-computer interfaces with increasing bandwidth (Musk and Neuralink, 2019), and preserving brains through vitrification and aldehyde-stabilized cryopreservation with the explicit hope of future revival or digital reconstruction (McIntyre and Bhatt, 2018). Yet these efforts proceed under an assumption that is rarely made explicit: that we know what must be preserved.
+Consciousness preservation is an engineering problem with a philosophical dependency that nobody talks about. We are building toward whole-brain emulation (Sandberg and Bostrom, 2008), developing brain-computer interfaces with increasing bandwidth (Musk and Neuralink, 2019), and preserving brains through vitrification and cryopreservation with the explicit hope of future revival (McIntyre and Fahy, 2015). These efforts proceed under an assumption that is rarely stated and never justified: that we know what must be preserved.
 
-We do not. The question of what constitutes consciousness — and therefore what physical substrate or information pattern must be maintained for a person to continue existing — remains open. More critically, the major theories of consciousness give answers that differ not merely in philosophical nuance but in concrete engineering specifications, spanning many orders of magnitude in required scanning resolution, data volume, and computational power.
+We do not. The major theories of consciousness give answers that differ not in philosophical nuance but in hard engineering specifications — by many orders of magnitude. The gap between the most and least demanding theories is not a factor of two. It is the difference between a tractable engineering project and a physical impossibility.
 
 Consider a thought experiment. You have access to a perfectly preserved brain and unlimited technology. What do you scan? Under Global Neuronal Workspace Theory (Dehaene et al., 2011), you need the connectome plus synaptic weights plus the dynamics of ignition — roughly 2 PB of processed data at 10 nm scanning resolution. Under Attention Schema Theory (Graziano, 2013), you may need only the attention control circuits and self-model — perhaps 1-10 TB at 1 micrometer resolution. Under Orchestrated Objective Reduction (Penrose and Hameroff, 1996), you need the quantum states of 8.6 x 10^18 tubulin dimers, which the no-cloning theorem renders physically impossible to capture. These are not minor variations. They are the difference between a tractable engineering project and a physical impossibility.
 
@@ -32,11 +32,11 @@ Butlin et al. (2023) systematically mapped theories of consciousness to indicato
 
 Chalmers (2010) argued philosophically for the possibility of mind uploading, primarily from a functionalist framework. His analysis assumes that functional organization is what matters — an assumption that begs the central question, since several major theories reject functionalism.
 
-No existing work does what this paper does: systematically derive specific, quantitative engineering requirements from each major theory's stated postulates, then compare these requirements to identify points of consensus, critical disagreements, and the theory-dependent risks of each preservation strategy.
+This paper bridges that gap. I systematically derive specific, quantitative engineering requirements from each major theory's core postulates, then compare them to identify where the theories agree, where they diverge catastrophically, and what each divergence means for anyone trying to preserve a mind.
 
 ### Why These Eight Theories
 
-We selected theories that satisfy three criteria: (1) they are empirically active, with ongoing experimental programs designed to test their predictions; (2) they have published formal or semi-formal frameworks that permit derivation of preservation implications; and (3) they make distinct predictions for at least some preservation-relevant questions. This excludes purely philosophical positions (property dualism, panprotopsychism) that lack engineering-relevant specificity, and informal proposals that have not been developed to the point where preservation implications can be derived.
+I selected theories that satisfy three criteria: (1) they are empirically active, with ongoing experimental programs designed to test their predictions; (2) they have published formal or semi-formal frameworks that permit derivation of preservation implications; and (3) they make distinct predictions for at least some preservation-relevant questions. This excludes purely philosophical positions (property dualism, panprotopsychism) that lack engineering-relevant specificity, and informal proposals that have not been developed to the point where preservation implications can be derived.
 
 The eight theories span the space of possible answers to the key questions. On substrate independence: four say yes (GNWT, HOT, AST, RPT), three say no (IIT, Biological Computationalism, Orch OR), and one is ambiguous (Predictive Processing). On what must be preserved: they range from abstract computational architecture to full molecular state to quantum coherence. This coverage ensures that our analysis is not biased toward any particular answer.
 
@@ -48,7 +48,7 @@ The remainder of this paper proceeds as follows. Section 2 describes our methods
 
 ### 2.1 Theory Selection
 
-Theories were selected from those with active empirical research programs as of early 2026. We required each theory to have foundational publications with sufficient formal specificity to derive preservation implications. The COGITATE adversarial collaboration (Melloni et al., 2023; results published in Nature, 2025) tested predictions of IIT and GNWT directly, confirming that both theories generate empirically distinguishable predictions. The remaining theories have empirical programs at various stages of maturity.
+Theories were selected from those with active empirical research programs as of early 2026. We required each theory to have foundational publications with sufficient formal specificity to derive preservation implications. The COGITATE adversarial collaboration (COGITATE Consortium, 2025) tested predictions of IIT and GNWT directly, confirming that both theories generate empirically distinguishable predictions. The remaining theories have empirical programs at various stages of maturity.
 
 ### 2.2 Assessment Criteria
 
@@ -162,7 +162,7 @@ This approach has three significant limitations. First, theories of consciousnes
 
 ### 3.6 Biological Computationalism
 
-**Core claim.** Consciousness arises from a specific kind of computation that only biological systems currently instantiate: hybrid, scale-inseparable, metabolically grounded processing (Aru and Milinkovic, 2025). The brain computes, but not like a digital computer. Neural computation combines discrete events (spikes) with continuous dynamics (voltage fields, chemical gradients). Crucially, this computation is scale-inseparable: cause and effect flow simultaneously across scales from ion channels to dendrites to circuits to whole-brain dynamics. The metabolic constraints of biological systems are constitutive, not incidental. Consciousness is what this kind of computation produces; "the algorithm is the substrate."
+**Core claim.** Consciousness arises from a specific kind of computation that only biological systems currently instantiate: hybrid, scale-inseparable, metabolically grounded processing (Milinkovic and Aru, 2025). The brain computes, but not like a digital computer. Neural computation combines discrete events (spikes) with continuous dynamics (voltage fields, chemical gradients). Crucially, this computation is scale-inseparable: cause and effect flow simultaneously across scales from ion channels to dendrites to circuits to whole-brain dynamics. The metabolic constraints of biological systems are constitutive, not incidental. Consciousness is what this kind of computation produces; "the algorithm is the substrate."
 
 **Substrate independence: No.** This is the theory's core claim. Neural computation cannot be cleanly separated from its biological implementation. A different substrate could support consciousness only if it implements the same class of hybrid, scale-inseparable, metabolically grounded computation — which no existing digital architecture does.
 
@@ -327,7 +327,7 @@ For BCI development (Neuralink, Paradromics): the 7+ order-of-magnitude gap betw
 
 ### 6.4 Limitations
 
-This analysis has several limitations beyond those noted in Section 2.4. We do not assign probabilities to theories, though some (GNWT, Predictive Processing) have substantially more empirical support than others (Orch OR). We treat theories as monolithic, though internal variations exist (e.g., Lau's PRM variant of HOT differs from Rosenthal's classical version in ways that affect preservation implications). We focus on information-theoretic and computational requirements and do not address cost, which may be the binding constraint in practice (a full human connectome scan could cost billions of dollars even if the technology exists). Finally, we assume that current theories exhaust the relevant possibility space, which they almost certainly do not — a future theory of consciousness may have preservation implications that differ from all eight theories considered here.
+This analysis has several limitations beyond those noted in Section 2.4. I do not assign probabilities to theories, though some (GNWT, Predictive Processing) have substantially more empirical support than others (Orch OR). I treat theories as monolithic, though internal variations exist (e.g., Lau's PRM variant of HOT differs from Rosenthal's classical version in ways that affect preservation implications). I focus on information-theoretic and computational requirements and do not address cost, which may be the binding constraint in practice (a full human connectome scan could cost billions of dollars even if the technology exists). Finally, we assume that current theories exhaust the relevant possibility space, which they almost certainly do not — a future theory of consciousness may have preservation implications that differ from all eight theories considered here.
 
 ### 6.5 Future Directions
 
@@ -337,15 +337,15 @@ Three extensions of this work would be valuable. First, a formal decision-theore
 
 ## 7. Conclusion
 
-We have systematically mapped eight major theories of consciousness to their specific engineering requirements for consciousness preservation. The exercise reveals three findings.
+This paper mapped eight major theories of consciousness to their engineering requirements for preservation. Three things came out of it.
 
-First, the engineering requirements vary by 10+ orders of magnitude depending on which theory is correct — from ~1 TB and 10^15 FLOPS (AST) to formally impossible (Orch OR). This is not a typical case of scientific uncertainty reducing engineering precision by a factor of two or three. The theories disagree on whether the problem is tractable.
+First, the requirements span 10+ orders of magnitude — from ~1 TB and 10^15 FLOPS under AST to formally impossible under Orch OR. This is not normal engineering uncertainty. The theories don't disagree on how hard the problem is. They disagree on whether it's solvable at all.
 
-Second, despite this disagreement, there is genuine consensus: all eight theories require temporal dynamics, integration across components, and recurrent processing. Any preservation strategy must capture these features. Static connectome snapshots are insufficient under every theory.
+Second, there is real consensus where you wouldn't expect it. All eight theories — from the most permissive to the most hostile — agree that consciousness requires temporal dynamics, integration across components, and recurrent processing. A static connectome snapshot is insufficient under every theory. That's a concrete engineering constraint that holds regardless of which theory wins.
 
-Third, the theories reveal a structural paradox. The theories most compatible with preservation are those that deflate consciousness to a functional property. The theories that take subjective experience most seriously make preservation hardest. This means that confidence in the possibility of consciousness preservation requires, implicitly, a deflationary view of what consciousness is. Anyone who believes both that consciousness is a deep, irreducible feature of reality and that it can be straightforwardly digitally preserved holds a position that no current theory supports.
+Third, there is a paradox at the heart of this entire enterprise. The theories that are kindest to preservation are the ones that deflate consciousness — that treat it as a model, a monitoring process, an access mechanism. The theories that take phenomenal experience most seriously, that try to explain why there is something it is like to be you, are exactly the ones that make preservation hardest or impossible. If you believe consciousness is deep and real and irreducible, then the theories that support that belief are the same ones that say you probably can't preserve it digitally. No current theory lets you have it both ways.
 
-The practical recommendation is clear: the primary bottleneck for consciousness preservation is not scanning resolution, not compute, and not storage. It is the theory of consciousness. Resolving which theory is correct — particularly whether consciousness is substrate-independent — would collapse the engineering requirements from a 10+ order-of-magnitude uncertainty range to a tractable specification. Until that resolution, the most robust strategy is biological preservation (cryonics with the highest achievable quality), because it is the only approach that keeps all doors open regardless of which theory proves correct. Investments in consciousness theory research, and specifically in experiments that discriminate between substrate-dependent and substrate-independent theories, have higher expected value for consciousness preservation than any engineering investment currently being made.
+The practical takeaway: the bottleneck for consciousness preservation is not scanning resolution, not compute, not storage. It is the theory of consciousness itself. Resolve the substrate independence question and the engineering requirements collapse from a 10-order-of-magnitude uncertainty range to a tractable spec. Until then, the most robust strategy is biological preservation — cryonics at the highest achievable quality — because it is the only approach that keeps all doors open regardless of which theory is correct. Dollar for dollar, funding experiments that discriminate between substrate-dependent and substrate-independent theories has higher expected value for consciousness preservation than any engineering investment being made today.
 
 ---
 
@@ -353,7 +353,7 @@ The practical recommendation is clear: the primary bottleneck for consciousness 
 
 Andrews, M. (2021). The math is not the territory: Navigating the free energy principle. *Biology & Philosophy*, 36(5), 30.
 
-Aru, J., and Milinkovic, D. (2025). Biological computationalism and the nature of neural computation. *Neuroscience & Biobehavioral Reviews*, 169, 105563.
+Milinkovic, B., and Aru, J. (2025). On biological and artificial consciousness: A case for biological computationalism. *Neuroscience and Biobehavioral Reviews*, 181, 106524. DOI: 10.1016/j.neubiorev.2025.106524
 
 Azevedo, F. A. C., Carvalho, L. R. B., Grinberg, L. T., Farfel, J. M., Ferretti, R. E. L., Leite, R. E. P., Filho, W. J., Lent, R., and Herculano-Houzel, S. (2009). Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain. *Journal of Comparative Neurology*, 513(5), 532-541.
 
@@ -391,7 +391,7 @@ Markram, H. (2006). The Blue Brain Project. *Nature Reviews Neuroscience*, 7(2),
 
 McIntyre, R. L., and Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. *Cryobiology*, 71(3), 448-458.
 
-Melloni, L., Mudrik, L., Pitts, M., Bendtz, K., Ferrante, O., Gorska, U., Hirschhorn, R., Khalaf, A., Kosciessa, J., Kozma, C., et al. (2023). An adversarial collaboration to critically evaluate theories of consciousness. *bioRxiv*. (Results published in *Nature*, 2025.)
+COGITATE Consortium (2025). Adversarial testing of global neuronal workspace and integrated information theories of consciousness. *Nature*, 642(8066), 133-142. DOI: 10.1038/s41586-025-08888-1
 
 Musk, E., and Neuralink (2019). An integrated brain-machine interface platform with thousands of channels. *Journal of Medical Internet Research*, 21(10), e16194.
 
