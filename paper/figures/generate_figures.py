@@ -618,20 +618,21 @@ def figure8():
         'Gradual\nbio-hybrid':        '7/8 theories',
     }
 
+    label_positions = {
+        'Digital\nemulation':         (0.75, 3.8/8),
+        'Gradual silicon\nreplacement': (0.32, 5.3/8),
+        'Biological\npreservation\n(cryonics)': (0.58, 6.2/8),
+        'Gradual\nbio-hybrid':        (0.02, 6.2/8),
+    }
+
     for name, (x, y) in strategies.items():
         color = strategy_colors[name]
         ax.scatter(x, y, s=400, c=color, edgecolors='#333333', linewidth=1.2, zorder=5)
-        offset_x = 0.06
-        offset_y = 0.04
-        if 'bio-hybrid' in name:
-            offset_x = 0.08
-        if 'cryonics' in name:
-            offset_y = 0.05
-        if 'Digital' in name:
-            offset_x = 0.07
+        lx, ly = label_positions[name]
         ax.annotate(f'{name}\n({compatibility_labels[name]})',
-                    (x + offset_x, y + offset_y), fontsize=10, fontweight='bold',
-                    color=color, va='bottom')
+                    xy=(x, y), xytext=(lx, ly), fontsize=10, fontweight='bold',
+                    color=color, va='center',
+                    arrowprops=dict(arrowstyle='->', color='#cccccc', lw=0.8))
 
     # Mark ideal corner
     ax.scatter(0.95, 0.95, s=300, marker='*', c='gold', edgecolors='#333333',

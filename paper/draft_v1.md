@@ -42,9 +42,9 @@ I selected theories that satisfy three criteria: (1) they have generated empiric
 
 The eight theories span the space of possible answers to the key questions. On substrate independence: four say yes (GNWT, HOT, AST, RPT), three say no (IIT, Biological Computationalism, Orch OR), and one is ambiguous (Predictive Processing). On what must be preserved: they range from abstract computational architecture to full molecular state to quantum coherence. This coverage ensures that the analysis is not biased toward any particular answer.
 
-Figure 6 provides a decision tree showing how the key questions route to each theory.
+Figure 1 provides a decision tree showing how the key questions route to each theory.
 
-![Figure 6: Theory decision tree. The key questions that distinguish the eight theories, with color coding by substrate independence position.](figures/fig6_theory_decision_tree.png)
+![Figure 1: Theory decision tree. The key questions that distinguish the eight theories, with color coding by substrate independence position.](figures/fig1_theory_decision_tree.png)
 
 The remainder of this paper proceeds as follows. Section 2 describes the methods for deriving engineering requirements from theoretical postulates. Section 3 presents the theory-by-theory analysis. Section 4 compares across theories, introducing the engineering bridge table and identifying the key fault lines. Section 5 assesses preservation strategies against the full theory space. Section 6 discusses implications, limitations, and future directions.
 
@@ -249,21 +249,21 @@ The table below maps each theory to its specific engineering requirements. This 
 | **Orch OR** | Quantum states of microtubules + connectome | Sub-nm + quantum state tomography | N/A (no-cloning) | 2^(10^18) | N/A | Physically impossible | Never |
 | **AST** | Attention schema + self-model + episodic memory | ~1 um | ~1-10 TB | 10^15 - 10^18 | ~1-10 TB | ~10^5 neurons/s @ 1 kHz | 2040-2060 |
 
-![Figure 1: Engineering requirements span across theories. Log-scale comparison of data size, compute, and feasibility timeline for each theory of consciousness.](figures/fig1_engineering_requirements.png)
+![Figure 2: Engineering requirements span across theories. Log-scale comparison of data size, compute, and feasibility timeline for each theory of consciousness.](figures/fig2_engineering_requirements.png)
 
-![Figure 2: Estimated timeline to preservation feasibility under each theory, showing the three distinct clusters: near-term (AST), mid-century (GNWT/HOT/RPT/PP), and never (IIT verification, Orch OR).](figures/fig2_timeline.png)
+![Figure 3: Estimated timeline to preservation feasibility under each theory, showing the three distinct clusters: near-term (AST), mid-century (GNWT/HOT/RPT/PP), and never (IIT verification, Orch OR).](figures/fig3_timeline.png)
 
-Figure 7 provides an alternative visualization of the information requirements, showing how each theory maps onto layers of biological detail from functional connectivity at the base to quantum states at the peak.
+Figure 4 provides an alternative visualization of the information requirements, showing how each theory maps onto layers of biological detail from functional connectivity at the base to quantum states at the peak.
 
-![Figure 7: Information requirements pyramid. Each layer represents a level of biological detail, from functional connectivity (least demanding) to quantum state (most demanding). Theories are annotated at the level they require, with approximate data volumes on the left.](figures/fig7_information_pyramid.png)
+![Figure 4: Information requirements pyramid. Each layer represents a level of biological detail, from functional connectivity (least demanding) to quantum state (most demanding). Theories are annotated at the level they require, with approximate data volumes on the left.](figures/fig4_information_pyramid.png)
 
 Several features of this table deserve emphasis.
 
-First, the data size column spans roughly 10 orders of magnitude (Figure 1): from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
+First, the data size column spans roughly 10 orders of magnitude (Figure 2): from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
 
 Second, the compute column has an even wider span. AST's lower bound (10^15 FLOPS) is achievable on current high-end hardware. GNWT's upper bound (10^22 FLOPS) requires roughly 10,000x current exascale systems. Orch OR's requirement (2^(10^18) operations) is not a large number; it is a number that cannot be meaningfully written, computed, or compared to any physical quantity.
 
-Third, feasibility timelines cluster into three groups (see Figure 2): near-term under favorable theories (2040-2060 for AST), mid-century under moderate theories (2055-2080 for GNWT/HOT/RPT/PP), and never under hostile theories (IIT verification, Orch OR). The difference between the most and least favorable theories is not decades but the distinction between possible and impossible.
+Third, feasibility timelines cluster into three groups (see Figure 3): near-term under favorable theories (2040-2060 for AST), mid-century under moderate theories (2055-2080 for GNWT/HOT/RPT/PP), and never under hostile theories (IIT verification, Orch OR). The difference between the most and least favorable theories is not decades but the distinction between possible and impossible.
 
 ### 4.2 Points of Consensus
 
@@ -279,9 +279,9 @@ Despite their disagreements, all eight theories converge on three engineering re
 
 The most consequential disagreement across theories is substrate independence. Four theories (GNWT, HOT, AST, RPT) are substrate-independent: they define consciousness in terms of computational or functional properties that can, in principle, be instantiated on any physical substrate. Three theories (IIT, Biological Computationalism, Orch OR) are substrate-dependent, though for different reasons: IIT because intrinsic causal architecture matters, not function; Biological Computationalism because the algorithm is inseparable from the substrate; Orch OR because quantum coherence in specific biological structures is required. One theory (Predictive Processing) straddles the line, with the answer depending on whether consciousness requires genuine embodied active inference or merely the right computational dynamics.
 
-![Figure 3: The substrate independence fault line. Eight theories grouped by their position on substrate independence, with bar height representing preservation favorability score (0-5).](figures/fig3_substrate_fault_line.png)
+![Figure 5: The substrate independence fault line. Eight theories grouped by their position on substrate independence, with bar height representing preservation favorability score (0-5).](figures/fig5_substrate_fault_line.png)
 
-This fault line determines whether digital preservation is even conceivable (Figure 3). Under the four substrate-independent theories, a sufficiently detailed digital emulation of a brain is conscious and is, in the relevant sense, the original person. Under the three substrate-dependent theories, no amount of digital emulation suffices; the copy would be a behavioral replica without inner experience. These are not positions that can be split or compromised. Either the substrate matters or it does not.
+This fault line determines whether digital preservation is even conceivable (Figure 5). Under the four substrate-independent theories, a sufficiently detailed digital emulation of a brain is conscious and is, in the relevant sense, the original person. Under the three substrate-dependent theories, no amount of digital emulation suffices; the copy would be a behavioral replica without inner experience. These are not positions that can be split or compromised. Either the substrate matters or it does not.
 
 What would resolve this question? The most direct experiment would be a neural prosthesis test: replace a small population of neurons in a conscious animal with artificial neurons that are functionally identical but physically different, and measure whether consciousness-relevant behaviors and neural signatures are preserved. If a silicon replacement of cortical neurons preserves the animal's visual awareness (as assessed by, e.g., binocular rivalry paradigms or no-report paradigms), substrate independence receives strong support. If identical function on a different substrate produces measurably different consciousness-relevant signatures, substrate dependence gains evidence. Current neural prostheses (retinal implants, cochlear implants) are too crude to test this; they restore function but do not replace individual neurons with the fidelity required to distinguish the theories.
 
@@ -295,20 +295,20 @@ The theories that take phenomenal consciousness most seriously, IIT, Biological 
 
 This is not a coincidence. There is a deep structural relationship between how seriously a theory takes the irreducibility of subjective experience and how difficult it makes preservation. Theories that identify consciousness with something beyond functional organization, with the intrinsic nature of the physical substrate, with the specific character of biological computation, with quantum processes, necessarily make that something harder to replicate or transfer. Theories that reduce consciousness to functional organization make it transferable but, their critics argue, fail to capture what makes consciousness consciousness.
 
-![Figure 4: The deflation paradox. Scatter plot showing the inverse relationship between how seriously a theory takes phenomenal consciousness (x-axis) and how favorable it is to preservation (y-axis).](figures/fig4_deflation_paradox.png)
+![Figure 6: The deflation paradox. Scatter plot showing the inverse relationship between how seriously a theory takes phenomenal consciousness (x-axis) and how favorable it is to preservation (y-axis).](figures/fig6_deflation_paradox.png)
 
-The deflation paradox presents a genuine dilemma for anyone investing in consciousness preservation (Figure 4). If you believe your conscious experience is real, irreducible, and not merely a functional property, if you take the hard problem seriously, then the theories most aligned with your intuitions are the ones that say preservation is impossible. If you are comfortable with the idea that consciousness is "just" a computational pattern, preservation is straightforward, but you must accept that what you are preserving is a pattern, not an ineffable essence.
+The deflation paradox presents a genuine dilemma for anyone investing in consciousness preservation (Figure 6). If you believe your conscious experience is real, irreducible, and not merely a functional property, if you take the hard problem seriously, then the theories most aligned with your intuitions are the ones that say preservation is impossible. If you are comfortable with the idea that consciousness is "just" a computational pattern, preservation is straightforward, but you must accept that what you are preserving is a pattern, not an ineffable essence.
 
 
 ## 5. Risk Analysis
 
 ### 5.1 Preservation Strategies Against Theory Space
 
-I assess four preservation strategies against all eight theories (Figure 5). Figure 8 maps these strategies on two dimensions: technical feasibility with current technology and cross-theory compatibility.
+I assess four preservation strategies against all eight theories (Figure 8). Figure 7 maps these strategies on two dimensions: technical feasibility with current technology and cross-theory compatibility.
 
-![Figure 8: The preservation strategy landscape. Four strategies plotted by technical feasibility (x-axis) and cross-theory compatibility (y-axis). No strategy reaches the ideal corner (top-right). Biological preservation (cryonics) has the highest compatibility; digital emulation has the highest near-term feasibility but the lowest compatibility.](figures/fig8_strategy_landscape.png)
+![Figure 7: The preservation strategy landscape. Four strategies plotted by technical feasibility (x-axis) and cross-theory compatibility (y-axis). No strategy reaches the ideal corner (top-right). Biological preservation (cryonics) has the highest compatibility; digital emulation has the highest near-term feasibility but the lowest compatibility.](figures/fig7_strategy_landscape.png)
 
-![Figure 5: Preservation strategy risk matrix. Heatmap showing the compatibility of four preservation strategies (rows) with eight theories of consciousness (columns). Green indicates compatibility, red indicates incompatibility, yellow indicates conditional compatibility.](figures/fig5_risk_matrix.png)
+![Figure 8: Preservation strategy risk matrix. Heatmap showing the compatibility of four preservation strategies (rows) with eight theories of consciousness (columns). Green indicates compatibility, red indicates incompatibility, yellow indicates conditional compatibility.](figures/fig8_risk_matrix.png)
 
 **Strategy 1: Whole-brain emulation on digital hardware.** A brain is preserved, destructively scanned, and simulated on a digital computer. This succeeds under GNWT, HOT, AST, and probably RPT (4 theories). It fails under IIT, Biological Computationalism, and Orch OR (3 theories). It is unclear under Predictive Processing (1 theory), where success may require embodiment. Cross-theory survival probability, treating theories as equally likely: ~50-60%.
 
