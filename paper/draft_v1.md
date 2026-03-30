@@ -255,7 +255,7 @@ The table below maps each theory to its specific engineering requirements. This 
 
 Several features of this table deserve emphasis.
 
-First, the data size column spans roughly 10 orders of magnitude (Figure 1); from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
+First, the data size column spans roughly 10 orders of magnitude (Figure 1): from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
 
 Second, the compute column has an even wider span. AST's lower bound (10^15 FLOPS) is achievable on current high-end hardware. GNWT's upper bound (10^22 FLOPS) requires roughly 10,000x current exascale systems. Orch OR's requirement (2^(10^18) operations) is not a large number; it is a number that cannot be meaningfully written, computed, or compared to any physical quantity.
 
@@ -421,9 +421,9 @@ Graziano, M. S. A. (2017). The attention schema theory: A foundation for enginee
 
 Hameroff, S. R., and Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, 40(3-4), 453-480.
 
-Lamme, V. A. F., and Roelfsema, P. R. (2000). The distinct modes of vision offered by feedforward and recurrent processing. *Trends in Neurosciences*, 23(11), 571-579.
-
 Lamme, V. A. F. (2006). Towards a true neural stance on consciousness. *Trends in Cognitive Sciences*, 10(11), 494-501.
+
+Lamme, V. A. F., and Roelfsema, P. R. (2000). The distinct modes of vision offered by feedforward and recurrent processing. *Trends in Neurosciences*, 23(11), 571-579.
 
 Lau, H., and Rosenthal, D. (2011). Empirical support for higher-order theories of conscious awareness. *Trends in Cognitive Sciences*, 15(8), 365-373.
 
