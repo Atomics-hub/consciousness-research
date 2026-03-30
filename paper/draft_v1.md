@@ -249,21 +249,21 @@ The table below maps each theory to its specific engineering requirements. This 
 | **Orch OR** | Quantum states of microtubules + connectome | Sub-nm + quantum state tomography | N/A (no-cloning) | 2^(10^18) | N/A | Physically impossible | Never |
 | **AST** | Attention schema + self-model + episodic memory | ~1 um | ~1-10 TB | 10^15 - 10^18 | ~1-10 TB | ~10^5 neurons/s @ 1 kHz | 2040-2060 |
 
+Several features of this table deserve emphasis.
+
+First, the data size column spans roughly 10 orders of magnitude: from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
+
 ![Figure 2: Engineering requirements span across theories. Log-scale comparison of data size, compute, and feasibility timeline for each theory of consciousness.](figures/fig2_engineering_requirements.png)
+
+Second, the compute column has an even wider span. AST's lower bound (10^15 FLOPS) is achievable on current high-end hardware. GNWT's upper bound (10^22 FLOPS) requires roughly 10,000x current exascale systems. Orch OR's requirement (2^(10^18) operations) is not a large number; it is a number that cannot be meaningfully written, computed, or compared to any physical quantity.
+
+Third, feasibility timelines cluster into three groups: near-term under favorable theories (2040-2060 for AST), mid-century under moderate theories (2055-2080 for GNWT/HOT/RPT/PP), and never under hostile theories (IIT verification, Orch OR). The difference between the most and least favorable theories is not decades but the distinction between possible and impossible.
 
 ![Figure 3: Estimated timeline to preservation feasibility under each theory, showing the three distinct clusters: near-term (AST), mid-century (GNWT/HOT/RPT/PP), and never (IIT verification, Orch OR).](figures/fig3_timeline.png)
 
 Figure 4 provides an alternative visualization of the information requirements, showing how each theory maps onto layers of biological detail from functional connectivity at the base to quantum states at the peak.
 
 ![Figure 4: Information requirements pyramid. Each layer represents a level of biological detail, from functional connectivity (least demanding) to quantum state (most demanding). Theories are annotated at the level they require, with approximate data volumes on the left.](figures/fig4_information_pyramid.png)
-
-Several features of this table deserve emphasis.
-
-First, the data size column spans roughly 10 orders of magnitude (Figure 2): from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
-
-Second, the compute column has an even wider span. AST's lower bound (10^15 FLOPS) is achievable on current high-end hardware. GNWT's upper bound (10^22 FLOPS) requires roughly 10,000x current exascale systems. Orch OR's requirement (2^(10^18) operations) is not a large number; it is a number that cannot be meaningfully written, computed, or compared to any physical quantity.
-
-Third, feasibility timelines cluster into three groups (see Figure 3): near-term under favorable theories (2040-2060 for AST), mid-century under moderate theories (2055-2080 for GNWT/HOT/RPT/PP), and never under hostile theories (IIT verification, Orch OR). The difference between the most and least favorable theories is not decades but the distinction between possible and impossible.
 
 ### 4.2 Points of Consensus
 
