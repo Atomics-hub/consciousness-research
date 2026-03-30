@@ -42,7 +42,7 @@ h1 {
     margin-bottom: 0.3em;
     line-height: 1.3;
 }
-h2 { font-size: 14pt; margin-top: 1.8em; border-bottom: 1px solid #ccc; padding-bottom: 0.2em; }
+h2 { font-size: 14pt; margin-top: 1.8em; border-bottom: 1px solid #ccc; padding-bottom: 0.2em; page-break-after: avoid; }
 h3 { font-size: 12pt; margin-top: 1.4em; }
 p strong:first-child { }
 table {
@@ -50,7 +50,6 @@ table {
     width: 100%;
     font-size: 9pt;
     margin: 1em 0;
-    page-break-inside: avoid;
 }
 th, td {
     border: 1px solid #999;

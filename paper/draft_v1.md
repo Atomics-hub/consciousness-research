@@ -78,8 +78,6 @@ Engineering numbers (neuron counts, synapse counts, per-synapse parameter sizes)
 
 This approach has three significant limitations. First, theories of consciousness were not designed to answer preservation questions, so some derivations require extrapolation beyond what theorists have explicitly stated. I flag these cases. Second, the engineering estimates inherit substantial uncertainty from neuroscience. The number of functionally distinct synapse types, the role of glial cells, and the relevance of extracellular dynamics are all active research questions. Third, I treat the eight theories as equally plausible for the purpose of cross-theory comparison. I do not attempt to assign probabilities to theories, though I note empirical developments that bear on their relative standing.
 
----
-
 ## Notation and Definitions
 
 The following terms recur throughout the analysis. Definitions are provided here to avoid ambiguity.
