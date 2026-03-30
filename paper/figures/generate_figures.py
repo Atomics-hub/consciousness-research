@@ -67,7 +67,7 @@ def figure1():
     ax.set_ylabel('Preservation Favorability (0\u20135)', fontsize=12)
     ax.set_ylim(0, 6.2)
     ax.set_yticks([0, 1, 2, 3, 4, 5])
-    ax.set_title('Figure 1. The Substrate Independence Fault Line', fontsize=13, fontweight='bold', pad=15)
+    ax.set_title('Figure 5. The Substrate Independence Fault Line', fontsize=13, fontweight='bold', pad=15)
 
     legend_handles = [
         mpatches.Patch(color=SUBSTRATE_INDEP, label='Substrate-independent (4 theories)'),
@@ -237,7 +237,7 @@ def figure3():
     ax.legend(handles=legend_handles, loc='lower right', fontsize=9, frameon=True,
               facecolor='white', edgecolor='#cccccc', bbox_to_anchor=(1.0, -0.25), ncol=3)
 
-    ax.set_title('Figure 3. Preservation Strategy Risk Matrix', fontsize=13, fontweight='bold', pad=20)
+    ax.set_title('Figure 8. Preservation Strategy Risk Matrix', fontsize=13, fontweight='bold', pad=20)
     fig.tight_layout()
     fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig3_risk_matrix.png')
     fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig3_risk_matrix.pdf')
@@ -296,7 +296,7 @@ def figure4():
     ax.text(3.0, 6.15, 'Deflates consciousness,\neasy to preserve', fontsize=9, ha='center', color='#666666', va='bottom')
     ax.text(8.0, 6.15, 'Takes consciousness seriously,\nhard/impossible to preserve', fontsize=9, ha='center', color='#666666', va='bottom')
 
-    ax.set_title('Figure 4. The Deflation Paradox', fontsize=13, fontweight='bold', pad=15)
+    ax.set_title('Figure 6. The Deflation Paradox', fontsize=13, fontweight='bold', pad=15)
     fig.tight_layout()
     fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig4_deflation_paradox.png')
     fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig4_deflation_paradox.pdf')
@@ -349,7 +349,7 @@ def figure5():
 
     ax.set_xlim(2020, 2170)
     ax.set_xlabel('Year', fontsize=12)
-    ax.set_title('Figure 5. Estimated Timeline to Preservation Feasibility', fontsize=13, fontweight='bold', pad=15)
+    ax.set_title('Figure 3. Estimated Timeline to Preservation Feasibility', fontsize=13, fontweight='bold', pad=15)
 
     legend_handles = [
         mpatches.Patch(color=SUBSTRATE_INDEP, label='Substrate-independent'),
@@ -593,7 +593,7 @@ def figure7():
     ax.set_xlim(-0.5, 14)
     ax.set_ylim(-0.3, 8.8)
     ax.axis('off')
-    ax.set_title('Figure 7. Information Requirements Pyramid',
+    ax.set_title('Figure 4. Information Requirements Pyramid',
                  fontsize=13, fontweight='bold', pad=15)
 
     fig.tight_layout()
@@ -679,7 +679,7 @@ def figure8():
     ax.set_yticks([0, 1/8, 2/8, 3/8, 4/8, 5/8, 6/8, 7/8, 1.0])
     ax.set_yticklabels(['0/8', '1/8', '2/8', '3/8', '4/8', '5/8', '6/8', '7/8', '8/8'], fontsize=9)
 
-    ax.set_title('Figure 8. The Preservation Strategy Landscape',
+    ax.set_title('Figure 7. The Preservation Strategy Landscape',
                  fontsize=13, fontweight='bold', pad=15)
 
     fig.tight_layout()
