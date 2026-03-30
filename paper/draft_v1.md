@@ -1,6 +1,7 @@
 # What Must Be Preserved? Mapping Theories of Consciousness to Engineering Requirements for Mind Preservation
 
 **Author:** Thomas Ryan
+
 **Affiliation:** Independent Researcher, San Francisco, CA
 
 **Date:** March 2026
