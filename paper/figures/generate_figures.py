@@ -404,7 +404,9 @@ def figure6():
     draw_arrow(ax, 5.5, 7.85, 3.5, 7.15, 'Yes', 'left')
     ax.text(3.5, 6.85, 'Is functional organization\nsufficient?', **question_style)
 
-    draw_arrow(ax, 2.2, 6.5, 1.5, 5.85, 'Yes', 'left')
+    # Single arrow from question to the bar
+    draw_arrow(ax, 3.5, 6.5, 3.9, 5.85, 'Yes', 'left')
+
     # Draw one continuous green bar, then labels with divider lines
     bar_left = 0.75
     bar_right = 7.05
@@ -422,9 +424,6 @@ def figure6():
     for x, label in [(1.5, 'GNWT'), (3.1, 'HOT'), (4.7, 'AST'), (6.3, 'RPT')]:
         ax.text(x, bar_y, label, ha='center', va='center', fontsize=theory_fontsize,
                 fontweight='bold', color='white')
-    draw_arrow(ax, 3.5, 6.5, 3.1, 5.85, '', 'left')
-    draw_arrow(ax, 4.8, 6.5, 4.7, 5.85, '', 'right')
-    draw_arrow(ax, 4.8, 6.5, 6.3, 5.85, '', 'right')
 
     # NO branch (right)
     draw_arrow(ax, 8.5, 7.85, 10.5, 7.15, 'No', 'right')
