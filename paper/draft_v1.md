@@ -42,9 +42,12 @@ I selected theories that satisfy three criteria: (1) they have generated empiric
 
 The eight theories span the space of possible answers to the key questions. On substrate independence: four say yes (GNWT, HOT, AST, RPT), three say no (IIT, Biological Computationalism, Orch OR), and one is ambiguous (Predictive Processing). On what must be preserved: they range from abstract computational architecture to full molecular state to quantum coherence. This coverage ensures that the analysis is not biased toward any particular answer.
 
+Figure 6 provides a decision tree showing how the key questions route to each theory.
+
+![Figure 6: Theory decision tree. The key questions that distinguish the eight theories, with color coding by substrate independence position.](figures/fig6_theory_decision_tree.png)
+
 The remainder of this paper proceeds as follows. Section 2 describes the methods for deriving engineering requirements from theoretical postulates. Section 3 presents the theory-by-theory analysis. Section 4 compares across theories, introducing the engineering bridge table and identifying the key fault lines. Section 5 assesses preservation strategies against the full theory space. Section 6 discusses implications, limitations, and future directions.
 
----
 
 ## 2. Methods
 
@@ -97,7 +100,6 @@ The following terms recur throughout the analysis. Definitions are provided here
 | **FLOPS** | Floating-point operations per second, a measure of computational throughput. Current exascale computers achieve ~2 x 10^18 FLOPS. |
 | **PB / EB / ZB** | Petabyte (10^15 bytes), exabyte (10^18 bytes), zettabyte (10^21 bytes). For reference, the entire internet is estimated at ~100 EB. |
 
----
 
 ## 3. Theory-by-Theory Analysis
 
@@ -229,7 +231,6 @@ The following terms recur throughout the analysis. Definitions are provided here
 
 **Preservation verdict: 5/5.**
 
----
 
 ## 4. Cross-Theory Comparison
 
@@ -251,6 +252,10 @@ The table below maps each theory to its specific engineering requirements. This 
 ![Figure 1: Engineering requirements span across theories. Log-scale comparison of data size, compute, and feasibility timeline for each theory of consciousness.](figures/fig1_engineering_requirements.png)
 
 ![Figure 2: Estimated timeline to preservation feasibility under each theory, showing the three distinct clusters: near-term (AST), mid-century (GNWT/HOT/RPT/PP), and never (IIT verification, Orch OR).](figures/fig2_timeline.png)
+
+Figure 7 provides an alternative visualization of the information requirements, showing how each theory maps onto layers of biological detail from functional connectivity at the base to quantum states at the peak.
+
+![Figure 7: Information requirements pyramid. Each layer represents a level of biological detail, from functional connectivity (least demanding) to quantum state (most demanding). Theories are annotated at the level they require, with approximate data volumes on the left.](figures/fig7_information_pyramid.png)
 
 Several features of this table deserve emphasis.
 
@@ -294,13 +299,14 @@ This is not a coincidence. There is a deep structural relationship between how s
 
 The deflation paradox presents a genuine dilemma for anyone investing in consciousness preservation (Figure 4). If you believe your conscious experience is real, irreducible, and not merely a functional property, if you take the hard problem seriously, then the theories most aligned with your intuitions are the ones that say preservation is impossible. If you are comfortable with the idea that consciousness is "just" a computational pattern, preservation is straightforward, but you must accept that what you are preserving is a pattern, not an ineffable essence.
 
----
 
 ## 5. Risk Analysis
 
 ### 5.1 Preservation Strategies Against Theory Space
 
-I assess four preservation strategies against all eight theories (Figure 5).
+I assess four preservation strategies against all eight theories (Figure 5). Figure 8 maps these strategies on two dimensions: technical feasibility with current technology and cross-theory compatibility.
+
+![Figure 8: The preservation strategy landscape. Four strategies plotted by technical feasibility (x-axis) and cross-theory compatibility (y-axis). No strategy reaches the ideal corner (top-right). Biological preservation (cryonics) has the highest compatibility; digital emulation has the highest near-term feasibility but the lowest compatibility.](figures/fig8_strategy_landscape.png)
 
 ![Figure 5: Preservation strategy risk matrix. Heatmap showing the compatibility of four preservation strategies (rows) with eight theories of consciousness (columns). Green indicates compatibility, red indicates incompatibility, yellow indicates conditional compatibility.](figures/fig5_risk_matrix.png)
 
@@ -326,7 +332,6 @@ This is not a problem that better scanning or more compute can solve. It is a co
 
 No theory of consciousness resolves this question, because it is a question about identity, not about consciousness. A preservation strategy could succeed at preserving consciousness (the copy is conscious, has your experiences, has your memories) while failing to preserve *you* (your particular stream of subjective experience terminates). This distinction is the reason gradual replacement, despite its engineering difficulty, has philosophical advantages over scan-and-copy: it maintains the physical continuity that biological and four-dimensionalist views of identity require.
 
----
 
 ## 6. Discussion
 
@@ -364,7 +369,6 @@ This analysis has several limitations beyond those noted in Section 2.4. I do no
 
 Three extensions of this work would be valuable. First, a formal decision-theoretic analysis that assigns probabilities to theories (based on empirical evidence and expert survey) and computes expected utility for each preservation strategy. Second, an engineering-side analysis that maps each theory's requirements to specific technology roadmaps, identifying the theory-conditional critical path to preservation for each strategy. Third, a deeper analysis of the deflation paradox, exploring whether it represents a genuine philosophical constraint or an artifact of how current theories are formulated.
 
----
 
 ## 7. Conclusion
 
@@ -378,13 +382,11 @@ Third, there is a paradox at the heart of this entire enterprise. The theories t
 
 The practical takeaway: the bottleneck for consciousness preservation is not scanning resolution, not compute, not storage. It is the theory of consciousness itself. Resolve the substrate independence question and the engineering requirements collapse from a 10-order-of-magnitude uncertainty range to a tractable spec. Until then, the most robust strategy is biological preservation (cryonics at the highest achievable quality) because it is the only approach that keeps all doors open regardless of which theory is correct. Dollar for dollar, funding experiments that discriminate between substrate-dependent and substrate-independent theories has higher expected value for consciousness preservation than any engineering investment being made today.
 
----
 
 ## Acknowledgments
 
 I wrote this paper because consciousness is what I am most interested in and what I keep coming back to thinking about. I believe understanding consciousness could solve basically all the problems humans face, and unlock new ones we can't currently conceive of. My background is in systems security research, not neuroscience or philosophy of mind, and that shapes how I approach this: I look for where the specs are underspecified, where the assumptions are unstated, and where the failure modes are unexamined. I am grateful to the theorists whose work made this analysis possible, especially those who have been precise enough in their claims to let an outsider derive engineering consequences from them. Any errors in interpretation are mine.
 
----
 
 ## References
 
