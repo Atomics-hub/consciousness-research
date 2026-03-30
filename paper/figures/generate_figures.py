@@ -405,10 +405,23 @@ def figure6():
     ax.text(3.5, 6.85, 'Is functional organization\nsufficient?', **question_style)
 
     draw_arrow(ax, 2.2, 6.5, 1.5, 5.85, 'Yes', 'left')
-    draw_theory_box(ax, 1.5, 5.4, 'GNWT', SUBSTRATE_INDEP, width=1.5)
-    draw_theory_box(ax, 3.1, 5.4, 'HOT', SUBSTRATE_INDEP, width=1.5)
-    draw_theory_box(ax, 4.7, 5.4, 'AST', SUBSTRATE_INDEP, width=1.5)
-    draw_theory_box(ax, 6.3, 5.4, 'RPT', SUBSTRATE_INDEP, width=1.5)
+    # Draw one continuous green bar, then labels with divider lines
+    bar_left = 0.75
+    bar_right = 7.05
+    bar_y = 5.4
+    bar_h = 0.55
+    bar_rect = mpatches.FancyBboxPatch((bar_left, bar_y - bar_h/2), bar_right - bar_left, bar_h,
+                                        boxstyle='round,pad=0.15', facecolor=SUBSTRATE_INDEP,
+                                        edgecolor='#333333', linewidth=1.0, alpha=0.9)
+    ax.add_patch(bar_rect)
+    # Divider lines
+    for div_x in [2.3, 3.9, 5.5]:
+        ax.plot([div_x, div_x], [bar_y - bar_h/2 + 0.05, bar_y + bar_h/2 - 0.05],
+                color='#ffffff', linewidth=1.5, alpha=0.6)
+    # Labels
+    for x, label in [(1.5, 'GNWT'), (3.1, 'HOT'), (4.7, 'AST'), (6.3, 'RPT')]:
+        ax.text(x, bar_y, label, ha='center', va='center', fontsize=theory_fontsize,
+                fontweight='bold', color='white')
     draw_arrow(ax, 3.5, 6.5, 3.1, 5.85, '', 'left')
     draw_arrow(ax, 4.8, 6.5, 4.7, 5.85, '', 'right')
     draw_arrow(ax, 4.8, 6.5, 6.3, 5.85, '', 'right')
