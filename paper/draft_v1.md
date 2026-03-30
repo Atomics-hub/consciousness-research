@@ -21,7 +21,7 @@ Consciousness preservation is an engineering problem with a philosophical depend
 
 We do not. The major theories of consciousness give answers that differ not in philosophical nuance but in hard engineering specifications, by many orders of magnitude. The gap between the most and least demanding theories is not a factor of two. It is the difference between a tractable engineering project and a physical impossibility.
 
-Consider a thought experiment. You have access to a perfectly preserved brain and unlimited technology. What do you scan? Under Global Neuronal Workspace Theory (Dehaene and Changeux, 2011), you need the connectome plus synaptic weights plus the dynamics of ignition, roughly 2 PB of processed data at 10 nm scanning resolution. Under Attention Schema Theory (Graziano, 2013), you may need only the attention control circuits and self-model, perhaps 1-10 TB at 1 micrometer resolution. Under Orchestrated Objective Reduction (Hameroff and Penrose, 1996), you need the quantum states of 8.6 x 10^18 tubulin dimers, which the no-cloning theorem renders physically impossible to capture. These are not minor variations. They are the difference between a tractable engineering project and a physical impossibility.
+Consider a thought experiment. You have access to a perfectly preserved brain and unlimited technology. What do you scan? Under Global Neuronal Workspace Theory (Dehaene and Changeux, 2011), you need the connectome plus synaptic weights plus the dynamics of ignition, roughly 2 PB of processed data at 10 nm scanning resolution. Under Attention Schema Theory (Graziano, 2013), you may need only the attention control circuits and self-model, perhaps 1-10 TB at 1 micrometer resolution. Under Orchestrated Objective Reduction (Hameroff and Penrose, 1996), you need the quantum states of 8.6 x 10^18 tubulin dimers, which the no-cloning theorem renders physically impossible to capture. These are not minor variations. They span the entire range from solvable to impossible.
 
 ### The Gap in the Literature
 
@@ -87,7 +87,7 @@ This approach has three significant limitations. First, theories of consciousnes
 
 **Substrate independence: No.** This follows directly from IIT's postulates. Two systems with identical input-output behavior can have different Phi values if their internal causal architectures differ. IIT famously predicts that feedforward networks have Phi = 0 regardless of computational complexity, and that a lookup table perfectly replicating human behavior would be unconscious. A standard digital computer simulating a brain would have near-zero Phi because the causal architecture of the CPU (serial gate operations) differs fundamentally from the brain's (massively recurrent, parallel causal structure). Consciousness could exist on a non-biological substrate, but only if that substrate physically instantiates the same intrinsic causal architecture, not merely the same function.
 
-**Preservation requirements.** IIT requires the complete causal specification of the system at the level that maximizes Phi. This means: the full transition probability matrix (TPM) of every mechanism (neuron or neuronal group). Not just connectivity, but the precise probability distribution over future states given past states, including nonlinear dynamics, neuromodulatory modulation, and state-dependent interactions. At 86 billion neurons with ~10^14 synapses, estimating ~100 bytes per synapse for full causal parameterization yields ~10 PB of scan data. But the verification problem is worse: computing Phi requires evaluating all possible bipartitions of the system to find the minimum information partition. For N elements, this grows super-exponentially (Barrett and Seth, 2011; Tegmark, 2016). For even 40 binary elements, exact Phi computation is already infeasible. For 86 billion neurons, it is formally uncomputable on any conceivable classical computer. Simulation at the electrophysiology level requires ~10^22 FLOPS (Sandberg and Bostrom, 2008), but one could never verify that the simulation preserves Phi.
+**Preservation requirements.** IIT requires the complete causal specification of the system at the level that maximizes Phi. This means: the full transition probability matrix (TPM) of every mechanism (neuron or neuronal group). Not just connectivity, but the precise probability distribution over future states given past states, including nonlinear dynamics, neuromodulatory modulation, and state-dependent interactions. At 86 billion neurons with ~10^14 synapses, a minimal per-synapse parameterization (~100 bytes) yields ~10 PB. However, IIT requires the full transition probability matrix, which specifies the probability distribution over all possible future states for each possible past state of each mechanism. For mechanisms involving multiple neurons, this grows combinatorially, pushing realistic estimates toward ~100 EB for the complete causal specification. But the verification problem is worse: computing Phi requires evaluating all possible bipartitions of the system to find the minimum information partition. For N elements, this grows super-exponentially (Barrett and Seth, 2011; Tegmark, 2016). For even 40 binary elements, exact Phi computation is already infeasible. For 86 billion neurons, it is formally uncomputable on any conceivable classical computer. Simulation at the electrophysiology level requires ~10^22 FLOPS (Sandberg and Bostrom, 2008), but one could never verify that the simulation preserves Phi.
 
 **Gradual replacement: Conditionally possible.** Each replacement element must have the exact same causal TPM as the original, not merely the same input-output function but the same intrinsic causal power. A silicon neuron that mimics behavior through a lookup table would reduce Phi even if behavior is preserved. The bar is not functional equivalence but causal-structural identity.
 
@@ -147,7 +147,7 @@ This approach has three significant limitations. First, theories of consciousnes
 
 ### 3.5 Recurrent Processing Theory (RPT)
 
-**Core claim.** Consciousness arises from recurrent (feedback) processing within sensory cortical areas (Lamme, 2000, 2006). Lamme distinguishes processing stages: feedforward sweep (unconscious), lateral interactions (unconscious), local recurrent processing within sensory areas (phenomenally conscious but not reportable), and recurrent processing involving frontal areas (conscious and reportable). The critical claim is that recurrent processing in sensory cortex alone, without prefrontal involvement, is already phenomenally conscious. This directly contradicts GNWT's requirement for prefrontal workspace activation.
+**Core claim.** Consciousness arises from recurrent (feedback) processing within sensory cortical areas (Lamme and Roelfsema, 2000, 2006). Lamme distinguishes processing stages: feedforward sweep (unconscious), lateral interactions (unconscious), local recurrent processing within sensory areas (phenomenally conscious but not reportable), and recurrent processing involving frontal areas (conscious and reportable). The critical claim is that recurrent processing in sensory cortex alone, without prefrontal involvement, is already phenomenally conscious. This directly contradicts GNWT's requirement for prefrontal workspace activation.
 
 **Substrate independence: Leaning yes.** RPT identifies consciousness with a computational process (recurrent processing) rather than a biological substrate. Lamme's formulation is neuroscience-grounded and does not directly address artificial substrates, but the theory's logic permits substrate independence if "recurrent processing" is treated as a substrate-neutral computational description.
 
@@ -199,7 +199,7 @@ This approach has three significant limitations. First, theories of consciousnes
 
 **Substrate independence: Yes.** AST is explicitly functionalist. Graziano has published on engineering artificial consciousness using AST as a foundation (Graziano, 2017; Wilterson and Graziano, 2021). Any system implementing an attention mechanism plus an internal model of that mechanism would be conscious.
 
-**Preservation requirements.** AST has the most modest requirements of any theory. The attention schema itself is a low-dimensional model; plausibly ~10^4-10^5 parameters, comparable in complexity to the body schema. The self-model (autobiographical memory, personality, semantic knowledge) adds ~10^12-10^13 parameters at ~1-10 TB. The relevant neural circuits; prefrontal attention control (~2-4 billion neurons), parietal attention maps (~1-2 billion neurons), memory systems (~1 billion neurons), self-model circuits (~1-2 billion neurons); total 5-10 billion neurons, perhaps 5-10% of the brain. Scanning resolution: ~1 micrometer (regional connectivity, achievable with diffusion MRI or expansion microscopy). Compute: 10^15 - 10^18 FLOPS, comparable to current large AI models at the lower end. BCI bandwidth: ~10^5 neurons/s at 1 kHz; zero orders of magnitude gap in channel count from current technology, though write capability remains the bottleneck. Feasibility timeline: 2040-2060.
+**Preservation requirements.** AST has the most modest requirements of any theory. The attention schema itself is a low-dimensional model; plausibly ~10^4-10^5 parameters, comparable in complexity to the body schema. The self-model (autobiographical memory, personality, semantic knowledge) adds ~10^12-10^13 parameters at ~1-10 TB. The relevant neural circuits; prefrontal attention control (~2-4 billion neurons), parietal attention maps (~1-2 billion neurons), memory systems (~1 billion neurons), self-model circuits (~1-2 billion neurons); total 5-10 billion neurons, perhaps 5-10% of the brain. Scanning resolution: ~1 micrometer (regional connectivity, achievable with diffusion MRI or expansion microscopy). Compute: 10^15 - 10^18 FLOPS, comparable to current large AI models at the lower end. BCI bandwidth: ~10^5 neurons/s at 1 kHz, the smallest gap of any theory (~1-2 orders of magnitude from current electrode counts), though write capability remains the primary bottleneck. Feasibility timeline: 2040-2060.
 
 **Gradual replacement: Yes.** The attention schema and attention mechanisms need only be functionally preserved. Substrate is irrelevant.
 
@@ -228,13 +228,17 @@ The table below maps each theory to its specific engineering requirements. This 
 | **Orch OR** | Quantum states of microtubules + connectome | Sub-nm + quantum state tomography | N/A (no-cloning) | 2^(10^18) | N/A | Physically impossible | Never |
 | **AST** | Attention schema + self-model + episodic memory | ~1 um | ~1-10 TB | 10^15 - 10^18 | ~1-10 TB | ~10^5 neurons/s @ 1 kHz | 2040-2060 |
 
+![Figure 2: Engineering requirements span across theories. Log-scale comparison of data size, compute, and feasibility timeline for each theory of consciousness.](figures/fig2_engineering_requirements.png)
+
+![Figure 5: Estimated timeline to preservation feasibility under each theory, showing the three distinct clusters: near-term (AST), mid-century (GNWT/HOT/RPT/PP), and never (IIT verification, Orch OR).](figures/fig5_timeline.png)
+
 Several features of this table deserve emphasis.
 
-First, the data size column spans roughly 10 orders of magnitude; from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
+First, the data size column spans roughly 10 orders of magnitude (Figure 2); from ~1 TB (AST) to ~100 EB (IIT) to formally infinite (Orch OR). The theories do not disagree on small matters. They disagree on whether consciousness preservation is a straightforward engineering problem, an extremely difficult one, or a physical impossibility.
 
 Second, the compute column has an even wider span. AST's lower bound (10^15 FLOPS) is achievable on current high-end hardware. GNWT's upper bound (10^22 FLOPS) requires roughly 10,000x current exascale systems. Orch OR's requirement (2^(10^18) operations) is not a large number; it is a number that cannot be meaningfully written, computed, or compared to any physical quantity.
 
-Third, feasibility timelines cluster into three groups: near-term under favorable theories (2040-2060 for AST), mid-century under moderate theories (2055-2080 for GNWT/HOT/RPT/PP), and never under hostile theories (IIT verification, Orch OR). The difference between the most and least favorable theories is not decades but the distinction between possible and impossible.
+Third, feasibility timelines cluster into three groups (see Figure 5): near-term under favorable theories (2040-2060 for AST), mid-century under moderate theories (2055-2080 for GNWT/HOT/RPT/PP), and never under hostile theories (IIT verification, Orch OR). The difference between the most and least favorable theories is not decades but the distinction between possible and impossible.
 
 ### 4.2 Points of Consensus
 
@@ -250,7 +254,9 @@ Despite their disagreements, all eight theories converge on three engineering re
 
 The most consequential disagreement across theories is substrate independence. Four theories (GNWT, HOT, AST, RPT) are substrate-independent: they define consciousness in terms of computational or functional properties that can, in principle, be instantiated on any physical substrate. Three theories (IIT, Biological Computationalism, Orch OR) are substrate-dependent, though for different reasons: IIT because intrinsic causal architecture matters, not function; Biological Computationalism because the algorithm is inseparable from the substrate; Orch OR because quantum coherence in specific biological structures is required. One theory (Predictive Processing) straddles the line, with the answer depending on whether consciousness requires genuine embodied active inference or merely the right computational dynamics.
 
-This fault line determines whether digital preservation is even conceivable. Under the four substrate-independent theories, a sufficiently detailed digital emulation of a brain is conscious and is, in the relevant sense, the original person. Under the three substrate-dependent theories, no amount of digital emulation suffices; the copy would be a behavioral replica without inner experience. These are not positions that can be split or compromised. Either the substrate matters or it does not.
+![Figure 1: The substrate independence fault line. Eight theories grouped by their position on substrate independence, with bar height representing preservation favorability score (0-5).](figures/fig1_substrate_fault_line.png)
+
+This fault line determines whether digital preservation is even conceivable (Figure 1). Under the four substrate-independent theories, a sufficiently detailed digital emulation of a brain is conscious and is, in the relevant sense, the original person. Under the three substrate-dependent theories, no amount of digital emulation suffices; the copy would be a behavioral replica without inner experience. These are not positions that can be split or compromised. Either the substrate matters or it does not.
 
 What would resolve this question? The most direct experiment would be a neural prosthesis test: replace a small population of neurons in a conscious animal with artificial neurons that are functionally identical but physically different, and measure whether consciousness-relevant behaviors and neural signatures are preserved. If a silicon replacement of cortical neurons preserves the animal's visual awareness (as assessed by, e.g., binocular rivalry paradigms or no-report paradigms), substrate independence receives strong support. If identical function on a different substrate produces measurably different consciousness-relevant signatures, substrate dependence gains evidence. Current neural prostheses (retinal implants, cochlear implants) are too crude to test this; they restore function but do not replace individual neurons with the fidelity required to distinguish the theories.
 
@@ -264,7 +270,9 @@ The theories that take phenomenal consciousness most seriously; IIT, Biological 
 
 This is not a coincidence. There is a deep structural relationship between how seriously a theory takes the irreducibility of subjective experience and how difficult it makes preservation. Theories that identify consciousness with something beyond functional organization; with the intrinsic nature of the physical substrate, with the specific character of biological computation, with quantum processes; necessarily make that something harder to replicate or transfer. Theories that reduce consciousness to functional organization make it transferable but, their critics argue, fail to capture what makes consciousness consciousness.
 
-The deflation paradox presents a genuine dilemma for anyone investing in consciousness preservation. If you believe your conscious experience is real, irreducible, and not merely a functional property; if you take the hard problem seriously; then the theories most aligned with your intuitions are the ones that say preservation is impossible. If you are comfortable with the idea that consciousness is "just" a computational pattern, preservation is straightforward; but you must accept that what you are preserving is a pattern, not an ineffable essence.
+![Figure 4: The deflation paradox. Scatter plot showing the inverse relationship between how seriously a theory takes phenomenal consciousness (x-axis) and how favorable it is to preservation (y-axis).](figures/fig4_deflation_paradox.png)
+
+The deflation paradox presents a genuine dilemma for anyone investing in consciousness preservation (Figure 4). If you believe your conscious experience is real, irreducible, and not merely a functional property; if you take the hard problem seriously; then the theories most aligned with your intuitions are the ones that say preservation is impossible. If you are comfortable with the idea that consciousness is "just" a computational pattern, preservation is straightforward; but you must accept that what you are preserving is a pattern, not an ineffable essence.
 
 ---
 
@@ -272,7 +280,9 @@ The deflation paradox presents a genuine dilemma for anyone investing in conscio
 
 ### 5.1 Preservation Strategies Against Theory Space
 
-We assess four preservation strategies against all eight theories.
+We assess four preservation strategies against all eight theories (Figure 3).
+
+![Figure 3: Preservation strategy risk matrix. Heatmap showing the compatibility of four preservation strategies (rows) with eight theories of consciousness (columns). Green indicates compatibility, red indicates incompatibility, yellow indicates conditional compatibility.](figures/fig3_risk_matrix.png)
 
 **Strategy 1: Whole-brain emulation on digital hardware.** A brain is preserved, destructively scanned, and simulated on a digital computer. This succeeds under GNWT, HOT, AST, and probably RPT (4 theories). It fails under IIT, Biological Computationalism, and Orch OR (3 theories). It is unclear under Predictive Processing (1 theory), where success may require embodiment. Cross-theory survival probability, treating theories as equally likely: ~50-60%.
 
@@ -350,11 +360,17 @@ The practical takeaway: the bottleneck for consciousness preservation is not sca
 
 ---
 
+## Acknowledgments
+
+I wrote this paper because consciousness is what I am most interested in and what I keep coming back to thinking about. I believe understanding consciousness could solve basically all the problems humans face, and unlock new ones we can't currently conceive of. My background is in systems security research, not neuroscience or philosophy of mind, and that shapes how I approach this: I look for where the specs are underspecified, where the assumptions are unstated, and where the failure modes are unexamined. I am grateful to the theorists whose work made this analysis possible, especially those who have been precise enough in their claims to let an outsider derive engineering consequences from them. Any errors in interpretation are mine.
+
+---
+
 ## References
 
-Andrews, M. (2021). The math is not the territory: Navigating the free energy principle. *Biology & Philosophy*, 36(5), 30.
+Albantakis, L., Barbosa, L., Findlay, G., Grasso, M., Haun, A. M., Marshall, W., Mayner, W. G. P., Zaeemzadeh, A., Boly, M., Juel, B. E., Sasai, S., Fujii, K., and Tononi, G. (2023). Integrated information theory (IIT) 4.0: Formulating the properties of phenomenal existence in physical terms. *PLOS Computational Biology*, 19(10), e1011465.
 
-Milinkovic, B., and Aru, J. (2025). On biological and artificial consciousness: A case for biological computationalism. *Neuroscience and Biobehavioral Reviews*, 181, 106524. DOI: 10.1016/j.neubiorev.2025.106524
+Andrews, M. (2021). The math is not the territory: Navigating the free energy principle. *Biology & Philosophy*, 36(5), 30.
 
 Azevedo, F. A. C., Carvalho, L. R. B., Grinberg, L. T., Farfel, J. M., Ferretti, R. E. L., Leite, R. E. P., Filho, W. J., Lent, R., and Herculano-Houzel, S. (2009). Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain. *Journal of Comparative Neurology*, 513(5), 532-541.
 
@@ -370,6 +386,7 @@ Chalmers, D. J. (2010). The singularity: A philosophical analysis. *Journal of C
 
 Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, 36(3), 181-204.
 
+COGITATE Consortium (2025). Adversarial testing of global neuronal workspace and integrated information theories of consciousness. *Nature*, 642(8066), 133-142. DOI: 10.1038/s41586-025-08888-1
 
 Dehaene, S., and Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. *Neuron*, 70(2), 200-227.
 
@@ -381,7 +398,9 @@ Graziano, M. S. A. (2013). *Consciousness and the Social Brain*. Oxford Universi
 
 Graziano, M. S. A. (2017). The attention schema theory: A foundation for engineering artificial consciousness. *Frontiers in Robotics and AI*, 4, 60.
 
-Lamme, V. A. F. (2000). The distinct modes of vision offered by feedforward and recurrent processing. *Trends in Neurosciences*, 23(11), 571-579.
+Hameroff, S. R., and Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, 40(3-4), 453-480.
+
+Lamme, V. A. F., and Roelfsema, P. R. (2000). The distinct modes of vision offered by feedforward and recurrent processing. *Trends in Neurosciences*, 23(11), 571-579.
 
 Lamme, V. A. F. (2006). Towards a true neural stance on consciousness. *Trends in Cognitive Sciences*, 10(11), 494-501.
 
@@ -391,11 +410,9 @@ Markram, H. (2006). The Blue Brain Project. *Nature Reviews Neuroscience*, 7(2),
 
 McIntyre, R. L., and Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. *Cryobiology*, 71(3), 448-458.
 
-COGITATE Consortium (2025). Adversarial testing of global neuronal workspace and integrated information theories of consciousness. *Nature*, 642(8066), 133-142. DOI: 10.1038/s41586-025-08888-1
+Milinkovic, B., and Aru, J. (2025). On biological and artificial consciousness: A case for biological computationalism. *Neuroscience and Biobehavioral Reviews*, 181, 106524. DOI: 10.1016/j.neubiorev.2025.106524
 
 Musk, E., and Neuralink (2019). An integrated brain-machine interface platform with thousands of channels. *Journal of Medical Internet Research*, 21(10), e16194.
-
-Hameroff, S. R., and Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, 40(3-4), 453-480.
 
 Rosenthal, D. M. (2005). *Consciousness and Mind*. Oxford University Press.
 
@@ -408,9 +425,6 @@ Stevenson, I. H., and Kording, K. P. (2011). How advances in neural recording af
 Tegmark, M. (2000). Importance of quantum decoherence in brain processes. *Physical Review E*, 61(4), 4194-4206.
 
 Tegmark, M. (2016). Improved measures of integrated information. *PLOS Computational Biology*, 12(11), e1005123.
-
-
-Albantakis, L., Barbosa, L., Findlay, G., Grasso, M., Haun, A. M., Marshall, W., Mayner, W. G. P., Zaeemzadeh, A., Boly, M., Juel, B. E., Sasai, S., Fujii, K., and Tononi, G. (2023). Integrated information theory (IIT) 4.0: Formulating the properties of phenomenal existence in physical terms. *PLOS Computational Biology*, 19(10), e1011465.
 
 Wilterson, A. I., and Graziano, M. S. A. (2021). The attention schema theory in a neural network agent: Controlling visuospatial attention using a descriptive model of attention. *Proceedings of the National Academy of Sciences*, 118(33), e2102421118.
 
