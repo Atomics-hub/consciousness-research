@@ -409,7 +409,7 @@ def figure6():
 
     # Draw one continuous green bar, then labels with divider lines
     bar_left = 0.75
-    bar_right = 7.05
+    bar_right = 6.85
     bar_y = 5.4
     bar_h = 0.55
     bar_rect = mpatches.FancyBboxPatch((bar_left, bar_y - bar_h/2), bar_right - bar_left, bar_h,
@@ -445,10 +445,10 @@ def figure6():
     draw_theory_box(ax, 13.0, 2.7, 'Orch OR', SUBSTRATE_DEP)
 
     # Unclear branch (middle-bottom)
-    draw_arrow(ax, 7, 7.85, 7, 4.2, 'Unclear', 'right')
-    ax.text(7, 3.9, 'Depends on whether\nembodiment is required', **question_style)
-    draw_arrow(ax, 7, 3.55, 7, 2.9, '', 'left')
-    draw_theory_box(ax, 7, 2.5, 'Pred. Proc.', SUBSTRATE_UNCLEAR, width=1.8)
+    draw_arrow(ax, 7, 7.85, 7.5, 4.2, 'Unclear', 'right')
+    ax.text(7.5, 3.9, 'Depends on whether\nembodiment is required', **question_style)
+    draw_arrow(ax, 7.5, 3.55, 7.5, 2.9, '', 'left')
+    draw_theory_box(ax, 7.5, 2.5, 'Pred. Proc.', SUBSTRATE_UNCLEAR, width=1.8)
 
     # Legend
     legend_handles = [
