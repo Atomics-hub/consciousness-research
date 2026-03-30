@@ -405,13 +405,13 @@ def figure6():
     ax.text(3.5, 6.85, 'Is functional organization\nsufficient?', **question_style)
 
     draw_arrow(ax, 2.2, 6.5, 1.5, 5.85, 'Yes', 'left')
-    draw_theory_box(ax, 1.5, 5.4, 'GNWT', SUBSTRATE_INDEP)
-    draw_theory_box(ax, 3.3, 5.4, 'HOT', SUBSTRATE_INDEP)
-    draw_theory_box(ax, 5.1, 5.4, 'AST', SUBSTRATE_INDEP)
-    draw_theory_box(ax, 6.9, 5.4, 'RPT', SUBSTRATE_INDEP)
-    draw_arrow(ax, 3.5, 6.5, 3.3, 5.85, '', 'left')
-    draw_arrow(ax, 4.8, 6.5, 5.1, 5.85, '', 'right')
-    draw_arrow(ax, 4.8, 6.5, 6.9, 5.85, '', 'right')
+    draw_theory_box(ax, 1.5, 5.4, 'GNWT', SUBSTRATE_INDEP, width=1.5)
+    draw_theory_box(ax, 3.1, 5.4, 'HOT', SUBSTRATE_INDEP, width=1.5)
+    draw_theory_box(ax, 4.7, 5.4, 'AST', SUBSTRATE_INDEP, width=1.5)
+    draw_theory_box(ax, 6.3, 5.4, 'RPT', SUBSTRATE_INDEP, width=1.5)
+    draw_arrow(ax, 3.5, 6.5, 3.1, 5.85, '', 'left')
+    draw_arrow(ax, 4.8, 6.5, 4.7, 5.85, '', 'right')
+    draw_arrow(ax, 4.8, 6.5, 6.3, 5.85, '', 'right')
 
     # NO branch (right)
     draw_arrow(ax, 8.5, 7.85, 10.5, 7.15, 'No', 'right')
@@ -447,7 +447,7 @@ def figure6():
     ax.legend(handles=legend_handles, loc='lower left', fontsize=9, frameon=True,
               facecolor='white', edgecolor='#cccccc', bbox_to_anchor=(0.0, -0.02), ncol=3)
 
-    ax.set_title('Figure 6. Theory Decision Tree: Where Does Each Theory Fall?',
+    ax.set_title('Figure 1. Theory Decision Tree: Where Does Each Theory Fall?',
                  fontsize=13, fontweight='bold', pad=15)
 
     fig.tight_layout()
