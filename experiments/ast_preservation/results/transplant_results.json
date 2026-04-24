@@ -1,0 +1,42 @@
+{
+  "transplant": {
+    "mean_reward": -21.774538641542218,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.9998,
+    "mean_self_report_corr": 0.14241434310995205,
+    "mean_other_report_corr": 0.0012152718778210825,
+    "identity_probe_accuracy": 1.0,
+    "memory_overlap": 1.0
+  },
+  "random_control": {
+    "mean_reward": -25.00723539528253,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.9801,
+    "mean_self_report_corr": 0.5169490798062598,
+    "mean_other_report_corr": 0.004196225191538667,
+    "identity_probe_accuracy": 0.0,
+    "memory_overlap": 0.0
+  },
+  "arch_matched": {
+    "mean_reward": -28.57042016943345,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.9801,
+    "mean_self_report_corr": -0.049584712673946,
+    "mean_other_report_corr": 0.0014067027662630054,
+    "identity_probe_accuracy": 1.0,
+    "memory_overlap": 1.0
+  },
+  "full_retrain": {
+    "mean_reward": -25.026348544165515,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.9801,
+    "mean_self_report_corr": 0.0075774048182293665,
+    "mean_other_report_corr": -0.0014606911517461,
+    "identity_probe_accuracy": 0.0,
+    "memory_overlap": 0.0
+  }
+}

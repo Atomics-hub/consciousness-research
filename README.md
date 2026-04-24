@@ -1,6 +1,6 @@
 # What Must Be Preserved? Mapping Theories of Consciousness to Engineering Requirements for Mind Preservation
 
-**Thomas Ryan** — Independent Researcher, San Francisco, CA
+**Thomas Ryan** - Independent Researcher, San Francisco, CA
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19374628.svg)](https://doi.org/10.5281/zenodo.19374628)
 
@@ -8,7 +8,7 @@
 
 The engineering of consciousness preservation (whether through whole-brain emulation, cryonic revival, or brain-computer interfaces) proceeds largely without reference to theories of consciousness. This is a remarkable omission. The choice of what must be preserved in a brain depends entirely on what generates consciousness, and the major theories disagree on this question by many orders of magnitude in their engineering implications.
 
-This paper evaluates eight major theories of consciousness — Integrated Information Theory (IIT 4.0), Global Neuronal Workspace Theory (GNWT), Higher-Order Thought theory (HOT), Predictive Processing / Free Energy Principle, Recurrent Processing Theory (RPT), Biological Computationalism, Orchestrated Objective Reduction (Orch OR), and Attention Schema Theory (AST) — against nine preservation-relevant criteria, and derives specific engineering requirements from each theory's core postulates.
+This paper evaluates eight major theories of consciousness, including Integrated Information Theory (IIT 4.0), Global Neuronal Workspace Theory (GNWT), Higher-Order Thought theory (HOT), Predictive Processing / Free Energy Principle, Recurrent Processing Theory (RPT), Biological Computationalism, Orchestrated Objective Reduction (Orch OR), and Attention Schema Theory (AST), against nine preservation-relevant criteria. It derives specific engineering requirements from each theory's core postulates.
 
 **Key findings:**
 
@@ -21,15 +21,25 @@ This paper evaluates eight major theories of consciousness — Integrated Inform
 
 ## Paper
 
-📄 **[Read the paper on Zenodo](https://doi.org/10.5281/zenodo.19374628)**
+**[Read the paper on Zenodo](https://doi.org/10.5281/zenodo.19374628)**
 
 The PDF is also available in this repo: [`paper/ryan_2026_what_must_be_preserved.pdf`](paper/ryan_2026_what_must_be_preserved.pdf)
+
+## Paper 2
+
+`paper2/` contains an exploratory follow-up preprint and runnable pilot experiment:
+
+**An Exploratory Transplant Assay for Attention Schema Theory in a Toy Neural Agent**
+
+The associated code is in `experiments/ast_preservation/`. See [`experiments/ast_preservation/README.md`](experiments/ast_preservation/README.md) for reproduction commands and limitations.
 
 ## Repository Contents
 
 ```
 paper/              Full paper (markdown source, PDF, build script)
 paper/figures/      All 8 figures (PNG + PDF)
+paper2/             Exploratory AST transplant-assay follow-up
+experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
   ├── engineering_bridge_table.md  Theory → engineering requirements mapping

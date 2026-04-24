@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
+from pathlib import Path
+
+FIGURES_DIR = Path(__file__).resolve().parent
 
 plt.rcParams.update({
     'font.family': 'sans-serif',
@@ -67,7 +70,7 @@ def figure1():
     ax.set_ylabel('Preservation Favorability (0\u20135)', fontsize=12)
     ax.set_ylim(0, 6.2)
     ax.set_yticks([0, 1, 2, 3, 4, 5])
-    ax.set_title('Figure 5. The Substrate Independence Fault Line', fontsize=13, fontweight='bold', pad=15)
+    ax.set_title('Figure 1. The Substrate Independence Fault Line', fontsize=13, fontweight='bold', pad=15)
 
     legend_handles = [
         mpatches.Patch(color=SUBSTRATE_INDEP, label='Substrate-independent (4 theories)'),
@@ -78,8 +81,8 @@ def figure1():
               bbox_to_anchor=(0.5, -0.18), ncol=3)
 
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig1_substrate_fault_line.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig1_substrate_fault_line.pdf')
+    fig.savefig(FIGURES_DIR / 'fig1_substrate_fault_line.png')
+    fig.savefig(FIGURES_DIR / 'fig1_substrate_fault_line.pdf')
     plt.close(fig)
     print("Figure 1 saved.")
 
@@ -174,8 +177,8 @@ def figure2():
 
     fig.suptitle('Figure 2. Engineering Requirements Span Across Theories', fontsize=13, fontweight='bold', y=1.02)
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig2_engineering_requirements.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig2_engineering_requirements.pdf')
+    fig.savefig(FIGURES_DIR / 'fig2_engineering_requirements.png')
+    fig.savefig(FIGURES_DIR / 'fig2_engineering_requirements.pdf')
     plt.close(fig)
     print("Figure 2 saved.")
 
@@ -237,10 +240,10 @@ def figure3():
     ax.legend(handles=legend_handles, loc='lower right', fontsize=9, frameon=True,
               facecolor='white', edgecolor='#cccccc', bbox_to_anchor=(1.0, -0.25), ncol=3)
 
-    ax.set_title('Figure 8. Preservation Strategy Risk Matrix', fontsize=13, fontweight='bold', pad=20)
+    ax.set_title('Figure 3. Preservation Strategy Risk Matrix', fontsize=13, fontweight='bold', pad=20)
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig3_risk_matrix.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig3_risk_matrix.pdf')
+    fig.savefig(FIGURES_DIR / 'fig3_risk_matrix.png')
+    fig.savefig(FIGURES_DIR / 'fig3_risk_matrix.pdf')
     plt.close(fig)
     print("Figure 3 saved.")
 
@@ -296,10 +299,10 @@ def figure4():
     ax.text(3.0, 6.15, 'Deflates consciousness,\neasy to preserve', fontsize=9, ha='center', color='#666666', va='bottom')
     ax.text(8.0, 6.15, 'Takes consciousness seriously,\nhard/impossible to preserve', fontsize=9, ha='center', color='#666666', va='bottom')
 
-    ax.set_title('Figure 6. The Deflation Paradox', fontsize=13, fontweight='bold', pad=15)
+    ax.set_title('Figure 4. The Deflation Paradox', fontsize=13, fontweight='bold', pad=15)
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig4_deflation_paradox.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig4_deflation_paradox.pdf')
+    fig.savefig(FIGURES_DIR / 'fig4_deflation_paradox.png')
+    fig.savefig(FIGURES_DIR / 'fig4_deflation_paradox.pdf')
     plt.close(fig)
     print("Figure 4 saved.")
 
@@ -349,7 +352,7 @@ def figure5():
 
     ax.set_xlim(2020, 2170)
     ax.set_xlabel('Year', fontsize=12)
-    ax.set_title('Figure 3. Estimated Timeline to Preservation Feasibility', fontsize=13, fontweight='bold', pad=15)
+    ax.set_title('Figure 5. Estimated Timeline to Preservation Feasibility', fontsize=13, fontweight='bold', pad=15)
 
     legend_handles = [
         mpatches.Patch(color=SUBSTRATE_INDEP, label='Substrate-independent'),
@@ -359,8 +362,8 @@ def figure5():
     ax.legend(handles=legend_handles, loc='lower right', fontsize=9, frameon=False)
 
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig5_timeline.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig5_timeline.pdf')
+    fig.savefig(FIGURES_DIR / 'fig5_timeline.png')
+    fig.savefig(FIGURES_DIR / 'fig5_timeline.pdf')
     plt.close(fig)
     print("Figure 5 saved.")
 
@@ -459,12 +462,12 @@ def figure6():
     ax.legend(handles=legend_handles, loc='lower left', fontsize=9, frameon=True,
               facecolor='white', edgecolor='#cccccc', bbox_to_anchor=(0.0, -0.02), ncol=3)
 
-    ax.set_title('Figure 1. Theory Decision Tree: Where Does Each Theory Fall?',
+    ax.set_title('Figure 6. Theory Decision Tree: Where Does Each Theory Fall?',
                  fontsize=13, fontweight='bold', pad=15)
 
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig6_theory_decision_tree.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig6_theory_decision_tree.pdf')
+    fig.savefig(FIGURES_DIR / 'fig6_theory_decision_tree.png')
+    fig.savefig(FIGURES_DIR / 'fig6_theory_decision_tree.pdf')
     plt.close(fig)
     print("Figure 6 saved.")
 
@@ -593,12 +596,12 @@ def figure7():
     ax.set_xlim(-0.5, 14)
     ax.set_ylim(-0.3, 8.8)
     ax.axis('off')
-    ax.set_title('Figure 4. Information Requirements Pyramid',
+    ax.set_title('Figure 7. Information Requirements Pyramid',
                  fontsize=13, fontweight='bold', pad=15)
 
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig7_information_pyramid.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig7_information_pyramid.pdf')
+    fig.savefig(FIGURES_DIR / 'fig7_information_pyramid.png')
+    fig.savefig(FIGURES_DIR / 'fig7_information_pyramid.pdf')
     plt.close(fig)
     print("Figure 7 saved.")
 
@@ -679,12 +682,12 @@ def figure8():
     ax.set_yticks([0, 1/8, 2/8, 3/8, 4/8, 5/8, 6/8, 7/8, 1.0])
     ax.set_yticklabels(['0/8', '1/8', '2/8', '3/8', '4/8', '5/8', '6/8', '7/8', '8/8'], fontsize=9)
 
-    ax.set_title('Figure 7. The Preservation Strategy Landscape',
+    ax.set_title('Figure 8. The Preservation Strategy Landscape',
                  fontsize=13, fontweight='bold', pad=15)
 
     fig.tight_layout()
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig8_strategy_landscape.png')
-    fig.savefig('/Users/guts/Documents/consciousness-research/paper/figures/fig8_strategy_landscape.pdf')
+    fig.savefig(FIGURES_DIR / 'fig8_strategy_landscape.png')
+    fig.savefig(FIGURES_DIR / 'fig8_strategy_landscape.pdf')
     plt.close(fig)
     print("Figure 8 saved.")
 

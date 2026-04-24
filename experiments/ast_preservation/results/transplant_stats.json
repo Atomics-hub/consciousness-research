@@ -1,0 +1,242 @@
+[
+  {
+    "metric": "reward",
+    "a": "arch_matched",
+    "b": "full_retrain",
+    "mean_a": -28.57042016943345,
+    "mean_b": -25.026348544165515,
+    "d": -0.10933646739656008,
+    "p": 1.4741261617440527e-05,
+    "sig": true
+  },
+  {
+    "metric": "reward",
+    "a": "arch_matched",
+    "b": "random_control",
+    "mean_a": -28.57042016943345,
+    "mean_b": -25.00723539528253,
+    "d": -0.10985599735671933,
+    "p": 1.4741261617440527e-05,
+    "sig": true
+  },
+  {
+    "metric": "reward",
+    "a": "arch_matched",
+    "b": "transplant",
+    "mean_a": -28.57042016943345,
+    "mean_b": -21.774538641542218,
+    "d": -0.14372211794883427,
+    "p": 0.013152707833101776,
+    "sig": false
+  },
+  {
+    "metric": "reward",
+    "a": "full_retrain",
+    "b": "random_control",
+    "mean_a": -25.026348544165515,
+    "mean_b": -25.00723539528253,
+    "d": -0.3732044907192932,
+    "p": 1.6479364449501875e-08,
+    "sig": true
+  },
+  {
+    "metric": "reward",
+    "a": "full_retrain",
+    "b": "transplant",
+    "mean_a": -25.026348544165515,
+    "mean_b": -21.774538641542218,
+    "d": -0.13926748041671408,
+    "p": 0.5776657166770911,
+    "sig": false
+  },
+  {
+    "metric": "reward",
+    "a": "random_control",
+    "b": "transplant",
+    "mean_a": -25.00723539528253,
+    "mean_b": -21.774538641542218,
+    "d": -0.13862616971603609,
+    "p": 0.5878531753195925,
+    "sig": false
+  },
+  {
+    "metric": "self_report_corr",
+    "a": "arch_matched",
+    "b": "full_retrain",
+    "mean_a": -0.049582641409491576,
+    "mean_b": 0.00873606563472093,
+    "d": -0.5966676329055698,
+    "p": 2.845255256693596e-07,
+    "sig": true
+  },
+  {
+    "metric": "self_report_corr",
+    "a": "arch_matched",
+    "b": "random_control",
+    "mean_a": -0.049582641409491576,
+    "mean_b": 0.5109170218288664,
+    "d": -2.443977399551701,
+    "p": 4.266322730718234e-18,
+    "sig": true
+  },
+  {
+    "metric": "self_report_corr",
+    "a": "arch_matched",
+    "b": "transplant",
+    "mean_a": -0.049582641409491576,
+    "mean_b": 0.14689990152081633,
+    "d": -2.7041725489909916,
+    "p": 3.89655984509591e-18,
+    "sig": true
+  },
+  {
+    "metric": "self_report_corr",
+    "a": "full_retrain",
+    "b": "random_control",
+    "mean_a": 0.00873606563472093,
+    "mean_b": 0.5109170218288664,
+    "d": -1.7619534087547872,
+    "p": 1.0820049169264091e-17,
+    "sig": true
+  },
+  {
+    "metric": "self_report_corr",
+    "a": "full_retrain",
+    "b": "transplant",
+    "mean_a": 0.00873606563472093,
+    "mean_b": 0.14689990152081633,
+    "d": -1.1564038970259105,
+    "p": 1.1720978734947919e-14,
+    "sig": true
+  },
+  {
+    "metric": "self_report_corr",
+    "a": "random_control",
+    "b": "transplant",
+    "mean_a": 0.5109170218288664,
+    "mean_b": 0.14689990152081633,
+    "d": 1.4988563751790858,
+    "p": 1.4289849453522757e-16,
+    "sig": true
+  },
+  {
+    "metric": "other_report_corr",
+    "a": "arch_matched",
+    "b": "full_retrain",
+    "mean_a": 0.0038665745814275903,
+    "mean_b": -0.001428044050365112,
+    "d": 0.13809705444774498,
+    "p": 0.21397924855375006,
+    "sig": false
+  },
+  {
+    "metric": "other_report_corr",
+    "a": "arch_matched",
+    "b": "random_control",
+    "mean_a": 0.0038665745814275903,
+    "mean_b": 0.004580118871453859,
+    "d": -0.015806136134455504,
+    "p": 0.3301871000387707,
+    "sig": false
+  },
+  {
+    "metric": "other_report_corr",
+    "a": "arch_matched",
+    "b": "transplant",
+    "mean_a": 0.0038665745814275903,
+    "mean_b": -0.0005741994295810379,
+    "d": 0.10094545780822131,
+    "p": 0.2952175018938298,
+    "sig": false
+  },
+  {
+    "metric": "other_report_corr",
+    "a": "full_retrain",
+    "b": "random_control",
+    "mean_a": -0.001428044050365112,
+    "mean_b": 0.004580118871453859,
+    "d": -0.17906776079443548,
+    "p": 0.1521534667631603,
+    "sig": false
+  },
+  {
+    "metric": "other_report_corr",
+    "a": "full_retrain",
+    "b": "transplant",
+    "mean_a": -0.001428044050365112,
+    "mean_b": -0.0005741994295810379,
+    "d": -0.021628194626659325,
+    "p": 0.6721843853341778,
+    "sig": false
+  },
+  {
+    "metric": "other_report_corr",
+    "a": "random_control",
+    "b": "transplant",
+    "mean_a": 0.004580118871453859,
+    "mean_b": -0.0005741994295810379,
+    "d": 0.12347607314359789,
+    "p": 0.26229571996849943,
+    "sig": false
+  },
+  {
+    "metric": "goals_found",
+    "a": "arch_matched",
+    "b": "full_retrain",
+    "mean_a": 0.0,
+    "mean_b": 0.0,
+    "d": 0.0,
+    "p": null,
+    "sig": false
+  },
+  {
+    "metric": "goals_found",
+    "a": "arch_matched",
+    "b": "random_control",
+    "mean_a": 0.0,
+    "mean_b": 0.0,
+    "d": 0.0,
+    "p": null,
+    "sig": false
+  },
+  {
+    "metric": "goals_found",
+    "a": "arch_matched",
+    "b": "transplant",
+    "mean_a": 0.0,
+    "mean_b": 0.0,
+    "d": 0.0,
+    "p": null,
+    "sig": false
+  },
+  {
+    "metric": "goals_found",
+    "a": "full_retrain",
+    "b": "random_control",
+    "mean_a": 0.0,
+    "mean_b": 0.0,
+    "d": 0.0,
+    "p": null,
+    "sig": false
+  },
+  {
+    "metric": "goals_found",
+    "a": "full_retrain",
+    "b": "transplant",
+    "mean_a": 0.0,
+    "mean_b": 0.0,
+    "d": 0.0,
+    "p": null,
+    "sig": false
+  },
+  {
+    "metric": "goals_found",
+    "a": "random_control",
+    "b": "transplant",
+    "mean_a": 0.0,
+    "mean_b": 0.0,
+    "d": 0.0,
+    "p": null,
+    "sig": false
+  }
+]

@@ -3,3 +3,16 @@ __pycache__/
 *.pyc
 *.log
 .DS_Store
+__pyphi_cache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+build/
+dist/
+*.egg-info/
+
+# Local planning/audit notes that are not part of the public release.
+NEXT_PAPER.md
+paper2/release_audit.md

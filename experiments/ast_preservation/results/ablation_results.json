@@ -1,0 +1,34 @@
+{
+  "full": {
+    "mean_reward": -20.214471181273595,
+    "mean_goals_found": 0.01,
+    "mean_steps": 198.02,
+    "distractor_suppression_rate": 0.9998990001009999,
+    "mean_self_report_corr": 0.9372480116434839,
+    "mean_other_report_corr": 0.0034567371688537735
+  },
+  "schema_ablated": {
+    "mean_reward": -20.50003855586973,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.99995,
+    "mean_self_report_corr": 0.0,
+    "mean_other_report_corr": 0.0
+  },
+  "attention_ablated": {
+    "mean_reward": -26.32135709846021,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.97545,
+    "mean_self_report_corr": 0.0,
+    "mean_other_report_corr": 0.0020090442970642428
+  },
+  "self_model_ablated": {
+    "mean_reward": -20.45023587228014,
+    "mean_goals_found": 0.0,
+    "mean_steps": 200.0,
+    "distractor_suppression_rate": 0.9999,
+    "mean_self_report_corr": 0.9386864472751856,
+    "mean_other_report_corr": 0.002627500437915912
+  }
+}

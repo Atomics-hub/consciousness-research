@@ -1,0 +1,48 @@
+{
+  "full": {
+    "phi": 0,
+    "details": {
+      "n_nodes": 8,
+      "n_steps": 1000,
+      "node_indices": [
+        22,
+        19,
+        25,
+        16,
+        26,
+        17,
+        23,
+        18
+      ],
+      "tpm_shape": [
+        256,
+        8
+      ],
+      "state_coverage": 0.16796875,
+      "method_used": "approximate_phi_star"
+    }
+  },
+  "schema_ablated": {
+    "phi": 0,
+    "details": {
+      "n_nodes": 8,
+      "n_steps": 1000,
+      "node_indices": [
+        2,
+        29,
+        22,
+        15,
+        9,
+        30,
+        23,
+        16
+      ],
+      "tpm_shape": [
+        256,
+        8
+      ],
+      "state_coverage": 0.06640625,
+      "method_used": "approximate_phi_star"
+    }
+  }
+}

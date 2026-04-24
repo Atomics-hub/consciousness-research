@@ -1,0 +1,50 @@
+{
+  "full": {
+    "recurrent_processing": 1.0,
+    "global_broadcast": 1.0,
+    "higher_order_representation": 1.0,
+    "attention_modulation": 0.0,
+    "flexible_behavior": 0.5,
+    "metacognition": 1.0,
+    "integration": 0.5,
+    "self_other_distinction": 0.5,
+    "temporal_depth": 0.5,
+    "unified_agency": 1.0
+  },
+  "schema_ablated": {
+    "recurrent_processing": 0.0,
+    "global_broadcast": 1.0,
+    "higher_order_representation": 0.0,
+    "attention_modulation": 0.0,
+    "flexible_behavior": 0.5,
+    "metacognition": 0.0,
+    "integration": 0.5,
+    "self_other_distinction": 0.5,
+    "temporal_depth": 0.5,
+    "unified_agency": 1.0
+  },
+  "attention_ablated": {
+    "recurrent_processing": 0.0,
+    "global_broadcast": 1.0,
+    "higher_order_representation": 1.0,
+    "attention_modulation": 0.0,
+    "flexible_behavior": 0.5,
+    "metacognition": 0.0,
+    "integration": 0.5,
+    "self_other_distinction": 0.5,
+    "temporal_depth": 0.5,
+    "unified_agency": 1.0
+  },
+  "self_model_ablated": {
+    "recurrent_processing": 1.0,
+    "global_broadcast": 1.0,
+    "higher_order_representation": 1.0,
+    "attention_modulation": 0.0,
+    "flexible_behavior": 0.5,
+    "metacognition": 1.0,
+    "integration": 0.5,
+    "self_other_distinction": 0.5,
+    "temporal_depth": 0.5,
+    "unified_agency": 1.0
+  }
+}
