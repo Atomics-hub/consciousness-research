@@ -12,6 +12,7 @@ __pyphi_cache__/
 build/
 dist/
 *.egg-info/
+*.zip
 
 # Local planning/audit notes that are not part of the public release.
 NEXT_PAPER.md

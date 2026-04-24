@@ -31,6 +31,8 @@ The PDF is also available in this repo: [`paper/ryan_2026_what_must_be_preserved
 
 **An Exploratory Transplant Assay for Attention Schema Theory in a Toy Neural Agent**
 
+**[Read Paper 2 on Zenodo](https://doi.org/10.5281/zenodo.19738204)**
+
 The associated code is in `experiments/ast_preservation/`. See [`experiments/ast_preservation/README.md`](experiments/ast_preservation/README.md) for reproduction commands and limitations.
 
 ## Repository Contents
@@ -54,12 +56,26 @@ notes/              Deep research notes
 
 ## Citation
 
+Paper 1:
+
 ```bibtex
 @article{ryan2026preserved,
   title={What Must Be Preserved? Mapping Theories of Consciousness to Engineering Requirements for Mind Preservation},
   author={Ryan, Thomas},
   year={2026},
   doi={10.5281/zenodo.19374628},
+  publisher={Zenodo}
+}
+```
+
+Paper 2:
+
+```bibtex
+@article{ryan2026asttransplant,
+  title={An Exploratory Transplant Assay for Attention Schema Theory in a Toy Neural Agent},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.19738204},
   publisher={Zenodo}
 }
 ```
