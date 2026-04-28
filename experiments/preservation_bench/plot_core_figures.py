@@ -52,7 +52,14 @@ def parse_train_seed_index(path: Path) -> int | None:
 
 
 def validation_counts(run_dir: Path) -> dict:
-    paths = sorted(run_dir.glob("train_seed_*/source_validation.json"))
+    def train_seed_sort_key(path: Path) -> int:
+        train_idx = parse_train_seed_index(path)
+        return train_idx if train_idx is not None else -1
+
+    paths = sorted(
+        run_dir.glob("train_seed_*/source_validation.json"),
+        key=train_seed_sort_key,
+    )
     passed = []
     failed = []
     reasons = defaultdict(int)

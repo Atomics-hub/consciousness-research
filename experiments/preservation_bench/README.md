@@ -103,6 +103,14 @@ KMP_DUPLICATE_LIB_OK=TRUE OMP_NUM_THREADS=1 python3 \
   --config experiments/preservation_bench/configs/ast_competence_v2_core_10seed.json
 ```
 
+The expanded preprint-scale replication extends the same seed scheme to 30 attempted sources:
+
+```bash
+KMP_DUPLICATE_LIB_OK=TRUE OMP_NUM_THREADS=1 python3 \
+  experiments/preservation_bench/run_ast_training_smoke.py \
+  --config experiments/preservation_bench/configs/ast_competence_v2_core_30seed.json
+```
+
 ## Main Conditions
 
 - source_full
@@ -178,7 +186,8 @@ Current pilot read:
 Core replication status:
 
 - `ast_competence_v2_core_10seed.json` has been run
-- 8 of 10 source seeds passed validation
+- `ast_competence_v2_core_30seed.json` has been run as the expanded preprint-scale replication
+- 22 of 30 source seeds passed validation
 - rejected source seeds are retained as source-validation failures, not used for transfer contrasts
 - the reduced preservation profile is written to `runs/ast_competence_v2_core_10seed/preservation_profile_core.png`
 - focused paper figures are written under `runs/ast_competence_v2_core_10seed/paper_figures/`
@@ -188,15 +197,15 @@ Core replication status:
 
 Seed-count decision:
 
-- use the validated n = 8 core replication as the preprint-scale AST v0 result basis
+- use the validated n = 22 expanded core replication as the preprint-scale AST v0 result basis
 - do not add more transfer variants before drafting
-- only run 20 to 30 attempted source seeds if the target is a larger journal-style version
+- for a larger journal-style version, improve source-training stability or broaden the task family before adding more transfer variants
 
 Next build step:
 
-1. audit `paper3/manuscript.md` for overclaims and missing citations
-2. add a PDF build path for Paper 3
-3. freeze the protocol before any larger final run
+1. final prose audit on `paper3/manuscript.md`
+2. rebuild and visually audit the Paper 3 PDF
+3. prepare release metadata once the manuscript is stable
 
 ## Seed Registry
 

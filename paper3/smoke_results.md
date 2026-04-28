@@ -1,5 +1,7 @@
 # AST Checkpoint Smoke Results
 
+Note: the paper-facing AST v0 results are now based on the expanded core run with 30 attempted source seeds and 22 validated sources. The earlier smoke and reduced-replication sections below are retained as development history.
+
 This is a plumbing check, not a Paper 3 result. It evaluates static conditions from the existing Paper 2 checkpoint with the new PreservationBench log-first evaluator.
 
 Command:

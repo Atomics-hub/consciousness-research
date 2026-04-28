@@ -14,7 +14,7 @@
 
 Mind-preservation proposals often depend on claims about functional, psychological, or computational continuity, but these claims are rarely tested as explicit substrate-transfer interventions. This paper introduces PreservationBench, a benchmark framework for measuring preservation-relevant functional continuity after a source agent is copied, transplanted, adapted, or relearned in a target substrate. The benchmark is not a consciousness test and does not decide personal identity. It asks a narrower engineering question: which source-specific functions remain active after transfer, and which apparent recoveries are better explained by relearning, behavioral mimicry, or proxy optimization?
 
-As a first validation tier, I implement PreservationBench-AST v0 in a toy neural agent inspired by Attention Schema Theory. A source agent is trained in a small grid-world task with attention control, self-report, and source-specific identity probes. Selected source modules are transferred into a target architecture under matched controls: frozen copied state, source-alignment repair, copied attention, source-facing attention and control bridges, behavior-only distillation, and frozen random controls. In a reduced core replication, 10 independent source seeds were attempted and 8 passed source validation. The resulting preservation profile shows four dissociations. Frozen copied schema and self-model state preserves source-specific identity-probe behavior but does not recouple report or control. Long source-alignment repair improves report but does not restore source-like task control. A source-facing attention bridge recovers report behavior without source-like action agreement. A control bridge drives reward and goal-attention mass above source levels but remains weak on goals found and source-action agreement, indicating proxy optimization rather than preserved control. Copying source attention yields the strongest combined profile, with identity-probe preservation, high self-report, near-source goals found, and high source-action agreement, but this condition narrows the substrate gap. These results support PreservationBench as a profile-based assay for separating copied provenance, report continuity, task competence, proxy reward, and source-like control.
+As a first validation tier, I implement PreservationBench-AST v0 in a toy neural agent inspired by Attention Schema Theory. A source agent is trained in a small grid-world task with attention control, self-report, and source-specific identity probes. Selected source modules are transferred into a target architecture under matched controls: frozen copied state, source-alignment repair, copied attention, source-facing attention and control bridges, behavior-only distillation, and frozen random controls. In an expanded core replication, 30 independent source seeds were attempted and 22 passed source validation. The resulting preservation profile shows four dissociations. Frozen copied schema and self-model state preserved source-specific identity-probe behavior but did not recouple report or control. Long source-alignment repair improved report but did not restore source-like task control. A source-facing attention bridge recovered report behavior without source-like action agreement. A control bridge drove reward and goal-attention mass above source levels but remained weak on goals found and source-action agreement, indicating proxy optimization rather than preserved control. Copying source attention yielded the strongest combined profile, with identity-probe preservation, high self-report, near-source goals found, and high source-action agreement, but this condition narrows the substrate gap. These results support PreservationBench as a profile-based assay for separating copied provenance, report continuity, task competence, proxy reward, and source-like control.
 
 ---
 
@@ -155,19 +155,19 @@ The copied-attention condition is a coupling diagnostic, not a clean substrate-t
 
 ### 4.5 Evaluation And Analysis
 
-Every condition is evaluated on matched paired evaluation episodes for each source seed. The unit of inference is the trained source seed, not the evaluation episode. Episode-level metrics are aggregated to one row per condition per source seed. Paired contrasts are computed at the source-seed level using bootstrap confidence intervals over source seeds, paired Cohen dz, and sign-flip permutation p-values. The current draft reports raw means and paired intervals as descriptive evidence. Holm-corrected significance is not used as the headline because the current run is a preprint-scale pilot.
+Every condition is evaluated on matched paired evaluation episodes for each source seed. The unit of inference is the trained source seed, not the evaluation episode. Episode-level metrics are aggregated to one row per condition per source seed. Paired contrasts are computed at the source-seed level using bootstrap confidence intervals over source seeds, paired Cohen dz, and sign-flip permutation p-values. The current draft reports raw means and paired intervals as descriptive evidence. Holm-corrected significance is not used as the headline because the current run is a preprint-scale benchmark run.
 
-The core replication attempted 10 source seeds and evaluated 100 paired episodes per condition. Eight source seeds passed validation and were included in transfer contrasts.
+The expanded core replication attempted 30 source seeds and evaluated 100 paired episodes per condition. Twenty-two source seeds passed validation and were included in transfer contrasts.
 
 ## 5. Results
 
 ### 5.1 Source Validation
 
-Ten independent source seeds were trained. Eight passed the source validation gate. Two were rejected because goals found was 0.030, below the 0.100 gate, even though both had strong self-report. Rejected seeds were retained in the run records but excluded from target-transfer contrasts.
+Thirty independent source seeds were trained. Twenty-two passed the source validation gate. Eight were rejected and retained in the run records but excluded from target-transfer contrasts. Seven rejected seeds failed the goals-found gate, and one rejected seed failed the self-report gate.
 
-![Figure 1. Source validation flow. Ten independent source seeds were trained. Eight passed the source validation gate and two were rejected for low goals found.](figures/source_validation_flow.png)
+![Figure 1. Source validation flow. Thirty independent source seeds were trained. Twenty-two passed the source validation gate and eight were rejected before target-transfer contrasts.](figures/source_validation_flow.png)
 
-Among validated sources, `source_full` achieved mean reward -0.630, goals found 0.686, self-report correlation 0.837, identity probe accuracy 1.000, goal-attention mass 0.165, and source-action agreement 1.000 by definition. Source ablations behaved as expected. Schema ablation eliminated self-report correlation while preserving identity probes. Self-model ablation eliminated identity probe accuracy while leaving report behavior largely intact. Attention ablation caused the largest source-side control deficit, reducing reward to -9.933 and goals found to 0.219.
+Among validated sources, `source_full` achieved mean reward -1.711, goals found 0.698, self-report correlation 0.850, identity probe accuracy 1.000, goal-attention mass 0.165, and source-action agreement 1.000 by definition. Source ablations behaved as expected. Schema ablation eliminated self-report correlation while preserving identity probes. Self-model ablation eliminated identity probe accuracy while leaving report behavior largely intact. Attention ablation caused the largest source-side control deficit, reducing reward to -9.930 and goals found to 0.180.
 
 ### 5.2 Continuity Profile
 
@@ -177,31 +177,31 @@ Figure 2 shows the normalized profile across the core condition family. Normaliz
 
 ### 5.3 Frozen Copy And Long Repair
 
-The strict frozen cross-substrate copy preserved source-specific identity probes but failed to recouple most active behavior. It retained identity probe accuracy at 1.000, but its mean self-report correlation was 0.003, goals found was 0.099, and source-action agreement was 0.092. This is a negative profile: copied source state remains detectable but largely inactive.
+The strict frozen cross-substrate copy preserved source-specific identity probes but failed to recouple most active behavior. It retained identity probe accuracy at 1.000, but its mean self-report correlation was -0.054, goals found was 0.118, and source-action agreement was 0.080. This is a negative profile: copied source state remains detectable but largely inactive.
 
-Long source-alignment repair improved report relative to frozen copy, but did not restore source-like control. Mean self-report correlation increased from 0.003 to 0.294, with paired mean difference 0.291 and 95 percent bootstrap CI 0.114 to 0.478. Goals found remained low at 0.182, and source-action agreement remained low at 0.168. Identity probes stayed at 1.000.
+Long source-alignment repair improved report relative to frozen copy, but did not restore source-like control. Mean self-report correlation increased from -0.054 to 0.326, with paired mean difference 0.380 and 95 percent bootstrap CI 0.249 to 0.522. Goals found remained low at 0.155, and source-action agreement remained low at 0.178. Identity probes stayed at 1.000.
 
 ### 5.4 Copied Attention
 
-Copying and freezing the source attention module produced the strongest combined transfer profile. This condition preserved identity probes at 1.000, reached mean self-report correlation 0.796, restored goals found to 0.628, and recovered source-action agreement to 0.849. Compared with long repair, copied attention improved self-report by 0.501, with 95 percent CI 0.357 to 0.655. It also improved source-action agreement by 0.681, with 95 percent CI 0.593 to 0.770.
+Copying and freezing the source attention module produced the strongest combined transfer profile. This condition preserved identity probes at 1.000, reached mean self-report correlation 0.786, restored goals found to 0.616, and recovered source-action agreement to 0.808. Compared with long repair, copied attention improved self-report by 0.460, with 95 percent CI 0.367 to 0.552. It also improved source-action agreement by 0.629, with 95 percent CI 0.568 to 0.695.
 
 This should not be described as a clean cross-architecture success, because the attention module itself is copied. The useful result is bottleneck identification. In this AST-derived task, preserving the attention interface recovers the most source-like combined profile observed in the benchmark.
 
 ### 5.5 Report Bridge Without Control
 
-The attention-adapter bridge recovered report behavior without restoring source-like control. It achieved the highest mean self-report correlation among target-transfer conditions at 0.892, but goals found remained low at 0.116 and source-action agreement remained low at 0.191. Compared with copied attention, the bridge had slightly higher self-report but much lower source-action agreement, with paired mean difference -0.658 and 95 percent CI -0.790 to -0.510.
+The attention-adapter bridge recovered report behavior without restoring source-like control. It reached mean self-report correlation 0.795, statistically indistinguishable from copied attention in this expanded run, but goals found remained low at 0.102 and source-action agreement remained low at 0.193. Compared with copied attention, the bridge had much lower source-action agreement, with paired mean difference -0.615 and 95 percent CI -0.691 to -0.538.
 
 This is one of the central dissociations. A target can be report-like without being control-like. A benchmark that measured self-report alone would overstate this condition.
 
 ### 5.6 Proxy Control Without Source-Like Action
 
-The control-adapter bridge showed a different failure mode. It drove reward and goal-attention mass far above source levels, with mean reward 16.452 and goal-attention mass 0.672. However, it did not restore source-like goals found or source-action agreement. Mean goals found was 0.163, and source-action agreement was 0.307. Self-report correlation was 0.527, below both copied attention and the attention-adapter bridge.
+The control-adapter bridge showed a different failure mode. It drove reward and goal-attention mass far above source levels, with mean reward 18.686 and goal-attention mass 0.730. However, it did not restore source-like goals found or source-action agreement. Mean goals found was 0.147, and source-action agreement was 0.296. Self-report correlation was 0.518, below both copied attention and the attention-adapter bridge.
 
-Compared with copied attention, the control adapter had higher reward by 18.090 and higher goal-attention mass by 0.517, but lower source-action agreement by -0.542 and lower self-report by -0.268. This pattern is best interpreted as optimization of the attention-reward proxy rather than preservation of source-like task control.
+Compared with copied attention, the control adapter had higher reward by 21.147 and higher goal-attention mass by 0.563, but lower source-action agreement by -0.511 and lower self-report by -0.268. This pattern is best interpreted as optimization of the attention-reward proxy rather than preservation of source-like task control.
 
 ### 5.7 Behavior-Only And Random Controls
 
-Behavior-only distillation and frozen random controls failed copied identity probes, as intended. Behavior distillation reached self-report correlation 0.123 and source-action agreement 0.192, while identity probe accuracy remained 0.000. Frozen random had self-report correlation -0.057, source-action agreement 0.012, and identity probe accuracy 0.000. These controls support the interpretation that identity-probe success in copied conditions reflects copied source state rather than independent relearning or random target structure.
+Behavior-only distillation and frozen random controls failed copied identity probes, as intended. Behavior distillation reached self-report correlation 0.162 and source-action agreement 0.136, while identity probe accuracy remained 0.000. Frozen random had self-report correlation -0.023, source-action agreement 0.025, and identity probe accuracy 0.000. These controls support the interpretation that identity-probe success in copied conditions reflects copied source state rather than independent relearning or random target structure.
 
 ### 5.8 Focused Transfer Metrics
 
@@ -213,17 +213,17 @@ Figure 3 shows raw means and bootstrap confidence intervals across the four clea
 
 | Condition | n | Reward | Goals found | Self-report corr | Identity probe | Goal attention | Source action |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| source_full | 8 | -0.630 | 0.686 | 0.837 | 1.000 | 0.165 | 1.000 |
-| source_schema_ablated | 8 | -0.920 | 0.676 | 0.000 | 1.000 | 0.143 | 0.888 |
-| source_attention_ablated | 8 | -9.933 | 0.219 | 0.000 | 1.000 | 0.028 | 0.298 |
-| source_self_model_ablated | 8 | -1.406 | 0.619 | 0.844 | 0.000 | 0.162 | 0.796 |
-| b_frozen_copy | 8 | -10.322 | 0.099 | 0.003 | 1.000 | 0.030 | 0.092 |
-| b_source_align_repair_copy_long | 8 | -6.057 | 0.182 | 0.294 | 1.000 | 0.135 | 0.168 |
-| b_source_align_attention_copy_long | 8 | -1.638 | 0.628 | 0.796 | 1.000 | 0.156 | 0.849 |
-| b_source_align_attention_adapter_long | 8 | -9.263 | 0.116 | 0.892 | 1.000 | 0.082 | 0.191 |
-| b_source_align_control_adapter_long | 8 | 16.452 | 0.163 | 0.527 | 1.000 | 0.672 | 0.307 |
-| b_behavior_distill | 8 | -10.304 | 0.146 | 0.123 | 0.000 | 0.029 | 0.192 |
-| b_frozen_random | 8 | -10.178 | 0.163 | -0.057 | 0.000 | 0.027 | 0.012 |
+| source_full | 22 | -1.711 | 0.698 | 0.850 | 1.000 | 0.165 | 1.000 |
+| source_schema_ablated | 22 | -2.150 | 0.648 | 0.000 | 1.000 | 0.159 | 0.837 |
+| source_attention_ablated | 22 | -9.930 | 0.180 | 0.000 | 1.000 | 0.028 | 0.209 |
+| source_self_model_ablated | 22 | -2.067 | 0.630 | 0.855 | 0.000 | 0.168 | 0.768 |
+| b_frozen_copy | 22 | -10.267 | 0.118 | -0.054 | 1.000 | 0.029 | 0.080 |
+| b_source_align_repair_copy_long | 22 | -7.253 | 0.155 | 0.326 | 1.000 | 0.107 | 0.178 |
+| b_source_align_attention_copy_long | 22 | -2.462 | 0.616 | 0.786 | 1.000 | 0.167 | 0.808 |
+| b_source_align_attention_adapter_long | 22 | -9.654 | 0.102 | 0.795 | 1.000 | 0.068 | 0.193 |
+| b_source_align_control_adapter_long | 22 | 18.686 | 0.147 | 0.518 | 1.000 | 0.730 | 0.296 |
+| b_behavior_distill | 22 | -10.145 | 0.127 | 0.162 | 0.000 | 0.029 | 0.136 |
+| b_frozen_random | 22 | -10.320 | 0.155 | -0.023 | 0.000 | 0.027 | 0.025 |
 
 ## 6. Discussion
 
@@ -251,17 +251,17 @@ This motivates reporting preservation profiles rather than reward alone. A prese
 
 ### 6.4 Seed Count Decision
 
-The current result is sufficient to justify a preprint-scale AST v0 pilot report. It is not sufficient for a final benchmark claim. The reduced core replication attempted 10 source seeds and retained 8 validated sources, with paired evaluation across conditions. The major qualitative dissociations replicated from the earlier 5-seed pilot.
+The current result is sufficient to justify a preprint-scale AST v0 report. It is not sufficient for a final benchmark claim. The expanded core replication attempted 30 source seeds and retained 22 validated sources, with paired evaluation across conditions. The major qualitative dissociations replicated from the earlier 5-seed pilot and the reduced 10-seed run.
 
-For a larger journal-style version, the next run should attempt 20 to 30 source seeds with the frozen core condition family and likely 200 paired evaluation episodes per condition. That would improve power and reduce uncertainty around seed-variable reward effects. It should not block the current paper draft.
+For a larger journal-style version, the next step should be a more stable source-training protocol or a larger task family rather than simply adding more target-transfer conditions. A later run could also increase paired evaluation episodes from 100 to 200 per condition, but the main remaining uncertainty is source-seed variability rather than episode-level noise.
 
 ## 7. Limitations
 
-The task is a toy grid-world, not a general mind-preservation test. The source validation rate shows that even this small environment has seed-sensitive learning dynamics. The target conditions are engineered diagnostics rather than realistic upload procedures. Identity probes are source-specific functional fingerprints, not personal identity. Memory overlap is diagnostic and is not yet a behavioral autobiographical memory task. The reward channel can be exploited, which is itself informative but limits any simple interpretation of reward as preservation success.
+The task is a toy grid-world, not a general mind-preservation test. The source validation rate, 22 of 30 attempted seeds, shows that even this small environment has seed-sensitive learning dynamics. The target conditions are engineered diagnostics rather than realistic upload procedures. Identity probes are source-specific functional fingerprints, not personal identity. Memory overlap is diagnostic and is not yet a behavioral autobiographical memory task. The reward channel can be exploited, which is itself informative but limits any simple interpretation of reward as preservation success.
 
 The copied-attention condition deliberately narrows the substrate gap, so it should not be described as a clean cross-architecture transfer win. It is evidence about a bottleneck, not evidence that preservation is easy.
 
-The statistics should be read as pilot-scale. The source-seed unit of inference is correct, but validated n = 8 is still modest. The main value is the replicated dissociation structure, not a definitive estimate of population-level effect sizes.
+The statistics should be read as preprint-scale rather than definitive. The source-seed unit of inference is correct, but validated n = 22 is still modest for estimating population-level effect sizes. The main value is the replicated dissociation structure, not a final benchmark norm.
 
 ## 8. Conclusion
 

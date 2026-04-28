@@ -140,7 +140,7 @@ Build **PreservationBench-AST v0**:
 1. Keep the Paper 2 AST environment as the first task family.
 2. Preserve Paper 2 as a frozen reproduction path.
 3. Add a benchmark harness beside it under `experiments/preservation_bench`.
-4. Run 20 to 30 independent source seeds if compute allows.
+4. Run 20 to 30 independent source seeds if compute allows. The expanded AST v0 run now uses 30 attempted source seeds.
 5. Pair all conditions on the same evaluation episode seeds.
 6. Compare copied-state transfer against random, frozen-random, behavior-distillation, architecture-matched, and full-retrain controls.
 7. Analyze at the training-seed level, not the episode level.
@@ -279,16 +279,19 @@ Completed in the first Paper 3 pass:
 - regenerated the normalized preservation-profile figure with reward, goals found, goal-attention mass, self-report, source-action agreement, and identity probes
 - added `ast_competence_v2_core_10seed.json`, a reduced replication config with the source ablations, frozen copy, long repair, copied attention, attention adapter, control adapter, behavior distillation, and frozen random controls
 - ran the core 10-seed replication: 8 of 10 source seeds passed validation, with seeds 3 and 5 rejected for low goals found
-- confirmed the pilot pattern replicated at validated n = 8: copied-attention transfer recovers the strongest combined report, goals-found, and source-action profile; attention-adapter transfer recovers report without source-like control; control-adapter transfer drives reward and goal-attention proxy mass without restoring source-like goals found or source action agreement
+- confirmed the pilot pattern replicated in the reduced 10-seed run: copied-attention transfer recovers the strongest combined report, goals-found, and source-action profile; attention-adapter transfer recovers report without source-like control; control-adapter transfer drives reward and goal-attention proxy mass without restoring source-like goals found or source action agreement
 - added `plot_core_figures.py` and generated focused paper figures for source validation flow and core transfer metrics
 - drafted the AST v0 Results and Discussion text in `paper3/ast_v0_results_draft.md`
-- made the seed-count decision for the current preprint-scale draft: use the validated n = 8 core replication as the result basis, and reserve 20 to 30 attempted source seeds for a larger journal-style version
 - created the main manuscript draft at `paper3/manuscript.md`
 - generated trackable manuscript figures under `paper3/figures/`
+- added `ast_competence_v2_core_30seed.json`, extending the same core seed scheme to 30 attempted source seeds while reusing the first 10 completed seeds
+- ran the expanded 30-seed core replication: 22 of 30 source seeds passed validation, with rejected seeds 3, 5, 17, 19, 22, 23, 24, and 29
+- confirmed the expanded pattern at validated n = 22: copied attention remains the strongest combined profile, the attention bridge remains report-like without source-like control, and the control bridge still shows proxy-control failure
+- regenerated manuscript figures, result text, and the PDF around the expanded seed count
 
 Next build targets:
 
-1. Audit `paper3/manuscript.md` for overclaims, missing citations, and figure/table consistency.
-2. Convert the manuscript into a PDF build path.
+1. Final reviewer-style prose pass on the expanded n = 22 manuscript.
+2. Rebuild and visually audit the PDF.
 3. Run a final citation and reproducibility audit.
-4. Decide later whether a journal-style version needs 20 to 30 attempted source seeds.
+4. Prepare Zenodo/GitHub release metadata when the manuscript is stable.
