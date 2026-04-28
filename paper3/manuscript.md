@@ -28,7 +28,7 @@ This distinction matters because preservation claims can fail in several differe
 
 Paper 1 mapped theories of consciousness to preservation requirements and identified Attention Schema Theory (AST) as one of the more preservation-friendly theories because it treats consciousness as a functional model of attention rather than as a substrate-specific physical property. Paper 2 tested a narrow AST-style transplant assay in a single toy agent. The result was mixed-negative: copied self-model state survived as a source-specific fingerprint, but frozen schema transfer did not preserve strong self-report behavior across an architecture change.
 
-This paper makes the larger move. It turns that transplant assay into a benchmark scaffold with independent source seeds, validation gates, matched transfer controls, paired evaluation episodes, source-level statistical analysis, and profile-style reporting. The pilot domain remains AST-derived, but the benchmark is meant to generalize: for any theory that specifies preservation-relevant functional invariants, PreservationBench asks whether those invariants remain source-specific and active after transfer.
+This paper extends that assay into a benchmark scaffold with independent source seeds, validation gates, matched transfer controls, paired evaluation episodes, source-level statistical analysis, and profile-style reporting. The pilot domain remains AST-derived, but the benchmark is meant to generalize: for any theory that specifies preservation-relevant functional invariants, PreservationBench asks whether those invariants remain source-specific and active after transfer.
 
 The core contribution is methodological. PreservationBench shows how a preservation claim can be decomposed into measurable channels: copied identity probes, report continuity, task competence, attention alignment, source-action agreement, memory overlap, and adaptation cost. The AST v0 experiment then demonstrates why this decomposition is necessary.
 
@@ -44,15 +44,15 @@ Question-answering consciousness benchmarks and emerging AI-consciousness evalua
 
 Philosophical work on psychological continuity and personal identity, especially Parfit-style fission and continuity cases (Parfit, 1971; Parfit, 1984), motivates the benchmark but is not resolved by it. PreservationBench does not claim that source-specific functional continuity equals personal identity. It only measures whether functional and mnemonic channels that some preservation theories treat as relevant remain intact after transfer.
 
-Recent AI continuity and memory benchmarks evaluate whether agents maintain context, long-range memory, narrative coherence, or stable identity-like behavior across time. These are useful but distinct. A memory benchmark can show that an agent remembers facts. A continuity benchmark can show that an agent behaves coherently over time. PreservationBench asks whether source-specific internal machinery remains active after a controlled transfer into a target substrate.
+Recent AI continuity and memory benchmarks evaluate whether agents maintain context, long-range memory, narrative coherence, or stable identity-like behavior across time. Long-horizon conversational memory benchmarks such as LoCoMo evaluate whether models can retrieve, summarize, and reason over extended interaction histories (Maharana et al., 2024). These are useful but distinct. A memory benchmark can show that an agent remembers facts. A continuity benchmark can show that an agent behaves coherently over time. PreservationBench asks whether source-specific internal machinery remains active after a controlled transfer into a target substrate.
 
 ### 2.3 Model Transfer And Component Reuse
 
-Machine learning already contains many techniques for moving behavior or internal structure across models: distillation, model stitching, representation alignment, adapters, network morphisms, task arithmetic, model merging, and component transfer. PreservationBench borrows this engineering vocabulary but changes the target of evaluation. The question is not only whether a target model performs well. The question is whether the performance is caused by copied source-specific organization rather than random initialization, behavior-only mimicry, or ordinary retraining.
+Machine learning already contains many techniques for moving behavior or internal structure across models: distillation (Hinton et al., 2015), feature transfer (Yosinski et al., 2014), function-preserving network transformations (Chen et al., 2016), model stitching (Bansal et al., 2021), representation alignment, adapters, model merging, and component transfer. PreservationBench borrows this engineering vocabulary but changes the target of evaluation. The question is not only whether a target model performs well. The question is whether the performance is caused by copied source-specific organization rather than random initialization, behavior-only mimicry, or ordinary retraining.
 
 ### 2.4 Whole-Brain Emulation And Preservation Engineering
 
-Whole-brain emulation roadmaps ask what biological detail must be captured to reproduce a brain (Sandberg and Bostrom, 2008). Biological emulation projects such as OpenWorm, Drosophila connectome simulations, and embodied nervous-system models ask how much structure is enough to reproduce organism-level behavior. PreservationBench is complementary. It does not attempt biological fidelity. It provides a controlled artificial testbed for asking which preservation-relevant functions survive transfer.
+Whole-brain emulation roadmaps ask what biological detail must be captured to reproduce a brain (Sandberg and Bostrom, 2008). Recent WBE fidelity work argues that standardized functional tests will be needed to compare behavioral performance against cost and modeling detail (Linssen and Koene, 2025). Biological emulation projects such as OpenWorm, Drosophila connectome simulations, and embodied nervous-system models ask how much structure is enough to reproduce organism-level behavior. PreservationBench is complementary. It does not attempt biological fidelity. It provides a controlled artificial testbed for asking which preservation-relevant functions survive transfer and whether apparent fidelity is due to copied source organization rather than relearned behavior.
 
 ## 3. PreservationBench Framework
 
@@ -106,7 +106,7 @@ The AST v0 experiment below instantiates this profile in a toy domain.
 
 ### 4.1 Task Domain
 
-The AST v0 task uses a small grid-world agent inspired by computational AST work on attention-schema agents (Wilterson and Graziano, 2021) and by the earlier transplant assay in Ryan (2026b). The competence v2 version used for the core replication has a 7 by 7 grid, a full 7 by 7 observation window, two goals, one distractor, and 100-step episodes. The source agent must move through the grid, allocate attention to visible goals, avoid distractor capture, and answer self-report queries about its own attention state.
+The AST v0 task uses a small grid-world agent inspired by computational AST work on attention-schema agents (Wilterson and Graziano, 2021; Liu et al., 2023; Piefke et al., 2024) and by the earlier transplant assay in Ryan (2026b). The competence v2 version used for the core replication has a 7 by 7 grid, a full 7 by 7 observation window, two goals, one distractor, and 100-step episodes. The source agent must move through the grid, allocate attention to visible goals, avoid distractor capture, and answer self-report queries about its own attention state.
 
 The task is designed to separate three channels:
 
@@ -251,7 +251,7 @@ This motivates reporting preservation profiles rather than reward alone. A prese
 
 ### 6.4 Seed Count Decision
 
-The current result is sufficient for a preprint-scale AST v0 pilot. The reduced core replication attempted 10 source seeds and retained 8 validated sources, with paired evaluation across conditions. The major qualitative dissociations replicated from the earlier 5-seed pilot.
+The current result is sufficient to justify a preprint-scale AST v0 pilot report. It is not sufficient for a final benchmark claim. The reduced core replication attempted 10 source seeds and retained 8 validated sources, with paired evaluation across conditions. The major qualitative dissociations replicated from the earlier 5-seed pilot.
 
 For a larger journal-style version, the next run should attempt 20 to 30 source seeds with the frozen core condition family and likely 200 paired evaluation episodes per condition. That would improve power and reduce uncertainty around seed-variable reward effects. It should not block the current paper draft.
 
@@ -275,9 +275,13 @@ Baars, B. J. (1988). *A Cognitive Theory of Consciousness*. Cambridge University
 
 Barrett, A. B., and Seth, A. K. (2011). Practical measures of integrated information for time-series data. *PLOS Computational Biology*, 7(1), e1001052. https://doi.org/10.1371/journal.pcbi.1001052
 
+Bansal, Y., Nakkiran, P., and Barak, B. (2021). Revisiting model stitching to compare neural representations. *Advances in Neural Information Processing Systems*, 34, 225-236. https://arxiv.org/abs/2106.07682
+
 Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., Deane, G., Fleming, S. M., Frith, C., Ji, X., Kanai, R., Klein, C., Lindsay, G., Michel, M., Mudrik, L., Peters, M. A. K., Schwitzgebel, E., Simon, J., and VanRullen, R. (2023). Consciousness in artificial intelligence: Insights from the science of consciousness. *arXiv preprint*, arXiv:2308.08708. https://doi.org/10.48550/arXiv.2308.08708
 
 Chalmers, D. J. (2010). The singularity: A philosophical analysis. *Journal of Consciousness Studies*, 17(9-10), 7-65. https://consc.net/papers/singularity.pdf
+
+Chen, T., Goodfellow, I., and Shlens, J. (2016). Net2Net: Accelerating learning via knowledge transfer. *International Conference on Learning Representations*. https://arxiv.org/abs/1511.05641
 
 Dehaene, S., and Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. *Neuron*, 70(2), 200-227. https://doi.org/10.1016/j.neuron.2011.03.018
 
@@ -287,9 +291,19 @@ Graziano, M. S. A. (2017). The attention schema theory: A foundation for enginee
 
 Graziano, M. S. A. (2019). *Rethinking Consciousness: A Scientific Theory of Subjective Experience*. W. W. Norton. ISBN: 9780393652611.
 
+Hinton, G., Vinyals, O., and Dean, J. (2015). Distilling the knowledge in a neural network. *arXiv preprint*, arXiv:1503.02531. https://doi.org/10.48550/arXiv.1503.02531
+
+Linssen, A. M., and Koene, R. A. (2025). Functional tests guide complex fidelity tradeoffs in whole-brain emulation. *Journal of Ethics and Emerging Technologies*, 35(1), 1-14. https://doi.org/10.55613/jeet.v35i1.152
+
+Liu, F., Graesser, L., Nair, S., Robins, A., and Graziano, M. S. A. (2023). Attention schema in neural agents. *arXiv preprint*, arXiv:2305.17375. https://doi.org/10.48550/arXiv.2305.17375
+
+Maharana, A., Lee, D.-H., Tulyakov, S., Bansal, M., Barbieri, F., and Fang, Y. (2024). Evaluating very long-term conversational memory of LLM agents. *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics*. https://aclanthology.org/2024.acl-long.747/
+
 Parfit, D. (1971). Personal identity. *The Philosophical Review*, 80(1), 3-27. https://doi.org/10.2307/2184309
 
 Parfit, D. (1984). *Reasons and Persons*. Clarendon Press.
+
+Piefke, M., Sidorenko, V., Porta Mana, P. G. L., and Kroner, S. (2024). A computational characterization of the role of attention schema in controlling visuospatial attention. *Proceedings of the Annual Meeting of the Cognitive Science Society*, 46. https://doi.org/10.48550/arXiv.2402.01056
 
 Ryan, T. (2026a). What must be preserved? Mapping theories of consciousness to engineering requirements for mind preservation. *Zenodo*. https://doi.org/10.5281/zenodo.19374628
 
@@ -298,3 +312,5 @@ Ryan, T. (2026b). An exploratory transplant assay for Attention Schema Theory in
 Sandberg, A., and Bostrom, N. (2008). *Whole Brain Emulation: A Roadmap*. Technical Report 2008-3, Future of Humanity Institute, University of Oxford. https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788
 
 Wilterson, A. I., and Graziano, M. S. A. (2021). The attention schema theory in a neural network agent: Controlling visuospatial attention using a descriptive model of attention. *Proceedings of the National Academy of Sciences*, 118(33), e2102421118. https://doi.org/10.1073/pnas.2102421118
+
+Yosinski, J., Clune, J., Bengio, Y., and Lipson, H. (2014). How transferable are features in deep neural networks? *Advances in Neural Information Processing Systems*, 27, 3320-3328. https://arxiv.org/abs/1411.1792
