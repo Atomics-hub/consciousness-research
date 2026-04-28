@@ -14,7 +14,7 @@
 
 Mind-preservation proposals often depend on claims about functional, psychological, or computational continuity, but these claims are rarely tested as explicit substrate-transfer interventions. This paper introduces PreservationBench, a benchmark framework for measuring preservation-relevant functional continuity after a source agent is copied, transplanted, adapted, or relearned in a target substrate. The benchmark is not a consciousness test and does not decide personal identity. It asks a narrower engineering question: which source-specific functions remain active after transfer, and which apparent recoveries are better explained by relearning, behavioral mimicry, or proxy optimization?
 
-As a first validation tier, I implement PreservationBench-AST v0 in a toy neural agent inspired by Attention Schema Theory. A source agent is trained in a small grid-world task with attention control, self-report, and source-specific identity probes. Selected source modules are transferred into a target architecture under matched controls: frozen copied state, source-alignment repair, copied attention, source-facing attention and control bridges, behavior-only distillation, and frozen random controls. In a reduced core replication, 10 independent source seeds were attempted and 8 passed source validation. The resulting preservation profile shows four dissociations. Frozen copied schema and self-model state preserves source-specific identity probes but does not recouple report or control. Long source-alignment repair improves report but does not restore source-like task control. A source-facing attention bridge recovers report behavior without source-like action agreement. A control bridge drives reward and goal-attention mass above source levels but remains weak on goals found and source-action agreement, indicating proxy optimization rather than preserved control. Copying source attention yields the strongest combined profile, with preserved identity, high self-report, near-source goals found, and high source-action agreement, but this condition narrows the substrate gap. These results support PreservationBench as a profile-based assay for separating copied provenance, report continuity, task competence, proxy reward, and source-like control.
+As a first validation tier, I implement PreservationBench-AST v0 in a toy neural agent inspired by Attention Schema Theory. A source agent is trained in a small grid-world task with attention control, self-report, and source-specific identity probes. Selected source modules are transferred into a target architecture under matched controls: frozen copied state, source-alignment repair, copied attention, source-facing attention and control bridges, behavior-only distillation, and frozen random controls. In a reduced core replication, 10 independent source seeds were attempted and 8 passed source validation. The resulting preservation profile shows four dissociations. Frozen copied schema and self-model state preserves source-specific identity-probe behavior but does not recouple report or control. Long source-alignment repair improves report but does not restore source-like task control. A source-facing attention bridge recovers report behavior without source-like action agreement. A control bridge drives reward and goal-attention mass above source levels but remains weak on goals found and source-action agreement, indicating proxy optimization rather than preserved control. Copying source attention yields the strongest combined profile, with identity-probe preservation, high self-report, near-source goals found, and high source-action agreement, but this condition narrows the substrate gap. These results support PreservationBench as a profile-based assay for separating copied provenance, report continuity, task competence, proxy reward, and source-like control.
 
 ---
 
@@ -36,13 +36,13 @@ The core contribution is methodological. PreservationBench shows how a preservat
 
 ### 2.1 Consciousness Indicators And AI Evaluation
 
-Butlin et al. proposed theory-derived indicators of consciousness in artificial systems, drawing on several major theories including recurrent processing, global workspace theory, higher-order theories, predictive processing, and AST. That work asks whether an artificial system has features that may indicate consciousness. PreservationBench asks a different question: if a system has theory-relevant functional organization, does that organization remain active after transfer?
+Butlin et al. (2023) proposed theory-derived indicators of consciousness in artificial systems, drawing on several major theories including recurrent processing, global workspace theory, higher-order theories, predictive processing, and AST. That work asks whether an artificial system has features that may indicate consciousness. PreservationBench asks a different question: if a system has theory-relevant functional organization, does that organization remain active after transfer?
 
 Question-answering consciousness benchmarks and emerging AI-consciousness evaluation projects are also adjacent. They usually evaluate static system behavior or self-description. PreservationBench instead makes substrate transfer the intervention. It is not enough for a target to answer questions or perform well. The target must be compared to random, frozen, behavior-only, and copied-state controls to ask whether source-specific organization survived.
 
 ### 2.2 Continuity, Memory, And Identity
 
-Philosophical work on psychological continuity and personal identity, especially Parfit-style fission and continuity cases, motivates the benchmark but is not resolved by it. PreservationBench does not claim that source-specific functional continuity equals personal identity. It only measures whether functional and mnemonic channels that some preservation theories treat as relevant remain intact after transfer.
+Philosophical work on psychological continuity and personal identity, especially Parfit-style fission and continuity cases (Parfit, 1971; Parfit, 1984), motivates the benchmark but is not resolved by it. PreservationBench does not claim that source-specific functional continuity equals personal identity. It only measures whether functional and mnemonic channels that some preservation theories treat as relevant remain intact after transfer.
 
 Recent AI continuity and memory benchmarks evaluate whether agents maintain context, long-range memory, narrative coherence, or stable identity-like behavior across time. These are useful but distinct. A memory benchmark can show that an agent remembers facts. A continuity benchmark can show that an agent behaves coherently over time. PreservationBench asks whether source-specific internal machinery remains active after a controlled transfer into a target substrate.
 
@@ -52,7 +52,7 @@ Machine learning already contains many techniques for moving behavior or interna
 
 ### 2.4 Whole-Brain Emulation And Preservation Engineering
 
-Whole-brain emulation roadmaps ask what biological detail must be captured to reproduce a brain. Biological emulation projects such as OpenWorm, Drosophila connectome simulations, and embodied nervous-system models ask how much structure is enough to reproduce organism-level behavior. PreservationBench is complementary. It does not attempt biological fidelity. It provides a controlled artificial testbed for asking which preservation-relevant functions survive transfer.
+Whole-brain emulation roadmaps ask what biological detail must be captured to reproduce a brain (Sandberg and Bostrom, 2008). Biological emulation projects such as OpenWorm, Drosophila connectome simulations, and embodied nervous-system models ask how much structure is enough to reproduce organism-level behavior. PreservationBench is complementary. It does not attempt biological fidelity. It provides a controlled artificial testbed for asking which preservation-relevant functions survive transfer.
 
 ## 3. PreservationBench Framework
 
@@ -106,7 +106,7 @@ The AST v0 experiment below instantiates this profile in a toy domain.
 
 ### 4.1 Task Domain
 
-The AST v0 task uses a small grid-world agent. The competence v2 version used for the core replication has a 7 by 7 grid, a full 7 by 7 observation window, two goals, one distractor, and 100-step episodes. The source agent must move through the grid, allocate attention to visible goals, avoid distractor capture, and answer self-report queries about its own attention state.
+The AST v0 task uses a small grid-world agent inspired by computational AST work on attention-schema agents (Wilterson and Graziano, 2021) and by the earlier transplant assay in Ryan (2026b). The competence v2 version used for the core replication has a 7 by 7 grid, a full 7 by 7 observation window, two goals, one distractor, and 100-step episodes. The source agent must move through the grid, allocate attention to visible goals, avoid distractor capture, and answer self-report queries about its own attention state.
 
 The task is designed to separate three channels:
 
@@ -171,7 +171,7 @@ Among validated sources, `source_full` achieved mean reward -0.630, goals found 
 
 ### 5.2 Continuity Profile
 
-Figure 2 shows the normalized profile across the core condition family. Normalized scores are descriptive and are always interpreted alongside raw means. They make the main dissociations visible: frozen copy preserves identity but fails report and control; copied attention recovers the strongest combined profile; the attention bridge recovers report but not source-like control; and the control bridge overshoots reward and goal-attention mass while remaining weak on source-action agreement.
+Figure 2 shows the normalized profile across the core condition family. Normalized scores are descriptive and are always interpreted alongside raw means. They make the main dissociations visible: frozen copy preserves identity-probe behavior but fails report and control; copied attention recovers the strongest combined profile; the attention bridge recovers report but not source-like control; and the control bridge overshoots reward and goal-attention mass while remaining weak on source-action agreement.
 
 ![Figure 2. Normalized preservation profile for validated source seeds. Values are normalized relative to source and frozen-random baselines for each metric. Raw means remain the primary result.](figures/preservation_profile_core.png)
 
@@ -205,7 +205,7 @@ Behavior-only distillation and frozen random controls failed copied identity pro
 
 ### 5.8 Focused Transfer Metrics
 
-Figure 3 shows raw means and bootstrap confidence intervals across the four clearest transfer metrics. The copied-attention condition has the strongest combined profile. The attention bridge is report-like without source-like control. The control bridge preserves copied identity and improves some proxy measures, but remains weak on goals found and source-action agreement.
+Figure 3 shows raw means and bootstrap confidence intervals across the four clearest transfer metrics. The copied-attention condition has the strongest combined profile. The attention bridge is report-like without source-like control. The control bridge preserves copied identity-probe behavior and improves some proxy measures, but remains weak on goals found and source-action agreement.
 
 ![Figure 3. Focused transfer metrics across validated seeds. Raw means with bootstrap 95 percent CIs across source seeds.](figures/focused_transfer_metrics.png)
 
@@ -251,7 +251,7 @@ This motivates reporting preservation profiles rather than reward alone. A prese
 
 ### 6.4 Seed Count Decision
 
-The current result is strong enough for a preprint-scale AST v0 pilot. The reduced core replication attempted 10 source seeds and retained 8 validated sources, with paired evaluation across conditions. The major qualitative dissociations replicated from the earlier 5-seed pilot.
+The current result is sufficient for a preprint-scale AST v0 pilot. The reduced core replication attempted 10 source seeds and retained 8 validated sources, with paired evaluation across conditions. The major qualitative dissociations replicated from the earlier 5-seed pilot.
 
 For a larger journal-style version, the next run should attempt 20 to 30 source seeds with the frozen core condition family and likely 200 paired evaluation episodes per condition. That would improve power and reduce uncertainty around seed-variable reward effects. It should not block the current paper draft.
 
@@ -269,18 +269,32 @@ PreservationBench turns substrate-transfer preservation claims into a measurable
 
 The safe conclusion is not that any condition preserves consciousness or personal identity. The safe conclusion is that preservation-relevant functional continuity can be benchmarked, and that profile-based controls reveal failure modes that single-score evaluations would miss.
 
-## References To Finalize
+## References
 
-Citation audit still needed before submission. Current anchor references:
+Baars, B. J. (1988). *A Cognitive Theory of Consciousness*. Cambridge University Press. ISBN: 9780521427432.
 
-- Baars, B. J. A Cognitive Theory of Consciousness. 1988.
-- Barrett, A. B., and Seth, A. K. Practical measures of integrated information for time-series data. 2011.
-- Butlin, P. et al. Consciousness in Artificial Intelligence: Insights from the Science of Consciousness. 2023.
-- Chalmers, D. The Singularity: A Philosophical Analysis. 2010.
-- Dehaene, S., and Changeux, J. P. Experimental and theoretical approaches to conscious processing. 2011.
-- Graziano, M. S. A. Consciousness and the Social Brain. 2013.
-- Graziano, M. S. A. Rethinking Consciousness. 2019.
-- Parfit, D. Personal Identity. 1971.
-- Ryan, T. What Must Be Preserved? Mapping Theories of Consciousness to Engineering Requirements for Mind Preservation. 2026.
-- Ryan, T. An Exploratory Transplant Assay for Attention Schema Theory in a Toy Neural Agent. 2026.
-- Sandberg, A., and Bostrom, N. Whole Brain Emulation: A Roadmap. 2008.
+Barrett, A. B., and Seth, A. K. (2011). Practical measures of integrated information for time-series data. *PLOS Computational Biology*, 7(1), e1001052. https://doi.org/10.1371/journal.pcbi.1001052
+
+Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., Deane, G., Fleming, S. M., Frith, C., Ji, X., Kanai, R., Klein, C., Lindsay, G., Michel, M., Mudrik, L., Peters, M. A. K., Schwitzgebel, E., Simon, J., and VanRullen, R. (2023). Consciousness in artificial intelligence: Insights from the science of consciousness. *arXiv preprint*, arXiv:2308.08708. https://doi.org/10.48550/arXiv.2308.08708
+
+Chalmers, D. J. (2010). The singularity: A philosophical analysis. *Journal of Consciousness Studies*, 17(9-10), 7-65. https://consc.net/papers/singularity.pdf
+
+Dehaene, S., and Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. *Neuron*, 70(2), 200-227. https://doi.org/10.1016/j.neuron.2011.03.018
+
+Graziano, M. S. A. (2013). *Consciousness and the Social Brain*. Oxford University Press.
+
+Graziano, M. S. A. (2017). The attention schema theory: A foundation for engineering artificial consciousness. *Frontiers in Robotics and AI*, 4, 60. https://doi.org/10.3389/frobt.2017.00060
+
+Graziano, M. S. A. (2019). *Rethinking Consciousness: A Scientific Theory of Subjective Experience*. W. W. Norton. ISBN: 9780393652611.
+
+Parfit, D. (1971). Personal identity. *The Philosophical Review*, 80(1), 3-27. https://doi.org/10.2307/2184309
+
+Parfit, D. (1984). *Reasons and Persons*. Clarendon Press.
+
+Ryan, T. (2026a). What must be preserved? Mapping theories of consciousness to engineering requirements for mind preservation. *Zenodo*. https://doi.org/10.5281/zenodo.19374628
+
+Ryan, T. (2026b). An exploratory transplant assay for Attention Schema Theory in a toy neural agent. *Zenodo*. https://doi.org/10.5281/zenodo.19738204
+
+Sandberg, A., and Bostrom, N. (2008). *Whole Brain Emulation: A Roadmap*. Technical Report 2008-3, Future of Humanity Institute, University of Oxford. https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788
+
+Wilterson, A. I., and Graziano, M. S. A. (2021). The attention schema theory in a neural network agent: Controlling visuospatial attention using a descriptive model of attention. *Proceedings of the National Academy of Sciences*, 118(33), e2102421118. https://doi.org/10.1073/pnas.2102421118
