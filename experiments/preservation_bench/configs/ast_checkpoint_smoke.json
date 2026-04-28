@@ -1,0 +1,26 @@
+{
+  "study_id": "ast_checkpoint_smoke",
+  "master_seed": 20260424,
+  "n_train_seeds": 1,
+  "n_eval_episodes": 20,
+  "max_steps": 200,
+  "checkpoint_source_seed": 42,
+  "checkpoint": "experiments/ast_preservation/checkpoints/final_agent.pt",
+  "output_dir": "experiments/preservation_bench/runs/ast_checkpoint_smoke",
+  "conditions": [
+    "source_full",
+    "source_attention_ablated",
+    "source_schema_ablated",
+    "source_self_model_ablated",
+    "a_to_a_copy",
+    "b_frozen_copy",
+    "b_frozen_random"
+  ],
+  "primary_metrics": [
+    "reward",
+    "goals_found",
+    "distractor_capture_rate",
+    "self_report_corr",
+    "identity_probe_accuracy"
+  ]
+}

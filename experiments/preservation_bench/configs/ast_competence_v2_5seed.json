@@ -1,0 +1,81 @@
+{
+  "study_id": "preservation_bench_ast_competence_v2_5seed",
+  "master_seed": 20260424,
+  "n_train_seeds": 5,
+  "n_eval_episodes": 100,
+  "source_steps": 60000,
+  "target_train_steps": 60000,
+  "finetune_steps": 6000,
+  "condition_finetune_steps": {
+    "b_source_align_repair_copy_long": 24000,
+    "b_source_align_policy_copy_long": 24000,
+    "b_source_align_attention_copy_long": 24000,
+    "b_source_align_attention_adapter_long": 24000,
+    "b_source_align_control_adapter_long": 24000,
+    "b_source_align_attention_copy_trainable_long": 24000,
+    "b_source_align_attention_copy_random_adapter_long": 24000,
+    "b_source_align_identity_adapter_long": 24000
+  },
+  "condition_seed_aliases": {
+    "b_source_align_repair_copy_long": "b_source_align_repair_copy",
+    "b_source_align_policy_copy_long": "b_source_align_repair_copy",
+    "b_source_align_attention_copy_long": "b_source_align_repair_copy",
+    "b_source_align_attention_adapter_long": "b_source_align_repair_copy",
+    "b_source_align_control_adapter_long": "b_source_align_repair_copy",
+    "b_source_align_attention_copy_trainable_long": "b_source_align_repair_copy",
+    "b_source_align_attention_copy_random_adapter_long": "b_source_align_repair_copy",
+    "b_source_align_identity_adapter_long": "b_source_align_repair_copy"
+  },
+  "curriculum_phase1_steps": 5000,
+  "curriculum_phase2_steps": 20000,
+  "output_dir": "experiments/preservation_bench/runs/ast_competence_v2_5seed",
+  "config_overrides": {
+    "grid_size": 7,
+    "obs_window": 7,
+    "n_goals": 2,
+    "n_distractors": 1,
+    "max_steps": 100,
+    "goal_reward": 8.0,
+    "goal_progress_reward": 0.5,
+    "attention_goal_reward": 0.4,
+    "attention_distractor_penalty": 0.8,
+    "distractor_hit_penalty": 0.5,
+    "attention_capture_threshold": 0.02,
+    "eps_decay_steps": 60000,
+    "lr": 0.0002
+  },
+  "source_validation": {
+    "enabled": true,
+    "min_self_report_corr": 0.5,
+    "min_self_queries": 20,
+    "min_reward": -1000000,
+    "min_goals_found": 0.10,
+    "require_memory": false
+  },
+  "conditions": [
+    "source_full",
+    "source_schema_ablated",
+    "source_attention_ablated",
+    "source_self_model_ablated",
+    "b_frozen_copy",
+    "b_adapter_repair_copy",
+    "b_source_align_repair_copy",
+    "b_source_align_repair_copy_long",
+    "b_source_align_policy_copy_long",
+    "b_source_align_attention_copy_long",
+    "b_source_align_attention_adapter_long",
+    "b_source_align_control_adapter_long",
+    "b_source_align_attention_copy_trainable_long",
+    "b_source_align_attention_copy_random_adapter_long",
+    "b_source_align_identity_adapter_long",
+    "b_behavior_distill",
+    "b_frozen_random"
+  ],
+  "primary_metrics": [
+    "reward",
+    "goals_found",
+    "distractor_capture_rate",
+    "self_report_corr",
+    "identity_probe_accuracy"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "study_id": "ast_checkpoint_repair_smoke",
+  "master_seed": 20260424,
+  "n_train_seeds": 1,
+  "n_eval_episodes": 20,
+  "max_steps": 200,
+  "finetune_steps": 1000,
+  "checkpoint_source_seed": 42,
+  "checkpoint": "experiments/ast_preservation/checkpoints/final_agent.pt",
+  "output_dir": "experiments/preservation_bench/runs/ast_checkpoint_repair_smoke",
+  "conditions": [
+    "source_full",
+    "b_frozen_copy",
+    "b_adapter_repair_copy",
+    "b_trainable_copy",
+    "b_behavior_distill",
+    "b_frozen_random",
+    "b_trainable_random"
+  ],
+  "primary_metrics": [
+    "reward",
+    "goals_found",
+    "distractor_capture_rate",
+    "self_report_corr",
+    "identity_probe_accuracy"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "study_id": "preservation_bench_ast_smoke",
+  "master_seed": 20260424,
+  "n_train_seeds": 2,
+  "n_eval_episodes": 20,
+  "max_steps": 200,
+  "source_steps": 5000,
+  "finetune_steps": 1000,
+  "curriculum_phase1_steps": 1000,
+  "curriculum_phase2_steps": 3000,
+  "output_dir": "experiments/preservation_bench/runs/ast_smoke",
+  "source_validation": {
+    "enabled": true,
+    "min_self_report_corr": 0.5,
+    "min_self_queries": 1,
+    "min_reward": -1000000,
+    "require_memory": false
+  },
+  "conditions": [
+    "source_full",
+    "source_schema_ablated",
+    "b_frozen_copy",
+    "b_adapter_repair_copy",
+    "b_behavior_distill",
+    "b_frozen_random"
+  ],
+  "primary_metrics": [
+    "reward",
+    "goals_found",
+    "distractor_capture_rate",
+    "self_report_corr",
+    "identity_probe_accuracy"
+  ]
+}

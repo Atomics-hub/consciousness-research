@@ -1,0 +1,76 @@
+{
+  "study_id": "preservation_bench_ast_pilot_5seed",
+  "master_seed": 20260424,
+  "n_train_seeds": 5,
+  "n_eval_episodes": 100,
+  "max_steps": 200,
+  "source_steps": 50000,
+  "target_train_steps": 50000,
+  "finetune_steps": 5000,
+  "condition_finetune_steps": {
+    "b_source_align_repair_copy_long": 20000,
+    "b_source_align_policy_copy_long": 20000,
+    "b_source_align_attention_copy_long": 20000,
+    "b_source_align_attention_adapter_long": 20000,
+    "b_source_align_control_adapter_long": 20000,
+    "b_source_align_attention_copy_trainable_long": 20000,
+    "b_source_align_attention_copy_random_adapter_long": 20000,
+    "b_source_align_identity_adapter_long": 20000
+  },
+  "condition_seed_aliases": {
+    "b_source_align_repair_copy_long": "b_source_align_repair_copy",
+    "b_source_align_policy_copy_long": "b_source_align_repair_copy",
+    "b_source_align_attention_copy_long": "b_source_align_repair_copy",
+    "b_source_align_attention_adapter_long": "b_source_align_repair_copy",
+    "b_source_align_control_adapter_long": "b_source_align_repair_copy",
+    "b_source_align_attention_copy_trainable_long": "b_source_align_repair_copy",
+    "b_source_align_attention_copy_random_adapter_long": "b_source_align_repair_copy",
+    "b_source_align_identity_adapter_long": "b_source_align_repair_copy"
+  },
+  "curriculum_phase1_steps": 10000,
+  "curriculum_phase2_steps": 30000,
+  "output_dir": "experiments/preservation_bench/runs/ast_pilot_5seed",
+  "source_validation": {
+    "enabled": true,
+    "min_self_report_corr": 0.5,
+    "min_self_queries": 10,
+    "min_reward": -1000000,
+    "require_memory": false
+  },
+  "conditions": [
+    "source_full",
+    "source_schema_ablated",
+    "source_attention_ablated",
+    "source_self_model_ablated",
+    "a_to_a_copy",
+    "b_frozen_copy",
+    "b_adapter_repair_copy",
+    "b_source_align_repair_copy",
+    "b_source_align_repair_copy_long",
+    "b_source_align_policy_copy_long",
+    "b_source_align_attention_copy_long",
+    "b_source_align_attention_adapter_long",
+    "b_source_align_control_adapter_long",
+    "b_source_align_attention_copy_trainable_long",
+    "b_source_align_attention_copy_random_adapter_long",
+    "b_source_align_identity_adapter_long",
+    "b_behavior_distill",
+    "b_frozen_random",
+    "b_trainable_random",
+    "b_full_retrain"
+  ],
+  "primary_metrics": [
+    "reward",
+    "goals_found",
+    "distractor_capture_rate",
+    "self_report_corr",
+    "identity_probe_accuracy",
+    "adaptation_steps_to_threshold"
+  ],
+  "secondary_metrics": [
+    "other_report_corr",
+    "memory_overlap",
+    "training_curve_auc",
+    "payload_parameter_count"
+  ]
+}

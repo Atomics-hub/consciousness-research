@@ -17,3 +17,7 @@ dist/
 # Local planning/audit notes that are not part of the public release.
 NEXT_PAPER.md
 paper2/release_audit.md
+
+# Generated Paper 3 benchmark artifacts.
+experiments/preservation_bench/runs/
+experiments/preservation_bench/seeds/
