@@ -1,0 +1,602 @@
+{
+  "baseline_condition": "b_frozen_random",
+  "boundary": "Toy functional benchmark only. These outputs do not measure consciousness, identity, survival, biological preservation, or whole-agent equivalence.",
+  "perturbation": {
+    "baseline": "b_frozen_random",
+    "path": "experiments/preservation_bench/runs/ast_perturbation_core_condition_expanded22_cached/perturbation_contrasts.json",
+    "rows": [
+      {
+        "action_shift_match": 1.0,
+        "attention_delta_l1_to_source": 0.0,
+        "condition": "source_full",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 1.0,
+        "perturbed_action_delta_vs_random": 0.7863636363636363,
+        "q_delta_mse_to_source": 0.0,
+        "self_report_delta_l1_to_source": 0.0
+      },
+      {
+        "action_shift_match": 0.9454545454545454,
+        "attention_delta_l1_to_source": 0.0,
+        "condition": "b_source_align_attention_copy_long",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 0.85,
+        "perturbed_action_delta_vs_random": 0.6363636363636365,
+        "q_delta_mse_to_source": 0.020811176000313073,
+        "self_report_delta_l1_to_source": 0.0015490399655279609
+      },
+      {
+        "action_shift_match": 0.8295454545454547,
+        "attention_delta_l1_to_source": 0.013334239730843954,
+        "condition": "b_source_align_control_adapter_long",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 0.4772727272727273,
+        "perturbed_action_delta_vs_random": 0.2636363636363636,
+        "q_delta_mse_to_source": 1.7609420614084412,
+        "self_report_delta_l1_to_source": 0.003374489025250196
+      },
+      {
+        "action_shift_match": 0.8363636363636363,
+        "attention_delta_l1_to_source": 0.00491528864450348,
+        "condition": "b_source_align_attention_adapter_long",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 0.41363636363636364,
+        "perturbed_action_delta_vs_random": 0.2,
+        "q_delta_mse_to_source": 2.1639640148517634,
+        "self_report_delta_l1_to_source": 0.0020140164888741634
+      },
+      {
+        "action_shift_match": 0.8477272727272728,
+        "attention_delta_l1_to_source": 0.00568858247033032,
+        "condition": "b_source_align_repair_copy_long",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 0.3931818181818182,
+        "perturbed_action_delta_vs_random": 0.17954545454545456,
+        "q_delta_mse_to_source": 2.2759202240842558,
+        "self_report_delta_l1_to_source": 0.001889892265250011
+      },
+      {
+        "action_shift_match": 0.859090909090909,
+        "attention_delta_l1_to_source": 0.0045505981801261565,
+        "condition": "b_behavior_distill",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 0.38409090909090904,
+        "perturbed_action_delta_vs_random": 0.17045454545454544,
+        "q_delta_mse_to_source": 3.299560887434896,
+        "self_report_delta_l1_to_source": 0.0018919068258711547
+      },
+      {
+        "action_shift_match": 0.859090909090909,
+        "attention_delta_l1_to_source": 0.004544654680780139,
+        "condition": "b_frozen_random",
+        "n_rows": 440,
+        "n_train_seeds": 22,
+        "perturbed_action_agreement": 0.2136363636363636,
+        "q_delta_mse_to_source": 3.4242780242889967,
+        "self_report_delta_l1_to_source": 0.0018919068410447005
+      }
+    ]
+  },
+  "recurrent_rows": [
+    {
+      "baseline_hidden_mse": 0.10158568141262302,
+      "baseline_report_delta": 0.0066113221304972694,
+      "baseline_warm_action_agreement": 0.20454545454545456,
+      "family": "source-selected",
+      "hidden_mse_ci": [
+        0.05940536512629354,
+        0.14587915986886624
+      ],
+      "hidden_mse_improvement": 0.09635275372106249,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "source",
+      "label": "Selected source-policy delay 4",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_full22/recurrent_contrasts.json",
+      "query_mode": "selected_history",
+      "report_delay_steps": 4,
+      "report_delta_ci": [
+        0.0019100559320386439,
+        0.004170332116007068
+      ],
+      "report_delta_failure_count": null,
+      "report_delta_failure_seeds": [],
+      "report_delta_improvement": 0.003019987740542393,
+      "report_delta_win_rate": 0.9090909090909091,
+      "short_label": "selected-d4",
+      "target_hidden_mse": 0.005232927691560524,
+      "target_report_delta": 0.003591334389954877,
+      "target_warm_action_agreement": 0.8579545454545454,
+      "warm_action_ci": [
+        0.5056818181818182,
+        0.7954545454545454
+      ],
+      "warm_action_improvement": 0.6534090909090909,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10086225020826202,
+      "baseline_report_delta": 0.0057660432025427736,
+      "baseline_warm_action_agreement": 0.20454545454545456,
+      "family": "source-unselected",
+      "hidden_mse_ci": [
+        0.059725278753365856,
+        0.14572718515165967
+      ],
+      "hidden_mse_improvement": 0.09637405582956986,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "source",
+      "label": "Unselected source-policy delay 4",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_full22/recurrent_contrasts.json",
+      "query_mode": "deterministic_unselected",
+      "report_delay_steps": 4,
+      "report_delta_ci": [
+        0.0016830840225313263,
+        0.0038062986470497745
+      ],
+      "report_delta_failure_count": 2,
+      "report_delta_failure_seeds": [
+        18,
+        14
+      ],
+      "report_delta_improvement": 0.0026985110237415146,
+      "report_delta_win_rate": 0.9090909090909091,
+      "short_label": "unselected-d4",
+      "target_hidden_mse": 0.004488194378692159,
+      "target_report_delta": 0.0030675321788012594,
+      "target_warm_action_agreement": 0.8693181818181818,
+      "warm_action_ci": [
+        0.5568181818181818,
+        0.7670454545454546
+      ],
+      "warm_action_improvement": 0.6647727272727273,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10005704888184978,
+      "baseline_report_delta": 0.0056359963651960825,
+      "baseline_warm_action_agreement": 0.1875,
+      "family": "source-unselected",
+      "hidden_mse_ci": [
+        0.059420322470216225,
+        0.14613545208349435
+      ],
+      "hidden_mse_improvement": 0.09613189369296875,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "source",
+      "label": "Unselected source-policy delay 8",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_delay8_full22/recurrent_contrasts.json",
+      "query_mode": "deterministic_unselected",
+      "report_delay_steps": 8,
+      "report_delta_ci": [
+        0.0018701600162047008,
+        0.004121608027651262
+      ],
+      "report_delta_failure_count": 2,
+      "report_delta_failure_seeds": [
+        18,
+        14
+      ],
+      "report_delta_improvement": 0.002952910365170751,
+      "report_delta_win_rate": 0.9090909090909091,
+      "short_label": "unselected-d8",
+      "target_hidden_mse": 0.003925155188881035,
+      "target_report_delta": 0.002683086000025331,
+      "target_warm_action_agreement": 0.8693181818181818,
+      "warm_action_ci": [
+        0.5795454545454546,
+        0.7785511363636356
+      ],
+      "warm_action_improvement": 0.6818181818181818,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10576415864158083,
+      "baseline_report_delta": 0.0053378781861035595,
+      "baseline_warm_action_agreement": 0.19318181818181818,
+      "family": "shifted-policy",
+      "hidden_mse_ci": [
+        0.062021008693866196,
+        0.15106799814224642
+      ],
+      "hidden_mse_improvement": 0.10003430409770689,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "source_action_shift",
+      "label": "Shifted-policy delay 4",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_shifted_policy_full22/recurrent_contrasts.json",
+      "query_mode": "source_action_shift_unselected",
+      "report_delay_steps": 4,
+      "report_delta_ci": [
+        0.0014027740002656203,
+        0.003352411008186253
+      ],
+      "report_delta_failure_count": 3,
+      "report_delta_failure_seeds": [
+        14,
+        8,
+        18
+      ],
+      "report_delta_improvement": 0.002309140824940738,
+      "report_delta_win_rate": 0.8636363636363636,
+      "short_label": "shifted-d4",
+      "target_hidden_mse": 0.005729854543873939,
+      "target_report_delta": 0.0030287373611628215,
+      "target_warm_action_agreement": 0.9488636363636364,
+      "warm_action_ci": [
+        0.6704545454545454,
+        0.8353693181818174
+      ],
+      "warm_action_improvement": 0.7556818181818182,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10494005621876568,
+      "baseline_report_delta": 0.00533858657416369,
+      "baseline_warm_action_agreement": 0.21022727272727273,
+      "family": "random-policy",
+      "hidden_mse_ci": [
+        0.061936239008636304,
+        0.1505487801690626
+      ],
+      "hidden_mse_improvement": 0.09983556508082488,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "random",
+      "label": "Random-policy delay 4",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_full22/recurrent_contrasts.json",
+      "query_mode": "random_unselected",
+      "report_delay_steps": 4,
+      "report_delta_ci": [
+        0.0014968771453016427,
+        0.0034301134752457367
+      ],
+      "report_delta_failure_count": 1,
+      "report_delta_failure_seeds": [
+        14
+      ],
+      "report_delta_improvement": 0.002389464213769867,
+      "report_delta_win_rate": 0.9545454545454546,
+      "short_label": "random-d4",
+      "target_hidden_mse": 0.0051044911379407995,
+      "target_report_delta": 0.002949122360393823,
+      "target_warm_action_agreement": 0.9034090909090909,
+      "warm_action_ci": [
+        0.5852272727272727,
+        0.7955965909090901
+      ],
+      "warm_action_improvement": 0.6931818181818182,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10595403658755292,
+      "baseline_report_delta": 0.005494299568950241,
+      "baseline_warm_action_agreement": 0.1534090909090909,
+      "family": "random-policy",
+      "hidden_mse_ci": [
+        0.06202901448435899,
+        0.15110045311103223
+      ],
+      "hidden_mse_improvement": 0.10048983062527193,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "random",
+      "label": "Random-policy delay 8",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay8_full22/recurrent_contrasts.json",
+      "query_mode": "random_unselected",
+      "report_delay_steps": 8,
+      "report_delta_ci": [
+        0.0015512179072370636,
+        0.0036176405414334333
+      ],
+      "report_delta_failure_count": 3,
+      "report_delta_failure_seeds": [
+        14,
+        18,
+        8
+      ],
+      "report_delta_improvement": 0.0025064928945242506,
+      "report_delta_win_rate": 0.8636363636363636,
+      "short_label": "random-d8",
+      "target_hidden_mse": 0.005464205962281002,
+      "target_report_delta": 0.0029878066744259903,
+      "target_warm_action_agreement": 0.9034090909090909,
+      "warm_action_ci": [
+        0.6590909090909091,
+        0.8352272727272727
+      ],
+      "warm_action_improvement": 0.75,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10592529609989883,
+      "baseline_report_delta": 0.005609523758473436,
+      "baseline_warm_action_agreement": 0.19318181818181818,
+      "family": "random-policy",
+      "hidden_mse_ci": [
+        0.06212816741481633,
+        0.1524961378897098
+      ],
+      "hidden_mse_improvement": 0.10125092348698672,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "random",
+      "label": "Random-policy delay 12",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay12_full22/recurrent_contrasts.json",
+      "query_mode": "random_unselected",
+      "report_delay_steps": 12,
+      "report_delta_ci": [
+        0.0016652742885614595,
+        0.0036019236534777497
+      ],
+      "report_delta_failure_count": 2,
+      "report_delta_failure_seeds": [
+        8,
+        14
+      ],
+      "report_delta_improvement": 0.0025828990215434238,
+      "report_delta_win_rate": 0.9090909090909091,
+      "short_label": "random-d12",
+      "target_hidden_mse": 0.004674372612912107,
+      "target_report_delta": 0.0030266247369300117,
+      "target_warm_action_agreement": 0.9034090909090909,
+      "warm_action_ci": [
+        0.6022727272727273,
+        0.8068181818181818
+      ],
+      "warm_action_improvement": 0.7102272727272727,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10684070278975097,
+      "baseline_report_delta": 0.005838240314749948,
+      "baseline_warm_action_agreement": 0.1875,
+      "family": "random-policy",
+      "hidden_mse_ci": [
+        0.062324509125299056,
+        0.15188587982641527
+      ],
+      "hidden_mse_improvement": 0.10084926636880648,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "random",
+      "label": "Random-policy history 16 delay 12",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_full22/recurrent_contrasts.json",
+      "query_mode": "random_unselected",
+      "report_delay_steps": 12,
+      "report_delta_ci": [
+        0.001644634897847814,
+        0.0033686947907757376
+      ],
+      "report_delta_failure_count": 0,
+      "report_delta_failure_seeds": [],
+      "report_delta_improvement": 0.002455664353059279,
+      "report_delta_win_rate": 1.0,
+      "short_label": "random-h16-d12",
+      "target_hidden_mse": 0.005991436420944493,
+      "target_report_delta": 0.003382575961690669,
+      "target_warm_action_agreement": 0.9147727272727273,
+      "warm_action_ci": [
+        0.6022727272727273,
+        0.8352272727272727
+      ],
+      "warm_action_improvement": 0.7272727272727273,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10530459035230293,
+      "baseline_report_delta": 0.005314097900819351,
+      "baseline_warm_action_agreement": 0.1590909090909091,
+      "family": "random-policy-alt",
+      "hidden_mse_ci": [
+        0.06149368749183643,
+        0.15085420156082446
+      ],
+      "hidden_mse_improvement": 0.10000469269479337,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "random",
+      "label": "Random-policy history 16 delay 12 altseed",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_altseed2_full22/recurrent_contrasts.json",
+      "query_mode": "random_unselected",
+      "report_delay_steps": 12,
+      "report_delta_ci": [
+        0.0012289577022914057,
+        0.003205762183470327
+      ],
+      "report_delta_failure_count": 3,
+      "report_delta_failure_seeds": [
+        8,
+        14,
+        26
+      ],
+      "report_delta_improvement": 0.0021793511148098955,
+      "report_delta_win_rate": 0.8636363636363636,
+      "short_label": "random-h16-d12-alt",
+      "target_hidden_mse": 0.005299897657509559,
+      "target_report_delta": 0.0031347467860094553,
+      "target_warm_action_agreement": 0.875,
+      "warm_action_ci": [
+        0.6079545454545454,
+        0.8181818181818182
+      ],
+      "warm_action_improvement": 0.7159090909090909,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10627036392477086,
+      "baseline_report_delta": 0.00599707111822764,
+      "baseline_warm_action_agreement": 0.19886363636363635,
+      "family": "scripted-cycle",
+      "hidden_mse_ci": [
+        0.06281239498730636,
+        0.1504282904337141
+      ],
+      "hidden_mse_improvement": 0.10068908438742338,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "scripted_cycle",
+      "label": "Scripted-cycle delay 8",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_delay8_full22/recurrent_contrasts.json",
+      "query_mode": "scripted_cycle_unselected",
+      "report_delay_steps": 8,
+      "report_delta_ci": [
+        0.0017427707024590807,
+        0.0037891683558906064
+      ],
+      "report_delta_failure_count": 0,
+      "report_delta_failure_seeds": [],
+      "report_delta_improvement": 0.00271198616487632,
+      "report_delta_win_rate": 1.0,
+      "short_label": "cycle-d8",
+      "target_hidden_mse": 0.005581279537347489,
+      "target_report_delta": 0.0032850849533513204,
+      "target_warm_action_agreement": 0.8806818181818182,
+      "warm_action_ci": [
+        0.5681818181818182,
+        0.7784090909090909
+      ],
+      "warm_action_improvement": 0.6818181818181818,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10656255113214931,
+      "baseline_report_delta": 0.005780792513178312,
+      "baseline_warm_action_agreement": 0.16477272727272727,
+      "family": "scripted-cycle",
+      "hidden_mse_ci": [
+        0.06310121384009541,
+        0.15175911050071755
+      ],
+      "hidden_mse_improvement": 0.10100908283621637,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "scripted_cycle",
+      "label": "Scripted-cycle stride 2 delay 8",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay8_full22/recurrent_contrasts.json",
+      "query_mode": "scripted_cycle_unselected",
+      "report_delay_steps": 8,
+      "report_delta_ci": [
+        0.0015042851059935193,
+        0.0032529906182010063
+      ],
+      "report_delta_failure_count": 1,
+      "report_delta_failure_seeds": [
+        14
+      ],
+      "report_delta_improvement": 0.002324328840102077,
+      "report_delta_win_rate": 0.9545454545454546,
+      "short_label": "cycle-s2-d8",
+      "target_hidden_mse": 0.00555346829593294,
+      "target_report_delta": 0.0034564636730762353,
+      "target_warm_action_agreement": 0.9147727272727273,
+      "warm_action_ci": [
+        0.6647727272727273,
+        0.8409090909090909
+      ],
+      "warm_action_improvement": 0.75,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10659265028185803,
+      "baseline_report_delta": 0.005423986083769705,
+      "baseline_warm_action_agreement": 0.21022727272727273,
+      "family": "scripted-cycle",
+      "hidden_mse_ci": [
+        0.06207870353572699,
+        0.1513041738290171
+      ],
+      "hidden_mse_improvement": 0.10088487781616674,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "scripted_cycle",
+      "label": "Scripted-cycle stride 2 delay 12",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay12_full22/recurrent_contrasts.json",
+      "query_mode": "scripted_cycle_unselected",
+      "report_delay_steps": 12,
+      "report_delta_ci": [
+        0.0012507644963865128,
+        0.003239684998667352
+      ],
+      "report_delta_failure_count": 3,
+      "report_delta_failure_seeds": [
+        8,
+        14,
+        10
+      ],
+      "report_delta_improvement": 0.0021874024366662216,
+      "report_delta_win_rate": 0.8636363636363636,
+      "short_label": "cycle-s2-d12",
+      "target_hidden_mse": 0.005707772465691299,
+      "target_report_delta": 0.0032365836471034836,
+      "target_warm_action_agreement": 0.8977272727272727,
+      "warm_action_ci": [
+        0.5909090909090909,
+        0.7784090909090909
+      ],
+      "warm_action_improvement": 0.6875,
+      "warm_action_win_rate": 1.0
+    },
+    {
+      "baseline_hidden_mse": 0.10821964725090022,
+      "baseline_report_delta": 0.005431387372895683,
+      "baseline_warm_action_agreement": 0.17045454545454544,
+      "family": "scripted-cycle",
+      "hidden_mse_ci": [
+        0.06354411948376848,
+        0.1544421761299852
+      ],
+      "hidden_mse_improvement": 0.10268658712377808,
+      "hidden_mse_win_rate": 1.0,
+      "history_policy_mode": "scripted_cycle",
+      "label": "Scripted-cycle stride 2 history 16 delay 12",
+      "n_rows": 528,
+      "n_train_seeds": 22,
+      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_history16_delay12_full22/recurrent_contrasts.json",
+      "query_mode": "scripted_cycle_unselected",
+      "report_delay_steps": 12,
+      "report_delta_ci": [
+        0.0012382048943627953,
+        0.003521287896901475
+      ],
+      "report_delta_failure_count": 2,
+      "report_delta_failure_seeds": [
+        8,
+        14
+      ],
+      "report_delta_improvement": 0.002334016584356402,
+      "report_delta_win_rate": 0.9090909090909091,
+      "short_label": "cycle-s2-h16-d12",
+      "target_hidden_mse": 0.0055330601271221394,
+      "target_report_delta": 0.0030973707885392815,
+      "target_warm_action_agreement": 0.875,
+      "warm_action_ci": [
+        0.6193181818181818,
+        0.7897727272727273
+      ],
+      "warm_action_improvement": 0.7045454545454546,
+      "warm_action_win_rate": 1.0
+    }
+  ],
+  "target_condition": "b_source_align_attention_copy_long"
+}
