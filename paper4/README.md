@@ -17,7 +17,7 @@ This is not a consciousness, identity, survival, biological preservation, or who
 From the repository root:
 
 ```bash
-python3 paper4/generate_assets.py
+.venv/bin/python paper4/generate_assets.py
 ```
 
 Generated outputs:
@@ -27,10 +27,12 @@ Generated outputs:
 - `paper4/figures/fig1_recurrent_stress_sweep.png`
 - `paper4/figures/fig2_perturbation_layer.png`
 
+Compact source contrast snapshots are stored in `paper4/source_contrasts/`. The full local run directories are intentionally not required for the release build.
+
 ## Build PDF
 
 ```bash
-python3 paper4/build_pdf.py
+.venv/bin/python paper4/build_pdf.py
 ```
 
 Output:
@@ -39,4 +41,4 @@ Output:
 
 ## Status
 
-Draft scaffold created 2026-06-01. The next pass should tighten the related work, add any missing citations, and decide whether to run one new lesion or target-policy history experiment before public release.
+Publish-review pass prepared 2026-06-15. Public release should upload the PDF and use `paper4/zenodo_metadata.md` for record metadata.

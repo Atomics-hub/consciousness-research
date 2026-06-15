@@ -41,13 +41,27 @@ The associated code is in `experiments/ast_preservation/`. See [`experiments/ast
 
 **The Preservation Benchmark: Testing Functional Continuity Across Substrate Transfer**
 
-Zenodo DOI pending.
+**[Read Paper 3 on Zenodo](https://doi.org/10.5281/zenodo.20480505)**
 
 The PDF is available in this repo: [`paper3/ryan_2026_preservation_benchmark_ast_v0.pdf`](paper3/ryan_2026_preservation_benchmark_ast_v0.pdf)
 
 The associated benchmark code is in `experiments/preservation_bench/`. See [`experiments/preservation_bench/README.md`](experiments/preservation_bench/README.md) for reproduction commands, validation rules, and limitations.
 
 Stable release snapshot: [`paper3-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper3-v1.0.0)
+
+## Paper 4
+
+`paper4/` contains a recurrent and perturbation stress-test follow-up:
+
+**History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes**
+
+Zenodo DOI pending.
+
+The PDF is available in this repo: [`paper4/ryan_2026_history_dependent_functional_continuity.pdf`](paper4/ryan_2026_history_dependent_functional_continuity.pdf)
+
+The associated benchmark code is in `experiments/preservation_bench/`. See [`experiments/preservation_bench/README.md`](experiments/preservation_bench/README.md) for reproduction commands, validation rules, and limitations.
+
+Planned stable release snapshot: [`paper4-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper4-v1.0.0)
 
 ## Repository Contents
 
@@ -56,6 +70,7 @@ paper/              Full paper (markdown source, PDF, build script)
 paper/figures/      All 8 figures (PNG + PDF)
 paper2/             Exploratory AST transplant-assay follow-up
 paper3/             PreservationBench AST v0 benchmark preprint
+paper4/             Recurrent and perturbation stress-test follow-up
 experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
@@ -100,6 +115,18 @@ Paper 3:
 ```bibtex
 @article{ryan2026preservationbench,
   title={The Preservation Benchmark: Testing Functional Continuity Across Substrate Transfer},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.20480505},
+  publisher={Zenodo},
+}
+```
+
+Paper 4:
+
+```bibtex
+@article{ryan2026historydependentcontinuity,
+  title={History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes},
   author={Ryan, Thomas},
   year={2026},
   publisher={Zenodo},

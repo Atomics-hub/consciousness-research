@@ -1,0 +1,113 @@
+{
+  "description": "Compact Paper 4 source contrast snapshots used by paper4/generate_assets.py. Full local run directories are intentionally not included.",
+  "generated_from": [
+    {
+      "label": "selected-d4",
+      "sha256": "89e8c787680be15d0f541d10e848755c413f923fb8bb43ccfb871ba547b23718",
+      "snapshot_path": "paper4/source_contrasts/selected-d4/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "5ce2621decf8fed8c071247b301be7602b964f787c3d3ed48e6b8cf5d6d16a01",
+      "failure_snapshot_path": "paper4/source_contrasts/unselected-d4/report_failure_inspection.json",
+      "label": "unselected-d4",
+      "sha256": "a14687a19255d8ae32ad3b7a32eed3ba3be9a1966eeb77f5f103f4b4e4707fd7",
+      "snapshot_path": "paper4/source_contrasts/unselected-d4/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "a0b1377e92894ba03b35f087a2fc8adec8d792a31b0b80aeeb623b72ea5d4b93",
+      "failure_snapshot_path": "paper4/source_contrasts/unselected-d8/report_failure_inspection.json",
+      "label": "unselected-d8",
+      "sha256": "0724741d79bbee3d0e93a30ef022077e90b6e52e327ff03c4ceca54c1a7cfb57",
+      "snapshot_path": "paper4/source_contrasts/unselected-d8/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_delay8_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "3a993449204587275830960a0aeb69414a004c0f428ace3d141845c744db3953",
+      "failure_snapshot_path": "paper4/source_contrasts/shifted-d4/report_failure_inspection.json",
+      "label": "shifted-d4",
+      "sha256": "ccef16d3d3b89f71ec5f69226f71e5a196739d0350cb2015998b71b186f26103",
+      "snapshot_path": "paper4/source_contrasts/shifted-d4/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_shifted_policy_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "ba3487ca96e1437f289f36ef4ade838afae77425bc978ca862de88a1965bef9f",
+      "failure_snapshot_path": "paper4/source_contrasts/random-d4/report_failure_inspection.json",
+      "label": "random-d4",
+      "sha256": "ac94370133db4bb7a8445798ea11aa56f913fc25537c7753ca903a4fc4d28b48",
+      "snapshot_path": "paper4/source_contrasts/random-d4/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "a564f0da2cb63b244a66d93e2897be5c3ccc827d2a05095afc6b72c94b16dbc1",
+      "failure_snapshot_path": "paper4/source_contrasts/random-d8/report_failure_inspection.json",
+      "label": "random-d8",
+      "sha256": "6556631b7d2cb1b49611220aedbcc282bdf16ae9971f5ab1aad1a91bd35a0205",
+      "snapshot_path": "paper4/source_contrasts/random-d8/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay8_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "620774ad7fe7c872e940b193d8213e4e2eb5655ba05d0ce39f771d494c39fd87",
+      "failure_snapshot_path": "paper4/source_contrasts/random-d12/report_failure_inspection.json",
+      "label": "random-d12",
+      "sha256": "98e09a2c629e7d956d22c8187fd5d6cd1d03d0fd44e787e6ffb0922ef7b68b23",
+      "snapshot_path": "paper4/source_contrasts/random-d12/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay12_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "bb3f91e6f3d4221312d926b205c83908a54e9ff84b6ed771a0b56c8d9e884f27",
+      "failure_snapshot_path": "paper4/source_contrasts/random-h16-d12/report_failure_inspection.json",
+      "label": "random-h16-d12",
+      "sha256": "1349246936a5a2dd3962f50d89d853d67a2221323ed8a0efc441917a98419f06",
+      "snapshot_path": "paper4/source_contrasts/random-h16-d12/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "8f40a370c165f7377534a8b7740c0f443908d071a1bdeb5c85528149b6eb0670",
+      "failure_snapshot_path": "paper4/source_contrasts/random-h16-d12-alt/report_failure_inspection.json",
+      "label": "random-h16-d12-alt",
+      "sha256": "0fc38729a61263e1d4faa82b4af3d8854574d71a4e7ddef29b9c98f9b2daca28",
+      "snapshot_path": "paper4/source_contrasts/random-h16-d12-alt/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_altseed2_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "c5b311b2f8c442b80b70014110eef4ae6031007d1323cb9d5acb5b723aa3316e",
+      "failure_snapshot_path": "paper4/source_contrasts/cycle-d8/report_failure_inspection.json",
+      "label": "cycle-d8",
+      "sha256": "a7908083d2b3b91f70f3be5e0c6ddb6faaadb240fa4e248f01eb93336aa5e339",
+      "snapshot_path": "paper4/source_contrasts/cycle-d8/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_delay8_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "c731cc9c0dabe9b3d4ec7bd21b019293ac483a74edd9db03fbf284a4ec3e8a32",
+      "failure_snapshot_path": "paper4/source_contrasts/cycle-s2-d8/report_failure_inspection.json",
+      "label": "cycle-s2-d8",
+      "sha256": "46af8f114c2ac0587ea3aa02fc38c5cfec99efebdc83e757076876ea90f58924",
+      "snapshot_path": "paper4/source_contrasts/cycle-s2-d8/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay8_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "7e2e0790777448b7c0b441a6500935861fef821a47c60c283beb506a3db89d9c",
+      "failure_snapshot_path": "paper4/source_contrasts/cycle-s2-d12/report_failure_inspection.json",
+      "label": "cycle-s2-d12",
+      "sha256": "6d83cbecb81c7a2f41c903d86eae42af2619c08a0b7f8c04fb2778fa7d5bdaa4",
+      "snapshot_path": "paper4/source_contrasts/cycle-s2-d12/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay12_full22/recurrent_contrasts.json"
+    },
+    {
+      "failure_sha256": "43aef63287cd44095d0a37586f105bcf4d87c0f6727774891af717ad55ae193f",
+      "failure_snapshot_path": "paper4/source_contrasts/cycle-s2-h16-d12/report_failure_inspection.json",
+      "label": "cycle-s2-h16-d12",
+      "sha256": "3de18775348f8f70132f660661c07b922a1d357ab12ca1ea7aca51a8584bf8e1",
+      "snapshot_path": "paper4/source_contrasts/cycle-s2-h16-d12/recurrent_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_history16_delay12_full22/recurrent_contrasts.json"
+    },
+    {
+      "label": "perturbation-expanded22",
+      "sha256": "92b97d811fa8ecf0845bfc3bc05b806f09623d0c6803da824d523bc3016fc516",
+      "snapshot_path": "paper4/source_contrasts/perturbation-expanded22/perturbation_contrasts.json",
+      "source_path": "experiments/preservation_bench/runs/ast_perturbation_core_condition_expanded22_cached/perturbation_contrasts.json"
+    }
+  ]
+}

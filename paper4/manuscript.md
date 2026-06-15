@@ -14,7 +14,7 @@
 
 PreservationBench was introduced to test whether preservation-relevant functions remain active after a source agent is copied, transplanted, adapted, or relearned in a target substrate. The previous PreservationBench-AST v0 result separated copied provenance, report continuity, task competence, proxy reward, and source-like control in clean paired evaluation episodes. The strongest combined profile came from a copied-attention condition, but that condition also narrowed the substrate gap. This paper asks a harder follow-up question: was the copied-attention result merely clean-episode mimicry, or does it preserve source-like history-dependent responses under delayed and counterfactual probes?
 
-I evaluate the copied-attention condition against frozen random target state across thirteen full validated-source recurrent stress families and one expanded perturbation family. The recurrent families include source-selected histories, deterministic unselected histories, shifted-policy histories, random-policy histories, scripted-cycle histories, longer report delays, longer histories, and an alternate random master seed. Across all thirteen full22 recurrent families, copied attention remained separated from frozen random on warm-action agreement, source-hidden-state distance, and report-delta distance. Warm-action improvement ranged from 0.653 to 0.756, hidden-state MSE improvement ranged from 0.0961 to 0.1027, and report-delta improvement remained positive but smaller, ranging from 0.0022 to 0.0030. In the expanded22 perturbation layer, copied attention reached 0.850 perturbed-action agreement versus 0.214 for frozen random and had near-zero attention-delta distance to source.
+I evaluate the copied-attention condition against frozen random target state across thirteen 22-seed validated-source recurrent stress families and one 22-seed perturbation family. The recurrent families include source-selected histories, deterministic unselected histories, shifted-policy histories, random-policy histories, scripted-cycle histories, longer report delays, longer histories, and an alternate random master seed. Across all thirteen recurrent families, copied attention remained separated from frozen random on warm-action agreement, source-hidden-state distance, and report-delta distance. Warm-action improvement ranged from 0.653 to 0.756, hidden-state MSE improvement ranged from 0.0961 to 0.1027, and report-delta improvement remained positive but smaller, ranging from 0.0022 to 0.0030. In the perturbation layer, copied attention reached 0.850 perturbed-action agreement versus 0.214 for frozen random and had near-zero attention-delta distance to source.
 
 These results support a bounded conclusion: in this toy AST-derived benchmark, copying the attention/source-state machinery preserves a history-dependent functional response profile better than frozen random target state across delayed, perturbed, and non-source-policy probes. The result does not measure consciousness, personal identity, survival, biological preservation, or whole-agent equivalence. It identifies a functional bottleneck and a stronger benchmark stress layer for future preservation research.
 
@@ -92,7 +92,7 @@ Each full recurrent family uses 22 validated source seeds and 528 condition rows
 
 ### 3.3 Perturbation Layer
 
-The perturbation layer uses controlled observation changes rather than delayed history changes. It compares how each target responds when the same observation is changed in a specific way. Perturbations include goal masking, distractor masking, goal-distractor swapping, fog removal, and partner masking. The expanded22 perturbation run uses 22 validated source seeds and evaluates source-relative action and internal response deltas.
+The perturbation layer uses controlled observation changes rather than delayed history changes. It compares how each target responds when the same observation is changed in a specific way. Perturbations include goal masking, distractor masking, goal-distractor swapping, fog removal, and partner masking. The perturbation run uses 22 validated source seeds and evaluates source-relative action and internal response deltas.
 
 ### 3.4 Metrics
 
@@ -128,7 +128,7 @@ The report-delta channel was also positive in every family, but smaller and more
 
 | Recurrent family | Delay | Target/base warm | Warm improvement | Hidden improvement | Report improvement | Report failures |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Selected source-policy | 4 | 0.858/0.205 | 0.653 | 0.0964 | 0.0030 | n/a |
+| Selected source-policy | 4 | 0.858/0.205 | 0.653 | 0.0964 | 0.0030 | not inspected |
 | Unselected source-policy | 4 | 0.869/0.205 | 0.665 | 0.0964 | 0.0027 | 2 |
 | Unselected source-policy | 8 | 0.869/0.188 | 0.682 | 0.0961 | 0.0030 | 2 |
 | Shifted policy | 4 | 0.949/0.193 | 0.756 | 0.1000 | 0.0023 | 3 |
@@ -144,9 +144,9 @@ The report-delta channel was also positive in every family, but smaller and more
 
 ### 4.2 Perturbation Layer
 
-The perturbation result is consistent with the recurrent stress result. In the expanded22 perturbation run, copied attention reached 0.850 perturbed-action agreement, compared with 0.214 for frozen random. It also had near-zero attention-delta distance to source and much lower Q-delta distance than bridge, repair, behavior-only, and random target conditions.
+The perturbation result is consistent with the recurrent stress result. In the 22-seed perturbation run, copied attention reached 0.850 perturbed-action agreement, compared with 0.214 for frozen random. It also had near-zero attention-delta distance to source and much lower Q-delta distance than bridge, repair, behavior-only, and random target conditions.
 
-![Figure 2. Expanded22 perturbation layer. Copied attention remains closest to source on perturbed-action agreement and internal response distance. Distances are plotted with Q-delta MSE scaled by 100 for visibility.](figures/fig2_perturbation_layer.png)
+![Figure 2. Perturbation layer. Copied attention remains closest to source on perturbed-action agreement and internal response distance. Distances are plotted with Q-delta MSE scaled by 100 for visibility.](figures/fig2_perturbation_layer.png)
 
 | Condition | Perturbed action agreement | Attention delta | Q delta MSE | Self-report delta |
 | --- | ---: | ---: | ---: | ---: |

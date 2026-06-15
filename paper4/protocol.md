@@ -119,6 +119,9 @@ Generated Paper 4 assets:
 - `paper4/tables/paper4_results_summary.md`
 - `paper4/figures/fig1_recurrent_stress_sweep.png`
 - `paper4/figures/fig2_perturbation_layer.png`
+- `paper4/source_contrasts/`
+
+The public release build uses compact source contrast snapshots under `paper4/source_contrasts/`. The original full local run directories are listed below for provenance but are intentionally not required for rebuilding Paper 4 assets.
 
 Primary recurrent source runs:
 

@@ -3,7 +3,7 @@
   "boundary": "Toy functional benchmark only. These outputs do not measure consciousness, identity, survival, biological preservation, or whole-agent equivalence.",
   "perturbation": {
     "baseline": "b_frozen_random",
-    "path": "experiments/preservation_bench/runs/ast_perturbation_core_condition_expanded22_cached/perturbation_contrasts.json",
+    "path": "paper4/source_contrasts/perturbation-expanded22/perturbation_contrasts.json",
     "rows": [
       {
         "action_shift_match": 1.0,
@@ -99,7 +99,7 @@
       "label": "Selected source-policy delay 4",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/selected-d4/recurrent_contrasts.json",
       "query_mode": "selected_history",
       "report_delay_steps": 4,
       "report_delta_ci": [
@@ -136,7 +136,7 @@
       "label": "Unselected source-policy delay 4",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/unselected-d4/recurrent_contrasts.json",
       "query_mode": "deterministic_unselected",
       "report_delay_steps": 4,
       "report_delta_ci": [
@@ -176,7 +176,7 @@
       "label": "Unselected source-policy delay 8",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_delay8_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/unselected-d8/recurrent_contrasts.json",
       "query_mode": "deterministic_unselected",
       "report_delay_steps": 8,
       "report_delta_ci": [
@@ -216,7 +216,7 @@
       "label": "Shifted-policy delay 4",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_shifted_policy_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/shifted-d4/recurrent_contrasts.json",
       "query_mode": "source_action_shift_unselected",
       "report_delay_steps": 4,
       "report_delta_ci": [
@@ -257,7 +257,7 @@
       "label": "Random-policy delay 4",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/random-d4/recurrent_contrasts.json",
       "query_mode": "random_unselected",
       "report_delay_steps": 4,
       "report_delta_ci": [
@@ -296,7 +296,7 @@
       "label": "Random-policy delay 8",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay8_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/random-d8/recurrent_contrasts.json",
       "query_mode": "random_unselected",
       "report_delay_steps": 8,
       "report_delta_ci": [
@@ -337,7 +337,7 @@
       "label": "Random-policy delay 12",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay12_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/random-d12/recurrent_contrasts.json",
       "query_mode": "random_unselected",
       "report_delay_steps": 12,
       "report_delta_ci": [
@@ -377,7 +377,7 @@
       "label": "Random-policy history 16 delay 12",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/random-h16-d12/recurrent_contrasts.json",
       "query_mode": "random_unselected",
       "report_delay_steps": 12,
       "report_delta_ci": [
@@ -414,7 +414,7 @@
       "label": "Random-policy history 16 delay 12 altseed",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_altseed2_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/random-h16-d12-alt/recurrent_contrasts.json",
       "query_mode": "random_unselected",
       "report_delay_steps": 12,
       "report_delta_ci": [
@@ -455,7 +455,7 @@
       "label": "Scripted-cycle delay 8",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_delay8_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/cycle-d8/recurrent_contrasts.json",
       "query_mode": "scripted_cycle_unselected",
       "report_delay_steps": 8,
       "report_delta_ci": [
@@ -492,7 +492,7 @@
       "label": "Scripted-cycle stride 2 delay 8",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay8_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/cycle-s2-d8/recurrent_contrasts.json",
       "query_mode": "scripted_cycle_unselected",
       "report_delay_steps": 8,
       "report_delta_ci": [
@@ -531,7 +531,7 @@
       "label": "Scripted-cycle stride 2 delay 12",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay12_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/cycle-s2-d12/recurrent_contrasts.json",
       "query_mode": "scripted_cycle_unselected",
       "report_delay_steps": 12,
       "report_delta_ci": [
@@ -572,7 +572,7 @@
       "label": "Scripted-cycle stride 2 history 16 delay 12",
       "n_rows": 528,
       "n_train_seeds": 22,
-      "path": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_history16_delay12_full22/recurrent_contrasts.json",
+      "path": "paper4/source_contrasts/cycle-s2-h16-d12/recurrent_contrasts.json",
       "query_mode": "scripted_cycle_unselected",
       "report_delay_steps": 12,
       "report_delta_ci": [

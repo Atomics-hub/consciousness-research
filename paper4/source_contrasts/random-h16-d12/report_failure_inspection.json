@@ -1,0 +1,166 @@
+{
+  "baseline_condition": "b_frozen_random",
+  "best_next_step": "Add longer report delays and shifted/non-source-policy histories, and track whether report-delta failures cluster with early terminations, low source action-change, or high baseline report similarity.",
+  "contrasts_json": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_full22/recurrent_contrasts.json",
+  "failure_histories": {},
+  "interpretation": "No report-delta failure seeds were found for the target condition. Continue to treat this as benchmark-hardening only, and keep tracking delay completion, source action-change, and baseline report similarity in larger or shifted-history runs.",
+  "n_rows": 528,
+  "n_train_seeds": 22,
+  "primary_contrast_summary": {
+    "history_delta_self_report_l1_to_source": {
+      "bootstrap_95_ci_improvement": [
+        0.001644634897847814,
+        0.0033686947907757376
+      ],
+      "mean_delta": -0.002455664353059279,
+      "mean_improvement_vs_baseline": 0.002455664353059279,
+      "win_rate_vs_baseline": 1.0
+    },
+    "schema_hidden_mse_to_source_at_probe": {
+      "bootstrap_95_ci_improvement": [
+        0.062324509125299056,
+        0.15188587982641527
+      ],
+      "mean_delta": -0.10084926636880648,
+      "mean_improvement_vs_baseline": 0.10084926636880648,
+      "win_rate_vs_baseline": 1.0
+    },
+    "warm_action_agreement": {
+      "bootstrap_95_ci_improvement": [
+        0.6022727272727273,
+        0.8352272727272727
+      ],
+      "mean_delta": 0.7272727272727273,
+      "mean_improvement_vs_baseline": 0.7272727272727273,
+      "win_rate_vs_baseline": 1.0
+    }
+  },
+  "query_mode": "random_unselected",
+  "report_delay_steps": 12,
+  "report_delta_failure_count": 0,
+  "report_delta_failure_seeds": [],
+  "rows_jsonl": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_full22/recurrent_probe_rows.jsonl",
+  "target_condition": "b_source_align_attention_copy_long",
+  "weakest_report_delta_seeds": [
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.007712165737757459,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.02686605027247424,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00014361085413838737,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.007483021166990511,
+      "target_report_delta": 0.007568554883619072,
+      "training_seed_index": 14,
+      "warm_action_improvement": 0.75
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.0004449506704986561,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.1556667663389817,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0001460466482967604,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.00013227380259195343,
+      "target_report_delta": 0.0002989040222018957,
+      "training_seed_index": 13,
+      "warm_action_improvement": 0.875
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.0003908801809302531,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.5120130993891507,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00039088014662549617,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 1.3263106162387378e-13,
+      "target_report_delta": 3.430475695176405e-11,
+      "training_seed_index": 2,
+      "warm_action_improvement": 0.625
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.01127743226243183,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.037076247041113675,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0005646879435516894,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.011124925804324448,
+      "target_report_delta": 0.01071274431888014,
+      "training_seed_index": 8,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.006413106806576252,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.03415109912384651,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0006930871677468531,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.006245097261853516,
+      "target_report_delta": 0.005720019638829399,
+      "training_seed_index": 26,
+      "warm_action_improvement": 0.875
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.0023709370725555345,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.03180342676387227,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0007045127713354304,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.0021680786012439057,
+      "target_report_delta": 0.001666424301220104,
+      "training_seed_index": 28,
+      "warm_action_improvement": 0.625
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.0033547035127412528,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.2542932358555845,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0008647269860375673,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.003100168309174478,
+      "target_report_delta": 0.0024899765267036855,
+      "training_seed_index": 25,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "12": 8
+      },
+      "baseline_report_delta": 0.005308490770403296,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.030482376139843836,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0010920165514107794,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.005060834024334326,
+      "target_report_delta": 0.004216474218992516,
+      "training_seed_index": 27,
+      "warm_action_improvement": 1.0
+    }
+  ]
+}

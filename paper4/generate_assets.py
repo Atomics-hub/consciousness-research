@@ -24,85 +24,85 @@ RECURRENT_STUDIES = [
         "Selected source-policy delay 4",
         "selected-d4",
         "source-selected",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/selected-d4/recurrent_contrasts.json",
     ),
     (
         "Unselected source-policy delay 4",
         "unselected-d4",
         "source-unselected",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/unselected-d4/recurrent_contrasts.json",
     ),
     (
         "Unselected source-policy delay 8",
         "unselected-d8",
         "source-unselected",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_unselected_delay8_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/unselected-d8/recurrent_contrasts.json",
     ),
     (
         "Shifted-policy delay 4",
         "shifted-d4",
         "shifted-policy",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_shifted_policy_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/shifted-d4/recurrent_contrasts.json",
     ),
     (
         "Random-policy delay 4",
         "random-d4",
         "random-policy",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/random-d4/recurrent_contrasts.json",
     ),
     (
         "Random-policy delay 8",
         "random-d8",
         "random-policy",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay8_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/random-d8/recurrent_contrasts.json",
     ),
     (
         "Random-policy delay 12",
         "random-d12",
         "random-policy",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay12_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/random-d12/recurrent_contrasts.json",
     ),
     (
         "Random-policy history 16 delay 12",
         "random-h16-d12",
         "random-policy",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/random-h16-d12/recurrent_contrasts.json",
     ),
     (
         "Random-policy history 16 delay 12 altseed",
         "random-h16-d12-alt",
         "random-policy-alt",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_history16_delay12_altseed2_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/random-h16-d12-alt/recurrent_contrasts.json",
     ),
     (
         "Scripted-cycle delay 8",
         "cycle-d8",
         "scripted-cycle",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_delay8_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/cycle-d8/recurrent_contrasts.json",
     ),
     (
         "Scripted-cycle stride 2 delay 8",
         "cycle-s2-d8",
         "scripted-cycle",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay8_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/cycle-s2-d8/recurrent_contrasts.json",
     ),
     (
         "Scripted-cycle stride 2 delay 12",
         "cycle-s2-d12",
         "scripted-cycle",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay12_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/cycle-s2-d12/recurrent_contrasts.json",
     ),
     (
         "Scripted-cycle stride 2 history 16 delay 12",
         "cycle-s2-h16-d12",
         "scripted-cycle",
-        "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_history16_delay12_full22/recurrent_contrasts.json",
+        "paper4/source_contrasts/cycle-s2-h16-d12/recurrent_contrasts.json",
     ),
 ]
 
 PERTURBATION_REPORT = (
     ROOT
-    / "experiments/preservation_bench/runs/ast_perturbation_core_condition_expanded22_cached/perturbation_contrasts.json"
+    / "paper4/source_contrasts/perturbation-expanded22/perturbation_contrasts.json"
 )
 
 
@@ -395,7 +395,7 @@ def plot_perturbation(perturbation: dict[str, Any]) -> None:
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
 
-    fig.suptitle("Expanded22 perturbation layer", fontsize=14, fontweight="bold")
+    fig.suptitle("Paper 4 perturbation layer", fontsize=14, fontweight="bold")
     fig.tight_layout(rect=[0, 0, 1, 0.94])
     fig.savefig(FIGURES_DIR / "fig2_perturbation_layer.png", dpi=180)
     plt.close(fig)

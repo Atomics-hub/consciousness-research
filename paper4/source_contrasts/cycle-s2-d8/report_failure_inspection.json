@@ -1,0 +1,291 @@
+{
+  "baseline_condition": "b_frozen_random",
+  "best_next_step": "Add longer report delays and shifted/non-source-policy histories, and track whether report-delta failures cluster with early terminations, low source action-change, or high baseline report similarity.",
+  "contrasts_json": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay8_full22/recurrent_contrasts.json",
+  "failure_histories": {
+    "14": [
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.042181797325611115,
+        "baseline_report_delta": 0.008613606914877892,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 0,
+        "eval_seed": 3215513675,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.008315769024193287,
+        "target_hidden_mse": 0.015605240128934383,
+        "target_minus_baseline_report_delta": 0.0006756028160452843,
+        "target_report_delta": 0.009289209730923176,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.043222829699516296,
+        "baseline_report_delta": 0.010301951318979263,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 1,
+        "eval_seed": 820565383,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.010011499747633934,
+        "target_hidden_mse": 0.016193967312574387,
+        "target_minus_baseline_report_delta": 0.0007013455033302307,
+        "target_report_delta": 0.011003296822309494,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.036178238689899445,
+        "baseline_report_delta": 0.012076050974428654,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 2,
+        "eval_seed": 2160277387,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.011838249862194061,
+        "target_hidden_mse": 0.013749967329204082,
+        "target_minus_baseline_report_delta": 0.0008556060492992401,
+        "target_report_delta": 0.012931657023727894,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.030207036063075066,
+        "baseline_report_delta": 0.008844689466059208,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 3,
+        "eval_seed": 918028976,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 1.0,
+        "source_history_self_report_delta_l1": 0.008719206787645817,
+        "target_hidden_mse": 0.013983795419335365,
+        "target_minus_baseline_report_delta": 0.0010145893320441246,
+        "target_report_delta": 0.009859278798103333,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.032269664108753204,
+        "baseline_report_delta": 0.011566776782274246,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 4,
+        "eval_seed": 1473385764,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.011454183608293533,
+        "target_hidden_mse": 0.018322672694921494,
+        "target_minus_baseline_report_delta": 0.0008286293596029282,
+        "target_report_delta": 0.012395406141877174,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.03582937642931938,
+        "baseline_report_delta": 0.013152125291526318,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 5,
+        "eval_seed": 223483875,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.01304477360099554,
+        "target_hidden_mse": 0.02456974796950817,
+        "target_minus_baseline_report_delta": 0.0008243964985013008,
+        "target_report_delta": 0.013976521790027618,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.04272853583097458,
+        "baseline_report_delta": 0.012055778875946999,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 6,
+        "eval_seed": 4225125810,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.011787700466811657,
+        "target_hidden_mse": 0.01591775380074978,
+        "target_minus_baseline_report_delta": 0.0006997669115662575,
+        "target_report_delta": 0.012755545787513256,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.04089447855949402,
+        "baseline_report_delta": 0.011767959222197533,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 7,
+        "eval_seed": 1232105420,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.011501721106469631,
+        "target_hidden_mse": 0.015939315780997276,
+        "target_minus_baseline_report_delta": 0.00069408118724823,
+        "target_report_delta": 0.012462040409445763,
+        "target_warm_action_agreement": 1.0
+      }
+    ]
+  },
+  "interpretation": "Report-delta failures are narrow relative to warm-action and hidden-state wins. Treat them as a specific report-channel caveat to inspect under longer delays and shifted histories, not as a collapse of the unselected hard-delay result.",
+  "n_rows": 528,
+  "n_train_seeds": 22,
+  "primary_contrast_summary": {
+    "history_delta_self_report_l1_to_source": {
+      "bootstrap_95_ci_improvement": [
+        0.0015042851059935193,
+        0.0032529906182010063
+      ],
+      "mean_delta": -0.002324328840102077,
+      "mean_improvement_vs_baseline": 0.002324328840102077,
+      "win_rate_vs_baseline": 0.9545454545454546
+    },
+    "schema_hidden_mse_to_source_at_probe": {
+      "bootstrap_95_ci_improvement": [
+        0.06310121384009541,
+        0.15175911050071755
+      ],
+      "mean_delta": -0.10100908283621637,
+      "mean_improvement_vs_baseline": 0.10100908283621637,
+      "win_rate_vs_baseline": 1.0
+    },
+    "warm_action_agreement": {
+      "bootstrap_95_ci_improvement": [
+        0.6647727272727273,
+        0.8409090909090909
+      ],
+      "mean_delta": 0.75,
+      "mean_improvement_vs_baseline": 0.75,
+      "win_rate_vs_baseline": 1.0
+    }
+  },
+  "query_mode": "scripted_cycle_unselected",
+  "report_delay_steps": 8,
+  "report_delta_failure_count": 1,
+  "report_delta_failure_seeds": [
+    14
+  ],
+  "rows_jsonl": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_stride2_delay8_full22/recurrent_probe_rows.jsonl",
+  "target_condition": "b_source_align_attention_copy_long",
+  "weakest_report_delta_seeds": [
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.011047367355786264,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.02115368703380227,
+      "n_rows": 8,
+      "report_delta_improvement": -0.0007867522072046995,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.010834138025529683,
+      "target_report_delta": 0.011834119562990963,
+      "training_seed_index": 14,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.0004440329867065884,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.15557995659764856,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00014456716235144995,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.0001314411492785439,
+      "target_report_delta": 0.00029946582435513847,
+      "training_seed_index": 13,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.00039088449921109714,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.5124596066889353,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00039088446490622916,
+      "source_action_changed_fraction": 0.25,
+      "source_report_delta": 1.3263526798948985e-13,
+      "target_report_delta": 3.430486797406651e-11,
+      "training_seed_index": 2,
+      "warm_action_improvement": 0.5
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.0029427570261759683,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.031114433018956333,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0005387625133153051,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.002732566717895679,
+      "target_report_delta": 0.0024039945128606632,
+      "training_seed_index": 28,
+      "warm_action_improvement": 0.75
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.005035488924477249,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.10749270650558174,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0008824220858514309,
+      "source_action_changed_fraction": 0.375,
+      "source_report_delta": 0.004809481426491402,
+      "target_report_delta": 0.0041530668386258185,
+      "training_seed_index": 15,
+      "warm_action_improvement": 0.75
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.005552791350055486,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.04661780977039598,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0009505914495093748,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.005374146479880437,
+      "target_report_delta": 0.004602199900546111,
+      "training_seed_index": 26,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.006348654424073175,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.023906326983706094,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0009718502114992589,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.006118748657172546,
+      "target_report_delta": 0.005376804212573916,
+      "training_seed_index": 27,
+      "warm_action_improvement": 0.5
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.003326658916193992,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.030681900807394413,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0009857054392341524,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.0032096643117256463,
+      "target_report_delta": 0.0023409534769598395,
+      "training_seed_index": 10,
+      "warm_action_improvement": 0.625
+    }
+  ]
+}
