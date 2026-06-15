@@ -1,0 +1,537 @@
+{
+  "baseline_condition": "b_frozen_random",
+  "best_next_step": "Add longer report delays and shifted/non-source-policy histories, and track whether report-delta failures cluster with early terminations, low source action-change, or high baseline report similarity.",
+  "contrasts_json": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay8_full22/recurrent_contrasts.json",
+  "failure_histories": {
+    "14": [
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.02633519470691681,
+        "baseline_report_delta": 0.002502966672182083,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 0,
+        "eval_seed": 3864520319,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.0021934793330729008,
+        "target_hidden_mse": 0.0015931515954434872,
+        "target_minus_baseline_report_delta": 0.002062237821519375,
+        "target_report_delta": 0.004565204493701458,
+        "target_warm_action_agreement": 0.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.04371686652302742,
+        "baseline_report_delta": 0.003715913277119398,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 1,
+        "eval_seed": 1529259412,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.0035753396805375814,
+        "target_hidden_mse": 0.0043793306685984135,
+        "target_minus_baseline_report_delta": -0.0028914057184010744,
+        "target_report_delta": 0.0008245075587183237,
+        "target_warm_action_agreement": 0.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.04794085770845413,
+        "baseline_report_delta": 0.013614260591566563,
+        "baseline_warm_action_agreement": 1.0,
+        "eval_episode_index": 2,
+        "eval_seed": 2591449672,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.013347283005714417,
+        "target_hidden_mse": 0.02265959419310093,
+        "target_minus_baseline_report_delta": 0.000666717067360878,
+        "target_report_delta": 0.01428097765892744,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.036250870674848557,
+        "baseline_report_delta": 0.006167818792164326,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 3,
+        "eval_seed": 652958343,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.005865928251296282,
+        "target_hidden_mse": 0.005457555875182152,
+        "target_minus_baseline_report_delta": 0.0008731354027986526,
+        "target_report_delta": 0.007040954194962978,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.051896192133426666,
+        "baseline_report_delta": 0.018068529665470123,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 4,
+        "eval_seed": 2704739998,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.01785845123231411,
+        "target_hidden_mse": 0.03062502294778824,
+        "target_minus_baseline_report_delta": 0.0006593111902475357,
+        "target_report_delta": 0.01872784085571766,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.031281135976314545,
+        "baseline_report_delta": 0.012458279728889465,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 5,
+        "eval_seed": 1297916763,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.012258733622729778,
+        "target_hidden_mse": 0.013359246775507927,
+        "target_minus_baseline_report_delta": 0.0007432615384459496,
+        "target_report_delta": 0.013201541267335415,
+        "target_warm_action_agreement": 0.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.028251726180315018,
+        "baseline_report_delta": 0.007385571487247944,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 6,
+        "eval_seed": 1086070902,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.007113191764801741,
+        "target_hidden_mse": 0.008294480852782726,
+        "target_minus_baseline_report_delta": 0.0010769078508019447,
+        "target_report_delta": 0.008462479338049889,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.028690166771411896,
+        "baseline_report_delta": 0.0077340141870081425,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 7,
+        "eval_seed": 4081590270,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.007494717836380005,
+        "target_hidden_mse": 0.008161552250385284,
+        "target_minus_baseline_report_delta": 0.001192615833133459,
+        "target_report_delta": 0.008926630020141602,
+        "target_warm_action_agreement": 1.0
+      }
+    ],
+    "18": [
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.03760099411010742,
+        "baseline_report_delta": 0.002222087001428008,
+        "baseline_warm_action_agreement": 1.0,
+        "eval_episode_index": 0,
+        "eval_seed": 2117792596,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.002028095070272684,
+        "target_hidden_mse": 0.015543760731816292,
+        "target_minus_baseline_report_delta": 6.276252679526806e-05,
+        "target_report_delta": 0.002284849528223276,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.03417610377073288,
+        "baseline_report_delta": 0.0025434058625251055,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 1,
+        "eval_seed": 1440683698,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.002344663254916668,
+        "target_hidden_mse": 0.005216615274548531,
+        "target_minus_baseline_report_delta": 0.001850025961175561,
+        "target_report_delta": 0.004393431823700666,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.036038000136613846,
+        "baseline_report_delta": 0.0018046280601993203,
+        "baseline_warm_action_agreement": 1.0,
+        "eval_episode_index": 2,
+        "eval_seed": 2911846638,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.0016205491265282035,
+        "target_hidden_mse": 0.015296370722353458,
+        "target_minus_baseline_report_delta": 0.0006929869996383786,
+        "target_report_delta": 0.002497615059837699,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.05182858929038048,
+        "baseline_report_delta": 0.009867897257208824,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 3,
+        "eval_seed": 593964107,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.009608513675630093,
+        "target_hidden_mse": 0.015653692185878754,
+        "target_minus_baseline_report_delta": -3.419630229473114e-05,
+        "target_report_delta": 0.009833700954914093,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.028675204142928123,
+        "baseline_report_delta": 0.0024186186492443085,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 4,
+        "eval_seed": 3006323381,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.0021961673628538847,
+        "target_hidden_mse": 0.0029546283185482025,
+        "target_minus_baseline_report_delta": 0.0018690363503992558,
+        "target_report_delta": 0.004287654999643564,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.03977249190211296,
+        "baseline_report_delta": 0.006817237939685583,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 5,
+        "eval_seed": 233943560,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.006608065217733383,
+        "target_hidden_mse": 0.004363028798252344,
+        "target_minus_baseline_report_delta": -0.0029380805790424347,
+        "target_report_delta": 0.0038791573606431484,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.025349464267492294,
+        "baseline_report_delta": 0.0031438807491213083,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 6,
+        "eval_seed": 2968618516,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.0029275736305862665,
+        "target_hidden_mse": 0.0029038842767477036,
+        "target_minus_baseline_report_delta": -0.0011437125504016876,
+        "target_report_delta": 0.0020001681987196207,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.05761190876364708,
+        "baseline_report_delta": 0.003934203181415796,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 7,
+        "eval_seed": 1714618519,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 1.0,
+        "source_history_self_report_delta_l1": 0.003649610560387373,
+        "target_hidden_mse": 0.008649603463709354,
+        "target_minus_baseline_report_delta": 0.0010894625447690487,
+        "target_report_delta": 0.005023665726184845,
+        "target_warm_action_agreement": 1.0
+      }
+    ],
+    "8": [
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.03216829523444176,
+        "baseline_report_delta": 0.003038982395082712,
+        "baseline_warm_action_agreement": 1.0,
+        "eval_episode_index": 0,
+        "eval_seed": 504624897,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.0029063415713608265,
+        "target_hidden_mse": 0.004447796382009983,
+        "target_minus_baseline_report_delta": 0.0016656545922160149,
+        "target_report_delta": 0.004704636987298727,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.03029230237007141,
+        "baseline_report_delta": 0.009943857789039612,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 1,
+        "eval_seed": 2439261570,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.009802556596696377,
+        "target_hidden_mse": 0.019827578216791153,
+        "target_minus_baseline_report_delta": 0.006313987076282501,
+        "target_report_delta": 0.016257844865322113,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.04466167837381363,
+        "baseline_report_delta": 0.016842585057020187,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 2,
+        "eval_seed": 2860605899,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.016671625897288322,
+        "target_hidden_mse": 0.040094926953315735,
+        "target_minus_baseline_report_delta": 0.004984470084309578,
+        "target_report_delta": 0.021827055141329765,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.031103648245334625,
+        "baseline_report_delta": 0.006020808592438698,
+        "baseline_warm_action_agreement": 1.0,
+        "eval_episode_index": 3,
+        "eval_seed": 2860930587,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.005843757186084986,
+        "target_hidden_mse": 0.003368435660377145,
+        "target_minus_baseline_report_delta": -0.0020434362813830376,
+        "target_report_delta": 0.00397737231105566,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.019844360649585724,
+        "baseline_report_delta": 0.005940434988588095,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 4,
+        "eval_seed": 1342912463,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.005860951263457537,
+        "target_hidden_mse": 0.003193437587469816,
+        "target_minus_baseline_report_delta": 0.0005127922631800175,
+        "target_report_delta": 0.006453227251768112,
+        "target_warm_action_agreement": 0.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.024800870567560196,
+        "baseline_report_delta": 0.0033731223084032536,
+        "baseline_warm_action_agreement": 1.0,
+        "eval_episode_index": 5,
+        "eval_seed": 1532600191,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.003267482155933976,
+        "target_hidden_mse": 0.006923023611307144,
+        "target_minus_baseline_report_delta": 0.001222570426762104,
+        "target_report_delta": 0.004595692735165358,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.04893970862030983,
+        "baseline_report_delta": 0.014385363087058067,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 6,
+        "eval_seed": 3054302995,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.01426937896758318,
+        "target_hidden_mse": 0.004856460727751255,
+        "target_minus_baseline_report_delta": -0.009829726070165634,
+        "target_report_delta": 0.004555637016892433,
+        "target_warm_action_agreement": 1.0
+      },
+      {
+        "actual_report_delay_steps": 8,
+        "baseline_hidden_mse": 0.024621877819299698,
+        "baseline_report_delta": 0.007165165618062019,
+        "baseline_warm_action_agreement": 0.0,
+        "eval_episode_index": 7,
+        "eval_seed": 2407177092,
+        "report_delay_steps": 8,
+        "source_history_action_changed": 0.0,
+        "source_history_self_report_delta_l1": 0.007090195082128048,
+        "target_hidden_mse": 0.006195593625307083,
+        "target_minus_baseline_report_delta": -0.0014645331539213657,
+        "target_report_delta": 0.005700632464140654,
+        "target_warm_action_agreement": 1.0
+      }
+    ]
+  },
+  "interpretation": "Report-delta failures are narrow relative to warm-action and hidden-state wins. Treat them as a specific report-channel caveat to inspect under longer delays and shifted histories, not as a collapse of the unselected hard-delay result.",
+  "n_rows": 528,
+  "n_train_seeds": 22,
+  "primary_contrast_summary": {
+    "history_delta_self_report_l1_to_source": {
+      "bootstrap_95_ci_improvement": [
+        0.0015512179072370636,
+        0.0036176405414334333
+      ],
+      "mean_delta": -0.0025064928945242506,
+      "mean_improvement_vs_baseline": 0.0025064928945242506,
+      "win_rate_vs_baseline": 0.8636363636363636
+    },
+    "schema_hidden_mse_to_source_at_probe": {
+      "bootstrap_95_ci_improvement": [
+        0.06202901448435899,
+        0.15110045311103223
+      ],
+      "mean_delta": -0.10048983062527193,
+      "mean_improvement_vs_baseline": 0.10048983062527193,
+      "win_rate_vs_baseline": 1.0
+    },
+    "warm_action_agreement": {
+      "bootstrap_95_ci_improvement": [
+        0.6590909090909091,
+        0.8352272727272727
+      ],
+      "mean_delta": 0.75,
+      "mean_improvement_vs_baseline": 0.75,
+      "win_rate_vs_baseline": 1.0
+    }
+  },
+  "query_mode": "random_unselected",
+  "report_delay_steps": 8,
+  "report_delta_failure_count": 3,
+  "report_delta_failure_seeds": [
+    14,
+    18,
+    8
+  ],
+  "rows_jsonl": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_random_policy_delay8_full22/recurrent_probe_rows.jsonl",
+  "target_condition": "b_source_align_attention_copy_long",
+  "weakest_report_delta_seeds": [
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.008955919300206006,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.024979134439490736,
+      "n_rows": 8,
+      "report_delta_improvement": -0.00054784762323834,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.008713390590855852,
+      "target_report_delta": 0.009503766923444346,
+      "training_seed_index": 14,
+      "warm_action_improvement": 0.5
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.004093994837603532,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.030058896576520056,
+      "n_rows": 8,
+      "report_delta_improvement": -0.00018103561887983233,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.0038729047373635694,
+      "target_report_delta": 0.004275030456483364,
+      "training_seed_index": 18,
+      "warm_action_improvement": 0.75
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.00833878997946158,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.020940686139510944,
+      "n_rows": 8,
+      "report_delta_improvement": -0.00017022236716002226,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.008214036090066656,
+      "target_report_delta": 0.008509012346621603,
+      "training_seed_index": 8,
+      "warm_action_improvement": 0.5
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.0004471250904316548,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.15519928489811718,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00014842191740171984,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.00013462188144330867,
+      "target_report_delta": 0.000298703173029935,
+      "training_seed_index": 13,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.00039088440462364815,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.5124596061068587,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0003908843703187802,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 1.3263523580223785e-13,
+      "target_report_delta": 3.430486797406651e-11,
+      "training_seed_index": 2,
+      "warm_action_improvement": 0.875
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.001991460070712492,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.028872880022390746,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0004814662170247175,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.0017937937082024291,
+      "target_report_delta": 0.0015099938536877744,
+      "training_seed_index": 28,
+      "warm_action_improvement": 0.875
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.003936748224077746,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.029907488205935806,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0005657254077959806,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.003682170558022335,
+      "target_report_delta": 0.0033710228162817657,
+      "training_seed_index": 27,
+      "warm_action_improvement": 0.75
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.002577340812422335,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.028330005050520413,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0006047848146408796,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.0024474879464833066,
+      "target_report_delta": 0.0019725559977814555,
+      "training_seed_index": 10,
+      "warm_action_improvement": 0.125
+    }
+  ]
+}
