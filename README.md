@@ -55,13 +55,13 @@ Stable release snapshot: [`paper3-v1.0.0`](https://github.com/Atomics-hub/consci
 
 **History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes**
 
-Zenodo DOI pending.
+**[Read Paper 4 on Zenodo](https://doi.org/10.5281/zenodo.20705654)**
 
 The PDF is available in this repo: [`paper4/ryan_2026_history_dependent_functional_continuity.pdf`](paper4/ryan_2026_history_dependent_functional_continuity.pdf)
 
 The associated benchmark code is in `experiments/preservation_bench/`. See [`experiments/preservation_bench/README.md`](experiments/preservation_bench/README.md) for reproduction commands, validation rules, and limitations.
 
-Planned stable release snapshot: [`paper4-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper4-v1.0.0)
+Stable release snapshot: [`paper4-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper4-v1.0.0)
 
 ## Repository Contents
 
@@ -129,8 +129,8 @@ Paper 4:
   title={History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes},
   author={Ryan, Thomas},
   year={2026},
-  publisher={Zenodo},
-  note={DOI pending}
+  doi={10.5281/zenodo.20705654},
+  publisher={Zenodo}
 }
 ```
 

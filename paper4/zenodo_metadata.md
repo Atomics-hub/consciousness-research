@@ -16,6 +16,8 @@ Title: History-Dependent Functional Continuity Under Delayed and Counterfactual 
 
 Publication date: 2026-06-15
 
+DOI: 10.5281/zenodo.20705654
+
 Version: v1.0.0
 
 Publisher: Zenodo
@@ -65,17 +67,18 @@ Development status: Concept
 
 Stable release snapshot: `https://github.com/Atomics-hub/consciousness-research/releases/tag/paper4-v1.0.0`
 
-## Suggested Citation Before DOI Is Assigned
+## Suggested Citation
 
-Ryan, T. (2026). *History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes* (v1.0.0). Zenodo.
+Ryan, T. (2026). *History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.20705654
 
-## BibTeX Before DOI Is Assigned
+## BibTeX
 
 ```bibtex
 @article{ryan2026historydependentcontinuity,
   title={History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes},
   author={Ryan, Thomas},
   year={2026},
+  doi={10.5281/zenodo.20705654},
   publisher={Zenodo},
   note={Version v1.0.0}
 }

@@ -41,4 +41,4 @@ Output:
 
 ## Status
 
-Publish-review pass prepared 2026-06-15. Public release should upload the PDF and use `paper4/zenodo_metadata.md` for record metadata.
+Published on Zenodo 2026-06-15: https://doi.org/10.5281/zenodo.20705654.

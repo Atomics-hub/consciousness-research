@@ -10,6 +10,8 @@ Title: Paper 4 preprint v1.0.0 - History-dependent functional continuity stress 
 
 **History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes**
 
+Zenodo DOI: https://doi.org/10.5281/zenodo.20705654
+
 This release packages the Paper 4 preprint and the code/results state used for the PreservationBench-AST recurrent and perturbation stress-test suite.
 
 The paper asks whether the copied-attention condition from Paper 3 was merely a clean-episode shortcut or whether it preserves source-like history-dependent responses under delayed, counterfactual, and perturbation probes. The benchmark remains a toy functional benchmark. It is not a consciousness test, personal-identity test, survival claim, biological preservation claim, or whole-agent equivalence result.
