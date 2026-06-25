@@ -1,0 +1,105 @@
+{
+  "candidate_eval_pairs": 160,
+  "conditions": [
+    "source_full",
+    "b_source_align_attention_copy_long",
+    "b_behavior_distill",
+    "b_frozen_random"
+  ],
+  "config": {
+    "candidate_eval_pairs": 160,
+    "conditions": [
+      "source_full",
+      "b_source_align_attention_copy_long",
+      "b_behavior_distill",
+      "b_frozen_random"
+    ],
+    "donor_controls": [
+      "matched",
+      "donor_action_mismatch"
+    ],
+    "master_seed": 20260616,
+    "max_train_seeds": 22,
+    "output_dir": "experiments/preservation_bench/runs/ast_causal_patch_attention_state_donor_action_mismatch_full22",
+    "patch": {
+      "alignment": "identity_same_attention_map_and_feature_dimension",
+      "donor": "source_context_b_attention_weights_and_attended_features",
+      "recipient": "condition_context_a_attention_activation_before_schema_self_model_policy",
+      "vector_path": "attention_state"
+    },
+    "primary_metrics": [
+      "source_patch_action_changed",
+      "source_patch_q_delta_mse",
+      "source_patch_self_report_delta_l1",
+      "target_interchange_action_agreement",
+      "target_patch_shift_match",
+      "target_patch_delta_q_mse_to_source",
+      "target_patch_delta_self_report_l1_to_source",
+      "target_patched_q_mse_to_source_cf",
+      "target_patched_matched_reference_action_agreement",
+      "source_control_matches_matched_reference_action"
+    ],
+    "selected_pairs": 8,
+    "source_run_dir": "experiments/preservation_bench/runs/ast_competence_v2_core_10seed",
+    "study_id": "preservation_bench_ast_causal_patch_attention_state_donor_action_mismatch_full22",
+    "warmup_steps": 8
+  },
+  "donor_controls": [
+    "matched",
+    "donor_action_mismatch"
+  ],
+  "metric_boundary": "This causal-patching smoke tests toy source-counterfactual functional responses. It does not measure consciousness, survival, identity, or AST truth.",
+  "patch": {
+    "alignment": "identity_same_attention_dimensions",
+    "donor": "source_context_b_attention_weights_and_attended_features",
+    "recipient": "condition_context_a_attention_weights_and_attended_features",
+    "vector_path": "attention_state"
+  },
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "primary_metrics": [
+    "source_patch_action_changed",
+    "source_patch_q_delta_mse",
+    "source_patch_self_report_delta_l1",
+    "target_interchange_action_agreement",
+    "target_patch_shift_match",
+    "target_patch_delta_q_mse_to_source",
+    "target_patch_delta_self_report_l1_to_source",
+    "target_patched_q_mse_to_source_cf",
+    "target_patched_self_report_l1_to_source_cf"
+  ],
+  "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "seed_status": {
+    "selected_train_seed_indices": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      21,
+      25,
+      26,
+      27,
+      28
+    ],
+    "source_master_seed": 20260428,
+    "source_run_dir": "experiments/preservation_bench/runs/ast_competence_v2_core_10seed",
+    "source_study_id": "preservation_bench_ast_competence_v2_core_10seed"
+  },
+  "selected_pairs": 8,
+  "source_run_dir": "experiments/preservation_bench/runs/ast_competence_v2_core_10seed",
+  "study_id": "preservation_bench_ast_causal_patch_attention_state_donor_action_mismatch_full22",
+  "torch": "2.8.0",
+  "warmup_steps": 8
+}

@@ -1,0 +1,277 @@
+{
+  "rows_path": "experiments/preservation_bench/runs/ast_causal_patch_attention_state_donor_action_mismatch_full22/causal_patch_rows.jsonl",
+  "subsets": [
+    {
+      "behavior": {
+        "n_rows": 128,
+        "n_source_seeds": 18,
+        "target_interchange_action_agreement": 0.234375,
+        "target_patch_delta_q_mse_to_source": 89.49730453267694,
+        "target_patch_delta_self_report_l1_to_source": 0.010917373642769235,
+        "target_patch_shift_match": 0.6328125,
+        "target_patched_q_mse_to_source_cf": 64.07127324165776,
+        "target_unpatched_source_a_action_agreement": 0.3125
+      },
+      "copied_attention": {
+        "n_rows": 128,
+        "n_source_seeds": 18,
+        "target_interchange_action_agreement": 0.40625,
+        "target_patch_delta_q_mse_to_source": 0.1386029585576125,
+        "target_patch_delta_self_report_l1_to_source": 0.006545123549585696,
+        "target_patch_shift_match": 0.7734375,
+        "target_patched_q_mse_to_source_cf": 0.08224703692894764,
+        "target_unpatched_source_a_action_agreement": 0.90625
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": 0.171875,
+        "target_patch_delta_q_mse_to_source": -89.35870157411932,
+        "target_patch_delta_self_report_l1_to_source": -0.004372250093183538,
+        "target_patch_shift_match": 0.140625,
+        "target_patched_q_mse_to_source_cf": -63.989026204728816,
+        "target_unpatched_source_a_action_agreement": 0.59375
+      },
+      "donor_control": "donor_action_mismatch",
+      "n_pairs": 128,
+      "n_source_seeds": 18,
+      "subset": "all_pairs"
+    },
+    {
+      "behavior": {
+        "n_rows": 40,
+        "n_source_seeds": 15,
+        "target_interchange_action_agreement": 0.375,
+        "target_patch_delta_q_mse_to_source": 56.560380423069,
+        "target_patch_delta_self_report_l1_to_source": 0.009375030125374906,
+        "target_patch_shift_match": 0.7,
+        "target_patched_q_mse_to_source_cf": 57.62656730115414,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_attention": {
+        "n_rows": 40,
+        "n_source_seeds": 15,
+        "target_interchange_action_agreement": 0.35,
+        "target_patch_delta_q_mse_to_source": 0.199923579456663,
+        "target_patch_delta_self_report_l1_to_source": 0.005048222718323813,
+        "target_patch_shift_match": 0.6,
+        "target_patched_q_mse_to_source_cf": 0.07868678586019087,
+        "target_unpatched_source_a_action_agreement": 0.925
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": -0.025,
+        "target_patch_delta_q_mse_to_source": -56.36045684361234,
+        "target_patch_delta_self_report_l1_to_source": -0.004326807407051092,
+        "target_patch_shift_match": -0.1,
+        "target_patched_q_mse_to_source_cf": -57.54788051529395,
+        "target_unpatched_source_a_action_agreement": -0.075
+      },
+      "donor_control": "donor_action_mismatch",
+      "n_pairs": 40,
+      "n_source_seeds": 15,
+      "subset": "behavior_unpatched_matches_source_a"
+    },
+    {
+      "behavior": {
+        "n_rows": 37,
+        "n_source_seeds": 14,
+        "target_interchange_action_agreement": 0.3783783783783784,
+        "target_patch_delta_q_mse_to_source": 53.53675629641559,
+        "target_patch_delta_self_report_l1_to_source": 0.009176841342343471,
+        "target_patch_shift_match": 0.7027027027027027,
+        "target_patched_q_mse_to_source_cf": 53.29788862692343,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_attention": {
+        "n_rows": 37,
+        "n_source_seeds": 14,
+        "target_interchange_action_agreement": 0.35135135135135137,
+        "target_patch_delta_q_mse_to_source": 0.20146387250153222,
+        "target_patch_delta_self_report_l1_to_source": 0.004867036648352655,
+        "target_patch_shift_match": 0.5945945945945946,
+        "target_patched_q_mse_to_source_cf": 0.07989625581083945,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": -0.02702702702702703,
+        "target_patch_delta_q_mse_to_source": -53.335292423914055,
+        "target_patch_delta_self_report_l1_to_source": -0.004309804693990815,
+        "target_patch_shift_match": -0.10810810810810811,
+        "target_patched_q_mse_to_source_cf": -53.217992371112594,
+        "target_unpatched_source_a_action_agreement": 0.0
+      },
+      "donor_control": "donor_action_mismatch",
+      "n_pairs": 37,
+      "n_source_seeds": 14,
+      "subset": "both_unpatched_match_source_a"
+    },
+    {
+      "behavior": {
+        "n_rows": 39,
+        "n_source_seeds": 15,
+        "target_interchange_action_agreement": 0.38461538461538464,
+        "target_patch_delta_q_mse_to_source": 57.61877305691059,
+        "target_patch_delta_self_report_l1_to_source": 0.009243391737795602,
+        "target_patch_shift_match": 0.717948717948718,
+        "target_patched_q_mse_to_source_cf": 58.488120675086975,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_attention": {
+        "n_rows": 39,
+        "n_source_seeds": 15,
+        "target_interchange_action_agreement": 0.3333333333333333,
+        "target_patch_delta_q_mse_to_source": 0.20487512371469982,
+        "target_patch_delta_self_report_l1_to_source": 0.005051865428238391,
+        "target_patch_shift_match": 0.5897435897435898,
+        "target_patched_q_mse_to_source_cf": 0.08069597439727005,
+        "target_unpatched_source_a_action_agreement": 0.9230769230769231
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": -0.05128205128205128,
+        "target_patch_delta_q_mse_to_source": -57.41389793319589,
+        "target_patch_delta_self_report_l1_to_source": -0.004191526309557212,
+        "target_patch_shift_match": -0.1282051282051282,
+        "target_patched_q_mse_to_source_cf": -58.4074247006897,
+        "target_unpatched_source_a_action_agreement": -0.07692307692307693
+      },
+      "donor_control": "donor_action_mismatch",
+      "n_pairs": 39,
+      "n_source_seeds": 15,
+      "subset": "behavior_matches_source_a_and_source_patch_flips"
+    },
+    {
+      "behavior": {
+        "n_rows": 176,
+        "n_source_seeds": 22,
+        "target_interchange_action_agreement": 0.2556818181818182,
+        "target_patch_delta_q_mse_to_source": 109.30331671068615,
+        "target_patch_delta_self_report_l1_to_source": 0.009266889649366434,
+        "target_patch_shift_match": 0.6420454545454546,
+        "target_patched_q_mse_to_source_cf": 88.64677914672278,
+        "target_unpatched_source_a_action_agreement": 0.3693181818181818
+      },
+      "copied_attention": {
+        "n_rows": 176,
+        "n_source_seeds": 22,
+        "target_interchange_action_agreement": 0.875,
+        "target_patch_delta_q_mse_to_source": 0.15779206844854343,
+        "target_patch_delta_self_report_l1_to_source": 0.0051833029750593595,
+        "target_patch_shift_match": 0.9090909090909091,
+        "target_patched_q_mse_to_source_cf": 0.10736802222064315,
+        "target_unpatched_source_a_action_agreement": 0.9090909090909091
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": 0.6193181818181818,
+        "target_patch_delta_q_mse_to_source": -109.1455246422376,
+        "target_patch_delta_self_report_l1_to_source": -0.004083586674307075,
+        "target_patch_shift_match": 0.26704545454545453,
+        "target_patched_q_mse_to_source_cf": -88.53941112450212,
+        "target_unpatched_source_a_action_agreement": 0.5397727272727273
+      },
+      "donor_control": "matched",
+      "n_pairs": 176,
+      "n_source_seeds": 22,
+      "subset": "all_pairs"
+    },
+    {
+      "behavior": {
+        "n_rows": 65,
+        "n_source_seeds": 20,
+        "target_interchange_action_agreement": 0.15384615384615385,
+        "target_patch_delta_q_mse_to_source": 79.39387850669713,
+        "target_patch_delta_self_report_l1_to_source": 0.00928100484357296,
+        "target_patch_shift_match": 0.7230769230769231,
+        "target_patched_q_mse_to_source_cf": 80.9238164965923,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_attention": {
+        "n_rows": 65,
+        "n_source_seeds": 20,
+        "target_interchange_action_agreement": 0.9230769230769231,
+        "target_patch_delta_q_mse_to_source": 0.20032851310052838,
+        "target_patch_delta_self_report_l1_to_source": 0.003797355745001238,
+        "target_patch_shift_match": 0.8923076923076924,
+        "target_patched_q_mse_to_source_cf": 0.08317224709272313,
+        "target_unpatched_source_a_action_agreement": 0.9230769230769231
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": 0.7692307692307693,
+        "target_patch_delta_q_mse_to_source": -79.19354999359662,
+        "target_patch_delta_self_report_l1_to_source": -0.005483649098571723,
+        "target_patch_shift_match": 0.16923076923076924,
+        "target_patched_q_mse_to_source_cf": -80.84064424949958,
+        "target_unpatched_source_a_action_agreement": -0.07692307692307693
+      },
+      "donor_control": "matched",
+      "n_pairs": 65,
+      "n_source_seeds": 20,
+      "subset": "behavior_unpatched_matches_source_a"
+    },
+    {
+      "behavior": {
+        "n_rows": 60,
+        "n_source_seeds": 19,
+        "target_interchange_action_agreement": 0.16666666666666666,
+        "target_patch_delta_q_mse_to_source": 78.2786760121584,
+        "target_patch_delta_self_report_l1_to_source": 0.009229639898270156,
+        "target_patch_shift_match": 0.7333333333333333,
+        "target_patched_q_mse_to_source_cf": 79.32977536320686,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_attention": {
+        "n_rows": 60,
+        "n_source_seeds": 19,
+        "target_interchange_action_agreement": 0.9333333333333333,
+        "target_patch_delta_q_mse_to_source": 0.20249301992735128,
+        "target_patch_delta_self_report_l1_to_source": 0.0036021465235536137,
+        "target_patch_shift_match": 0.95,
+        "target_patched_q_mse_to_source_cf": 0.08361810893547954,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": 0.7666666666666667,
+        "target_patch_delta_q_mse_to_source": -78.07618299223104,
+        "target_patch_delta_self_report_l1_to_source": -0.0056274933747165416,
+        "target_patch_shift_match": 0.21666666666666667,
+        "target_patched_q_mse_to_source_cf": -79.24615725427138,
+        "target_unpatched_source_a_action_agreement": 0.0
+      },
+      "donor_control": "matched",
+      "n_pairs": 60,
+      "n_source_seeds": 19,
+      "subset": "both_unpatched_match_source_a"
+    },
+    {
+      "behavior": {
+        "n_rows": 63,
+        "n_source_seeds": 20,
+        "target_interchange_action_agreement": 0.14285714285714285,
+        "target_patch_delta_q_mse_to_source": 79.62641427914302,
+        "target_patch_delta_self_report_l1_to_source": 0.009461152784968448,
+        "target_patch_shift_match": 0.7301587301587301,
+        "target_patched_q_mse_to_source_cf": 79.76821753240768,
+        "target_unpatched_source_a_action_agreement": 1.0
+      },
+      "copied_attention": {
+        "n_rows": 63,
+        "n_source_seeds": 20,
+        "target_interchange_action_agreement": 0.9206349206349206,
+        "target_patch_delta_q_mse_to_source": 0.20285463926848024,
+        "target_patch_delta_self_report_l1_to_source": 0.003830084500863069,
+        "target_patch_shift_match": 0.9047619047619048,
+        "target_patched_q_mse_to_source_cf": 0.08505962717315434,
+        "target_unpatched_source_a_action_agreement": 0.9365079365079365
+      },
+      "copied_minus_behavior": {
+        "target_interchange_action_agreement": 0.7777777777777778,
+        "target_patch_delta_q_mse_to_source": -79.42355963987454,
+        "target_patch_delta_self_report_l1_to_source": -0.00563106828410538,
+        "target_patch_shift_match": 0.1746031746031746,
+        "target_patched_q_mse_to_source_cf": -79.68315790523451,
+        "target_unpatched_source_a_action_agreement": -0.06349206349206349
+      },
+      "donor_control": "matched",
+      "n_pairs": 63,
+      "n_source_seeds": 20,
+      "subset": "behavior_matches_source_a_and_source_patch_flips"
+    }
+  ]
+}

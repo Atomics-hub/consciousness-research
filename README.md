@@ -63,6 +63,20 @@ The associated benchmark code is in `experiments/preservation_bench/`. See [`exp
 
 Stable release snapshot: [`paper4-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper4-v1.0.0)
 
+## Paper 5
+
+`paper5/` contains a causal-intervention follow-up:
+
+**Causal Preservation Under Substrate Transfer: Interchange Intervention Tests for Source-Specific Functional Continuity**
+
+**[Read Paper 5 on Zenodo](https://doi.org/10.5281/zenodo.20852042)**
+
+The PDF is available in this repo: [`paper5/ryan_2026_causal_preservation_under_substrate_transfer.pdf`](paper5/ryan_2026_causal_preservation_under_substrate_transfer.pdf)
+
+The associated benchmark code is in `experiments/preservation_bench/`. See [`paper5/reproducibility_checklist.md`](paper5/reproducibility_checklist.md) for causal-patching reproduction commands, validation checks, and limitations.
+
+Stable release snapshot: [`paper5-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper5-v1.0.0)
+
 ## Repository Contents
 
 ```
@@ -71,6 +85,7 @@ paper/figures/      All 8 figures (PNG + PDF)
 paper2/             Exploratory AST transplant-assay follow-up
 paper3/             PreservationBench AST v0 benchmark preprint
 paper4/             Recurrent and perturbation stress-test follow-up
+paper5/             Causal-preservation and interchange-intervention follow-up
 experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
@@ -131,6 +146,19 @@ Paper 4:
   year={2026},
   doi={10.5281/zenodo.20705654},
   publisher={Zenodo}
+}
+```
+
+Paper 5:
+
+```bibtex
+@article{ryan2026causalpreservation,
+  title={Causal Preservation Under Substrate Transfer: Interchange Intervention Tests for Source-Specific Functional Continuity},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.20852042},
+  publisher={Zenodo},
+  note={Version v1.0.0}
 }
 ```
 

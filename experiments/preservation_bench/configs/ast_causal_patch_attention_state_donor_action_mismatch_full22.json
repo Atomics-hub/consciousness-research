@@ -1,0 +1,38 @@
+{
+  "study_id": "preservation_bench_ast_causal_patch_attention_state_donor_action_mismatch_full22",
+  "master_seed": 20260616,
+  "source_run_dir": "experiments/preservation_bench/runs/ast_competence_v2_core_10seed",
+  "max_train_seeds": 22,
+  "candidate_eval_pairs": 160,
+  "selected_pairs": 8,
+  "warmup_steps": 8,
+  "output_dir": "experiments/preservation_bench/runs/ast_causal_patch_attention_state_donor_action_mismatch_full22",
+  "conditions": [
+    "source_full",
+    "b_source_align_attention_copy_long",
+    "b_behavior_distill",
+    "b_frozen_random"
+  ],
+  "donor_controls": [
+    "matched",
+    "donor_action_mismatch"
+  ],
+  "patch": {
+    "vector_path": "attention_state",
+    "donor": "source_context_b_attention_weights_and_attended_features",
+    "recipient": "condition_context_a_attention_activation_before_schema_self_model_policy",
+    "alignment": "identity_same_attention_map_and_feature_dimension"
+  },
+  "primary_metrics": [
+    "source_patch_action_changed",
+    "source_patch_q_delta_mse",
+    "source_patch_self_report_delta_l1",
+    "target_interchange_action_agreement",
+    "target_patch_shift_match",
+    "target_patch_delta_q_mse_to_source",
+    "target_patch_delta_self_report_l1_to_source",
+    "target_patched_q_mse_to_source_cf",
+    "target_patched_matched_reference_action_agreement",
+    "source_control_matches_matched_reference_action"
+  ]
+}
