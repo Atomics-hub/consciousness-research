@@ -1,0 +1,166 @@
+{
+  "baseline_condition": "b_frozen_random",
+  "best_next_step": "Add longer report delays and shifted/non-source-policy histories, and track whether report-delta failures cluster with early terminations, low source action-change, or high baseline report similarity.",
+  "contrasts_json": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_delay8_full22/recurrent_contrasts.json",
+  "failure_histories": {},
+  "interpretation": "No report-delta failure seeds were found for the target condition. Continue to treat this as benchmark-hardening only, and keep tracking delay completion, source action-change, and baseline report similarity in larger or shifted-history runs.",
+  "n_rows": 528,
+  "n_train_seeds": 22,
+  "primary_contrast_summary": {
+    "history_delta_self_report_l1_to_source": {
+      "bootstrap_95_ci_improvement": [
+        0.0017427707024590807,
+        0.0037891683558906064
+      ],
+      "mean_delta": -0.00271198616487632,
+      "mean_improvement_vs_baseline": 0.00271198616487632,
+      "win_rate_vs_baseline": 1.0
+    },
+    "schema_hidden_mse_to_source_at_probe": {
+      "bootstrap_95_ci_improvement": [
+        0.06281239498730636,
+        0.1504282904337141
+      ],
+      "mean_delta": -0.10068908438742338,
+      "mean_improvement_vs_baseline": 0.10068908438742338,
+      "win_rate_vs_baseline": 1.0
+    },
+    "warm_action_agreement": {
+      "bootstrap_95_ci_improvement": [
+        0.5681818181818182,
+        0.7784090909090909
+      ],
+      "mean_delta": 0.6818181818181818,
+      "mean_improvement_vs_baseline": 0.6818181818181818,
+      "win_rate_vs_baseline": 1.0
+    }
+  },
+  "query_mode": "scripted_cycle_unselected",
+  "report_delay_steps": 8,
+  "report_delta_failure_count": 0,
+  "report_delta_failure_seeds": [],
+  "rows_jsonl": "experiments/preservation_bench/runs/ast_recurrent_delayed_report_hard_scripted_cycle_delay8_full22/recurrent_probe_rows.jsonl",
+  "target_condition": "b_source_align_attention_copy_long",
+  "weakest_report_delta_seeds": [
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.00044424353836802766,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.15553266112692654,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00014479621313512325,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.00013165831114747562,
+      "target_report_delta": 0.0002994473252329044,
+      "training_seed_index": 13,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.009027572465129197,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.0243217617389746,
+      "n_rows": 8,
+      "report_delta_improvement": 0.00017541556735523045,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.00879152538254857,
+      "target_report_delta": 0.008852156897773966,
+      "training_seed_index": 14,
+      "warm_action_improvement": 0.75
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.0028365227044560015,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.026634465415554587,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0002889450261136517,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.0026359295152360573,
+      "target_report_delta": 0.00254757767834235,
+      "training_seed_index": 28,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.0003908844919351395,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.5124596074456349,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0003908844576302633,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 1.3263526798948985e-13,
+      "target_report_delta": 3.430487621400302e-11,
+      "training_seed_index": 2,
+      "warm_action_improvement": 0.5
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.003150612858007662,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.03183464636094868,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0007036985480226576,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.0030327709537232295,
+      "target_report_delta": 0.0024469143099850044,
+      "training_seed_index": 10,
+      "warm_action_improvement": 0.125
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.0029694184486288577,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.03410840975629981,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0009925507838488556,
+      "source_action_changed_fraction": 0.0,
+      "source_report_delta": 0.0027902150177396834,
+      "target_report_delta": 0.001976867664780002,
+      "training_seed_index": 7,
+      "warm_action_improvement": 1.0
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.004758301336551085,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.03102136281086132,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0010897759348154068,
+      "source_action_changed_fraction": 0.125,
+      "source_report_delta": 0.00452614959795028,
+      "target_report_delta": 0.0036685254017356783,
+      "training_seed_index": 18,
+      "warm_action_improvement": 0.625
+    },
+    {
+      "actual_delay_counts": {
+        "8": 8
+      },
+      "baseline_report_delta": 0.010609122109599411,
+      "full_delay_fraction": 1.0,
+      "hidden_mse_improvement": 0.03392340417485684,
+      "n_rows": 8,
+      "report_delta_improvement": 0.0012068572686985135,
+      "source_action_changed_fraction": 0.25,
+      "source_report_delta": 0.010465724539244547,
+      "target_report_delta": 0.009402264840900898,
+      "training_seed_index": 8,
+      "warm_action_improvement": 0.875
+    }
+  ]
+}

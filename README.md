@@ -41,13 +41,55 @@ The associated code is in `experiments/ast_preservation/`. See [`experiments/ast
 
 **The Preservation Benchmark: Testing Functional Continuity Across Substrate Transfer**
 
-Zenodo DOI pending.
+**[Read Paper 3 on Zenodo](https://doi.org/10.5281/zenodo.20480505)**
 
 The PDF is available in this repo: [`paper3/ryan_2026_preservation_benchmark_ast_v0.pdf`](paper3/ryan_2026_preservation_benchmark_ast_v0.pdf)
 
 The associated benchmark code is in `experiments/preservation_bench/`. See [`experiments/preservation_bench/README.md`](experiments/preservation_bench/README.md) for reproduction commands, validation rules, and limitations.
 
 Stable release snapshot: [`paper3-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper3-v1.0.0)
+
+## Paper 4
+
+`paper4/` contains a recurrent and perturbation stress-test follow-up:
+
+**History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes**
+
+**[Read Paper 4 on Zenodo](https://doi.org/10.5281/zenodo.20705654)**
+
+The PDF is available in this repo: [`paper4/ryan_2026_history_dependent_functional_continuity.pdf`](paper4/ryan_2026_history_dependent_functional_continuity.pdf)
+
+The associated benchmark code is in `experiments/preservation_bench/`. See [`experiments/preservation_bench/README.md`](experiments/preservation_bench/README.md) for reproduction commands, validation rules, and limitations.
+
+Stable release snapshot: [`paper4-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper4-v1.0.0)
+
+## Paper 5
+
+`paper5/` contains a causal-intervention follow-up:
+
+**Causal Preservation Under Substrate Transfer: Interchange Intervention Tests for Source-Specific Functional Continuity**
+
+**[Read Paper 5 on Zenodo](https://doi.org/10.5281/zenodo.20852042)**
+
+The PDF is available in this repo: [`paper5/ryan_2026_causal_preservation_under_substrate_transfer.pdf`](paper5/ryan_2026_causal_preservation_under_substrate_transfer.pdf)
+
+The associated benchmark code is in `experiments/preservation_bench/`. See [`paper5/reproducibility_checklist.md`](paper5/reproducibility_checklist.md) for causal-patching reproduction commands, validation checks, and limitations.
+
+Stable release snapshot: [`paper5-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper5-v1.0.0)
+
+## Paper 6
+
+`paper6/` contains a blinded scaffold-lesion follow-up on persistent coding agents:
+
+**The Scaffold Continuity Trap: A Blinded Scaffold-Lesion Test in Persistent Coding Agents**
+
+**[Read Paper 6 on Zenodo](https://doi.org/10.5281/zenodo.21342748)**
+
+The PDF is available in this repo: [`paper6/ryan_2026_scaffold_continuity_trap.pdf`](paper6/ryan_2026_scaffold_continuity_trap.pdf)
+
+The public package includes the manuscript, figures, result tables, release notes, and a reproducibility note. Coordinator-private scaffolding, hidden keys, blind packet archives, and runner return materials are intentionally excluded from the public repository.
+
+Stable release snapshot: [`paper6-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper6-v1.0.0)
 
 ## Repository Contents
 
@@ -56,6 +98,9 @@ paper/              Full paper (markdown source, PDF, build script)
 paper/figures/      All 8 figures (PNG + PDF)
 paper2/             Exploratory AST transplant-assay follow-up
 paper3/             PreservationBench AST v0 benchmark preprint
+paper4/             Recurrent and perturbation stress-test follow-up
+paper5/             Causal-preservation and interchange-intervention follow-up
+paper6/             Blinded scaffold-lesion follow-up for persistent coding agents
 experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
@@ -102,8 +147,46 @@ Paper 3:
   title={The Preservation Benchmark: Testing Functional Continuity Across Substrate Transfer},
   author={Ryan, Thomas},
   year={2026},
+  doi={10.5281/zenodo.20480505},
   publisher={Zenodo},
-  note={DOI pending}
+}
+```
+
+Paper 4:
+
+```bibtex
+@article{ryan2026historydependentcontinuity,
+  title={History-Dependent Functional Continuity Under Delayed and Counterfactual Source-State Probes},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.20705654},
+  publisher={Zenodo}
+}
+```
+
+Paper 5:
+
+```bibtex
+@article{ryan2026causalpreservation,
+  title={Causal Preservation Under Substrate Transfer: Interchange Intervention Tests for Source-Specific Functional Continuity},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.20852042},
+  publisher={Zenodo},
+  note={Version v1.0.0}
+}
+```
+
+Paper 6:
+
+```bibtex
+@article{ryan2026scaffoldcontinuitytrap,
+  title={The Scaffold Continuity Trap: A Blinded Scaffold-Lesion Test in Persistent Coding Agents},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.21342748},
+  publisher={Zenodo},
+  note={Version v1.0.0}
 }
 ```
 

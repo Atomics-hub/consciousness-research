@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460" viewBox="0 0 820 460" role="img" aria-label="Figure 1. Condition means by lesion condition">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="28" y="28" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">Figure 1. Condition means by lesion condition</text>
+<g font-family="Helvetica, Arial, sans-serif" fill="#111827">
+<line x1="88" y1="46" x2="88" y2="306" stroke="#111827"/>
+<line x1="88" y1="306" x2="772" y2="306" stroke="#111827"/>
+<text x="20" y="176.0" transform="rotate(-90 20 176.0)" text-anchor="middle" font-size="12">Core score (0-12)</text>
+<rect x="136.5" y="46.0" width="34.0" height="260.0" fill="#2f6f9f"/>
+<rect x="176.5" y="254.0" width="34.0" height="52.0" fill="#d08c2f"/>
+<text x="173.5" y="324" text-anchor="end" transform="rotate(-35 173.5 324)" font-size="10">straight/full_scaffold</text>
+<text x="173.5" y="354" text-anchor="middle" font-size="10">n=1</text>
+<rect x="307.5" y="46.0" width="34.0" height="260.0" fill="#2f6f9f"/>
+<rect x="347.5" y="306.0" width="34.0" height="0.0" fill="#d08c2f"/>
+<text x="344.5" y="324" text-anchor="end" transform="rotate(-35 344.5 324)" font-size="10">straight/no_memory</text>
+<text x="344.5" y="354" text-anchor="middle" font-size="10">n=1</text>
+<rect x="478.5" y="46.0" width="34.0" height="260.0" fill="#2f6f9f"/>
+<rect x="518.5" y="254.0" width="34.0" height="52.0" fill="#d08c2f"/>
+<text x="515.5" y="324" text-anchor="end" transform="rotate(-35 515.5 324)" font-size="10">straight/sham_lesion</text>
+<text x="515.5" y="354" text-anchor="middle" font-size="10">n=1</text>
+<rect x="649.5" y="46.0" width="34.0" height="260.0" fill="#2f6f9f"/>
+<rect x="689.5" y="306.0" width="34.0" height="0.0" fill="#d08c2f"/>
+<text x="686.5" y="324" text-anchor="end" transform="rotate(-35 686.5 324)" font-size="10">straight/summary_only</text>
+<text x="686.5" y="354" text-anchor="middle" font-size="10">n=1</text>
+<rect x="88" y="412" width="12" height="12" fill="#2f6f9f"/>
+<text x="106" y="422" font-size="12">Mean core score</text>
+<rect x="258" y="412" width="12" height="12" fill="#d08c2f"/>
+<text x="276" y="422" font-size="12">Hidden probe accuracy scaled to 12</text>
+</g>
+</svg>

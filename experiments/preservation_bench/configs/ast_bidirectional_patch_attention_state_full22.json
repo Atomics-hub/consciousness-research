@@ -1,0 +1,24 @@
+{
+  "study_id": "preservation_bench_ast_bidirectional_patch_attention_state_full22",
+  "candidate_seed_study_id": "preservation_bench_ast_causal_patch_attention_state_action_mismatch_full22",
+  "candidate_seed_master_seed": 20260615,
+  "master_seed": 20260616,
+  "source_run_dir": "experiments/preservation_bench/runs/ast_competence_v2_core_10seed",
+  "max_train_seeds": 22,
+  "candidate_eval_pairs": 80,
+  "selected_pairs": 8,
+  "warmup_steps": 8,
+  "output_dir": "experiments/preservation_bench/runs/ast_bidirectional_patch_attention_state_full22",
+  "conditions": [
+    "source_full",
+    "b_source_align_attention_copy_long",
+    "b_behavior_distill",
+    "b_frozen_random"
+  ],
+  "patch": {
+    "vector_path": "attention_state",
+    "donor": "condition_context_b_attention_weights_and_attended_features",
+    "recipient": "source_context_a_attention_activation_before_schema_self_model_policy",
+    "alignment": "identity_same_attention_map_and_feature_dimension"
+  }
+}

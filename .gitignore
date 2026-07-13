@@ -21,3 +21,11 @@ paper2/release_audit.md
 # Generated Paper 3 benchmark artifacts.
 experiments/preservation_bench/runs/
 experiments/preservation_bench/seeds/
+
+# Paper 6 local/coordinator-only experiment surfaces.
+paper6/outputs/
+paper6/work/
+paper6/coordinator_private/
+paper6/blind_packets/
+paper6/runner_packets/
+paper6/return_inbox/
