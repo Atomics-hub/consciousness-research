@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="690" viewBox="0 0 1000 690" role="img" aria-labelledby="title description">
+<title id="title">+15pp U by ICC planning heatmap</title>
+<desc id="description">Synthetic planning heatmap of all-four-cell positive decision rates over four follow-up unavailability levels and three block-arm ICC sensitivities.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50.00" y="48.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#17212b">+15pp all-four-cell decision rate at B=384 per macro cell</text>
+<text x="50.00" y="78.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#8f2d20">SYNTHETIC PLANNING ONLY — NO PROVIDER/MODEL OBSERVATIONS</text>
+<text x="50.00" y="104.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#425466">Cell labels: Monte Carlo rate and Wilson 95% interval (10,000 replicates/cell)</text>
+<text x="120.00" y="370.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#17212b">Follow-up U</text>
+<text x="565.00" y="145.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#17212b">Block-arm ICC sensitivity</text>
+<text x="347.50" y="166.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">ICC=0.00</text>
+<text x="562.50" y="166.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">ICC=0.10</text>
+<text x="777.50" y="166.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">ICC=0.25</text>
+<text x="221.00" y="222.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">U=0%</text>
+<rect x="245" y="175" width="205" height="90" rx="8" fill="#0a529d" stroke="#385170" stroke-width="1"/>
+<text x="347.50" y="214.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.96%</text>
+<text x="347.50" y="241.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.90%, 99.98%]</text>
+<rect x="460" y="175" width="205" height="90" rx="8" fill="#155aa2" stroke="#385170" stroke-width="1"/>
+<text x="562.50" y="214.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.72%</text>
+<text x="562.50" y="241.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.60%, 99.81%]</text>
+<rect x="675" y="175" width="205" height="90" rx="8" fill="#81a7d0" stroke="#385170" stroke-width="1"/>
+<text x="777.50" y="214.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#17212b">97.39%</text>
+<text x="777.50" y="241.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">[97.06%, 97.68%]</text>
+<text x="221.00" y="322.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">U=5%</text>
+<rect x="245" y="275" width="205" height="90" rx="8" fill="#0b539d" stroke="#385170" stroke-width="1"/>
+<text x="347.50" y="314.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.93%</text>
+<text x="347.50" y="341.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.86%, 99.97%]</text>
+<rect x="460" y="275" width="205" height="90" rx="8" fill="#1b5fa4" stroke="#385170" stroke-width="1"/>
+<text x="562.50" y="314.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.59%</text>
+<text x="562.50" y="341.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.44%, 99.70%]</text>
+<rect x="675" y="275" width="205" height="90" rx="8" fill="#a9c4e1" stroke="#385170" stroke-width="1"/>
+<text x="777.50" y="314.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#17212b">96.51%</text>
+<text x="777.50" y="341.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">[96.13%, 96.85%]</text>
+<text x="221.00" y="422.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">U=10%</text>
+<rect x="245" y="375" width="205" height="90" rx="8" fill="#09529d" stroke="#385170" stroke-width="1"/>
+<text x="347.50" y="414.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.97%</text>
+<text x="347.50" y="441.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.91%, 99.99%]</text>
+<rect x="460" y="375" width="205" height="90" rx="8" fill="#2263a7" stroke="#385170" stroke-width="1"/>
+<text x="562.50" y="414.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.44%</text>
+<text x="562.50" y="441.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.27%, 99.57%]</text>
+<rect x="675" y="375" width="205" height="90" rx="8" fill="#b5cde6" stroke="#385170" stroke-width="1"/>
+<text x="777.50" y="414.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#17212b">96.25%</text>
+<text x="777.50" y="441.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">[95.86%, 96.60%]</text>
+<text x="221.00" y="522.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">U=15%</text>
+<rect x="245" y="475" width="205" height="90" rx="8" fill="#0a539d" stroke="#385170" stroke-width="1"/>
+<text x="347.50" y="514.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.95%</text>
+<text x="347.50" y="541.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.88%, 99.98%]</text>
+<rect x="460" y="475" width="205" height="90" rx="8" fill="#1a5ea4" stroke="#385170" stroke-width="1"/>
+<text x="562.50" y="514.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">99.60%</text>
+<text x="562.50" y="541.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#ffffff">[99.46%, 99.71%]</text>
+<rect x="675" y="475" width="205" height="90" rx="8" fill="#b4cce6" stroke="#385170" stroke-width="1"/>
+<text x="777.50" y="514.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#17212b">96.27%</text>
+<text x="777.50" y="541.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">[95.88%, 96.62%]</text>
+<rect x="280" y="605" width="38" height="16" fill="#eff6ff"/>
+<rect x="318" y="605" width="38" height="16" fill="#d8e6f5"/>
+<rect x="356" y="605" width="38" height="16" fill="#c1d5eb"/>
+<rect x="394" y="605" width="38" height="16" fill="#aac4e1"/>
+<rect x="432" y="605" width="38" height="16" fill="#93b4d7"/>
+<rect x="470" y="605" width="38" height="16" fill="#7ba3cd"/>
+<rect x="508" y="605" width="38" height="16" fill="#6493c4"/>
+<rect x="546" y="605" width="38" height="16" fill="#4d82ba"/>
+<rect x="584" y="605" width="38" height="16" fill="#3672b0"/>
+<rect x="622" y="605" width="38" height="16" fill="#1f61a6"/>
+<rect x="660" y="605" width="38" height="16" fill="#08519c"/>
+<text x="280.00" y="643.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">95%</text>
+<text x="660.00" y="643.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">100%</text>
+<text x="50.00" y="669.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#566573">Source: confirmatory_size_certification.cell_assessments, scenario=positive_15. Wilson intervals quantify Monte Carlo frequency only.</text>
+</svg>

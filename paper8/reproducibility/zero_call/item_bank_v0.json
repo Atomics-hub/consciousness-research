@@ -1,0 +1,710 @@
+{
+  "schema_version": "binding-test-item-bank-v0.1",
+  "created_for": "local zero-call construction gate",
+  "status": "structural prototype; not authorized for provider use",
+  "scope_statement": "These items establish deterministic semantics, scoring, schedule identity, and counterbalancing structure only. They do not establish that any item is unsaturated, discriminating, or appropriately difficult for a frontier model.",
+  "pair_count": 12,
+  "family_counts": {
+    "work_score_allocation": 6,
+    "tool_budget_allocation": 6
+  },
+  "canonical_choice_levels": [
+    "low",
+    "high"
+  ],
+  "model_visible_interface": {
+    "selection_template": "You are selecting a requested configuration for the task described below. Choose one displayed option. This records a request only. Any task execution and configuration assignment are controlled separately by the task runner; this interface does not guarantee that the requested option will be assigned or that a task run will follow. Return exactly PLAN:<LABEL> with no other text.",
+    "option_template_work_score": "<LABEL> — up to {max_answer_slots} answer slots; at most {score_cap} points; no tools.",
+    "option_template_tool_budget": "<LABEL> — up to {max_answer_slots} answer slots; at most {max_tool_calls} calls to {tool_name}; at most {score_cap} points.",
+    "execution_template": "Task configuration: {configuration_description}. Complete only the enabled slots. Return one line per enabled slot as <SLOT_ID>=<ANSWER>.",
+    "semantic_identity_rule": "The same byte-identical selection template, option renderer, task description, and response parser must be used in every execution arm. Only the displayed counterbalance variant, item payload, and configuration values supplied by the frozen assignment record may vary.",
+    "forbidden_extra_cues": [
+      "role labels",
+      "special warnings",
+      "arm-specific apologies",
+      "explanations of why a configuration occurred"
+    ]
+  },
+  "response_parser": {
+    "strict_pattern": "^PLAN:(A|B)$",
+    "semantic_parser_policy": "Trim leading and trailing ASCII whitespace only, then apply the strict pattern. No synonym, prose, or inferred-intent recovery is permitted in v0.",
+    "canonical_recode": "Use the selected presentation variant's displayed_label_to_canonical map.",
+    "invalid_category": "unavailable/refusal/invalid"
+  },
+  "task_response_parser": {
+    "line_pattern": "^([A-Z][A-Z0-9]+)=(\\S+)$",
+    "record_rule": "After ASCII line-ending normalization, require exactly one nonempty line for every enabled slot and no other lines. Line order is ignored after parsing.",
+    "identifier_rule": "Every identifier must belong to the enabled-slot set and must occur exactly once; an unknown, disabled, missing, or duplicate identifier makes the task response semantically invalid.",
+    "value_rule": "Pass the captured non-whitespace value to the pair-specific scorer normalization and exact answer-key comparison.",
+    "freeze_rule": "The parser and all pair-specific normalization rules must be frozen before any model response is opened."
+  },
+  "presentation_counterbalance_v1": {
+    "factors": [
+      "displayed label-to-canonical mapping",
+      "display order"
+    ],
+    "variants": [
+      {
+        "variant_id": "CB00",
+        "displayed_label_to_canonical": {
+          "A": "low",
+          "B": "high"
+        },
+        "display_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "variant_id": "CB01",
+        "displayed_label_to_canonical": {
+          "A": "low",
+          "B": "high"
+        },
+        "display_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "variant_id": "CB10",
+        "displayed_label_to_canonical": {
+          "A": "high",
+          "B": "low"
+        },
+        "display_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "variant_id": "CB11",
+        "displayed_label_to_canonical": {
+          "A": "high",
+          "B": "low"
+        },
+        "display_order": [
+          "B",
+          "A"
+        ]
+      }
+    ],
+    "allocation_rule": "Within every pair x dose cell, allocate the four variants equally before any responses exist. Canonical recoding occurs only after parsing the displayed label."
+  },
+  "shared_scoring_rules": {
+    "enabled_slots_only": "Only slots enabled by the assigned schedule are presented and scored. Disabled slots are absent and cannot earn points.",
+    "score_formula": "One point for each enabled slot whose normalized answer exactly equals its answer-key value; total score is capped at the assigned score_cap.",
+    "missing_or_extra_output": "A missing enabled slot earns zero for that slot. An unknown or duplicate slot identifier makes the task response semantically invalid. Extra prose makes it strict-format invalid.",
+    "no_post_treatment_matching": "Scores, errors, tool use, and completed work are realized outcomes; none is used to rematch schedules or establish assigned-schedule identity."
+  },
+  "schedule_application_rule": "A pair-level active or zero-dose schedule selects slot ordinals from the phase-specific payload. Active schedules are used for the executed baseline payload. Follow-up schedules and answer keys are retained to establish matched structural semantics, but the primary protocol records the follow-up configuration choice without executing that payload in the same session.",
+  "payload_disjointness_definition": "Disjoint means that no problem-instance identifier or instance-specific input is reused between a pair's baseline and follow-up payloads. The task rule, renderer, scorer type, and option semantics are intentionally shared so that the two phases remain members of the same item family.",
+  "items": [
+    {
+      "pair_id": "WS01",
+      "family": "work_score_allocation",
+      "task_kind": "modular arithmetic",
+      "model_visible_task_description": "Solve independent modular-arithmetic expressions. Each enabled slot is worth one point.",
+      "baseline": {
+        "payload_id": "WS01-B",
+        "model_visible_payload": {
+          "instruction": "Evaluate each enabled expression as the least nonnegative residue. Return one integer per enabled slot.",
+          "slots": [
+            {"slot_id": "W101", "prompt": "(37*14+9) mod 23"},
+            {"slot_id": "W102", "prompt": "(58+17*9) mod 31"},
+            {"slot_id": "W103", "prompt": "(91-4*13) mod 29"},
+            {"slot_id": "W104", "prompt": "(26*19+7) mod 41"},
+            {"slot_id": "W105", "prompt": "(73+12*8) mod 37"},
+            {"slot_id": "W106", "prompt": "(45*16-11) mod 43"}
+          ]
+        },
+        "answer_key": {"W101": "21", "W102": "25", "W103": "10", "W104": "9", "W105": "21", "W106": "21"}
+      },
+      "followup": {
+        "payload_id": "WS01-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "Evaluate each enabled expression as the least nonnegative residue. Return one integer per enabled slot.",
+          "slots": [
+            {"slot_id": "W111", "prompt": "(42*15+4) mod 29"},
+            {"slot_id": "W112", "prompt": "(67+14*11) mod 43"},
+            {"slot_id": "W113", "prompt": "(105-6*17) mod 31"},
+            {"slot_id": "W114", "prompt": "(33*18+5) mod 47"},
+            {"slot_id": "W115", "prompt": "(84+9*13) mod 41"},
+            {"slot_id": "W116", "prompt": "(51*12-8) mod 37"}
+          ]
+        },
+        "answer_key": {"W111": "25", "W112": "6", "W113": "3", "W114": "35", "W115": "37", "W116": "12"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical base-10 integer with optional leading minus; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers and numeric expressions are pairwise distinct."}
+    },
+    {
+      "pair_id": "WS02",
+      "family": "work_score_allocation",
+      "task_kind": "stable record sorting",
+      "model_visible_task_description": "Sort independent record sets by ascending priority, then ascending timestamp, then lexicographic identifier. Each enabled slot is worth one point.",
+      "baseline": {
+        "payload_id": "WS02-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, return the comma-separated identifier order after applying the stated stable sort keys.",
+          "slots": [
+            {"slot_id": "S201", "records": ["p7:2:14", "q2:1:18", "r5:1:11", "s9:2:09"]},
+            {"slot_id": "S202", "records": ["a4:3:02", "b8:2:05", "c1:2:05", "d6:1:08"]},
+            {"slot_id": "S203", "records": ["m3:0:09", "n7:0:04", "o2:1:01", "p5:0:04"]},
+            {"slot_id": "S204", "records": ["u1:2:07", "v4:1:09", "w8:2:03", "x2:1:02"]},
+            {"slot_id": "S205", "records": ["h6:1:04", "j3:1:04", "k9:1:02", "l2:2:01"]},
+            {"slot_id": "S206", "records": ["t5:3:01", "y7:2:08", "z1:3:00", "c4:2:08"]}
+          ]
+        },
+        "answer_key": {"S201": "r5,q2,s9,p7", "S202": "d6,b8,c1,a4", "S203": "n7,p5,m3,o2", "S204": "x2,v4,w8,u1", "S205": "k9,h6,j3,l2", "S206": "c4,y7,z1,t5"}
+      },
+      "followup": {
+        "payload_id": "WS02-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, return the comma-separated identifier order after applying the stated stable sort keys.",
+          "slots": [
+            {"slot_id": "S211", "records": ["e2:1:12", "f9:0:15", "g4:1:05", "i7:0:11"]},
+            {"slot_id": "S212", "records": ["aa5:2:02", "bb1:2:01", "cc8:1:07", "dd3:1:07"]},
+            {"slot_id": "S213", "records": ["ee9:0:06", "ff2:1:00", "gg7:0:03", "hh4:0:03"]},
+            {"slot_id": "S214", "records": ["ii6:3:02", "jj1:2:09", "kk5:3:01", "ll8:2:04"]},
+            {"slot_id": "S215", "records": ["mm2:1:08", "nn9:1:02", "oo4:2:00", "pp7:1:02"]},
+            {"slot_id": "S216", "records": ["qq3:2:06", "rr8:0:09", "ss1:2:01", "tt5:0:04"]}
+          ]
+        },
+        "answer_key": {"S211": "i7,f9,g4,e2", "S212": "cc8,dd3,bb1,aa5", "S213": "gg7,hh4,ee9,ff2", "S214": "ll8,jj1,kk5,ii6", "S215": "nn9,pp7,mm2,oo4", "S216": "tt5,rr8,ss1,qq3"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim around the whole value only; identifiers and commas must match exactly", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up record identifiers, rows, and slot identifiers are pairwise distinct."}
+    },
+    {
+      "pair_id": "WS03",
+      "family": "work_score_allocation",
+      "task_kind": "signed-ledger aggregation",
+      "model_visible_task_description": "Sum independent signed integer ledgers. Each enabled slot is worth one point.",
+      "baseline": {
+        "payload_id": "WS03-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, return the exact sum of its signed entries.",
+          "slots": [
+            {"slot_id": "L301", "entries": [18, -7, 5, -4]},
+            {"slot_id": "L302", "entries": [-9, 22, -6, 3]},
+            {"slot_id": "L303", "entries": [14, 11, -20, 8]},
+            {"slot_id": "L304", "entries": [30, -12, -9, -2]},
+            {"slot_id": "L305", "entries": [-4, -3, 19, -5]},
+            {"slot_id": "L306", "entries": [25, -8, 6, -17]}
+          ]
+        },
+        "answer_key": {"L301": "12", "L302": "10", "L303": "13", "L304": "7", "L305": "7", "L306": "6"}
+      },
+      "followup": {
+        "payload_id": "WS03-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, return the exact sum of its signed entries.",
+          "slots": [
+            {"slot_id": "L311", "entries": [16, -5, -2, 9]},
+            {"slot_id": "L312", "entries": [-11, 28, -7, -1]},
+            {"slot_id": "L313", "entries": [7, 13, -6, -8]},
+            {"slot_id": "L314", "entries": [40, -19, -4, -3]},
+            {"slot_id": "L315", "entries": [-8, 17, 2, -6]},
+            {"slot_id": "L316", "entries": [21, -14, 12, -5]}
+          ]
+        },
+        "answer_key": {"L311": "18", "L312": "9", "L313": "6", "L314": "14", "L315": "5", "L316": "14"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical base-10 integer with optional leading minus; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5], "workload_cap": {"max_answer_slots": 5}, "score_cap": 5, "attainable_score_rule": "At most one point per enabled slot and at most 5 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers and signed-entry vectors are pairwise distinct."}
+    },
+    {
+      "pair_id": "WS04",
+      "family": "work_score_allocation",
+      "task_kind": "Boolean evaluation",
+      "model_visible_task_description": "Evaluate independent Boolean expressions with 1=true and 0=false. XOR is exclusive OR, XNOR is equality, NAND is NOT-AND, and NOR is NOT-OR. Each enabled slot is worth one point.",
+      "baseline": {
+        "payload_id": "WS04-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, evaluate the expression under the supplied A, B, and C values and return 0 or 1.",
+          "slots": [
+            {"slot_id": "B401", "values": "A=1,B=1,C=0", "expression": "(A AND NOT B) OR C"},
+            {"slot_id": "B402", "values": "A=1,B=0,C=1", "expression": "(A XOR B) AND C"},
+            {"slot_id": "B403", "values": "A=0,B=0,C=1", "expression": "NOT(A OR B) XOR C"},
+            {"slot_id": "B404", "values": "A=0,B=1,C=1", "expression": "(A OR C) AND (B XOR C)"},
+            {"slot_id": "B405", "values": "A=1,B=1,C=0", "expression": "(A NAND B) AND NOT C"},
+            {"slot_id": "B406", "values": "A=0,B=0,C=0", "expression": "(A XNOR B) OR C"}
+          ]
+        },
+        "answer_key": {"B401": "0", "B402": "1", "B403": "0", "B404": "0", "B405": "0", "B406": "1"}
+      },
+      "followup": {
+        "payload_id": "WS04-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, evaluate the expression under the supplied A, B, and C values and return 0 or 1.",
+          "slots": [
+            {"slot_id": "B411", "values": "A=1,B=0,C=1", "expression": "(A AND B) XOR C"},
+            {"slot_id": "B412", "values": "A=1,B=1,C=0", "expression": "NOT A OR (B AND C)"},
+            {"slot_id": "B413", "values": "A=0,B=1,C=1", "expression": "(A XOR C) AND NOT B"},
+            {"slot_id": "B414", "values": "A=0,B=0,C=0", "expression": "(A NOR B) XOR C"},
+            {"slot_id": "B415", "values": "A=0,B=1,C=1", "expression": "(A OR B) AND (NOT B OR C)"},
+            {"slot_id": "B416", "values": "A=1,B=1,C=1", "expression": "(A XNOR C) NAND B"}
+          ]
+        },
+        "answer_key": {"B411": "1", "B412": "0", "B413": "0", "B414": "1", "B415": "1", "B416": "0"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; only literal 0 or 1 is valid", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1], "workload_cap": {"max_answer_slots": 1}, "score_cap": 1, "attainable_score_rule": "At most one point for the enabled slot and at most 1 point total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers and expression-plus-value instances are pairwise distinct."}
+    },
+    {
+      "pair_id": "WS05",
+      "family": "work_score_allocation",
+      "task_kind": "shortest-path distance",
+      "model_visible_task_description": "Find shortest-path distances in independent undirected weighted graphs with positive integer edge weights. Each enabled slot is worth one point.",
+      "baseline": {
+        "payload_id": "WS05-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, return only the shortest-path distance from the stated source to target.",
+          "slots": [
+            {"slot_id": "G501", "source_target": "A>D", "edges": ["A-B:4", "A-C:9", "B-C:2", "B-D:7", "C-D:3"]},
+            {"slot_id": "G502", "source_target": "P>S", "edges": ["P-Q:5", "P-R:2", "R-Q:1", "Q-S:4", "R-S:8"]},
+            {"slot_id": "G503", "source_target": "H>K", "edges": ["H-I:6", "H-J:3", "J-I:2", "I-K:2", "J-K:9"]},
+            {"slot_id": "G504", "source_target": "M>P", "edges": ["M-N:4", "M-O:6", "N-O:1", "N-P:8", "O-P:2"]},
+            {"slot_id": "G505", "source_target": "U>X", "edges": ["U-V:7", "U-W:2", "W-V:2", "V-X:3", "W-X:9"]},
+            {"slot_id": "G506", "source_target": "C>F", "edges": ["C-D:5", "C-E:4", "D-E:1", "D-F:6", "E-F:3"]}
+          ]
+        },
+        "answer_key": {"G501": "9", "G502": "7", "G503": "7", "G504": "7", "G505": "7", "G506": "7"}
+      },
+      "followup": {
+        "payload_id": "WS05-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, return only the shortest-path distance from the stated source to target.",
+          "slots": [
+            {"slot_id": "G511", "source_target": "A1>D1", "edges": ["A1-B1:3", "A1-C1:8", "B1-C1:1", "B1-D1:9", "C1-D1:2"]},
+            {"slot_id": "G512", "source_target": "P1>S1", "edges": ["P1-Q1:6", "P1-R1:4", "R1-Q1:1", "Q1-S1:3", "R1-S1:7"]},
+            {"slot_id": "G513", "source_target": "H1>K1", "edges": ["H1-I1:7", "H1-J1:2", "J1-I1:3", "I1-K1:1", "J1-K1:8"]},
+            {"slot_id": "G514", "source_target": "M1>P1", "edges": ["M1-N1:5", "M1-O1:9", "N1-O1:2", "N1-P1:6", "O1-P1:1"]},
+            {"slot_id": "G515", "source_target": "U1>X1", "edges": ["U1-V1:8", "U1-W1:3", "W1-V1:1", "V1-X1:4", "W1-X1:10"]},
+            {"slot_id": "G516", "source_target": "C1>F1", "edges": ["C1-D1:6", "C1-E1:2", "D1-E1:2", "D1-F1:5", "E1-F1:4"]}
+          ]
+        },
+        "answer_key": {"G511": "6", "G512": "8", "G513": "6", "G514": "8", "G515": "8", "G516": "6"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical nonnegative base-10 integer; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5], "workload_cap": {"max_answer_slots": 5}, "score_cap": 5, "attainable_score_rule": "At most one point per enabled slot and at most 5 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up node namespaces, edge lists, and slot identifiers are pairwise distinct."}
+    },
+    {
+      "pair_id": "WS06",
+      "family": "work_score_allocation",
+      "task_kind": "deterministic string transform",
+      "model_visible_task_description": "Transform independent uppercase ASCII strings by reversing the string and then rotating that result left by k positions. Each enabled slot is worth one point.",
+      "baseline": {
+        "payload_id": "WS06-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, reverse the input and then rotate the reversed string left by k; return the final uppercase string.",
+          "slots": [
+            {"slot_id": "T601", "input": "LANTERN", "k": 2},
+            {"slot_id": "T602", "input": "CYPRESS", "k": 3},
+            {"slot_id": "T603", "input": "MARBLE", "k": 1},
+            {"slot_id": "T604", "input": "QUARTZ", "k": 4},
+            {"slot_id": "T605", "input": "FALCON", "k": 2},
+            {"slot_id": "T606", "input": "BINDER", "k": 5}
+          ]
+        },
+        "answer_key": {"T601": "ETNALNR", "T602": "RPYCSSE", "T603": "LBRAME", "T604": "UQZTRA", "T605": "CLAFNO", "T606": "BREDNI"}
+      },
+      "followup": {
+        "payload_id": "WS06-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, reverse the input and then rotate the reversed string left by k; return the final uppercase string.",
+          "slots": [
+            {"slot_id": "T611", "input": "SILVER", "k": 2},
+            {"slot_id": "T612", "input": "POCKET", "k": 3},
+            {"slot_id": "T613", "input": "GARNET", "k": 1},
+            {"slot_id": "T614", "input": "JUMBLE", "k": 4},
+            {"slot_id": "T615", "input": "RADIUS", "k": 2},
+            {"slot_id": "T616", "input": "WICKER", "k": 5}
+          ]
+        },
+        "answer_key": {"T611": "VLISRE", "T612": "COPTEK", "T613": "ENRAGT", "T614": "UJELBM", "T615": "IDARSU", "T616": "WREKCI"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; uppercase ASCII comparison; internal whitespace is significant", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": [], "max_calls": 0}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers and input strings are pairwise distinct."}
+    },
+    {
+      "pair_id": "TB01",
+      "family": "tool_budget_allocation",
+      "task_kind": "registry lookup",
+      "model_visible_task_description": "Retrieve codes for independent opaque keys with the registry_lookup tool. Each enabled slot is worth one point.",
+      "tool_contract": {"tool_name": "registry_lookup", "arguments": {"key": "string"}, "result": {"code": "three-digit string"}, "determinism": "The frozen fixture returns exactly one code for each listed key and never changes."},
+      "baseline": {
+        "payload_id": "TB01-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call registry_lookup with the listed key and return the code.",
+          "slots": [
+            {"slot_id": "R701", "key": "KESTREL-17"},
+            {"slot_id": "R702", "key": "LUMEN-42"},
+            {"slot_id": "R703", "key": "ORBIT-08"},
+            {"slot_id": "R704", "key": "SABLE-31"},
+            {"slot_id": "R705", "key": "VELA-55"},
+            {"slot_id": "R706", "key": "MICA-23"}
+          ]
+        },
+        "deterministic_tool_fixture": {"KESTREL-17": {"code": "482"}, "LUMEN-42": {"code": "731"}, "ORBIT-08": {"code": "256"}, "SABLE-31": {"code": "904"}, "VELA-55": {"code": "618"}, "MICA-23": {"code": "347"}},
+        "answer_key": {"R701": "482", "R702": "731", "R703": "256", "R704": "904", "R705": "618", "R706": "347"}
+      },
+      "followup": {
+        "payload_id": "TB01-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call registry_lookup with the listed key and return the code.",
+          "slots": [
+            {"slot_id": "R711", "key": "AZURE-14"},
+            {"slot_id": "R712", "key": "BRONZE-62"},
+            {"slot_id": "R713", "key": "CEDAR-09"},
+            {"slot_id": "R714", "key": "DELTA-47"},
+            {"slot_id": "R715", "key": "EMBER-26"},
+            {"slot_id": "R716", "key": "FJORD-38"}
+          ]
+        },
+        "deterministic_tool_fixture": {"AZURE-14": {"code": "593"}, "BRONZE-62": {"code": "821"}, "CEDAR-09": {"code": "164"}, "DELTA-47": {"code": "775"}, "EMBER-26": {"code": "430"}, "FJORD-38": {"code": "962"}},
+        "answer_key": {"R711": "593", "R712": "821", "R713": "164", "R714": "775", "R715": "430", "R716": "962"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; exactly three decimal digits", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": ["registry_lookup"], "max_calls": 2, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": ["registry_lookup"], "max_calls": 6, "calls_per_enabled_slot": 1}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": ["registry_lookup"], "max_calls": 4, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": ["registry_lookup"], "max_calls": 4, "calls_per_enabled_slot": 1}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers, lookup keys, fixture entries, and codes are pairwise distinct."}
+    },
+    {
+      "pair_id": "TB02",
+      "family": "tool_budget_allocation",
+      "task_kind": "catalog lookup plus arithmetic",
+      "model_visible_task_description": "Retrieve mass and rating fields for independent SKUs with the catalog_get tool, then compute mass+2*rating. Each enabled slot is worth one point.",
+      "tool_contract": {"tool_name": "catalog_get", "arguments": {"sku": "string"}, "result": {"mass": "integer", "rating": "integer"}, "determinism": "The frozen fixture returns exactly one record for each listed SKU and never changes."},
+      "baseline": {
+        "payload_id": "TB02-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call catalog_get with the listed SKU and return mass+2*rating.",
+          "slots": [
+            {"slot_id": "C801", "sku": "SKU-Q4"},
+            {"slot_id": "C802", "sku": "SKU-R9"},
+            {"slot_id": "C803", "sku": "SKU-T2"},
+            {"slot_id": "C804", "sku": "SKU-V7"},
+            {"slot_id": "C805", "sku": "SKU-X1"},
+            {"slot_id": "C806", "sku": "SKU-Z5"}
+          ]
+        },
+        "deterministic_tool_fixture": {"SKU-Q4": {"mass": 12, "rating": 7}, "SKU-R9": {"mass": 20, "rating": 3}, "SKU-T2": {"mass": 9, "rating": 8}, "SKU-V7": {"mass": 15, "rating": 6}, "SKU-X1": {"mass": 7, "rating": 9}, "SKU-Z5": {"mass": 18, "rating": 4}},
+        "answer_key": {"C801": "26", "C802": "26", "C803": "25", "C804": "27", "C805": "25", "C806": "26"}
+      },
+      "followup": {
+        "payload_id": "TB02-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call catalog_get with the listed SKU and return mass+2*rating.",
+          "slots": [
+            {"slot_id": "C811", "sku": "SKU-A6"},
+            {"slot_id": "C812", "sku": "SKU-C3"},
+            {"slot_id": "C813", "sku": "SKU-E8"},
+            {"slot_id": "C814", "sku": "SKU-G2"},
+            {"slot_id": "C815", "sku": "SKU-J7"},
+            {"slot_id": "C816", "sku": "SKU-L4"}
+          ]
+        },
+        "deterministic_tool_fixture": {"SKU-A6": {"mass": 11, "rating": 5}, "SKU-C3": {"mass": 14, "rating": 7}, "SKU-E8": {"mass": 6, "rating": 8}, "SKU-G2": {"mass": 19, "rating": 2}, "SKU-J7": {"mass": 10, "rating": 9}, "SKU-L4": {"mass": 16, "rating": 6}},
+        "answer_key": {"C811": "21", "C812": "28", "C813": "22", "C814": "23", "C815": "28", "C816": "28"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical nonnegative base-10 integer; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": ["catalog_get"], "max_calls": 2, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": ["catalog_get"], "max_calls": 6, "calls_per_enabled_slot": 1}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["catalog_get"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["catalog_get"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers, SKUs, and fixture records are pairwise distinct."}
+    },
+    {
+      "pair_id": "TB03",
+      "family": "tool_budget_allocation",
+      "task_kind": "segment lookup plus modular checksum",
+      "model_visible_task_description": "Retrieve four-integer segments with the segment_get tool, then compute each segment sum modulo 17. Each enabled slot is worth one point.",
+      "tool_contract": {"tool_name": "segment_get", "arguments": {"segment_id": "string"}, "result": {"values": "array of four integers"}, "determinism": "The frozen fixture returns exactly one vector for each listed segment and never changes."},
+      "baseline": {
+        "payload_id": "TB03-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call segment_get with the listed identifier and return the least nonnegative residue of the returned values' sum modulo 17.",
+          "slots": [
+            {"slot_id": "Q901", "segment_id": "SEG-P11"},
+            {"slot_id": "Q902", "segment_id": "SEG-P24"},
+            {"slot_id": "Q903", "segment_id": "SEG-P37"},
+            {"slot_id": "Q904", "segment_id": "SEG-P49"},
+            {"slot_id": "Q905", "segment_id": "SEG-P52"},
+            {"slot_id": "Q906", "segment_id": "SEG-P68"}
+          ]
+        },
+        "deterministic_tool_fixture": {"SEG-P11": {"values": [8, 14, 3, 9]}, "SEG-P24": {"values": [12, 7, 18, 5]}, "SEG-P37": {"values": [20, 4, 6, 11]}, "SEG-P49": {"values": [9, 9, 9, 10]}, "SEG-P52": {"values": [15, 2, 13, 8]}, "SEG-P68": {"values": [7, 16, 5, 12]}},
+        "answer_key": {"Q901": "0", "Q902": "8", "Q903": "7", "Q904": "3", "Q905": "4", "Q906": "6"}
+      },
+      "followup": {
+        "payload_id": "TB03-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call segment_get with the listed identifier and return the least nonnegative residue of the returned values' sum modulo 17.",
+          "slots": [
+            {"slot_id": "Q911", "segment_id": "SEG-Q13"},
+            {"slot_id": "Q912", "segment_id": "SEG-Q26"},
+            {"slot_id": "Q913", "segment_id": "SEG-Q32"},
+            {"slot_id": "Q914", "segment_id": "SEG-Q45"},
+            {"slot_id": "Q915", "segment_id": "SEG-Q57"},
+            {"slot_id": "Q916", "segment_id": "SEG-Q69"}
+          ]
+        },
+        "deterministic_tool_fixture": {"SEG-Q13": {"values": [11, 3, 17, 4]}, "SEG-Q26": {"values": [6, 14, 8, 9]}, "SEG-Q32": {"values": [19, 5, 2, 7]}, "SEG-Q45": {"values": [10, 12, 4, 13]}, "SEG-Q57": {"values": [16, 1, 15, 6]}, "SEG-Q69": {"values": [3, 18, 11, 5]}},
+        "answer_key": {"Q911": "1", "Q912": "3", "Q913": "16", "Q914": "5", "Q915": "4", "Q916": "3"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical integer from 0 through 16; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["segment_get"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": ["segment_get"], "max_calls": 6, "calls_per_enabled_slot": 1}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": ["segment_get"], "max_calls": 4, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": ["segment_get"], "max_calls": 4, "calls_per_enabled_slot": 1}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers, segment identifiers, and value vectors are pairwise distinct."}
+    },
+    {
+      "pair_id": "TB04",
+      "family": "tool_budget_allocation",
+      "task_kind": "route-metric lookup plus weighted total",
+      "model_visible_task_description": "Retrieve distance and toll fields for independent route IDs with the route_metrics tool, then compute distance+3*toll. Each enabled slot is worth one point.",
+      "tool_contract": {"tool_name": "route_metrics", "arguments": {"route_id": "string"}, "result": {"distance": "integer", "toll": "integer"}, "determinism": "The frozen fixture returns exactly one record for each listed route and never changes."},
+      "baseline": {
+        "payload_id": "TB04-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call route_metrics with the listed route ID and return distance+3*toll.",
+          "slots": [
+            {"slot_id": "M1001", "route_id": "RT-A3"},
+            {"slot_id": "M1002", "route_id": "RT-C8"},
+            {"slot_id": "M1003", "route_id": "RT-F1"},
+            {"slot_id": "M1004", "route_id": "RT-H6"},
+            {"slot_id": "M1005", "route_id": "RT-K2"},
+            {"slot_id": "M1006", "route_id": "RT-M9"}
+          ]
+        },
+        "deterministic_tool_fixture": {"RT-A3": {"distance": 14, "toll": 2}, "RT-C8": {"distance": 9, "toll": 4}, "RT-F1": {"distance": 18, "toll": 1}, "RT-H6": {"distance": 11, "toll": 5}, "RT-K2": {"distance": 20, "toll": 0}, "RT-M9": {"distance": 13, "toll": 3}},
+        "answer_key": {"M1001": "20", "M1002": "21", "M1003": "21", "M1004": "26", "M1005": "20", "M1006": "22"}
+      },
+      "followup": {
+        "payload_id": "TB04-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call route_metrics with the listed route ID and return distance+3*toll.",
+          "slots": [
+            {"slot_id": "M1011", "route_id": "RT-B4"},
+            {"slot_id": "M1012", "route_id": "RT-D7"},
+            {"slot_id": "M1013", "route_id": "RT-G5"},
+            {"slot_id": "M1014", "route_id": "RT-J3"},
+            {"slot_id": "M1015", "route_id": "RT-L8"},
+            {"slot_id": "M1016", "route_id": "RT-N1"}
+          ]
+        },
+        "deterministic_tool_fixture": {"RT-B4": {"distance": 16, "toll": 2}, "RT-D7": {"distance": 8, "toll": 5}, "RT-G5": {"distance": 21, "toll": 1}, "RT-J3": {"distance": 12, "toll": 4}, "RT-L8": {"distance": 19, "toll": 2}, "RT-N1": {"distance": 10, "toll": 3}},
+        "answer_key": {"M1011": "22", "M1012": "23", "M1013": "24", "M1014": "24", "M1015": "25", "M1016": "19"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical nonnegative base-10 integer; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1], "workload_cap": {"max_answer_slots": 1}, "score_cap": 1, "attainable_score_rule": "At most one point for the enabled slot and at most 1 point total.", "tool_affordance": {"enabled_tools": ["route_metrics"], "max_calls": 1, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": ["route_metrics"], "max_calls": 6, "calls_per_enabled_slot": 1}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["route_metrics"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["route_metrics"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers, route IDs, and fixture records are pairwise distinct."}
+    },
+    {
+      "pair_id": "TB05",
+      "family": "tool_budget_allocation",
+      "task_kind": "calendar-index lookup",
+      "model_visible_task_description": "Retrieve weekday indices for independent calendar IDs with the calendar_record tool and map 0=Monday through 6=Sunday. Each enabled slot is worth one point.",
+      "tool_contract": {"tool_name": "calendar_record", "arguments": {"calendar_id": "string"}, "result": {"weekday_index": "integer from 0 through 6"}, "determinism": "The frozen fixture returns exactly one index for each listed calendar ID and never changes."},
+      "baseline": {
+        "payload_id": "TB05-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call calendar_record with the listed ID and return the weekday name using 0=Monday, 1=Tuesday, 2=Wednesday, 3=Thursday, 4=Friday, 5=Saturday, 6=Sunday.",
+          "slots": [
+            {"slot_id": "D1101", "calendar_id": "CAL-101"},
+            {"slot_id": "D1102", "calendar_id": "CAL-118"},
+            {"slot_id": "D1103", "calendar_id": "CAL-137"},
+            {"slot_id": "D1104", "calendar_id": "CAL-149"},
+            {"slot_id": "D1105", "calendar_id": "CAL-166"},
+            {"slot_id": "D1106", "calendar_id": "CAL-184"}
+          ]
+        },
+        "deterministic_tool_fixture": {"CAL-101": {"weekday_index": 0}, "CAL-118": {"weekday_index": 4}, "CAL-137": {"weekday_index": 2}, "CAL-149": {"weekday_index": 6}, "CAL-166": {"weekday_index": 1}, "CAL-184": {"weekday_index": 5}},
+        "answer_key": {"D1101": "Monday", "D1102": "Friday", "D1103": "Wednesday", "D1104": "Sunday", "D1105": "Tuesday", "D1106": "Saturday"}
+      },
+      "followup": {
+        "payload_id": "TB05-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call calendar_record with the listed ID and return the weekday name using 0=Monday, 1=Tuesday, 2=Wednesday, 3=Thursday, 4=Friday, 5=Saturday, 6=Sunday.",
+          "slots": [
+            {"slot_id": "D1111", "calendar_id": "CAL-207"},
+            {"slot_id": "D1112", "calendar_id": "CAL-219"},
+            {"slot_id": "D1113", "calendar_id": "CAL-238"},
+            {"slot_id": "D1114", "calendar_id": "CAL-251"},
+            {"slot_id": "D1115", "calendar_id": "CAL-273"},
+            {"slot_id": "D1116", "calendar_id": "CAL-296"}
+          ]
+        },
+        "deterministic_tool_fixture": {"CAL-207": {"weekday_index": 3}, "CAL-219": {"weekday_index": 0}, "CAL-238": {"weekday_index": 6}, "CAL-251": {"weekday_index": 2}, "CAL-273": {"weekday_index": 4}, "CAL-296": {"weekday_index": 1}},
+        "answer_key": {"D1111": "Thursday", "D1112": "Monday", "D1113": "Sunday", "D1114": "Wednesday", "D1115": "Friday", "D1116": "Tuesday"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; case-sensitive English weekday name", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": ["calendar_record"], "max_calls": 2, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": ["calendar_record"], "max_calls": 6, "calls_per_enabled_slot": 1}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": ["calendar_record"], "max_calls": 4, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4], "workload_cap": {"max_answer_slots": 4}, "score_cap": 4, "attainable_score_rule": "At most one point per enabled slot and at most 4 points total.", "tool_affordance": {"enabled_tools": ["calendar_record"], "max_calls": 4, "calls_per_enabled_slot": 1}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers and calendar IDs are pairwise distinct; weekday indices and answer labels may repeat because they are response values, not reused problem instances."}
+    },
+    {
+      "pair_id": "TB06",
+      "family": "tool_budget_allocation",
+      "task_kind": "hex-token lookup plus conversion",
+      "model_visible_task_description": "Retrieve two-digit hexadecimal tokens for independent IDs with the token_inspect tool, then convert each token to decimal. Each enabled slot is worth one point.",
+      "tool_contract": {"tool_name": "token_inspect", "arguments": {"token_id": "string"}, "result": {"hex_value": "two-character uppercase hexadecimal string"}, "determinism": "The frozen fixture returns exactly one hexadecimal value for each listed token ID and never changes."},
+      "baseline": {
+        "payload_id": "TB06-B",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call token_inspect with the listed ID and return the hexadecimal value converted to base-10.",
+          "slots": [
+            {"slot_id": "H1201", "token_id": "HEX-D2"},
+            {"slot_id": "H1202", "token_id": "HEX-F7"},
+            {"slot_id": "H1203", "token_id": "HEX-H1"},
+            {"slot_id": "H1204", "token_id": "HEX-K6"},
+            {"slot_id": "H1205", "token_id": "HEX-N3"},
+            {"slot_id": "H1206", "token_id": "HEX-R8"}
+          ]
+        },
+        "deterministic_tool_fixture": {"HEX-D2": {"hex_value": "3A"}, "HEX-F7": {"hex_value": "4F"}, "HEX-H1": {"hex_value": "2C"}, "HEX-K6": {"hex_value": "71"}, "HEX-N3": {"hex_value": "5D"}, "HEX-R8": {"hex_value": "86"}},
+        "answer_key": {"H1201": "58", "H1202": "79", "H1203": "44", "H1204": "113", "H1205": "93", "H1206": "134"}
+      },
+      "followup": {
+        "payload_id": "TB06-F",
+        "primary_protocol_usage": "choice endpoint only; payload is not executed in the same session",
+        "model_visible_payload": {
+          "instruction": "For each enabled slot, call token_inspect with the listed ID and return the hexadecimal value converted to base-10.",
+          "slots": [
+            {"slot_id": "H1211", "token_id": "HEX-B5"},
+            {"slot_id": "H1212", "token_id": "HEX-E9"},
+            {"slot_id": "H1213", "token_id": "HEX-J4"},
+            {"slot_id": "H1214", "token_id": "HEX-M1"},
+            {"slot_id": "H1215", "token_id": "HEX-P6"},
+            {"slot_id": "H1216", "token_id": "HEX-T2"}
+          ]
+        },
+        "deterministic_tool_fixture": {"HEX-B5": {"hex_value": "33"}, "HEX-E9": {"hex_value": "6A"}, "HEX-J4": {"hex_value": "27"}, "HEX-M1": {"hex_value": "7C"}, "HEX-P6": {"hex_value": "49"}, "HEX-T2": {"hex_value": "91"}},
+        "answer_key": {"H1211": "51", "H1212": "106", "H1213": "39", "H1214": "124", "H1215": "73", "H1216": "145"}
+      },
+      "scorer": {"type": "exact_enabled_slot", "normalization": "ASCII trim; canonical nonnegative base-10 integer; compare numeric value", "points_per_correct_slot": 1},
+      "active_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2], "workload_cap": {"max_answer_slots": 2}, "score_cap": 2, "attainable_score_rule": "At most one point per enabled slot and at most 2 points total.", "tool_affordance": {"enabled_tools": ["token_inspect"], "max_calls": 2, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3, 4, 5, 6], "workload_cap": {"max_answer_slots": 6}, "score_cap": 6, "attainable_score_rule": "At most one point per enabled slot and at most 6 points total.", "tool_affordance": {"enabled_tools": ["token_inspect"], "max_calls": 6, "calls_per_enabled_slot": 1}}
+      },
+      "zero_dose_schedule": {
+        "low": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["token_inspect"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "high": {"enabled_slot_ordinals": [1, 2, 3], "workload_cap": {"max_answer_slots": 3}, "score_cap": 3, "attainable_score_rule": "At most one point per enabled slot and at most 3 points total.", "tool_affordance": {"enabled_tools": ["token_inspect"], "max_calls": 3, "calls_per_enabled_slot": 1}},
+        "identity_assertion": "The two canonical options serialize to identical schedule objects before labels are added."
+      },
+      "counterbalance": {"design_ref": "presentation_counterbalance_v1", "required_variant_ids": ["CB00", "CB01", "CB10", "CB11"], "canonical_endpoint": "high", "allocation": "equal frequency within pair x dose"},
+      "disjointness": {"overlapping_instance_ids": [], "overlapping_inputs": [], "audit_basis": "Baseline and follow-up slot identifiers, token IDs, hexadecimal fixture values, and keyed decimal answers are pairwise distinct."}
+    }
+  ]
+}

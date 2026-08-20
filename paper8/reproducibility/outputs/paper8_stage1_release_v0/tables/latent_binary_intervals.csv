@@ -1,0 +1,7 @@
+scenario,followup_unavailability,block_icc,observed_high_contrast,latent_binary_lower,latent_binary_upper,macro_cells_with_same_record,gating_role,source_json_path
+null,0.15,0.25,0,-0.15,0.15,4,non-gating analytical sensitivity,latent_binary_sensitivity.declared_worst_sensitivity_examples.null
+availability_only,0.15,0.25,-0.05,-0.2,0.2,4,non-gating analytical sensitivity,latent_binary_sensitivity.declared_worst_sensitivity_examples.availability_only
+fine_stratum_heterogeneity,0.15,0.25,0.05,-0.1,0.2,4,non-gating analytical sensitivity,latent_binary_sensitivity.declared_worst_sensitivity_examples.fine_stratum_heterogeneity
+positive_1055,0.15,0.25,0.1055,-0.0445,0.2555,4,non-gating analytical sensitivity,latent_binary_sensitivity.declared_worst_sensitivity_examples.positive_1055
+positive_15,0.15,0.25,0.15,0,0.3,4,non-gating analytical sensitivity,latent_binary_sensitivity.declared_worst_sensitivity_examples.positive_15
+negative_15,0.15,0.25,-0.15,-0.3,0,4,non-gating analytical sensitivity,latent_binary_sensitivity.declared_worst_sensitivity_examples.negative_15

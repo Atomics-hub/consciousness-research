@@ -1,0 +1,48 @@
+{
+  "status": "upload-ready-doi-reserved",
+  "resource_type": "Publication / Preprint",
+  "title": "The Binding Test: Construction Audit, Synthetic Planning, and an Exploratory Feasibility Case Study of Causal Choice-Control Evaluation for AI Systems",
+  "publication_date": "2026-08-19",
+  "version": "v1.0.0",
+  "publisher": "Zenodo",
+  "language": "English",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright 2026 Thomas Ryan",
+  "creators": [
+    {
+      "family_name": "Ryan",
+      "given_names": "Thomas",
+      "role": "Researcher",
+      "affiliation": "Independent Researcher, San Francisco, CA"
+    }
+  ],
+  "orcid_asserted": false,
+  "doi": "10.5281/zenodo.22020047",
+  "upload_files": [
+    "ryan_2026_binding_test_methods_feasibility.pdf",
+    "paper8_reproducibility_package_v1.0.0.zip"
+  ],
+  "keywords": [
+    "AI evaluation",
+    "causal measurement",
+    "yoked control",
+    "choice contingency",
+    "enforcement policy",
+    "large language models",
+    "construct validity",
+    "randomized evaluation",
+    "provider transport",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {"relation": "References", "identifier": "10.5281/zenodo.19374628"},
+    {"relation": "References", "identifier": "10.5281/zenodo.19738204"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20480505"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20705654"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20852042"},
+    {"relation": "References", "identifier": "10.5281/zenodo.21342748"},
+    {"relation": "References", "identifier": "10.5281/zenodo.21782895"}
+  ],
+  "external_causal_result": false,
+  "confirmatory_data": false
+}

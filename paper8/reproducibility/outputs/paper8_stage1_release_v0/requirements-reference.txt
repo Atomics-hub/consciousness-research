@@ -1,0 +1,4 @@
+# Current reproduction reference only; not proven to be the historical build environment.
+# Full synthetic regeneration and the verifier's mandatory test/replay subprocesses import
+# NumPy. Verifier orchestration and artifact generation use the Python standard library.
+numpy==2.4.2

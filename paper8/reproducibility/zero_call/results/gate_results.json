@@ -1,0 +1,2256 @@
+{
+  "assignment_audit": {
+    "collapsed_exposure_assignments": 144,
+    "collapsed_multiplicity": [
+      4
+    ],
+    "donor_aware_assignments": 576,
+    "is_canonical": true,
+    "materialized_self_schedule_multiset": {
+      "2982145c608dd8a7591688c91a0141c60ccebe7a78c7a942f08e523c9b8e4e82": 2,
+      "55d918daf6d8599ae756ed78c0809506967eb97cbdeab244d1bf9056c5cf3fb5": 2
+    },
+    "materialized_yoke_schedule_multiset": {
+      "2982145c608dd8a7591688c91a0141c60ccebe7a78c7a942f08e523c9b8e4e82": 2,
+      "55d918daf6d8599ae756ed78c0809506967eb97cbdeab244d1bf9056c5cf3fb5": 2
+    },
+    "session_probabilities": [
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-h-0"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-h-1"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-h-2"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-h-3"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-l-0"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-l-1"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-l-2"
+      },
+      {
+        "p_match_given_yoke": "1/2",
+        "p_mismatch_given_yoke": "1/2",
+        "p_receive_high_given_yoke": "1/2",
+        "p_receive_low_given_yoke": "1/2",
+        "p_self": "1/2",
+        "p_yoke": "1/2",
+        "session_id": "gate-l-3"
+      }
+    ],
+    "unique_donor_aware_assignments": 576
+  },
+  "binary_invariance_limits": [
+    {
+      "delta": 0.05,
+      "infinite_sample_lower": -0.05,
+      "infinite_sample_upper": 0.05,
+      "strict_invariance_possible": false,
+      "unavailability": 0.05
+    },
+    {
+      "delta": 0.05,
+      "infinite_sample_lower": -0.1,
+      "infinite_sample_upper": 0.1,
+      "strict_invariance_possible": false,
+      "unavailability": 0.1
+    },
+    {
+      "delta": 0.05,
+      "infinite_sample_lower": -0.15,
+      "infinite_sample_upper": 0.15,
+      "strict_invariance_possible": false,
+      "unavailability": 0.15
+    }
+  ],
+  "gates": [
+    {
+      "finding": "Payload-bound two-choice state machine, distinct parser ledgers, terminal zero-retry execution, and nonordinal U pass automated tests.",
+      "gate": "G1 timing/parsing/retention",
+      "status": "PASS"
+    },
+    {
+      "finding": "12-pair renderer and 144 keys pass structurally; frontier unsaturation, positivity, and no-guarantee salience remain empirical.",
+      "gate": "G2 item/semantic surface",
+      "status": "CONDITIONAL"
+    },
+    {
+      "finding": "576 unique donor-aware assignments, 144 collapsed exposures, exact probabilities, schedule fingerprints, and runtime binding pass.",
+      "gate": "G3 restricted assignment",
+      "status": "PASS"
+    },
+    {
+      "finding": "Construction is coherent; retention ceiling falls to 20% at 10/90 baseline splits and actual within-stratum support is unknown.",
+      "gate": "G4 block support",
+      "status": "CONDITIONAL"
+    },
+    {
+      "finding": "Strict \u00b1.05 binary equivalence is logically unattainable at every planned 5\u201315% U level; the 512-session planning grid also shows weak binary responsiveness for a 15-point effect.",
+      "gate": "G5 estimands/decisions",
+      "status": "FAIL"
+    },
+    {
+      "finding": "Required synthetic stresses run; mechanism alias proves generic credibility remains unidentified without a valid comparator.",
+      "gate": "G6 stress scenarios",
+      "status": "CONDITIONAL"
+    },
+    {
+      "finding": "Exact request identity and sequential tool caps are derived; dollar cost awaits frozen models, tokens, prices, and retained-block counts.",
+      "gate": "G7 call/cost envelope",
+      "status": "CONDITIONAL"
+    }
+  ],
+  "generated_date": "2026-08-04",
+  "item_bank_audit": {
+    "active_schedule_digest_count": 17,
+    "errors": [],
+    "family_counts": {
+      "tool_budget_allocation": 6,
+      "work_score_allocation": 6
+    },
+    "pair_count": 12,
+    "passed": true,
+    "payload_count": 24,
+    "recomputed_answer_count": 144,
+    "rendered_surface_count": 240,
+    "slot_count": 144,
+    "warnings": [
+      "Frontier-model unsaturation and baseline choice positivity are empirical, not established here.",
+      "The honest no-guarantee interface may weaken action-contingency salience and changes the interpretation.",
+      "Active options bundle workload/tool budget with attainable score; component mechanisms are not isolated."
+    ],
+    "zero_dose_schedule_digest_count": 8
+  },
+  "limitations": [
+    "No provider/model observation occurred; unsaturation, positivity, routing, and snapshot stability are unknown.",
+    "Monte Carlo and block bootstrap are planning-grade, not final restricted-randomization inference.",
+    "Generic credibility and workload-control mechanisms are observably aliased in the core.",
+    "Retention grid conditions on valid L/H baselines; attempted-session retention also depends on baseline availability.",
+    "The 24-replicate Monte Carlo grid is too small to certify a 0.075 error rate."
+  ],
+  "master_seed": 20260804,
+  "monte_carlo": {
+    "block_counts": [
+      8,
+      16
+    ],
+    "bootstrap_replicates": 120,
+    "cells": [
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "null",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "null",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "null",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "null",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "null",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "null",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 0.75,
+          "positive": 0.25
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.75,
+          "invariant": 0.0,
+          "responsive": 0.25
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.5,
+          "indeterminate": 0.5,
+          "invariant": 0.0
+        },
+        "scenario": "positive",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 0.9583333333333334,
+          "positive": 0.041666666666666664
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0,
+          "responsive": 0.041666666666666664
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.3333333333333333,
+          "indeterminate": 0.6666666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "positive",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.4583333333333333,
+          "indeterminate": 0.5416666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "positive",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 0.9583333333333334,
+          "positive": 0.041666666666666664
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0,
+          "responsive": 0.041666666666666664
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7083333333333334,
+          "indeterminate": 0.2916666666666667,
+          "invariant": 0.0
+        },
+        "scenario": "positive",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7916666666666666,
+          "indeterminate": 0.20833333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "positive",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7083333333333334,
+          "indeterminate": 0.2916666666666667,
+          "invariant": 0.0
+        },
+        "scenario": "positive",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.16666666666666666,
+          "none": 0.8333333333333334,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.8333333333333334,
+          "invariant": 0.0,
+          "responsive": 0.16666666666666666
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.6666666666666666,
+          "indeterminate": 0.3333333333333333,
+          "invariant": 0.0
+        },
+        "scenario": "negative",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.4166666666666667,
+          "indeterminate": 0.5833333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "negative",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.5833333333333334,
+          "indeterminate": 0.4166666666666667,
+          "invariant": 0.0
+        },
+        "scenario": "negative",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.20833333333333334,
+          "none": 0.7916666666666666,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.7916666666666666,
+          "invariant": 0.0,
+          "responsive": 0.20833333333333334
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.75,
+          "indeterminate": 0.25,
+          "invariant": 0.0
+        },
+        "scenario": "negative",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.041666666666666664,
+          "none": 0.9583333333333334,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0,
+          "responsive": 0.041666666666666664
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.5416666666666666,
+          "indeterminate": 0.4583333333333333,
+          "invariant": 0.0
+        },
+        "scenario": "negative",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7916666666666666,
+          "indeterminate": 0.20833333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "negative",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.125,
+          "indeterminate": 0.875,
+          "invariant": 0.0
+        },
+        "scenario": "availability_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.16666666666666666,
+          "indeterminate": 0.8333333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "availability_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.25,
+          "indeterminate": 0.75,
+          "invariant": 0.0
+        },
+        "scenario": "availability_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.2916666666666667,
+          "indeterminate": 0.7083333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "availability_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.20833333333333334,
+          "indeterminate": 0.7916666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "availability_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.4166666666666667,
+          "indeterminate": 0.5833333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "availability_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.041666666666666664,
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "one_model_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.125,
+          "indeterminate": 0.875,
+          "invariant": 0.0
+        },
+        "scenario": "one_model_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.041666666666666664,
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "one_model_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.25,
+          "indeterminate": 0.75,
+          "invariant": 0.0
+        },
+        "scenario": "one_model_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.125,
+          "indeterminate": 0.875,
+          "invariant": 0.0
+        },
+        "scenario": "one_model_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.16666666666666666,
+          "indeterminate": 0.8333333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "one_model_only",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 0.75,
+          "positive": 0.25
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.75,
+          "invariant": 0.0,
+          "responsive": 0.25
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.5,
+          "indeterminate": 0.5,
+          "invariant": 0.0
+        },
+        "scenario": "mechanism_alias",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 0.9583333333333334,
+          "positive": 0.041666666666666664
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0,
+          "responsive": 0.041666666666666664
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.3333333333333333,
+          "indeterminate": 0.6666666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "mechanism_alias",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.4583333333333333,
+          "indeterminate": 0.5416666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "mechanism_alias",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 0.9583333333333334,
+          "positive": 0.041666666666666664
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0,
+          "responsive": 0.041666666666666664
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7083333333333334,
+          "indeterminate": 0.2916666666666667,
+          "invariant": 0.0
+        },
+        "scenario": "mechanism_alias",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7916666666666666,
+          "indeterminate": 0.20833333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "mechanism_alias",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": null,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": null,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": null,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": null,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.7083333333333334,
+          "indeterminate": 0.2916666666666667,
+          "invariant": 0.0
+        },
+        "scenario": "mechanism_alias",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.08333333333333333,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": false,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.08333333333333333,
+          "indeterminate": 0.9166666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "equivalence_boundary",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.08333333333333333,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": false,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.08333333333333333,
+          "indeterminate": 0.9166666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "equivalence_boundary",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 8,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.041666666666666664,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.041666666666666664,
+          "indeterminate": 0.9583333333333334,
+          "invariant": 0.0
+        },
+        "scenario": "equivalence_boundary",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.125,
+        "followup_unavailability": 0.05,
+        "observable_false_rate_within_tolerance": false,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.125,
+          "indeterminate": 0.875,
+          "invariant": 0.0
+        },
+        "scenario": "equivalence_boundary",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.08333333333333333,
+        "followup_unavailability": 0.1,
+        "observable_false_rate_within_tolerance": false,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.08333333333333333,
+          "indeterminate": 0.9166666666666666,
+          "invariant": 0.0
+        },
+        "scenario": "equivalence_boundary",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      },
+      {
+        "all_strata_binary_invariant_rate": 0.0,
+        "all_strata_broad_invariant_rate": 0.0,
+        "all_strata_observable_invariant_rate": 0.0,
+        "all_strata_same_direction_binary_responsive_rate": 0.0,
+        "alpha": 0.05,
+        "binary_delta": 0.05,
+        "binary_false_rate_within_tolerance": true,
+        "blocks_per_model_target": 16,
+        "bootstrap_replicates": 120,
+        "category_margins": {
+          "H": 0.05,
+          "L": 0.05,
+          "U": 0.02
+        },
+        "false_binary_categorical_rate": 0.0,
+        "false_categorical_tolerance": 0.075,
+        "false_observable_categorical_rate": 0.0,
+        "followup_unavailability": 0.15,
+        "observable_false_rate_within_tolerance": true,
+        "pooled_binary_direction_rates": {
+          "negative": 0.0,
+          "none": 1.0,
+          "positive": 0.0
+        },
+        "pooled_binary_rates": {
+          "indeterminate": 1.0,
+          "invariant": 0.0,
+          "responsive": 0.0
+        },
+        "pooled_broad_invariance_rate": 0.0,
+        "pooled_observable_rates": {
+          "changed": 0.0,
+          "indeterminate": 1.0,
+          "invariant": 0.0
+        },
+        "scenario": "equivalence_boundary",
+        "sessions_per_arm_block": 4,
+        "simulation_replicates": 24
+      }
+    ],
+    "cross_stratum_certificates": true,
+    "followup_unavailability_levels": [
+      0.05,
+      0.1,
+      0.15
+    ],
+    "master_seed": 20260804,
+    "method": "seeded synthetic Monte Carlo with planning-grade stratified block bootstrap; not final confirmatory inference",
+    "scenarios": [
+      "null",
+      "positive",
+      "negative",
+      "availability_only",
+      "one_model_only",
+      "mechanism_alias",
+      "equivalence_boundary"
+    ],
+    "simulation_replicates": 24
+  },
+  "overall_verdict": "REDESIGN_BEFORE_PROVIDER_CALLS",
+  "provider_calls_made": 0,
+  "request_envelopes": {
+    "cost_identity": "sum_m((input_tokens_m*price_in_m + output_cap_tokens_m*price_out_m)/1_000_000) + tool_fees",
+    "identity": "C = A + 2R + sum(q_s)",
+    "tool_budget_one_retained_block_sequential_caps": [
+      {
+        "attempted_sessions": 8,
+        "baseline_requests": 8,
+        "execution_and_followup_requests": 16,
+        "maximum_generation_requests": 56,
+        "maximum_tool_continuation_requests": 32,
+        "pair_id": "TB01",
+        "q_high_sequential_cap": 6,
+        "q_low_sequential_cap": 2,
+        "randomized_sessions": 8,
+        "tool_blocks": 1,
+        "work_blocks": 0
+      },
+      {
+        "attempted_sessions": 8,
+        "baseline_requests": 8,
+        "execution_and_followup_requests": 16,
+        "maximum_generation_requests": 56,
+        "maximum_tool_continuation_requests": 32,
+        "pair_id": "TB02",
+        "q_high_sequential_cap": 6,
+        "q_low_sequential_cap": 2,
+        "randomized_sessions": 8,
+        "tool_blocks": 1,
+        "work_blocks": 0
+      },
+      {
+        "attempted_sessions": 8,
+        "baseline_requests": 8,
+        "execution_and_followup_requests": 16,
+        "maximum_generation_requests": 60,
+        "maximum_tool_continuation_requests": 36,
+        "pair_id": "TB03",
+        "q_high_sequential_cap": 6,
+        "q_low_sequential_cap": 3,
+        "randomized_sessions": 8,
+        "tool_blocks": 1,
+        "work_blocks": 0
+      },
+      {
+        "attempted_sessions": 8,
+        "baseline_requests": 8,
+        "execution_and_followup_requests": 16,
+        "maximum_generation_requests": 52,
+        "maximum_tool_continuation_requests": 28,
+        "pair_id": "TB04",
+        "q_high_sequential_cap": 6,
+        "q_low_sequential_cap": 1,
+        "randomized_sessions": 8,
+        "tool_blocks": 1,
+        "work_blocks": 0
+      },
+      {
+        "attempted_sessions": 8,
+        "baseline_requests": 8,
+        "execution_and_followup_requests": 16,
+        "maximum_generation_requests": 56,
+        "maximum_tool_continuation_requests": 32,
+        "pair_id": "TB05",
+        "q_high_sequential_cap": 6,
+        "q_low_sequential_cap": 2,
+        "randomized_sessions": 8,
+        "tool_blocks": 1,
+        "work_blocks": 0
+      },
+      {
+        "attempted_sessions": 8,
+        "baseline_requests": 8,
+        "execution_and_followup_requests": 16,
+        "maximum_generation_requests": 56,
+        "maximum_tool_continuation_requests": 32,
+        "pair_id": "TB06",
+        "q_high_sequential_cap": 6,
+        "q_low_sequential_cap": 2,
+        "randomized_sessions": 8,
+        "tool_blocks": 1,
+        "work_blocks": 0
+      }
+    ],
+    "work_score_one_retained_block": {
+      "attempted_sessions": 8,
+      "baseline_requests": 8,
+      "execution_and_followup_requests": 16,
+      "maximum_generation_requests": 24,
+      "maximum_tool_continuation_requests": 0,
+      "randomized_sessions": 8,
+      "tool_blocks": 0,
+      "work_blocks": 1
+    }
+  },
+  "retention_grid": [
+    {
+      "asymptotic_fraction_ceiling": 0.2,
+      "attempted": 64,
+      "mean_retained": 9.972,
+      "mean_retained_fraction": 0.1558125,
+      "median_retained": 8,
+      "p05_retained": 0,
+      "p95_retained": 16,
+      "p_high": 0.1,
+      "probability_zero_blocks": 0.1085,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.2,
+      "attempted": 128,
+      "mean_retained": 22.464,
+      "mean_retained_fraction": 0.1755,
+      "median_retained": 24,
+      "p05_retained": 8,
+      "p95_retained": 32,
+      "p_high": 0.1,
+      "probability_zero_blocks": 0.001,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.2,
+      "attempted": 256,
+      "mean_retained": 47.896,
+      "mean_retained_fraction": 0.18709375,
+      "median_retained": 48,
+      "p05_retained": 32,
+      "p95_retained": 64,
+      "p_high": 0.1,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.2,
+      "attempted": 512,
+      "mean_retained": 99.488,
+      "mean_retained_fraction": 0.1943125,
+      "median_retained": 96,
+      "p05_retained": 80,
+      "p95_retained": 120,
+      "p_high": 0.1,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6,
+      "attempted": 64,
+      "mean_retained": 35.452,
+      "mean_retained_fraction": 0.5539375,
+      "median_retained": 32,
+      "p05_retained": 24,
+      "p95_retained": 48,
+      "p_high": 0.3,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6,
+      "attempted": 128,
+      "mean_retained": 73.556,
+      "mean_retained_fraction": 0.57465625,
+      "median_retained": 72,
+      "p05_retained": 56,
+      "p95_retained": 88,
+      "p_high": 0.3,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6,
+      "attempted": 256,
+      "mean_retained": 150.488,
+      "mean_retained_fraction": 0.58784375,
+      "median_retained": 152,
+      "p05_retained": 128,
+      "p95_retained": 176,
+      "p_high": 0.3,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6,
+      "attempted": 512,
+      "mean_retained": 303.688,
+      "mean_retained_fraction": 0.593140625,
+      "median_retained": 304,
+      "p05_retained": 272,
+      "p95_retained": 336,
+      "p_high": 0.3,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 1.0,
+      "attempted": 64,
+      "mean_retained": 54.392,
+      "mean_retained_fraction": 0.849875,
+      "median_retained": 56,
+      "p05_retained": 48,
+      "p95_retained": 64,
+      "p_high": 0.5,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 1.0,
+      "attempted": 128,
+      "mean_retained": 115.96,
+      "mean_retained_fraction": 0.9059375,
+      "median_retained": 120,
+      "p05_retained": 104,
+      "p95_retained": 128,
+      "p_high": 0.5,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 1.0,
+      "attempted": 256,
+      "mean_retained": 240.116,
+      "mean_retained_fraction": 0.937953125,
+      "median_retained": 240,
+      "p05_retained": 224,
+      "p95_retained": 256,
+      "p_high": 0.5,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 1.0,
+      "attempted": 512,
+      "mean_retained": 490.668,
+      "mean_retained_fraction": 0.9583359375,
+      "median_retained": 496,
+      "p05_retained": 464,
+      "p95_retained": 504,
+      "p_high": 0.5,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6000000000000001,
+      "attempted": 64,
+      "mean_retained": 35.304,
+      "mean_retained_fraction": 0.551625,
+      "median_retained": 32,
+      "p05_retained": 24,
+      "p95_retained": 48,
+      "p_high": 0.7,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6000000000000001,
+      "attempted": 128,
+      "mean_retained": 73.868,
+      "mean_retained_fraction": 0.57709375,
+      "median_retained": 72,
+      "p05_retained": 56,
+      "p95_retained": 88,
+      "p_high": 0.7,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6000000000000001,
+      "attempted": 256,
+      "mean_retained": 151.22,
+      "mean_retained_fraction": 0.590703125,
+      "median_retained": 152,
+      "p05_retained": 128,
+      "p95_retained": 176,
+      "p_high": 0.7,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.6000000000000001,
+      "attempted": 512,
+      "mean_retained": 304.236,
+      "mean_retained_fraction": 0.5942109375,
+      "median_retained": 304,
+      "p05_retained": 272,
+      "p95_retained": 336,
+      "p_high": 0.7,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.19999999999999996,
+      "attempted": 64,
+      "mean_retained": 9.84,
+      "mean_retained_fraction": 0.15375,
+      "median_retained": 8,
+      "p05_retained": 0,
+      "p95_retained": 16,
+      "p_high": 0.9,
+      "probability_zero_blocks": 0.1155,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.19999999999999996,
+      "attempted": 128,
+      "mean_retained": 22.812,
+      "mean_retained_fraction": 0.17821875,
+      "median_retained": 24,
+      "p05_retained": 16,
+      "p95_retained": 32,
+      "p_high": 0.9,
+      "probability_zero_blocks": 0.001,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.19999999999999996,
+      "attempted": 256,
+      "mean_retained": 47.956,
+      "mean_retained_fraction": 0.187328125,
+      "median_retained": 48,
+      "p05_retained": 32,
+      "p95_retained": 64,
+      "p_high": 0.9,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    },
+    {
+      "asymptotic_fraction_ceiling": 0.19999999999999996,
+      "attempted": 512,
+      "mean_retained": 99.648,
+      "mean_retained_fraction": 0.194625,
+      "median_retained": 96,
+      "p05_retained": 80,
+      "p95_retained": 120,
+      "p_high": 0.9,
+      "probability_zero_blocks": 0.0,
+      "replicates": 2000
+    }
+  ],
+  "schema_version": "binding-test-zero-call-gate-v1",
+  "stress_tests": {
+    "post_treatment_history": {
+      "conditioned_history_one_contrast": -1,
+      "conditioned_history_zero_contrast": 1,
+      "interpretation": "The primary randomized contrast remains near zero; conditioning on the post-treatment realized history creates near-unit spurious effects.",
+      "mean_absolute_conditioned_contrast": 1,
+      "primary_randomized_contrast": 0.0022981743261422105,
+      "sessions": 200000
+    },
+    "snapshot_drift": {
+      "blocks": 40,
+      "invalid_absolute_bias": 0.599653125,
+      "mean_invalid_time_confounded_contrast": 0.599653125,
+      "mean_valid_blocked_contrast": 0.0003687499999999994,
+      "new_snapshot_high_probability": 0.8,
+      "old_snapshot_high_probability": 0.2,
+      "replicates": 2000,
+      "valid_absolute_bias": 0.0003687499999999994
+    }
+  },
+  "test_suite": {
+    "command": "PYTHONPATH=.:zero_call PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s zero_call/tests -v",
+    "passed": true,
+    "return_code": 0,
+    "tests_run": 59,
+    "transcript": "test_complete_allowed_set_has_576_unique_donor_aware_assignments (test_assignment.AllowedAssignmentTests.test_complete_allowed_set_has_576_unique_donor_aware_assignments) ... ok\ntest_each_session_has_both_match_and_mismatch_yoke_support (test_assignment.AllowedAssignmentTests.test_each_session_has_both_match_and_mismatch_yoke_support) ... ok\ntest_every_enumerated_assignment_satisfies_all_constraints (test_assignment.AllowedAssignmentTests.test_every_enumerated_assignment_satisfies_all_constraints) ... ok\ntest_exact_assignment_probability_audit (test_assignment.AllowedAssignmentTests.test_exact_assignment_probability_audit) ... ok\ntest_probability_audit_rejects_repeated_allowed_members (test_assignment.AllowedAssignmentTests.test_probability_audit_rejects_repeated_allowed_members) ... ok\ntest_seeded_sampling_is_repeatable_and_returns_allowed_member (test_assignment.AllowedAssignmentTests.test_seeded_sampling_is_repeatable_and_returns_allowed_member) ... ok\ntest_block_formation_never_borrows_support_across_strata (test_assignment.BlockFormationTests.test_block_formation_never_borrows_support_across_strata) ... ok\ntest_deterministic_formation_and_transparent_attrition (test_assignment.BlockFormationTests.test_deterministic_formation_and_transparent_attrition) ... ok\ntest_duplicate_session_ids_are_rejected (test_assignment.BlockFormationTests.test_duplicate_session_ids_are_rejected) ... ok\ntest_malformed_canonical_block_is_rejected (test_assignment.BlockFormationTests.test_malformed_canonical_block_is_rejected) ... ok\ntest_alias_and_positive_monte_carlo_cells_match_observably (test_estimands.EstimandTests.test_alias_and_positive_monte_carlo_cells_match_observably) ... ok\ntest_availability_only_preserves_latent_binary_mix (test_estimands.EstimandTests.test_availability_only_preserves_latent_binary_mix) ... ok\ntest_binary_bounds_assign_u_only_to_worst_and_best_cases (test_estimands.EstimandTests.test_binary_bounds_assign_u_only_to_worst_and_best_cases) ... ok\ntest_binary_decisions_are_two_sided (test_estimands.EstimandTests.test_binary_decisions_are_two_sided) ... ok\ntest_binary_expansion_contains_identified_region (test_estimands.EstimandTests.test_binary_expansion_contains_identified_region) ... ok\ntest_blocks_cannot_cross_fixed_model_target_strata (test_estimands.EstimandTests.test_blocks_cannot_cross_fixed_model_target_strata) ... ok\ntest_boundary_false_rate_counts_any_non_indeterminate_decision (test_estimands.EstimandTests.test_boundary_false_rate_counts_any_non_indeterminate_decision) ... ok\ntest_broad_invariance_requires_both_components (test_estimands.EstimandTests.test_broad_invariance_requires_both_components) ... ok\ntest_grid_covers_declared_unavailability_levels (test_estimands.EstimandTests.test_grid_covers_declared_unavailability_levels) ... ok\ntest_invalid_category_and_incomplete_blocks_are_rejected (test_estimands.EstimandTests.test_invalid_category_and_incomplete_blocks_are_rejected) ... ok\ntest_monte_carlo_grid_is_seeded_serializable_and_exposes_counts (test_estimands.EstimandTests.test_monte_carlo_grid_is_seeded_serializable_and_exposes_counts) ... ok\ntest_observable_distribution_decisions_use_all_three_intervals (test_estimands.EstimandTests.test_observable_distribution_decisions_use_all_three_intervals) ... ok\ntest_one_model_only_scenario_can_be_stratified (test_estimands.EstimandTests.test_one_model_only_scenario_can_be_stratified) ... ok\ntest_positive_and_mechanism_alias_are_observationally_identical (test_estimands.EstimandTests.test_positive_and_mechanism_alias_are_observationally_identical) ... ok\ntest_seeded_simultaneous_category_bootstrap_is_reproducible (test_estimands.EstimandTests.test_seeded_simultaneous_category_bootstrap_is_reproducible) ... ok\ntest_synthetic_generator_supports_all_required_scenarios (test_estimands.EstimandTests.test_synthetic_generator_supports_all_required_scenarios) ... ok\ntest_three_category_contrasts_are_nominal_and_sum_to_zero (test_estimands.EstimandTests.test_three_category_contrasts_are_nominal_and_sum_to_zero) ... ok\ntest_complete_donor_schedule_fingerprints_match_across_arms (test_items.ItemBankTests.test_complete_donor_schedule_fingerprints_match_across_arms) ... ok\ntest_executable_structural_audit_recomputes_all_answers (test_items.ItemBankTests.test_executable_structural_audit_recomputes_all_answers) ... ok\ntest_materializer_rejects_valid_shape_with_wrong_allowed_set_index (test_items.ItemBankTests.test_materializer_rejects_valid_shape_with_wrong_allowed_set_index) ... ok\ntest_rendered_surfaces_have_no_enforcement_role_input_or_cue (test_items.ItemBankTests.test_rendered_surfaces_have_no_enforcement_role_input_or_cue) ... ok\ntest_counterbalanced_display_parser_recodes_without_prose_recovery (test_parsers_state_machine.ParserTests.test_counterbalanced_display_parser_recodes_without_prose_recovery) ... ok\ntest_strict_and_semantic_ledgers_are_distinct (test_parsers_state_machine.ParserTests.test_strict_and_semantic_ledgers_are_distinct) ... ok\ntest_strict_parser_rejects_duplicate_or_normalized_values (test_parsers_state_machine.ParserTests.test_strict_parser_rejects_duplicate_or_normalized_values) ... ok\ntest_unavailable_is_never_ordinal (test_parsers_state_machine.ParserTests.test_unavailable_is_never_ordinal) ... ok\ntest_assignment_cannot_exist_before_valid_baseline (test_parsers_state_machine.StateMachineTests.test_assignment_cannot_exist_before_valid_baseline) ... ok\ntest_complete_two_choice_session_and_hide_role (test_parsers_state_machine.StateMachineTests.test_complete_two_choice_session_and_hide_role) ... ok\ntest_executor_cannot_emit_role_field (test_parsers_state_machine.StateMachineTests.test_executor_cannot_emit_role_field) ... ok\ntest_executor_rejects_nested_or_value_role_leaks (test_parsers_state_machine.StateMachineTests.test_executor_rejects_nested_or_value_role_leaks) ... ok\ntest_followup_is_distinct_and_never_passed_to_executor (test_parsers_state_machine.StateMachineTests.test_followup_is_distinct_and_never_passed_to_executor) ... ok\ntest_followup_payload_binding_is_enforced (test_parsers_state_machine.StateMachineTests.test_followup_payload_binding_is_enforced) ... ok\ntest_interfaces_reject_role_cues (test_parsers_state_machine.StateMachineTests.test_interfaces_reject_role_cues) ... ok\ntest_item_bank_display_contract_runs_through_state_machine (test_parsers_state_machine.StateMachineTests.test_item_bank_display_contract_runs_through_state_machine) ... ok\ntest_match_surface_is_identical_across_internal_arms (test_parsers_state_machine.StateMachineTests.test_match_surface_is_identical_across_internal_arms) ... ok\ntest_self_schedule_must_equal_baseline_choice (test_parsers_state_machine.StateMachineTests.test_self_schedule_must_equal_baseline_choice) ... ok\ntest_treatment_fields_are_not_constructor_or_property_inputs (test_parsers_state_machine.StateMachineTests.test_treatment_fields_are_not_constructor_or_property_inputs) ... ok\ntest_visible_records_are_deep_snapshots (test_parsers_state_machine.StateMachineTests.test_visible_records_are_deep_snapshots) ... ok\ntest_no_tool_block_uses_24_requests_after_eligibility (test_planning.RequestEnvelopeTests.test_no_tool_block_uses_24_requests_after_eligibility) ... ok\ntest_randomized_count_cannot_exceed_attempts (test_planning.RequestEnvelopeTests.test_randomized_count_cannot_exceed_attempts) ... ok\ntest_tool_block_cap_and_attrited_baselines (test_planning.RequestEnvelopeTests.test_tool_block_cap_and_attrited_baselines) ... ok\ntest_retained_sessions_uses_complete_4_by_4_blocks (test_planning.RetentionTests.test_retained_sessions_uses_complete_4_by_4_blocks) ... ok\ntest_seeded_retention_is_reproducible_and_symmetric (test_planning.RetentionTests.test_seeded_retention_is_reproducible_and_symmetric) ... ok\ntest_assignment_materialization_state_and_executor_are_bound (test_runtime.RuntimeBindingTests.test_assignment_materialization_state_and_executor_are_bound) ... ok\ntest_opaque_stratum_fails_before_any_assignment (test_runtime.RuntimeBindingTests.test_opaque_stratum_fails_before_any_assignment) ... ok\ntest_tool_guard_enforces_cap_and_failed_execution_cannot_retry (test_runtime.RuntimeBindingTests.test_tool_guard_enforces_cap_and_failed_execution_cannot_retry) ... ok\ntest_wrong_session_binding_fails_before_any_assignment (test_runtime.RuntimeBindingTests.test_wrong_session_binding_fails_before_any_assignment) ... ok\ntest_five_percent_u_touches_margin_and_cannot_pass_strict_invariance (test_stress.StressTests.test_five_percent_u_touches_margin_and_cannot_pass_strict_invariance) ... ok\ntest_post_treatment_conditioning_creates_spurious_effect (test_stress.StressTests.test_post_treatment_conditioning_creates_spurious_effect) ... ok\ntest_snapshot_blocking_removes_time_confounding_in_expectation (test_stress.StressTests.test_snapshot_blocking_removes_time_confounding_in_expectation) ... ok\n\n----------------------------------------------------------------------\nRan 59 tests in 0.325s\n\nOK"
+  },
+  "verdict_scope": "Retain the structural randomization core; redesign the broad-negative decision architecture or explicitly abandon that claim before a pilot request."
+}

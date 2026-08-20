@@ -1,0 +1,2913 @@
+{
+  "assignment_audit": {
+    "allowed_assignment_count": 576,
+    "canonical_assignment_table_sha256": "ead4c7c1b7ddd8e0ce2f81b3e6e99bcb08273fb0140742590efa22fed13ab0d3",
+    "donor_rule": "each self donor supplies exactly one yoke recipient in every block",
+    "sampling_policy": "exact discrete uniform over allowed_set_index 0..575",
+    "selection_probability": "1/576"
+  },
+  "claim_ceiling": "Seeded, non-gating sensitivity results under the eight declared synthetic dependence/failure profiles and two block-formation profiles only. They may flag sensitivity of the complete-block B=384 benchmark but cannot estimate provider dependence, validate the unamended terminal-row schema or state machine, certify or rescue B=384, authorize collection or spend, or support mechanism, latent-choice, preference, welfare, or population-generalization claims.",
+  "design": {
+    "alpha": 0.05,
+    "blocks_per_fine_stratum": 16,
+    "blocks_per_macro_cell": 384,
+    "equivalence_margins_L_H_U": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "fine_strata_per_macro_cell": 24,
+    "formation_replicates_per_cell": 2000,
+    "macro_cells": 4,
+    "outcome_batches": 4,
+    "outcome_replicates_per_cell": 1000,
+    "positive_threshold": 0.05,
+    "required_fine_strata": 96,
+    "sessions_per_block": 8
+  },
+  "dgp": {
+    "dependence_amplitudes_HL_U_failure": {
+      "batch": [
+        0.025,
+        0.02,
+        0.005
+      ],
+      "block": [
+        0.04,
+        0.03,
+        0.007
+      ],
+      "donor_pair": [
+        0.04,
+        0.02,
+        0.005
+      ],
+      "provider": [
+        0.015,
+        0.01,
+        0.003
+      ]
+    },
+    "dependence_profiles": {
+      "donor_only": [
+        "donor_pair"
+      ],
+      "independent": [],
+      "joint": [
+        "provider",
+        "batch",
+        "block",
+        "donor_pair"
+      ],
+      "shared_shocks": [
+        "provider",
+        "batch",
+        "block"
+      ]
+    },
+    "failure_mapping": {
+      "disposition_source": "execution_failure",
+      "followup_after_failure": false,
+      "primary_category": "U",
+      "subtype_probabilities": {
+        "provider_error": 0.75,
+        "transport_error": 0.25
+      },
+      "terminal_rows_per_randomized_session": 1
+    },
+    "failure_probabilities_by_arm_schedule": {
+      "differential": {
+        "self": {
+          "H": 0.08,
+          "L": 0.06
+        },
+        "yoke": {
+          "H": 0.05,
+          "L": 0.04
+        }
+      },
+      "none": {
+        "self": {
+          "H": 0.0,
+          "L": 0.0
+        },
+        "yoke": {
+          "H": 0.0,
+          "L": 0.0
+        }
+      },
+      "symmetric": {
+        "self": {
+          "H": 0.05,
+          "L": 0.05
+        },
+        "yoke": {
+          "H": 0.05,
+          "L": 0.05
+        }
+      }
+    },
+    "formation_caps_by_high_probability": {
+      "0.10": 1024,
+      "0.30": 331,
+      "0.50": 194
+    },
+    "formation_profiles": [
+      "independent",
+      "provider_batch"
+    ],
+    "formation_provider_batch_shifts": {
+      "high_given_valid_batch": 0.03,
+      "high_given_valid_provider": 0.02,
+      "semantic_validity_batch": 0.04,
+      "semantic_validity_provider": 0.03
+    },
+    "outcome_profiles": [
+      {
+        "dependence_profile": "independent",
+        "failure_profile": "none",
+        "label": "positive15_independent_none",
+        "scenario": "positive_15"
+      },
+      {
+        "dependence_profile": "donor_only",
+        "failure_profile": "symmetric",
+        "label": "positive15_donor_symmetric",
+        "scenario": "positive_15"
+      },
+      {
+        "dependence_profile": "shared_shocks",
+        "failure_profile": "symmetric",
+        "label": "positive15_shared_symmetric",
+        "scenario": "positive_15"
+      },
+      {
+        "dependence_profile": "joint",
+        "failure_profile": "symmetric",
+        "label": "positive15_joint_symmetric",
+        "scenario": "positive_15"
+      },
+      {
+        "dependence_profile": "joint",
+        "failure_profile": "differential",
+        "label": "positive15_joint_differential",
+        "scenario": "positive_15"
+      },
+      {
+        "dependence_profile": "joint",
+        "failure_profile": "symmetric",
+        "label": "null_joint_symmetric",
+        "scenario": "null"
+      },
+      {
+        "dependence_profile": "joint",
+        "failure_profile": "differential",
+        "label": "null_joint_differential",
+        "scenario": "null"
+      },
+      {
+        "dependence_profile": "joint",
+        "failure_profile": "symmetric",
+        "label": "boundary_joint_symmetric",
+        "scenario": "positive_boundary"
+      }
+    ],
+    "scenario_probabilities_conditional_on_no_failure": {
+      "null": {
+        "self": [
+          0.45,
+          0.45,
+          0.1
+        ],
+        "yoke": [
+          0.45,
+          0.45,
+          0.1
+        ]
+      },
+      "positive_15": {
+        "self": [
+          0.3,
+          0.6,
+          0.1
+        ],
+        "yoke": [
+          0.45,
+          0.45,
+          0.1
+        ]
+      },
+      "positive_boundary": {
+        "self": [
+          0.4,
+          0.5,
+          0.1
+        ],
+        "yoke": [
+          0.45,
+          0.45,
+          0.1
+        ]
+      }
+    }
+  },
+  "formation_diagnostics": [
+    {
+      "attempt_batch_size": 32,
+      "attempt_cap_per_fine_stratum": 1024,
+      "high_probability_given_valid": 0.1,
+      "outer_replicates": 2000,
+      "probability_bounds": {
+        "high_given_valid": [
+          0.1,
+          0.1
+        ],
+        "semantic_validity": [
+          0.9,
+          0.9
+        ]
+      },
+      "profile": "independent",
+      "required_fine_strata": 96,
+      "retained_blocks_quantiles": {
+        "maximum": 1536,
+        "minimum": 1533,
+        "p05": 1535,
+        "p50": 1536,
+        "p95": 1536
+      },
+      "semantic_invalid_quantiles": {
+        "maximum": 7199,
+        "minimum": 6464,
+        "p05": 6635,
+        "p50": 6823,
+        "p95": 7021
+      },
+      "semantic_validity_probability": 0.9,
+      "stopping_rule": "within each fine stratum, stop at the first attempt with at least 64 valid L and 64 valid H; otherwise halt at the exact cap; never borrow, replace, or extend",
+      "supported_strata_quantiles": {
+        "maximum": 96,
+        "minimum": 94,
+        "p05": 95,
+        "p50": 96,
+        "p95": 96
+      },
+      "target_blocks_per_fine_stratum": 16,
+      "total_attempts_quantiles": {
+        "maximum": 70814,
+        "minimum": 65721,
+        "p05": 66883,
+        "p50": 68252,
+        "p95": 69540
+      },
+      "unmatched_valid_quantiles": {
+        "maximum": 51437,
+        "minimum": 46782,
+        "p05": 47921,
+        "p50": 49126,
+        "p95": 50284
+      },
+      "whole_panel_support_rate": {
+        "confidence_level": 0.95,
+        "estimate": 0.943,
+        "interval_lower": 0.9319642649870394,
+        "interval_method": "Wilson score interval for Monte Carlo frequency only",
+        "interval_upper": 0.9523372311217704,
+        "replicates": 2000,
+        "successes": 1886
+      }
+    },
+    {
+      "attempt_batch_size": 32,
+      "attempt_cap_per_fine_stratum": 331,
+      "high_probability_given_valid": 0.3,
+      "outer_replicates": 2000,
+      "probability_bounds": {
+        "high_given_valid": [
+          0.3,
+          0.3
+        ],
+        "semantic_validity": [
+          0.9,
+          0.9
+        ]
+      },
+      "profile": "independent",
+      "required_fine_strata": 96,
+      "retained_blocks_quantiles": {
+        "maximum": 1536,
+        "minimum": 1532,
+        "p05": 1536,
+        "p50": 1536,
+        "p95": 1536
+      },
+      "semantic_invalid_quantiles": {
+        "maximum": 2463,
+        "minimum": 2097,
+        "p05": 2187,
+        "p50": 2277,
+        "p95": 2372
+      },
+      "semantic_validity_probability": 0.9,
+      "stopping_rule": "within each fine stratum, stop at the first attempt with at least 64 valid L and 64 valid H; otherwise halt at the exact cap; never borrow, replace, or extend",
+      "supported_strata_quantiles": {
+        "maximum": 96,
+        "minimum": 94,
+        "p05": 96,
+        "p50": 96,
+        "p95": 96
+      },
+      "target_blocks_per_fine_stratum": 16,
+      "total_attempts_quantiles": {
+        "maximum": 23707,
+        "minimum": 22053,
+        "p05": 22360,
+        "p50": 22757,
+        "p95": 23189
+      },
+      "unmatched_valid_quantiles": {
+        "maximum": 8985,
+        "minimum": 7576,
+        "p05": 7844,
+        "p50": 8194,
+        "p95": 8571
+      },
+      "whole_panel_support_rate": {
+        "confidence_level": 0.95,
+        "estimate": 0.954,
+        "interval_lower": 0.9439163444279334,
+        "interval_method": "Wilson score interval for Monte Carlo frequency only",
+        "interval_upper": 0.9623429766406889,
+        "replicates": 2000,
+        "successes": 1908
+      }
+    },
+    {
+      "attempt_batch_size": 32,
+      "attempt_cap_per_fine_stratum": 194,
+      "high_probability_given_valid": 0.5,
+      "outer_replicates": 2000,
+      "probability_bounds": {
+        "high_given_valid": [
+          0.5,
+          0.5
+        ],
+        "semantic_validity": [
+          0.9,
+          0.9
+        ]
+      },
+      "profile": "independent",
+      "required_fine_strata": 96,
+      "retained_blocks_quantiles": {
+        "maximum": 1536,
+        "minimum": 1533,
+        "p05": 1535,
+        "p50": 1536,
+        "p95": 1536
+      },
+      "semantic_invalid_quantiles": {
+        "maximum": 1594,
+        "minimum": 1324,
+        "p05": 1397,
+        "p50": 1463,
+        "p95": 1530
+      },
+      "semantic_validity_probability": 0.9,
+      "stopping_rule": "within each fine stratum, stop at the first attempt with at least 64 valid L and 64 valid H; otherwise halt at the exact cap; never borrow, replace, or extend",
+      "supported_strata_quantiles": {
+        "maximum": 96,
+        "minimum": 94,
+        "p05": 95,
+        "p50": 96,
+        "p95": 96
+      },
+      "target_blocks_per_fine_stratum": 16,
+      "total_attempts_quantiles": {
+        "maximum": 14977,
+        "minimum": 14358,
+        "p05": 14469,
+        "p50": 14616,
+        "p95": 14757
+      },
+      "unmatched_valid_quantiles": {
+        "maximum": 1211,
+        "minimum": 655,
+        "p05": 747,
+        "p50": 866,
+        "p95": 985
+      },
+      "whole_panel_support_rate": {
+        "confidence_level": 0.95,
+        "estimate": 0.949,
+        "interval_lower": 0.9384684614587503,
+        "interval_method": "Wilson score interval for Monte Carlo frequency only",
+        "interval_upper": 0.9578100300826845,
+        "replicates": 2000,
+        "successes": 1898
+      }
+    },
+    {
+      "attempt_batch_size": 32,
+      "attempt_cap_per_fine_stratum": 1024,
+      "high_probability_given_valid": 0.1,
+      "outer_replicates": 2000,
+      "probability_bounds": {
+        "high_given_valid": [
+          0.05,
+          0.15000000000000002
+        ],
+        "semantic_validity": [
+          0.83,
+          0.97
+        ]
+      },
+      "profile": "provider_batch",
+      "required_fine_strata": 96,
+      "retained_blocks_quantiles": {
+        "maximum": 1536,
+        "minimum": 1331,
+        "p05": 1474,
+        "p50": 1536,
+        "p95": 1536
+      },
+      "semantic_invalid_quantiles": {
+        "maximum": 13714,
+        "minimum": 2442,
+        "p05": 3388,
+        "p50": 6638,
+        "p95": 12126
+      },
+      "semantic_validity_probability": 0.9,
+      "stopping_rule": "within each fine stratum, stop at the first attempt with at least 64 valid L and 64 valid H; otherwise halt at the exact cap; never borrow, replace, or extend",
+      "supported_strata_quantiles": {
+        "maximum": 96,
+        "minimum": 19,
+        "p05": 62,
+        "p50": 96,
+        "p95": 96
+      },
+      "target_blocks_per_fine_stratum": 16,
+      "total_attempts_quantiles": {
+        "maximum": 97007,
+        "minimum": 45338,
+        "p05": 51665,
+        "p50": 67285,
+        "p95": 91817
+      },
+      "unmatched_valid_quantiles": {
+        "maximum": 77851,
+        "minimum": 30031,
+        "p05": 35073,
+        "p50": 47135,
+        "p95": 70010
+      },
+      "whole_panel_support_rate": {
+        "confidence_level": 0.95,
+        "estimate": 0.5285,
+        "interval_lower": 0.506588839183156,
+        "interval_method": "Wilson score interval for Monte Carlo frequency only",
+        "interval_upper": 0.5503018891218124,
+        "replicates": 2000,
+        "successes": 1057
+      }
+    },
+    {
+      "attempt_batch_size": 32,
+      "attempt_cap_per_fine_stratum": 331,
+      "high_probability_given_valid": 0.3,
+      "outer_replicates": 2000,
+      "probability_bounds": {
+        "high_given_valid": [
+          0.25,
+          0.35
+        ],
+        "semantic_validity": [
+          0.83,
+          0.97
+        ]
+      },
+      "profile": "provider_batch",
+      "required_fine_strata": 96,
+      "retained_blocks_quantiles": {
+        "maximum": 1536,
+        "minimum": 1516,
+        "p05": 1532,
+        "p50": 1536,
+        "p95": 1536
+      },
+      "semantic_invalid_quantiles": {
+        "maximum": 4575,
+        "minimum": 559,
+        "p05": 1097,
+        "p50": 2333,
+        "p95": 3682
+      },
+      "semantic_validity_probability": 0.9,
+      "stopping_rule": "within each fine stratum, stop at the first attempt with at least 64 valid L and 64 valid H; otherwise halt at the exact cap; never borrow, replace, or extend",
+      "supported_strata_quantiles": {
+        "maximum": 96,
+        "minimum": 83,
+        "p05": 93,
+        "p50": 96,
+        "p95": 96
+      },
+      "target_blocks_per_fine_stratum": 16,
+      "total_attempts_quantiles": {
+        "maximum": 28541,
+        "minimum": 18478,
+        "p05": 19985,
+        "p50": 22852,
+        "p95": 26177
+      },
+      "unmatched_valid_quantiles": {
+        "maximum": 12331,
+        "minimum": 5126,
+        "p05": 6058,
+        "p50": 8308,
+        "p95": 10772
+      },
+      "whole_panel_support_rate": {
+        "confidence_level": 0.95,
+        "estimate": 0.77,
+        "interval_lower": 0.7510493566239724,
+        "interval_method": "Wilson score interval for Monte Carlo frequency only",
+        "interval_upper": 0.7879154378441511,
+        "replicates": 2000,
+        "successes": 1540
+      }
+    },
+    {
+      "attempt_batch_size": 32,
+      "attempt_cap_per_fine_stratum": 194,
+      "high_probability_given_valid": 0.5,
+      "outer_replicates": 2000,
+      "probability_bounds": {
+        "high_given_valid": [
+          0.45,
+          0.55
+        ],
+        "semantic_validity": [
+          0.83,
+          0.97
+        ]
+      },
+      "profile": "provider_batch",
+      "required_fine_strata": 96,
+      "retained_blocks_quantiles": {
+        "maximum": 1536,
+        "minimum": 1524,
+        "p05": 1533,
+        "p50": 1536,
+        "p95": 1536
+      },
+      "semantic_invalid_quantiles": {
+        "maximum": 2900,
+        "minimum": 373,
+        "p05": 653,
+        "p50": 1442,
+        "p95": 2401
+      },
+      "semantic_validity_probability": 0.9,
+      "stopping_rule": "within each fine stratum, stop at the first attempt with at least 64 valid L and 64 valid H; otherwise halt at the exact cap; never borrow, replace, or extend",
+      "supported_strata_quantiles": {
+        "maximum": 96,
+        "minimum": 86,
+        "p05": 94,
+        "p50": 96,
+        "p95": 96
+      },
+      "target_blocks_per_fine_stratum": 16,
+      "total_attempts_quantiles": {
+        "maximum": 16372,
+        "minimum": 13397,
+        "p05": 13870,
+        "p50": 14779,
+        "p95": 15745
+      },
+      "unmatched_valid_quantiles": {
+        "maximum": 1709,
+        "minimum": 673,
+        "p05": 799,
+        "p50": 982,
+        "p95": 1346
+      },
+      "whole_panel_support_rate": {
+        "confidence_level": 0.95,
+        "estimate": 0.7475,
+        "interval_lower": 0.7279977665094945,
+        "interval_method": "Wilson score interval for Monte Carlo frequency only",
+        "interval_upper": 0.7660532950862853,
+        "replicates": 2000,
+        "successes": 1495
+      }
+    }
+  ],
+  "gate_effect": "none",
+  "generated_date": "2026-08-08",
+  "master_seed": 20260808,
+  "method": "non-gating end-point and feasibility screen using actual uniform 576-way donor-aware assignments, zero-mean Rademacher probability shocks, composite-U terminal failure, fixed-stratum block t decisions, and stochastic pre-randomization block formation",
+  "numerical_gate_eligible": false,
+  "outcome_diagnostics": [
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.15000000000000002,
+        0.14999999999999997,
+        0.0
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 1.0,
+          "interval_lower": 0.996173241514445,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 1.0,
+          "replicates": 1000,
+          "successes": 1000
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.996,
+          "interval_lower": 0.9897604437227377,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9984434118595916,
+          "replicates": 1000,
+          "successes": 996
+        }
+      },
+      "dependence_profile": "independent",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2549292,
+        "cyclic_nonpair_rate": 0.414923828125,
+        "excess_agreement": 0.0003395182291666667,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2551378,
+        "paired_rate": 0.4152633463541667
+      },
+      "empirical_standard_deviation": [
+        [
+          0.01699225942332377,
+          0.018284491439174023,
+          0.011126827698411364
+        ],
+        [
+          0.01749824909746717,
+          0.017574587397290762,
+          0.010646360587392175
+        ],
+        [
+          0.016744726666969096,
+          0.017308453039404068,
+          0.010706544349491847
+        ],
+        [
+          0.01734283669522685,
+          0.01747804944707456,
+          0.010851304236337551
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          0.9684657396826114,
+          1.0531597582324208,
+          1.0577469634587178
+        ],
+        [
+          1.027357269886401,
+          0.9728852342361296,
+          0.9657788983383645
+        ],
+        [
+          0.9403495314043869,
+          0.9442512373576026,
+          0.9793639135206968
+        ],
+        [
+          1.0106941894545598,
+          0.9656641155023998,
+          1.0019485307996012
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.0,
+        "minimum": 0.0
+      },
+      "failure_profile": "none",
+      "label": "positive15_independent_none",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            0.007959413647035469,
+            -0.014061785590762758,
+            0.026781747110011647
+          ],
+          [
+            0.007959413647035469,
+            1.0,
+            -0.01973027470088945,
+            0.014793949434634121
+          ],
+          [
+            -0.014061785590762758,
+            -0.01973027470088945,
+            1.0,
+            -0.0009408347264332411
+          ],
+          [
+            0.026781747110011644,
+            0.014793949434634121,
+            -0.0009408347264332411,
+            1.0
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            -0.004611725658153429,
+            0.014112068962364206,
+            -0.016964274566663776
+          ],
+          [
+            -0.004611725658153429,
+            0.9999999999999998,
+            -0.003923752414720611,
+            0.020708094923461116
+          ],
+          [
+            0.014112068962364208,
+            -0.003923752414720611,
+            1.0,
+            0.019380565324979813
+          ],
+          [
+            -0.016964274566663776,
+            0.020708094923461116,
+            0.019380565324979813,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            -0.039546675722528436,
+            -0.0020437238586214516,
+            0.03137362011010165
+          ],
+          [
+            -0.03954667572252843,
+            1.0,
+            -0.021748670718553496,
+            0.059509055275944765
+          ],
+          [
+            -0.002043723858621452,
+            -0.021748670718553496,
+            1.0,
+            0.04206740670960435
+          ],
+          [
+            0.03137362011010165,
+            0.05950905527594477,
+            0.042067406709604356,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.01725590562265434,
+          0.017806075890645423,
+          0.010809203943575221
+        ],
+        [
+          0.01725276453478139,
+          0.017806114283048433,
+          0.010823134395676599
+        ],
+        [
+          0.017257027871300148,
+          0.017801208653749706,
+          0.010808907884973254
+        ],
+        [
+          0.017240522888214982,
+          0.017775882117095937,
+          0.010831045576972077
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.0002981384559913923,
+          0.00031744721024124704,
+          0.00011704717565465864
+        ],
+        [
+          0.0002980352896231192,
+          0.00031747436523437485,
+          0.00011736122413917829
+        ],
+        [
+          0.0002981719688132956,
+          0.000317269953974971,
+          0.00011704545197663475
+        ],
+        [
+          0.00029759148491753504,
+          0.0003163441693341293,
+          0.00011752180876555275
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.6,
+        "minimum": 0.1
+      },
+      "outer_replicates": 1000,
+      "scenario": "positive_15",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 0,
+          "execution_failure_rate": 0.0,
+          "followup_choice": 2765150,
+          "followup_choice_rate": 0.9001139322916667,
+          "followup_unavailable": 306850,
+          "followup_unavailable_rate": 0.09988606770833333,
+          "provider_error": 0,
+          "sessions": 3072000,
+          "transport_error": 0
+        },
+        "self|L": {
+          "execution_failure": 0,
+          "execution_failure_rate": 0.0,
+          "followup_choice": 2764337,
+          "followup_choice_rate": 0.8998492838541666,
+          "followup_unavailable": 307663,
+          "followup_unavailable_rate": 0.10015071614583333,
+          "provider_error": 0,
+          "sessions": 3072000,
+          "transport_error": 0
+        },
+        "yoke|H": {
+          "execution_failure": 0,
+          "execution_failure_rate": 0.0,
+          "followup_choice": 2764615,
+          "followup_choice_rate": 0.8999397786458333,
+          "followup_unavailable": 307385,
+          "followup_unavailable_rate": 0.10006022135416667,
+          "provider_error": 0,
+          "sessions": 3072000,
+          "transport_error": 0
+        },
+        "yoke|L": {
+          "execution_failure": 0,
+          "execution_failure_rate": 0.0,
+          "followup_choice": 2764804,
+          "followup_choice_rate": 0.9000013020833333,
+          "followup_unavailable": 307196,
+          "followup_unavailable_rate": 0.09999869791666667,
+          "provider_error": 0,
+          "sessions": 3072000,
+          "transport_error": 0
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "false_control",
+        "positive_all_cells": "power",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.14250000000000002,
+        0.14249999999999996,
+        0.0
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 1.0,
+          "interval_lower": 0.996173241514445,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 1.0,
+          "replicates": 1000,
+          "successes": 1000
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.991,
+          "interval_lower": 0.982984183834662,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9952579393325229,
+          "replicates": 1000,
+          "successes": 991
+        }
+      },
+      "dependence_profile": "donor_only",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2374419,
+        "cyclic_nonpair_rate": 0.38646142578125,
+        "excess_agreement": 0.0034755859375,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2395773,
+        "paired_rate": 0.38993701171875
+      },
+      "empirical_standard_deviation": [
+        [
+          0.016757784796679723,
+          0.017475587303843618,
+          0.012208015067475972
+        ],
+        [
+          0.016328953138864073,
+          0.017083872034837168,
+          0.012802764386744792
+        ],
+        [
+          0.016713648013078865,
+          0.01725221758521207,
+          0.012627560299523182
+        ],
+        [
+          0.01621019698669174,
+          0.017499157850327386,
+          0.01278273267945163
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          0.9729177014676476,
+          0.9650972427497606,
+          0.9246872517672793
+        ],
+        [
+          0.9211092425015436,
+          0.9190270604271275,
+          1.0183166707810825
+        ],
+        [
+          0.9594198512413014,
+          0.9360119003528584,
+          0.9946278483297534
+        ],
+        [
+          0.9099789299917515,
+          0.9716985401901432,
+          1.016420139073836
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.055,
+        "minimum": 0.045000000000000005
+      },
+      "failure_profile": "symmetric",
+      "label": "positive15_donor_symmetric",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            0.002368976390525367,
+            0.04260907290068261,
+            -0.009549509110525552
+          ],
+          [
+            0.002368976390525367,
+            1.0,
+            0.0562871908531115,
+            0.012092762618824646
+          ],
+          [
+            0.04260907290068261,
+            0.056287190853111506,
+            1.0,
+            0.005504170849174526
+          ],
+          [
+            -0.009549509110525552,
+            0.012092762618824644,
+            0.005504170849174526,
+            0.9999999999999998
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            -0.0186275522960738,
+            0.022945674200817872,
+            -0.025522002851646408
+          ],
+          [
+            -0.0186275522960738,
+            1.0,
+            0.005259003134060121,
+            0.00023836992490695186
+          ],
+          [
+            0.022945674200817872,
+            0.005259003134060121,
+            1.0,
+            0.00985385655502672
+          ],
+          [
+            -0.025522002851646408,
+            0.00023836992490695188,
+            0.00985385655502672,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            0.0024844360572297557,
+            0.000977873732198148,
+            -0.004637282566619768
+          ],
+          [
+            0.002484436057229756,
+            1.0,
+            -0.028061584949046252,
+            0.020259063663932222
+          ],
+          [
+            0.000977873732198148,
+            -0.028061584949046252,
+            1.0,
+            -0.09994787770771431
+          ],
+          [
+            -0.004637282566619768,
+            0.020259063663932222,
+            -0.09994787770771431,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.016978762570504267,
+          0.017778205194490325,
+          0.012686014076089895
+        ],
+        [
+          0.01700405074860296,
+          0.01780940875051734,
+          0.012677540826375375
+        ],
+        [
+          0.017053671955306465,
+          0.01782196746434014,
+          0.012651776240007453
+        ],
+        [
+          0.01698202872800636,
+          0.017740861775899838,
+          0.012669582672367983
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.00028864039668330394,
+          0.000316440808331525,
+          0.00016117409600151914
+        ],
+        [
+          0.00028947132251880763,
+          0.00031757354736328114,
+          0.00016096247920283557
+        ],
+        [
+          0.00029116140294958045,
+          0.0003179863541214556,
+          0.00016031652379918995
+        ],
+        [
+          0.00028876546223958376,
+          0.00031513943142361106,
+          0.00016075857656973368
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.65,
+        "minimum": 0.08
+      },
+      "outer_replicates": 1000,
+      "scenario": "positive_15",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 153312,
+          "execution_failure_rate": 0.04990625,
+          "followup_choice": 2627114,
+          "followup_choice_rate": 0.8551803385416666,
+          "followup_unavailable": 291574,
+          "followup_unavailable_rate": 0.09491341145833333,
+          "provider_error": 114906,
+          "sessions": 3072000,
+          "transport_error": 38406
+        },
+        "self|L": {
+          "execution_failure": 153264,
+          "execution_failure_rate": 0.049890625,
+          "followup_choice": 2626554,
+          "followup_choice_rate": 0.854998046875,
+          "followup_unavailable": 292182,
+          "followup_unavailable_rate": 0.095111328125,
+          "provider_error": 114757,
+          "sessions": 3072000,
+          "transport_error": 38507
+        },
+        "yoke|H": {
+          "execution_failure": 154037,
+          "execution_failure_rate": 0.050142252604166666,
+          "followup_choice": 2626501,
+          "followup_choice_rate": 0.8549807942708333,
+          "followup_unavailable": 291462,
+          "followup_unavailable_rate": 0.094876953125,
+          "provider_error": 115467,
+          "sessions": 3072000,
+          "transport_error": 38570
+        },
+        "yoke|L": {
+          "execution_failure": 152859,
+          "execution_failure_rate": 0.0497587890625,
+          "followup_choice": 2627116,
+          "followup_choice_rate": 0.8551809895833333,
+          "followup_unavailable": 292025,
+          "followup_unavailable_rate": 0.09506022135416667,
+          "provider_error": 114753,
+          "sessions": 3072000,
+          "transport_error": 38106
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "false_control",
+        "positive_all_cells": "power",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.14250000000000002,
+        0.14249999999999996,
+        0.0
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.997,
+          "interval_lower": 0.9912169859464969,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9989792161188614,
+          "replicates": 1000,
+          "successes": 997
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.988,
+          "interval_lower": 0.9791427315245017,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9931223521935965,
+          "replicates": 1000,
+          "successes": 988
+        }
+      },
+      "dependence_profile": "shared_shocks",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2415799,
+        "cyclic_nonpair_rate": 0.3931964518229167,
+        "excess_agreement": -0.00011637369791666667,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2415084,
+        "paired_rate": 0.393080078125
+      },
+      "empirical_standard_deviation": [
+        [
+          0.016350566837293745,
+          0.017048778115841705,
+          0.012372105836265721
+        ],
+        [
+          0.016964519317797137,
+          0.018025943768161905,
+          0.012732985471299654
+        ],
+        [
+          0.016824508619710753,
+          0.017477984875473383,
+          0.01288061187448766
+        ],
+        [
+          0.01692183107312272,
+          0.017928767291987436,
+          0.013203846059089789
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          0.925274436618256,
+          0.9211465046197115,
+          0.9557170624204051
+        ],
+        [
+          0.9930081117316959,
+          1.0234638730572758,
+          1.0131776989283912
+        ],
+        [
+          0.9801188961866943,
+          0.9698258850156299,
+          1.0402894883378904
+        ],
+        [
+          0.9908676362940163,
+          1.0200242502881685,
+          1.0904686566318467
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.065,
+        "minimum": 0.035
+      },
+      "failure_profile": "symmetric",
+      "label": "positive15_shared_symmetric",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            -0.01260036571409142,
+            0.04383215643638557,
+            -0.0006629432406265705
+          ],
+          [
+            -0.01260036571409142,
+            1.0,
+            0.0026965276027935132,
+            0.015312310375725072
+          ],
+          [
+            0.04383215643638557,
+            0.0026965276027935132,
+            1.0,
+            -0.012491237807202073
+          ],
+          [
+            -0.0006629432406265705,
+            0.015312310375725075,
+            -0.012491237807202075,
+            1.0
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            -0.049354666526446364,
+            -0.006371297257310359,
+            -0.03119066028462945
+          ],
+          [
+            -0.049354666526446364,
+            1.0,
+            -0.03467798311285445,
+            0.020485849137734147
+          ],
+          [
+            -0.006371297257310359,
+            -0.03467798311285446,
+            1.0,
+            0.003025396739080218
+          ],
+          [
+            -0.031190660284629454,
+            0.020485849137734144,
+            0.003025396739080218,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            -0.05291624815918285,
+            -0.010561439195144934,
+            0.005731275648534275
+          ],
+          [
+            -0.052916248159182847,
+            1.0,
+            -0.005431681767853006,
+            -0.0031898367590006598
+          ],
+          [
+            -0.010561439195144934,
+            -0.005431681767853006,
+            1.0,
+            0.04387820728635778
+          ],
+          [
+            0.005731275648534274,
+            -0.0031898367590006598,
+            0.04387820728635778,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.016985387180237885,
+          0.017752006275748692,
+          0.012633235242473121
+        ],
+        [
+          0.017011321895534788,
+          0.017807382515354853,
+          0.012629277043793833
+        ],
+        [
+          0.01698240620635058,
+          0.01773702009491599,
+          0.012607213837911538
+        ],
+        [
+          0.016988914688206853,
+          0.017741021398853866,
+          0.012624015334394082
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.00028893161349826405,
+          0.0003155424612539785,
+          0.0001601614210340713
+        ],
+        [
+          0.0002898213139286746,
+          0.00031748521592881937,
+          0.0001600202207212093
+        ],
+        [
+          0.00028880586977358204,
+          0.00031498432865849227,
+          0.00015948460896809927
+        ],
+        [
+          0.0002889875058774597,
+          0.0003151304456922744,
+          0.00015987763581452524
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.71,
+        "minimum": 0.04000000000000001
+      },
+      "outer_replicates": 1000,
+      "scenario": "positive_15",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 153182,
+          "execution_failure_rate": 0.04986393229166667,
+          "followup_choice": 2626200,
+          "followup_choice_rate": 0.8548828125,
+          "followup_unavailable": 292618,
+          "followup_unavailable_rate": 0.09525325520833333,
+          "provider_error": 115033,
+          "sessions": 3072000,
+          "transport_error": 38149
+        },
+        "self|L": {
+          "execution_failure": 154024,
+          "execution_failure_rate": 0.05013802083333333,
+          "followup_choice": 2626712,
+          "followup_choice_rate": 0.8550494791666666,
+          "followup_unavailable": 291264,
+          "followup_unavailable_rate": 0.0948125,
+          "provider_error": 115301,
+          "sessions": 3072000,
+          "transport_error": 38723
+        },
+        "yoke|H": {
+          "execution_failure": 153620,
+          "execution_failure_rate": 0.050006510416666664,
+          "followup_choice": 2626351,
+          "followup_choice_rate": 0.8549319661458333,
+          "followup_unavailable": 292029,
+          "followup_unavailable_rate": 0.0950615234375,
+          "provider_error": 115110,
+          "sessions": 3072000,
+          "transport_error": 38510
+        },
+        "yoke|L": {
+          "execution_failure": 154549,
+          "execution_failure_rate": 0.050308919270833335,
+          "followup_choice": 2625717,
+          "followup_choice_rate": 0.8547255859375,
+          "followup_unavailable": 291734,
+          "followup_unavailable_rate": 0.09496549479166666,
+          "provider_error": 116166,
+          "sessions": 3072000,
+          "transport_error": 38383
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "false_control",
+        "positive_all_cells": "power",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.14250000000000002,
+        0.14249999999999996,
+        0.0
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.998,
+          "interval_lower": 0.9927371921365079,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9994513564118793,
+          "replicates": 1000,
+          "successes": 998
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.988,
+          "interval_lower": 0.9791427315245017,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9931223521935965,
+          "replicates": 1000,
+          "successes": 988
+        }
+      },
+      "dependence_profile": "joint",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2412425,
+        "cyclic_nonpair_rate": 0.3926472981770833,
+        "excess_agreement": 0.0034007161458333335,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2433319,
+        "paired_rate": 0.39604801432291664
+      },
+      "empirical_standard_deviation": [
+        [
+          0.016102267508429063,
+          0.01682752416349507,
+          0.012704885875256557
+        ],
+        [
+          0.016959110082390524,
+          0.018148451472921184,
+          0.013035494696573582
+        ],
+        [
+          0.016991635499267292,
+          0.01828928157947381,
+          0.012701527281268334
+        ],
+        [
+          0.016906906712657727,
+          0.01761936795609317,
+          0.013023601106714177
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          0.9037751462587253,
+          0.8993774972272982,
+          1.008282777387684
+        ],
+        [
+          1.001975412016816,
+          1.0496014488089587,
+          1.0670403888637676
+        ],
+        [
+          1.0066558218752348,
+          1.0685470887067645,
+          1.013381155470708
+        ],
+        [
+          1.0003224895329592,
+          0.9937237282272393,
+          1.0644236469479185
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.07,
+        "minimum": 0.030000000000000002
+      },
+      "failure_profile": "symmetric",
+      "label": "positive15_joint_symmetric",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            0.00460618434807891,
+            -0.03280683393407872,
+            0.06280927436752513
+          ],
+          [
+            0.00460618434807891,
+            1.0,
+            -0.008237363665459773,
+            -0.025311674527782234
+          ],
+          [
+            -0.03280683393407872,
+            -0.008237363665459773,
+            1.0,
+            -0.06413364083320401
+          ],
+          [
+            0.06280927436752512,
+            -0.025311674527782234,
+            -0.06413364083320401,
+            1.0
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            0.021169593535404384,
+            -0.03604217412729093,
+            0.021685384077677644
+          ],
+          [
+            0.021169593535404388,
+            1.0,
+            -0.021756583933892445,
+            -0.03825306552964708
+          ],
+          [
+            -0.03604217412729093,
+            -0.021756583933892445,
+            1.0,
+            0.007193664596767944
+          ],
+          [
+            0.021685384077677644,
+            -0.03825306552964708,
+            0.007193664596767942,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            0.01263678908831882,
+            0.017068514146856544,
+            -0.015431757827333751
+          ],
+          [
+            0.012636789088318818,
+            1.0,
+            0.002779164105886507,
+            -0.04200932360750392
+          ],
+          [
+            0.017068514146856544,
+            0.002779164105886507,
+            1.0,
+            0.0008956776158287697
+          ],
+          [
+            -0.015431757827333751,
+            -0.04200932360750393,
+            0.0008956776158287697,
+            0.9999999999999999
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.01692563408583249,
+          0.017733126310244575,
+          0.012631975557438193
+        ],
+        [
+          0.016929993493543287,
+          0.017703758130541654,
+          0.012597975270168467
+        ],
+        [
+          0.016922795681909807,
+          0.017681694487335163,
+          0.01259479894014646
+        ],
+        [
+          0.016892406181299977,
+          0.017663345013583468,
+          0.012602167800850005
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.0002868888572410298,
+          0.0003148461801034438,
+          0.0001600881505895543
+        ],
+        [
+          0.0002870443838614005,
+          0.00031380129213686337,
+          0.00015924806948061336
+        ],
+        [
+          0.0002868067423502607,
+          0.00031303985030562787,
+          0.0001591985349301939
+        ],
+        [
+          0.00028575134277343745,
+          0.00031240285237630217,
+          0.00015934838189019099
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.76,
+        "minimum": 0.020000000000000004
+      },
+      "outer_replicates": 1000,
+      "scenario": "positive_15",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 153292,
+          "execution_failure_rate": 0.04989973958333333,
+          "followup_choice": 2625834,
+          "followup_choice_rate": 0.854763671875,
+          "followup_unavailable": 292874,
+          "followup_unavailable_rate": 0.09533658854166667,
+          "provider_error": 114902,
+          "sessions": 3072000,
+          "transport_error": 38390
+        },
+        "self|L": {
+          "execution_failure": 154345,
+          "execution_failure_rate": 0.05024251302083333,
+          "followup_choice": 2625801,
+          "followup_choice_rate": 0.8547529296875,
+          "followup_unavailable": 291854,
+          "followup_unavailable_rate": 0.09500455729166667,
+          "provider_error": 115593,
+          "sessions": 3072000,
+          "transport_error": 38752
+        },
+        "yoke|H": {
+          "execution_failure": 153378,
+          "execution_failure_rate": 0.049927734375,
+          "followup_choice": 2625644,
+          "followup_choice_rate": 0.8547018229166666,
+          "followup_unavailable": 292978,
+          "followup_unavailable_rate": 0.09537044270833334,
+          "provider_error": 114904,
+          "sessions": 3072000,
+          "transport_error": 38474
+        },
+        "yoke|L": {
+          "execution_failure": 153831,
+          "execution_failure_rate": 0.0500751953125,
+          "followup_choice": 2625888,
+          "followup_choice_rate": 0.85478125,
+          "followup_unavailable": 292281,
+          "followup_unavailable_rate": 0.0951435546875,
+          "provider_error": 115540,
+          "sessions": 3072000,
+          "transport_error": 38291
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "false_control",
+        "positive_all_cells": "power",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.15075,
+        0.12824999999999998,
+        0.022499999999999992
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.982,
+          "interval_lower": 0.9717267448294926,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9885842599904322,
+          "replicates": 1000,
+          "successes": 982
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.995,
+          "interval_lower": 0.9883490446266249,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9978624644726756,
+          "replicates": 1000,
+          "successes": 995
+        }
+      },
+      "dependence_profile": "joint",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2391629,
+        "cyclic_nonpair_rate": 0.3892625325520833,
+        "excess_agreement": 0.00294921875,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2409749,
+        "paired_rate": 0.39221175130208336
+      },
+      "empirical_standard_deviation": [
+        [
+          0.016705038481873657,
+          0.017107194346631154,
+          0.012711781722220542
+        ],
+        [
+          0.016569525022370097,
+          0.017376444081828417,
+          0.012783724605546823
+        ],
+        [
+          0.016948772380931176,
+          0.017658579859102852,
+          0.01269045363064716
+        ],
+        [
+          0.016896297604534167,
+          0.01772046934754133,
+          0.013501432255516217
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          0.9819950823610146,
+          0.9309743799714607,
+          0.980384819745124
+        ],
+        [
+          0.9640087463976476,
+          0.9588165035119255,
+          0.9920059721708959
+        ],
+        [
+          1.0096481528648196,
+          0.9930179274043838,
+          0.9736245428125596
+        ],
+        [
+          1.0005505050437071,
+          0.9970992931183248,
+          1.1027684630346395
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.1,
+        "minimum": 0.02
+      },
+      "failure_profile": "differential",
+      "label": "positive15_joint_differential",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            0.010097010026427492,
+            -0.034017178641696955,
+            0.04892556256441189
+          ],
+          [
+            0.010097010026427492,
+            1.0,
+            0.04559341200274992,
+            -0.07433206656323331
+          ],
+          [
+            -0.034017178641696955,
+            0.04559341200274992,
+            1.0,
+            0.05236646925008411
+          ],
+          [
+            0.04892556256441189,
+            -0.07433206656323331,
+            0.05236646925008411,
+            1.0
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            0.020774402276947254,
+            -0.002824899813663988,
+            0.0026659399596003115
+          ],
+          [
+            0.02077440227694725,
+            0.9999999999999998,
+            0.010098079504900175,
+            -0.06835106098288615
+          ],
+          [
+            -0.002824899813663988,
+            0.010098079504900173,
+            1.0,
+            0.01107413104124294
+          ],
+          [
+            0.0026659399596003115,
+            -0.06835106098288615,
+            0.011074131041242939,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            0.010604408934310963,
+            -0.009286631863156194,
+            0.05024239076918021
+          ],
+          [
+            0.010604408934310963,
+            1.0,
+            0.035742490583768036,
+            -0.0038122343144306715
+          ],
+          [
+            -0.009286631863156194,
+            0.035742490583768036,
+            1.0,
+            0.01934442255049263
+          ],
+          [
+            0.050242390769180204,
+            -0.003812234314430671,
+            0.01934442255049263,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.016845706880204547,
+          0.01771882314548972,
+          0.012818246413307309
+        ],
+        [
+          0.016864573218388697,
+          0.017734905226494416,
+          0.012814684954427205
+        ],
+        [
+          0.016855445737457758,
+          0.017708796333674972,
+          0.012841027074271318
+        ],
+        [
+          0.01688022216403212,
+          0.01773544218868732,
+          0.012837205534425692
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.00028417485555013046,
+          0.0003143546210394967,
+          0.00016482241595232932
+        ],
+        [
+          0.0002847994486490883,
+          0.00031490989967628816,
+          0.00016474055537471074
+        ],
+        [
+          0.0002845158329716436,
+          0.00031401793868453406,
+          0.00016541038795753763
+        ],
+        [
+          0.00028532779834888606,
+          0.00031492854930736383,
+          0.00016530094853153937
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.76,
+        "minimum": 0.020000000000000004
+      },
+      "outer_replicates": 1000,
+      "scenario": "positive_15",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 244599,
+          "execution_failure_rate": 0.0796220703125,
+          "followup_choice": 2543496,
+          "followup_choice_rate": 0.8279609375,
+          "followup_unavailable": 283905,
+          "followup_unavailable_rate": 0.0924169921875,
+          "provider_error": 183306,
+          "sessions": 3072000,
+          "transport_error": 61293
+        },
+        "self|L": {
+          "execution_failure": 183507,
+          "execution_failure_rate": 0.0597353515625,
+          "followup_choice": 2597103,
+          "followup_choice_rate": 0.8454111328125,
+          "followup_unavailable": 291390,
+          "followup_unavailable_rate": 0.094853515625,
+          "provider_error": 137631,
+          "sessions": 3072000,
+          "transport_error": 45876
+        },
+        "yoke|H": {
+          "execution_failure": 153324,
+          "execution_failure_rate": 0.04991015625,
+          "followup_choice": 2625559,
+          "followup_choice_rate": 0.8546741536458333,
+          "followup_unavailable": 293117,
+          "followup_unavailable_rate": 0.09541569010416667,
+          "provider_error": 115093,
+          "sessions": 3072000,
+          "transport_error": 38231
+        },
+        "yoke|L": {
+          "execution_failure": 122761,
+          "execution_failure_rate": 0.03996126302083333,
+          "followup_choice": 2653054,
+          "followup_choice_rate": 0.8636243489583333,
+          "followup_unavailable": 296185,
+          "followup_unavailable_rate": 0.09641438802083334,
+          "provider_error": 92227,
+          "sessions": 3072000,
+          "transport_error": 30534
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "false_control",
+        "positive_all_cells": "power",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.995,
+          "interval_lower": 0.9883490446266249,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9978624644726756,
+          "replicates": 1000,
+          "successes": 995
+        }
+      },
+      "dependence_profile": "joint",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2415119,
+        "cyclic_nonpair_rate": 0.39308577473958334,
+        "excess_agreement": 0.0032962239583333333,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2435371,
+        "paired_rate": 0.3963819986979167
+      },
+      "empirical_standard_deviation": [
+        [
+          0.018688975102011503,
+          0.018369291972739336,
+          0.012860474264955667
+        ],
+        [
+          0.017893198166579728,
+          0.01742642376159573,
+          0.012487190632236097
+        ],
+        [
+          0.017735670654959207,
+          0.01732673696751694,
+          0.012525157727244047
+        ],
+        [
+          0.017823279852704203,
+          0.017682784708050216,
+          0.012757133688167393
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          1.1124645945657936,
+          1.0753024969073293,
+          1.0334381857217156
+        ],
+        [
+          1.02115060869074,
+          0.9710232649878562,
+          0.9775413796642655
+        ],
+        [
+          1.005944855605044,
+          0.9576726783151188,
+          0.9871467847686209
+        ],
+        [
+          1.0137887636221181,
+          0.9994569956578205,
+          1.018752959546466
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.07,
+        "minimum": 0.030000000000000002
+      },
+      "failure_profile": "symmetric",
+      "label": "null_joint_symmetric",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            0.007547630844268414,
+            -0.01797814082480765,
+            -0.03152803735957684
+          ],
+          [
+            0.007547630844268415,
+            0.9999999999999998,
+            -0.03854940236798896,
+            0.030237200803500227
+          ],
+          [
+            -0.01797814082480765,
+            -0.03854940236798896,
+            1.0,
+            0.011924237350358519
+          ],
+          [
+            -0.03152803735957684,
+            0.030237200803500227,
+            0.01192423735035852,
+            0.9999999999999998
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            -0.0335424998689637,
+            0.03034797038723236,
+            0.006431142372312749
+          ],
+          [
+            -0.0335424998689637,
+            1.0,
+            -0.026291643312165974,
+            0.03082431836353264
+          ],
+          [
+            0.03034797038723236,
+            -0.026291643312165974,
+            1.0,
+            -0.04481620506185943
+          ],
+          [
+            0.006431142372312749,
+            0.030824318363532638,
+            -0.04481620506185943,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            -0.030884805101438925,
+            -0.012707356115814878,
+            -0.023252481499714928
+          ],
+          [
+            -0.030884805101438925,
+            0.9999999999999999,
+            0.0015238268418323285,
+            0.008052177154661971
+          ],
+          [
+            -0.012707356115814878,
+            0.0015238268418323283,
+            1.0,
+            -0.0701484357347923
+          ],
+          [
+            -0.023252481499714928,
+            0.008052177154661971,
+            -0.07014843573479229,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.017707523995636135,
+          0.017702729512724502,
+          0.01262984901344734
+        ],
+        [
+          0.017694105539140737,
+          0.01767220547398803,
+          0.012607491817753662
+        ],
+        [
+          0.017671302648483773,
+          0.017693932410437554,
+          0.01258378412285032
+        ],
+        [
+          0.01769077503587456,
+          0.017676029734504273,
+          0.012617651947792342
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.00031396755642361146,
+          0.0003138008965386286,
+          0.0001600403397171582
+        ],
+        [
+          0.0003135350827817565,
+          0.0003127425017180265,
+          0.00015951235735857928
+        ],
+        [
+          0.00031269508644386556,
+          0.00031348478529188365,
+          0.00015892223782009533
+        ],
+        [
+          0.00031334861472800886,
+          0.00031285075434932036,
+          0.00015974869904694742
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.6100000000000001,
+        "minimum": 0.020000000000000004
+      },
+      "outer_replicates": 1000,
+      "scenario": "null",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 153584,
+          "execution_failure_rate": 0.04999479166666667,
+          "followup_choice": 2625496,
+          "followup_choice_rate": 0.8546536458333334,
+          "followup_unavailable": 292920,
+          "followup_unavailable_rate": 0.0953515625,
+          "provider_error": 115725,
+          "sessions": 3072000,
+          "transport_error": 37859
+        },
+        "self|L": {
+          "execution_failure": 153103,
+          "execution_failure_rate": 0.049838216145833336,
+          "followup_choice": 2625348,
+          "followup_choice_rate": 0.85460546875,
+          "followup_unavailable": 293549,
+          "followup_unavailable_rate": 0.09555631510416666,
+          "provider_error": 114529,
+          "sessions": 3072000,
+          "transport_error": 38574
+        },
+        "yoke|H": {
+          "execution_failure": 153073,
+          "execution_failure_rate": 0.04982845052083333,
+          "followup_choice": 2626110,
+          "followup_choice_rate": 0.854853515625,
+          "followup_unavailable": 292817,
+          "followup_unavailable_rate": 0.09531803385416666,
+          "provider_error": 114624,
+          "sessions": 3072000,
+          "transport_error": 38449
+        },
+        "yoke|L": {
+          "execution_failure": 153162,
+          "execution_failure_rate": 0.049857421875,
+          "followup_choice": 2625813,
+          "followup_choice_rate": 0.8547568359375,
+          "followup_unavailable": 293025,
+          "followup_unavailable_rate": 0.0953857421875,
+          "provider_error": 114775,
+          "sessions": 3072000,
+          "transport_error": 38387
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "power",
+        "positive_all_cells": "false_control",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.011249999999999982,
+        -0.011249999999999982,
+        0.022499999999999992
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.995,
+          "interval_lower": 0.9883490446266249,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9978624644726756,
+          "replicates": 1000,
+          "successes": 995
+        }
+      },
+      "dependence_profile": "joint",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2390387,
+        "cyclic_nonpair_rate": 0.3890603841145833,
+        "excess_agreement": 0.0034111328125,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2411345,
+        "paired_rate": 0.3924715169270833
+      },
+      "empirical_standard_deviation": [
+        [
+          0.017505697393962193,
+          0.01734624338695357,
+          0.012747584340401383
+        ],
+        [
+          0.018048877158012202,
+          0.01788639491277696,
+          0.012375891641694866
+        ],
+        [
+          0.01753340964411731,
+          0.01796384839668829,
+          0.012366264199241995
+        ],
+        [
+          0.018137180625342888,
+          0.01775781492719683,
+          0.01308509450262244
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          0.9776546467904502,
+          0.9580577781903534,
+          0.9803733381545646
+        ],
+        [
+          1.0394595469483907,
+          1.0210174503507787,
+          0.9250726429700844
+        ],
+        [
+          0.9849990563893755,
+          1.0336248968496304,
+          0.92467628492659
+        ],
+        [
+          1.054239944623439,
+          1.007974470719574,
+          1.0378107713422453
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.1,
+        "minimum": 0.02
+      },
+      "failure_profile": "differential",
+      "label": "null_joint_differential",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            -0.034994596358934586,
+            0.029243930493433542,
+            0.003646868919891863
+          ],
+          [
+            -0.034994596358934586,
+            1.0,
+            -0.06616742091453232,
+            0.04569748173794928
+          ],
+          [
+            0.02924393049343354,
+            -0.06616742091453232,
+            1.0,
+            -0.0483621577153544
+          ],
+          [
+            0.003646868919891863,
+            0.04569748173794928,
+            -0.048362157715354404,
+            1.0
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            0.012539205467080592,
+            0.017085583463372488,
+            -0.011721417087701138
+          ],
+          [
+            0.012539205467080594,
+            1.0,
+            -0.012626750975633046,
+            0.0004732872729230977
+          ],
+          [
+            0.017085583463372488,
+            -0.012626750975633047,
+            1.0,
+            -0.03264345719276128
+          ],
+          [
+            -0.011721417087701136,
+            0.0004732872729230978,
+            -0.03264345719276128,
+            1.0
+          ]
+        ],
+        "U": [
+          [
+            0.9999999999999999,
+            0.06464663572120355,
+            0.024972344568402107,
+            -0.05078272560017094
+          ],
+          [
+            0.06464663572120354,
+            1.0,
+            0.02010163453495966,
+            0.011169268935423898
+          ],
+          [
+            0.024972344568402104,
+            0.020101634534959657,
+            1.0,
+            0.008144395232304834
+          ],
+          [
+            -0.05078272560017095,
+            0.0111692689354239,
+            0.008144395232304834,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.0176933964117449,
+          0.017710722623951472,
+          0.0128540506127171
+        ],
+        [
+          0.017691688626343523,
+          0.01769063620746522,
+          0.012847747185290474
+        ],
+        [
+          0.017655456151046925,
+          0.01765834037906374,
+          0.012840793590261362
+        ],
+        [
+          0.017653201623388928,
+          0.01767677367448092,
+          0.012825120139739632
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.00031345367431640593,
+          0.0003140647323043258,
+          0.000165754106309679
+        ],
+        [
+          0.00031339552137586816,
+          0.00031333756623444725,
+          0.00016556828816731737
+        ],
+        [
+          0.0003121022824887875,
+          0.000312202086272063,
+          0.0001653816505714699
+        ],
+        [
+          0.0003120326854564525,
+          0.0003128452159740309,
+          0.00016498161598488154
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.6100000000000001,
+        "minimum": 0.020000000000000004
+      },
+      "outer_replicates": 1000,
+      "scenario": "null",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 245359,
+          "execution_failure_rate": 0.07986946614583333,
+          "followup_choice": 2543670,
+          "followup_choice_rate": 0.828017578125,
+          "followup_unavailable": 282971,
+          "followup_unavailable_rate": 0.09211295572916667,
+          "provider_error": 184092,
+          "sessions": 3072000,
+          "transport_error": 61267
+        },
+        "self|L": {
+          "execution_failure": 184647,
+          "execution_failure_rate": 0.0601064453125,
+          "followup_choice": 2598569,
+          "followup_choice_rate": 0.8458883463541667,
+          "followup_unavailable": 288784,
+          "followup_unavailable_rate": 0.09400520833333334,
+          "provider_error": 138297,
+          "sessions": 3072000,
+          "transport_error": 46350
+        },
+        "yoke|H": {
+          "execution_failure": 153707,
+          "execution_failure_rate": 0.05003483072916667,
+          "followup_choice": 2626843,
+          "followup_choice_rate": 0.8550921223958333,
+          "followup_unavailable": 291450,
+          "followup_unavailable_rate": 0.094873046875,
+          "provider_error": 115213,
+          "sessions": 3072000,
+          "transport_error": 38494
+        },
+        "yoke|L": {
+          "execution_failure": 123315,
+          "execution_failure_rate": 0.0401416015625,
+          "followup_choice": 2653555,
+          "followup_choice_rate": 0.8637874348958333,
+          "followup_unavailable": 295130,
+          "followup_unavailable_rate": 0.09607096354166667,
+          "provider_error": 92564,
+          "sessions": 3072000,
+          "transport_error": 30751
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "false_control",
+        "positive_all_cells": "false_control",
+        "reverse_all_cells": "false_control"
+      }
+    },
+    {
+      "analytic_terminal_truth_L_H_U": [
+        -0.04749999999999999,
+        0.04749999999999999,
+        0.0
+      ],
+      "blocks_per_fine_stratum": 16,
+      "blocks_per_macro_cell": 384,
+      "decision_rates": {
+        "equivalence_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "positive_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "reverse_all_cells": {
+          "confidence_level": 0.95,
+          "estimate": 0.0,
+          "interval_lower": 2.168404344971009e-19,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.0038267584855551234,
+          "replicates": 1000,
+          "successes": 0
+        },
+        "simultaneous_coverage_all_12": {
+          "confidence_level": 0.95,
+          "estimate": 0.993,
+          "interval_lower": 0.9856216845342334,
+          "interval_method": "Wilson score interval for Monte Carlo frequency only",
+          "interval_upper": 0.9966051315990092,
+          "replicates": 1000,
+          "successes": 993
+        }
+      },
+      "dependence_profile": "joint",
+      "donor_pair_agreement": {
+        "cyclic_nonpair_agreements": 2415417,
+        "cyclic_nonpair_rate": 0.39313427734375,
+        "excess_agreement": 0.0037861328125,
+        "pair_comparisons": 6144000,
+        "paired_agreements": 2438679,
+        "paired_rate": 0.39692041015625
+      },
+      "empirical_standard_deviation": [
+        [
+          0.017576701161299994,
+          0.018220038998650507,
+          0.012595787359613562
+        ],
+        [
+          0.017570500935926565,
+          0.01772090252927288,
+          0.012456582763476996
+        ],
+        [
+          0.017011009440689128,
+          0.017506624845552047,
+          0.012432076530507031
+        ],
+        [
+          0.017324157120662393,
+          0.018313708034681603,
+          0.012615316069796923
+        ]
+      ],
+      "empirical_to_reported_variance_ratio": [
+        [
+          1.0082471647469464,
+          1.0508190261189934,
+          0.9967953737520197
+        ],
+        [
+          1.004748211104079,
+          0.9901077527677224,
+          0.9739842269952168
+        ],
+        [
+          0.9384631976534626,
+          0.9666537427105452,
+          0.9695074008616787
+        ],
+        [
+          0.9780115281531744,
+          1.0612974086961509,
+          1.0021291112499149
+        ]
+      ],
+      "failure_probability_bounds": {
+        "maximum": 0.07,
+        "minimum": 0.030000000000000002
+      },
+      "failure_profile": "symmetric",
+      "label": "boundary_joint_symmetric",
+      "macro_estimate_correlation_by_category": {
+        "H": [
+          [
+            1.0,
+            0.006155334082687515,
+            0.009324712913550503,
+            0.017437818666006067
+          ],
+          [
+            0.006155334082687516,
+            1.0,
+            -0.02250460618191029,
+            -0.06001895032791783
+          ],
+          [
+            0.009324712913550503,
+            -0.02250460618191029,
+            1.0,
+            0.050815367459003905
+          ],
+          [
+            0.017437818666006067,
+            -0.06001895032791783,
+            0.050815367459003905,
+            1.0
+          ]
+        ],
+        "L": [
+          [
+            1.0,
+            0.023002626992106825,
+            0.076745329043014,
+            -0.0017558814078211308
+          ],
+          [
+            0.023002626992106825,
+            1.0,
+            -0.020736079506185123,
+            -0.04018440368040863
+          ],
+          [
+            0.07674532904301401,
+            -0.020736079506185123,
+            1.0,
+            0.012388745078194777
+          ],
+          [
+            -0.0017558814078211305,
+            -0.04018440368040863,
+            0.012388745078194775,
+            0.9999999999999998
+          ]
+        ],
+        "U": [
+          [
+            1.0,
+            -0.014741541609255254,
+            -0.03786107006016193,
+            -0.0013996058738373924
+          ],
+          [
+            -0.014741541609255254,
+            0.9999999999999999,
+            -0.0431056279682992,
+            -0.03668740997112436
+          ],
+          [
+            -0.03786107006016193,
+            -0.0431056279682992,
+            1.0,
+            -0.025923670020964677
+          ],
+          [
+            -0.0013996058738373924,
+            -0.036687409971124366,
+            -0.025923670020964677,
+            1.0
+          ]
+        ]
+      },
+      "mean_reported_standard_error": [
+        [
+          0.01749327573569823,
+          0.017762206688854584,
+          0.01259552585752613
+        ],
+        [
+          0.017518152518317374,
+          0.017799037305486428,
+          0.012601630294653747
+        ],
+        [
+          0.017547696760567895,
+          0.01779479697429481,
+          0.012605595345391771
+        ],
+        [
+          0.017506235470135727,
+          0.01776525097526909,
+          0.012581036871251223
+        ]
+      ],
+      "mean_reported_variance": [
+        [
+          0.0003064133820710357,
+          0.0003159153125904227,
+          0.00015916392008463544
+        ],
+        [
+          0.00030726355093496817,
+          0.0003171678896303531,
+          0.00015931105437102136
+        ],
+        [
+          0.0003083492702907986,
+          0.00031705449422200516,
+          0.00015941758332429126
+        ],
+        [
+          0.00030687411272967347,
+          0.0003160206547489876,
+          0.00015880807947229463
+        ]
+      ],
+      "outcome_probability_bounds": {
+        "maximum": 0.66,
+        "minimum": 0.020000000000000004
+      },
+      "outer_replicates": 1000,
+      "scenario": "positive_boundary",
+      "terminal_sources_by_arm_schedule": {
+        "self|H": {
+          "execution_failure": 154538,
+          "execution_failure_rate": 0.05030533854166667,
+          "followup_choice": 2626034,
+          "followup_choice_rate": 0.8548287760416666,
+          "followup_unavailable": 291428,
+          "followup_unavailable_rate": 0.09486588541666667,
+          "provider_error": 115865,
+          "sessions": 3072000,
+          "transport_error": 38673
+        },
+        "self|L": {
+          "execution_failure": 153923,
+          "execution_failure_rate": 0.05010514322916667,
+          "followup_choice": 2628136,
+          "followup_choice_rate": 0.8555130208333334,
+          "followup_unavailable": 289941,
+          "followup_unavailable_rate": 0.0943818359375,
+          "provider_error": 115602,
+          "sessions": 3072000,
+          "transport_error": 38321
+        },
+        "yoke|H": {
+          "execution_failure": 153557,
+          "execution_failure_rate": 0.04998600260416667,
+          "followup_choice": 2627534,
+          "followup_choice_rate": 0.8553170572916666,
+          "followup_unavailable": 290909,
+          "followup_unavailable_rate": 0.09469694010416667,
+          "provider_error": 114953,
+          "sessions": 3072000,
+          "transport_error": 38604
+        },
+        "yoke|L": {
+          "execution_failure": 153886,
+          "execution_failure_rate": 0.05009309895833333,
+          "followup_choice": 2627683,
+          "followup_choice_rate": 0.8553655598958333,
+          "followup_unavailable": 290431,
+          "followup_unavailable_rate": 0.09454134114583333,
+          "provider_error": 115356,
+          "sessions": 3072000,
+          "transport_error": 38530
+        }
+      },
+      "truth_roles": {
+        "equivalence_all_cells": "power",
+        "positive_all_cells": "false_control",
+        "reverse_all_cells": "false_control"
+      }
+    }
+  ],
+  "rng_method": "independent NumPy Generator(PCG64) stream per logical outer replicate, seeded by SHA-256 over the fixed master seed and scientific coordinates; operational chunk size is excluded and cannot change output",
+  "schema_version": "binding-test-dependence-diagnostic-v1",
+  "scope": "local seeded synthetic dependence and feasibility diagnostics only",
+  "status": "NON_GATING_SYNTHETIC_SCREEN"
+}
