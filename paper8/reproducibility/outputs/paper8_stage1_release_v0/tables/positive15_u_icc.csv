@@ -1,0 +1,13 @@
+followup_unavailability,block_icc,blocks_per_macro_cell,outer_replicates,successes,decision_rate,wilson_lower,wilson_upper,decision_rate_percent,wilson_95_percent,source_json_path
+0,0,384,10000,9996,0.9996,0.998971871665,0.999844437163,99.96%,"[99.90%, 99.98%]",confirmatory_size_certification.cell_assessments[0]
+0,0.1,384,10000,9972,0.9972,0.995956157751,0.998061994269,99.72%,"[99.60%, 99.81%]",confirmatory_size_certification.cell_assessments[1]
+0,0.25,384,10000,9739,0.9739,0.970588504118,0.976847542226,97.39%,"[97.06%, 97.68%]",confirmatory_size_certification.cell_assessments[2]
+0.05,0,384,10000,9993,0.9993,0.998555665559,0.999660873668,99.93%,"[99.86%, 99.97%]",confirmatory_size_certification.cell_assessments[3]
+0.05,0.1,384,10000,9959,0.9959,0.994443005072,0.996976145344,99.59%,"[99.44%, 99.70%]",confirmatory_size_certification.cell_assessments[4]
+0.05,0.25,384,10000,9651,0.9651,0.961320607112,0.968522197603,96.51%,"[96.13%, 96.85%]",confirmatory_size_certification.cell_assessments[5]
+0.1,0,384,10000,9997,0.9997,0.999118264228,0.999897967801,99.97%,"[99.91%, 99.99%]",confirmatory_size_certification.cell_assessments[6]
+0.1,0.1,384,10000,9944,0.9944,0.992735569485,0.995684732926,99.44%,"[99.27%, 99.57%]",confirmatory_size_certification.cell_assessments[7]
+0.1,0.25,384,10000,9625,0.9625,0.958595272813,0.966049528694,96.25%,"[95.86%, 96.60%]",confirmatory_size_certification.cell_assessments[8]
+0.15,0,384,10000,9995,0.9995,0.998829974054,0.999786411574,99.95%,"[99.88%, 99.98%]",confirmatory_size_certification.cell_assessments[9]
+0.15,0.1,384,10000,9960,0.996,0.994558087354,0.997060986262,99.60%,"[99.46%, 99.71%]",confirmatory_size_certification.cell_assessments[10]
+0.15,0.25,384,10000,9627,0.9627,0.958804736711,0.966239911197,96.27%,"[95.88%, 96.62%]",confirmatory_size_certification.cell_assessments[11]

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="title description">
+<title id="title">Non-gating synthetic dependence outcome screen</title>
+<desc id="description">Eight-profile synthetic comparison of all-cell positive decision rates and simultaneous twelve-component coverage with Wilson intervals and analytic terminal truth vectors. No provider observations; cannot certify B=384.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50.00" y="46.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#17212b">Outcome decision and coverage rates under declared dependence profiles</text>
+<text x="50.00" y="78.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#8f2d20">NON-GATING SYNTHETIC SCREEN — NO PROVIDER OBSERVATIONS — CANNOT CERTIFY B=384</text>
+<text x="50.00" y="106.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#425466">Eight declared profiles; 1,000 replicates/profile; horizontal bars are Wilson 95% Monte Carlo intervals.</text>
+<text x="50.00" y="130.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#425466">Truth vectors are exact terminal self-minus-yoke contrasts ordered [L, H, U].</text>
+<line x1="360.00" y1="208" x2="360.00" y2="710" stroke="#e3e9ee" stroke-width="1"/>
+<text x="360.00" y="196.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">0%</text>
+<line x1="533.75" y1="208" x2="533.75" y2="710" stroke="#e3e9ee" stroke-width="1"/>
+<text x="533.75" y="196.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">25%</text>
+<line x1="707.50" y1="208" x2="707.50" y2="710" stroke="#e3e9ee" stroke-width="1"/>
+<text x="707.50" y="196.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">50%</text>
+<line x1="881.25" y1="208" x2="881.25" y2="710" stroke="#e3e9ee" stroke-width="1"/>
+<text x="881.25" y="196.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">75%</text>
+<line x1="1055.00" y1="208" x2="1055.00" y2="710" stroke="#e3e9ee" stroke-width="1"/>
+<text x="1055.00" y="196.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">100%</text>
+<line x1="360" y1="208" x2="360" y2="710" stroke="#566573" stroke-width="1.5"/>
+<text x="1078.00" y="196.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#17212b">Analytic truth [L, H, U]</text>
+<text x="1360.00" y="196.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#17212b">Positive / coverage</text>
+<line x1="360" y1="166" x2="388" y2="166" stroke="#0072B2" stroke-width="3"/>
+<circle cx="374" cy="166" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="398.00" y="171.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">All-cell positive decision</text>
+<line x1="615" y1="166" x2="643" y2="166" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<polygon points="629,159 636,166 629,173 622,166" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="653.00" y="171.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">Simultaneous 12-component coverage</text>
+<text x="340.00" y="235.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">+15 independent / no failure</text>
+<line x1="360" y1="261" x2="1055" y2="261" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="1052.34" y1="221" x2="1055.00" y2="221" stroke="#0072B2" stroke-width="3"/>
+<line x1="1052.34" y1="216" x2="1052.34" y2="226" stroke="#0072B2" stroke-width="2"/>
+<line x1="1055.00" y1="216" x2="1055.00" y2="226" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1055.00" cy="221" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1047.88" y1="240" x2="1053.92" y2="240" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1047.88" y1="235" x2="1047.88" y2="245" stroke="#D55E00" stroke-width="2"/>
+<line x1="1053.92" y1="235" x2="1053.92" y2="245" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1052.22,234 1058.22,240.00 1052.22,246 1046.22,240.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="235.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.1500, +0.1500, +0.0000]</text>
+<text x="1360.00" y="235.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">100.0% / 99.6%</text>
+<text x="340.00" y="299.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">+15 donor / symmetric failure</text>
+<line x1="360" y1="325" x2="1055" y2="325" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="1052.34" y1="285" x2="1055.00" y2="285" stroke="#0072B2" stroke-width="3"/>
+<line x1="1052.34" y1="280" x2="1052.34" y2="290" stroke="#0072B2" stroke-width="2"/>
+<line x1="1055.00" y1="280" x2="1055.00" y2="290" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1055.00" cy="285" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1043.17" y1="304" x2="1051.70" y2="304" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1043.17" y1="299" x2="1043.17" y2="309" stroke="#D55E00" stroke-width="2"/>
+<line x1="1051.70" y1="299" x2="1051.70" y2="309" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1048.74,298 1054.74,304.00 1048.74,310 1042.74,304.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="299.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.1425, +0.1425, +0.0000]</text>
+<text x="1360.00" y="299.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">100.0% / 99.1%</text>
+<text x="340.00" y="363.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">+15 shared / symmetric failure</text>
+<line x1="360" y1="389" x2="1055" y2="389" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="1048.90" y1="349" x2="1054.29" y2="349" stroke="#0072B2" stroke-width="3"/>
+<line x1="1048.90" y1="344" x2="1048.90" y2="354" stroke="#0072B2" stroke-width="2"/>
+<line x1="1054.29" y1="344" x2="1054.29" y2="354" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1052.91" cy="349" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040.50" y1="368" x2="1050.22" y2="368" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1040.50" y1="363" x2="1040.50" y2="373" stroke="#D55E00" stroke-width="2"/>
+<line x1="1050.22" y1="363" x2="1050.22" y2="373" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1046.66,362 1052.66,368.00 1046.66,374 1040.66,368.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="363.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.1425, +0.1425, +0.0000]</text>
+<text x="1360.00" y="363.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">99.7% / 98.8%</text>
+<text x="340.00" y="427.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">+15 joint / symmetric failure</text>
+<line x1="360" y1="453" x2="1055" y2="453" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="1049.95" y1="413" x2="1054.62" y2="413" stroke="#0072B2" stroke-width="3"/>
+<line x1="1049.95" y1="408" x2="1049.95" y2="418" stroke="#0072B2" stroke-width="2"/>
+<line x1="1054.62" y1="408" x2="1054.62" y2="418" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1053.61" cy="413" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1040.50" y1="432" x2="1050.22" y2="432" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1040.50" y1="427" x2="1040.50" y2="437" stroke="#D55E00" stroke-width="2"/>
+<line x1="1050.22" y1="427" x2="1050.22" y2="437" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1046.66,426 1052.66,432.00 1046.66,438 1040.66,432.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="427.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.1425, +0.1425, +0.0000]</text>
+<text x="1360.00" y="427.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">99.8% / 98.8%</text>
+<text x="340.00" y="491.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">+15 joint / differential failure</text>
+<line x1="360" y1="517" x2="1055" y2="517" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="1035.35" y1="477" x2="1047.07" y2="477" stroke="#0072B2" stroke-width="3"/>
+<line x1="1035.35" y1="472" x2="1035.35" y2="482" stroke="#0072B2" stroke-width="2"/>
+<line x1="1047.07" y1="472" x2="1047.07" y2="482" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1042.49" cy="477" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1046.90" y1="496" x2="1053.51" y2="496" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1046.90" y1="491" x2="1046.90" y2="501" stroke="#D55E00" stroke-width="2"/>
+<line x1="1053.51" y1="491" x2="1053.51" y2="501" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1051.53,490 1057.53,496.00 1051.53,502 1045.53,496.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="491.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.1507, +0.1282, +0.0225]</text>
+<text x="1360.00" y="491.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">98.2% / 99.5%</text>
+<line x1="50" y1="519" x2="1450" y2="519" stroke="#c9d2da" stroke-width="1.5"/>
+<text x="340.00" y="555.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">Null joint / symmetric failure</text>
+<line x1="360" y1="581" x2="1055" y2="581" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="360.00" y1="541" x2="362.66" y2="541" stroke="#0072B2" stroke-width="3"/>
+<line x1="360.00" y1="536" x2="360.00" y2="546" stroke="#0072B2" stroke-width="2"/>
+<line x1="362.66" y1="536" x2="362.66" y2="546" stroke="#0072B2" stroke-width="2"/>
+<circle cx="360.00" cy="541" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1046.90" y1="560" x2="1053.51" y2="560" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1046.90" y1="555" x2="1046.90" y2="565" stroke="#D55E00" stroke-width="2"/>
+<line x1="1053.51" y1="555" x2="1053.51" y2="565" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1051.53,554 1057.53,560.00 1051.53,566 1045.53,560.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="555.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[+0.0000, +0.0000, +0.0000]</text>
+<text x="1360.00" y="555.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">0.0% / 99.5%</text>
+<text x="340.00" y="619.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">Null joint / differential failure</text>
+<line x1="360" y1="645" x2="1055" y2="645" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="360.00" y1="605" x2="362.66" y2="605" stroke="#0072B2" stroke-width="3"/>
+<line x1="360.00" y1="600" x2="360.00" y2="610" stroke="#0072B2" stroke-width="2"/>
+<line x1="362.66" y1="600" x2="362.66" y2="610" stroke="#0072B2" stroke-width="2"/>
+<circle cx="360.00" cy="605" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1046.90" y1="624" x2="1053.51" y2="624" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1046.90" y1="619" x2="1046.90" y2="629" stroke="#D55E00" stroke-width="2"/>
+<line x1="1053.51" y1="619" x2="1053.51" y2="629" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1051.53,618 1057.53,624.00 1051.53,630 1045.53,624.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="619.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.0112, -0.0112, +0.0225]</text>
+<text x="1360.00" y="619.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">0.0% / 99.5%</text>
+<line x1="50" y1="647" x2="1450" y2="647" stroke="#c9d2da" stroke-width="1.5"/>
+<text x="340.00" y="683.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">Boundary joint / symmetric failure</text>
+<line x1="360" y1="709" x2="1055" y2="709" stroke="#f0f3f5" stroke-width="1"/>
+<line x1="360.00" y1="669" x2="362.66" y2="669" stroke="#0072B2" stroke-width="3"/>
+<line x1="360.00" y1="664" x2="360.00" y2="674" stroke="#0072B2" stroke-width="2"/>
+<line x1="362.66" y1="664" x2="362.66" y2="674" stroke="#0072B2" stroke-width="2"/>
+<circle cx="360.00" cy="669" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="1045.01" y1="688" x2="1052.64" y2="688" stroke="#D55E00" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="1045.01" y1="683" x2="1045.01" y2="693" stroke="#D55E00" stroke-width="2"/>
+<line x1="1052.64" y1="683" x2="1052.64" y2="693" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1050.13,682 1056.13,688.00 1050.13,694 1044.13,688.00" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1078.00" y="683.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#425466">[-0.0475, +0.0475, +0.0000]</text>
+<text x="1360.00" y="683.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">0.0% / 99.3%</text>
+<text x="707.50" y="748.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">Monte Carlo decision or coverage rate</text>
+<text x="50.00" y="846.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#566573">Source: amendment_v1/results/dependence_diagnostics.json, outcome_diagnostics[0:8]. Synthetic sensitivity only; no provider observations.</text>
+<text x="50.00" y="870.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#8f2d20">This non-gating screen cannot estimate provider dependence, certify or rescue B=384, or authorize collection or spend.</text>
+</svg>

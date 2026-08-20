@@ -1,0 +1,20 @@
+Paper 8 stage-1 release reference environment
+
+Observed during local release audit: 2026-08-07 (America/Los_Angeles)
+Python: 3.14.3
+NumPy: 2.4.2
+Markdown: 3.10.2 (presentation renderer only)
+WeasyPrint: 68.1 (presentation renderer only)
+
+STATUS: CURRENT REFERENCE ONLY; NOT PROVEN ORIGINAL ENVIRONMENT.
+
+The stored August 5 redesigned result does not record or prove the exact Python
+and NumPy versions that generated it. These versions identify the environment in
+which the release verifier, 120-test suite, and non-writing 178-cell smoke path
+were successfully checked during packaging. They are not a historical lock.
+
+The release verifier's orchestration and the table/figure generator use the
+Python standard library. The verifier's mandatory amendment-test and diagnostic-
+replay subprocesses, like full synthetic regeneration, import NumPy; the replay
+declares independent PCG64 random streams. Markdown and WeasyPrint affect only
+the rendered HTML/PDF reading copies; MANUSCRIPT.md remains authoritative.

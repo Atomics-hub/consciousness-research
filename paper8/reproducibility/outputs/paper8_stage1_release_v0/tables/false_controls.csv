@@ -1,0 +1,7 @@
+scenario,sensitivity_cells,replicates_per_cell,maximum_decision_rate,maximum_decision_rate_percent,maximum_wilson_upper,maximum_wilson_upper_percent,criterion_maximum_wilson_upper,all_cells_passed,source_json_path
+availability_only,12,20000,0,0.00%,0.000192036056105,0.019%,0.055,true,"confirmatory_size_certification.cell_assessments (role=false_control, scenario=availability_only)"
+fine_stratum_heterogeneity,12,20000,0,0.00%,0.000192036056105,0.019%,0.055,true,"confirmatory_size_certification.cell_assessments (role=false_control, scenario=fine_stratum_heterogeneity)"
+null,12,20000,0,0.00%,0.000192036056105,0.019%,0.055,true,"confirmatory_size_certification.cell_assessments (role=false_control, scenario=null)"
+one_cell_only,12,20000,0,0.00%,0.000192036056105,0.019%,0.055,true,"confirmatory_size_certification.cell_assessments (role=false_control, scenario=one_cell_only)"
+one_model_only,12,20000,0,0.00%,0.000192036056105,0.019%,0.055,true,"confirmatory_size_certification.cell_assessments (role=false_control, scenario=one_model_only)"
+positive_boundary,12,20000,0,0.00%,0.000192036056105,0.019%,0.055,true,"confirmatory_size_certification.cell_assessments (role=false_control, scenario=positive_boundary)"

@@ -1,0 +1,4 @@
+p_high_given_valid,semantic_validity_probability,blocks_per_macro_cell,blocks_per_fine_stratum,attempted_sessions_per_fine_stratum,attempted_sessions,retained_blocks,active_randomized_sessions,active_design_generation_request_cap,union_bound_global_support_lower_bound,dollar_cost,source_json_path
+0.1,0.9,384,16,1024,98304,1536,12288,147456,0.95077975075,,resource_plans.384.0.10
+0.3,0.9,384,16,331,31776,1536,12288,80928,0.954902212588,,resource_plans.384.0.30
+0.5,0.9,384,16,194,18624,1536,12288,67776,0.951587744455,,resource_plans.384.0.50

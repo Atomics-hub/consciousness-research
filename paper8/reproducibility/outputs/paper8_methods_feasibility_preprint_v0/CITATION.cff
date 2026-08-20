@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the versioned Zenodo record."
+title: "The Binding Test: Construction Audit, Synthetic Planning, and an Exploratory Feasibility Case Study of Causal Choice-Control Evaluation for AI Systems"
+type: article
+version: v1.0.0
+date-released: 2026-08-19
+doi: 10.5281/zenodo.22020047
+url: "https://doi.org/10.5281/zenodo.22020047"
+authors:
+  - family-names: Ryan
+    given-names: Thomas
+    affiliation: "Independent Researcher, San Francisco, CA"
+abstract: >-
+  A methods and feasibility preprint introducing a block-yoked randomized
+  design for testing whether later AI choice outputs depend on whether an
+  earlier choice controlled the assigned history. The release separates a
+  zero-call construction audit, conditional synthetic planning, and one
+  nonconfirmatory provider feasibility trajectory.
+license: CC-BY-4.0
+keywords:
+  - AI evaluation
+  - causal measurement
+  - yoked control
+  - choice contingency
+  - large language models
+  - construct validity
+  - randomized evaluation
+repository-code: "https://github.com/Atomics-hub/consciousness-research"

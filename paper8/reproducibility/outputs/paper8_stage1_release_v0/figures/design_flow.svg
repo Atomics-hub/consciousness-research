@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="430" viewBox="0 0 1250 430" role="img" aria-labelledby="title description">
+<title id="title">Binding Test stage-1 design flow</title>
+<desc id="description">Schematic from prospective baseline request through eligibility, canonical support, restricted assignment, execution, held-out follow-up, and fixed-stratum analysis.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="45.00" y="48.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#17212b">Binding Test stage-1 design flow</text>
+<text x="45.00" y="78.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#8f2d20">SYNTHETIC PLANNING ONLY — NO PROVIDER/MODEL OBSERVATIONS</text>
+<rect x="45" y="145" width="150" height="105" rx="12" fill="#f4f7fa" stroke="#385170" stroke-width="2"/>
+<text x="120.00" y="186.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#17212b">Prospective baseline</text>
+<text x="120.00" y="216.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#425466">request L or H</text>
+<line x1="201" y1="198" x2="215" y2="198" stroke="#0072B2" stroke-width="3"/>
+<polygon points="215,192 225,198 215,204" fill="#0072B2"/>
+<rect x="225" y="145" width="150" height="105" rx="12" fill="#f4f7fa" stroke="#385170" stroke-width="2"/>
+<text x="300.00" y="186.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#17212b">Eligibility gate</text>
+<text x="300.00" y="216.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#425466">semantic L/H only</text>
+<line x1="381" y1="198" x2="395" y2="198" stroke="#0072B2" stroke-width="3"/>
+<polygon points="395,192 405,198 395,204" fill="#0072B2"/>
+<rect x="405" y="145" width="150" height="105" rx="12" fill="#f4f7fa" stroke="#385170" stroke-width="2"/>
+<text x="480.00" y="186.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#17212b">Canonical support</text>
+<text x="480.00" y="216.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#425466">complete block</text>
+<line x1="561" y1="198" x2="575" y2="198" stroke="#0072B2" stroke-width="3"/>
+<polygon points="575,192 585,198 575,204" fill="#0072B2"/>
+<rect x="585" y="145" width="150" height="105" rx="12" fill="#f4f7fa" stroke="#385170" stroke-width="2"/>
+<text x="660.00" y="186.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#17212b">Restricted assignment</text>
+<text x="660.00" y="216.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#425466">self or yoke</text>
+<line x1="741" y1="198" x2="755" y2="198" stroke="#0072B2" stroke-width="3"/>
+<polygon points="755,192 765,198 755,204" fill="#0072B2"/>
+<rect x="765" y="145" width="150" height="105" rx="12" fill="#f4f7fa" stroke="#385170" stroke-width="2"/>
+<text x="840.00" y="186.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#17212b">Assigned execution</text>
+<text x="840.00" y="216.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#425466">role-neutral surface</text>
+<line x1="921" y1="198" x2="935" y2="198" stroke="#0072B2" stroke-width="3"/>
+<polygon points="935,192 945,198 935,204" fill="#0072B2"/>
+<rect x="945" y="145" width="150" height="105" rx="12" fill="#f4f7fa" stroke="#385170" stroke-width="2"/>
+<text x="1020.00" y="186.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#17212b">Held-out follow-up</text>
+<text x="1020.00" y="216.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#425466">D ∈ {L,H,U}</text>
+<rect x="315" y="305" width="620" height="65" rx="12" fill="#e8f4fa" stroke="#0072B2" stroke-width="2"/>
+<text x="625.00" y="334.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#17212b">Equal-weight fixed-stratum inference: 4 macro cells × 24 fine strata/cell</text>
+<text x="625.00" y="357.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#425466">Selected synthetic design: B=384 active blocks per macro cell</text>
+<text x="45.00" y="411.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#566573">Sources: reference_panel.{macro_cells,fine_strata_per_macro_cell}; confirmatory_size_certification.blocks_per_macro_cell. Diagram is a design schematic, not observed participant flow.</text>
+</svg>

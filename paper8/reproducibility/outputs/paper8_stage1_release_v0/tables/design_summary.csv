@@ -1,0 +1,21 @@
+section,field,value,unit,source_json_path,note
+evidence,provider calls made,0,calls,provider_calls_made,
+evidence,external spend,0,currency units,external_spend,
+evidence,scope,local deterministic construction and seeded synthetic numerical certification only,,scope,
+panel,macro cells,4,cells,reference_panel.macro_cells,
+panel,snapshot slots,reference_snapshot_a; reference_snapshot_b,,reference_panel.snapshot_slots,placeholders; exact provider snapshot IDs not frozen
+panel,target families,work_score_allocation; tool_budget_allocation,,reference_panel.target_families,
+panel,fine strata per macro cell,24,strata/cell,reference_panel.fine_strata_per_macro_cell,
+outcome,nominal categories,L; H; U,,confirmatory_size_certification.cell_assessments[*].config.equivalence_margin_items,
+outcome,L equivalence margin,0.05,probability difference,confirmatory_size_certification.cell_assessments[*].config.equivalence_margin_items,
+outcome,H equivalence margin,0.05,probability difference,confirmatory_size_certification.cell_assessments[*].config.equivalence_margin_items,
+outcome,U equivalence margin,0.02,probability difference,confirmatory_size_certification.cell_assessments[*].config.equivalence_margin_items,
+inference,alpha,0.05,one-sided level,confirmatory_size_certification.cell_assessments[*].config.alpha,
+inference,positive threshold,0.05,probability difference,confirmatory_size_certification.cell_assessments[*].config.positive_threshold,
+selected design,blocks per macro cell,384,blocks/cell,selected_sizes.positive_15.blocks_per_macro_cell,
+selected design,blocks per fine stratum,16,blocks/stratum,confirmatory_size_certification.blocks_per_fine_stratum,
+selected design,total retained blocks,1536,blocks,resource_plans.384.0.50.retained_blocks,Invariant across stored support assumptions at B=384.
+selected design,active randomized sessions,12288,sessions,resource_plans.384.0.50.retained_sessions,No provider sessions were collected; this is a planned count.
+simulation,master seed,20260805,seed,master_seed,
+simulation,required sensitivity cells,12,U×ICC cells,confirmatory_size_certification.required_sensitivity_grid,Count derived from the stored exact grid.
+simulation,gating assessments,84,scenario×sensitivity cells,confirmatory_size_certification.cell_assessments,

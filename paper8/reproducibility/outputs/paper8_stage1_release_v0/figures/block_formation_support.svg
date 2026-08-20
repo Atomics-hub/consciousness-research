@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="740" viewBox="0 0 1180 740" role="img" aria-labelledby="title description">
+<title id="title">Non-gating synthetic block-formation support screen</title>
+<desc id="description">Six-cell synthetic comparison of whole-panel block-formation support under independent and shared provider-batch shock profiles, with Wilson intervals. No provider observations; cannot certify B=384.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50.00" y="46.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#17212b">Whole-panel block-formation support under two declared profiles</text>
+<text x="50.00" y="78.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#8f2d20">NON-GATING SYNTHETIC SCREEN — NO PROVIDER OBSERVATIONS — CANNOT CERTIFY B=384</text>
+<text x="50.00" y="106.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#425466">Six declared cells; 2,000 replicates/cell; vertical bars are Wilson 95% Monte Carlo intervals.</text>
+<text x="50.00" y="130.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#425466">Support requires all 96 fine strata to reach 16 complete blocks before the exact per-stratum cap.</text>
+<line x1="110" y1="575.00" x2="1080" y2="575.00" stroke="#e3e9ee" stroke-width="1"/>
+<text x="96.00" y="580.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">0%</text>
+<line x1="110" y1="478.75" x2="1080" y2="478.75" stroke="#e3e9ee" stroke-width="1"/>
+<text x="96.00" y="483.75" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">25%</text>
+<line x1="110" y1="382.50" x2="1080" y2="382.50" stroke="#e3e9ee" stroke-width="1"/>
+<text x="96.00" y="387.50" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">50%</text>
+<line x1="110" y1="286.25" x2="1080" y2="286.25" stroke="#e3e9ee" stroke-width="1"/>
+<text x="96.00" y="291.25" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">75%</text>
+<line x1="110" y1="190.00" x2="1080" y2="190.00" stroke="#e3e9ee" stroke-width="1"/>
+<text x="96.00" y="195.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#17212b">100%</text>
+<line x1="110.00" y1="190" x2="110.00" y2="575" stroke="#f0f3f5" stroke-width="1"/>
+<text x="110.00" y="603.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">10%</text>
+<text x="110.00" y="624.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#566573">cap 1,024/stratum</text>
+<line x1="595.00" y1="190" x2="595.00" y2="575" stroke="#f0f3f5" stroke-width="1"/>
+<text x="595.00" y="603.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">30%</text>
+<text x="595.00" y="624.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#566573">cap 331/stratum</text>
+<line x1="1080.00" y1="190" x2="1080.00" y2="575" stroke="#f0f3f5" stroke-width="1"/>
+<text x="1080.00" y="603.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#17212b">50%</text>
+<text x="1080.00" y="624.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#566573">cap 194/stratum</text>
+<text x="595.00" y="658.00" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">Declared Pr(H | semantically valid)</text>
+<text x="30" y="382.50" transform="rotate(-90 30 382.50)" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#17212b">Whole-panel support rate</text>
+<polyline points="110.00,211.94 595.00,207.71 1080.00,209.63" fill="none" stroke="#0072B2" stroke-width="3"/>
+<line x1="110.00" y1="208.35" x2="110.00" y2="216.19" stroke="#0072B2" stroke-width="2"/>
+<line x1="104.00" y1="208.35" x2="116.00" y2="208.35" stroke="#0072B2" stroke-width="2"/>
+<line x1="104.00" y1="216.19" x2="116.00" y2="216.19" stroke="#0072B2" stroke-width="2"/>
+<circle cx="110.00" cy="211.94" r="6" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="120.00" y="201.94" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#0072B2">94.3%</text>
+<line x1="595.00" y1="204.50" x2="595.00" y2="211.59" stroke="#0072B2" stroke-width="2"/>
+<line x1="589.00" y1="204.50" x2="601.00" y2="204.50" stroke="#0072B2" stroke-width="2"/>
+<line x1="589.00" y1="211.59" x2="601.00" y2="211.59" stroke="#0072B2" stroke-width="2"/>
+<circle cx="595.00" cy="207.71" r="6" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="605.00" y="197.71" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#0072B2">95.4%</text>
+<line x1="1080.00" y1="206.24" x2="1080.00" y2="213.69" stroke="#0072B2" stroke-width="2"/>
+<line x1="1074.00" y1="206.24" x2="1086.00" y2="206.24" stroke="#0072B2" stroke-width="2"/>
+<line x1="1074.00" y1="213.69" x2="1086.00" y2="213.69" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1080.00" cy="209.63" r="6" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="1070.00" y="199.63" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#0072B2">94.9%</text>
+<line x1="150" y1="665" x2="188" y2="665" stroke="#0072B2" stroke-width="3"/>
+<circle cx="169" cy="665" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="200.00" y="670.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">Independent attempts</text>
+<polyline points="110.00,371.53 595.00,278.55 1080.00,287.21" fill="none" stroke="#D55E00" stroke-width="3" stroke-dasharray="8 5"/>
+<line x1="110.00" y1="363.13" x2="110.00" y2="379.96" stroke="#D55E00" stroke-width="2"/>
+<line x1="104.00" y1="363.13" x2="116.00" y2="363.13" stroke="#D55E00" stroke-width="2"/>
+<line x1="104.00" y1="379.96" x2="116.00" y2="379.96" stroke="#D55E00" stroke-width="2"/>
+<polygon points="110.00,364.53 117.00,371.53 110.00,378.53 103.00,371.53" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="120.00" y="361.53" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#D55E00">52.8%</text>
+<line x1="595.00" y1="271.65" x2="595.00" y2="285.85" stroke="#D55E00" stroke-width="2"/>
+<line x1="589.00" y1="271.65" x2="601.00" y2="271.65" stroke="#D55E00" stroke-width="2"/>
+<line x1="589.00" y1="285.85" x2="601.00" y2="285.85" stroke="#D55E00" stroke-width="2"/>
+<polygon points="595.00,271.55 602.00,278.55 595.00,285.55 588.00,278.55" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="605.00" y="268.55" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#D55E00">77.0%</text>
+<line x1="1080.00" y1="280.07" x2="1080.00" y2="294.72" stroke="#D55E00" stroke-width="2"/>
+<line x1="1074.00" y1="280.07" x2="1086.00" y2="280.07" stroke="#D55E00" stroke-width="2"/>
+<line x1="1074.00" y1="294.72" x2="1086.00" y2="294.72" stroke="#D55E00" stroke-width="2"/>
+<polygon points="1080.00,280.21 1087.00,287.21 1080.00,294.21 1073.00,287.21" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="1070.00" y="277.21" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#D55E00">74.8%</text>
+<line x1="520" y1="665" x2="558" y2="665" stroke="#D55E00" stroke-width="3" stroke-dasharray="8 5"/>
+<polygon points="539,659 545,665 539,671 533,665" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="570.00" y="670.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#17212b">Shared provider/batch shocks</text>
+<text x="50.00" y="707.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#566573">Source: amendment_v1/results/dependence_diagnostics.json, formation_diagnostics[0:6]. Synthetic feasibility only; no provider observations.</text>
+<text x="50.00" y="730.00" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#8f2d20">This non-gating screen cannot certify or rescue B=384 or authorize collection or spend.</text>
+</svg>

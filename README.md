@@ -91,6 +91,23 @@ The public package includes the manuscript, figures, result tables, release note
 
 Stable release snapshot: [`paper6-v1.0.0`](https://github.com/Atomics-hub/consciousness-research/releases/tag/paper6-v1.0.0)
 
+## Paper 8
+
+`paper8/` contains the Binding Test methods and exploratory-feasibility
+preprint together with its complete public reproducibility package:
+
+**The Binding Test: Construction Audit, Synthetic Planning, and an Exploratory
+Feasibility Case Study of Causal Choice-Control Evaluation for AI Systems**
+
+**[Read Paper 8 on Zenodo](https://doi.org/10.5281/zenodo.22020047)**
+
+The PDF is available in this repo:
+[`paper8/ryan_2026_binding_test_methods_feasibility.pdf`](paper8/ryan_2026_binding_test_methods_feasibility.pdf)
+
+The exact unpacked 108-payload reproducibility archive is available under
+[`paper8/reproducibility/`](paper8/reproducibility/). See
+[`paper8/README.md`](paper8/README.md) for scope and claim limitations.
+
 ## Repository Contents
 
 ```
@@ -101,6 +118,7 @@ paper3/             PreservationBench AST v0 benchmark preprint
 paper4/             Recurrent and perturbation stress-test follow-up
 paper5/             Causal-preservation and interchange-intervention follow-up
 paper6/             Blinded scaffold-lesion follow-up for persistent coding agents
+paper8/             Binding Test methods, PDF, and reproducibility release
 experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
