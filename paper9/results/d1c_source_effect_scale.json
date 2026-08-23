@@ -1,0 +1,93 @@
+{
+  "all_per_sample_rms": [
+    0.0009367563761770725,
+    0.0006490715895779431,
+    0.0006744978600181639,
+    0.0007294663228094578,
+    0.0008354260353371501,
+    0.000832041900139302,
+    0.0009939337614923716,
+    0.0009875026298686862,
+    0.0008577777189202607,
+    0.0013708379119634628,
+    0.0007936293259263039,
+    0.0012196650495752692
+  ],
+  "boundary": "source-only canonical Mi1 impulse decoder-effect scale; no candidate exposure",
+  "denominator_floor_q10_per_sample_decoder_effect_rms": 0.0006799947062972933,
+  "frozen_design": {
+    "cells": [
+      [
+        0,
+        0
+      ],
+      [
+        90,
+        1
+      ],
+      [
+        180,
+        0
+      ],
+      [
+        270,
+        1
+      ]
+    ],
+    "delta": 0.01,
+    "dt": 0.02,
+    "frame": 25,
+    "models": [
+      "010",
+      "011",
+      "012"
+    ]
+  },
+  "gates": {
+    "all_finite": true,
+    "positive_floor": true,
+    "three_source_checkpoints": true
+  },
+  "records": [
+    {
+      "finite": true,
+      "model_id": "010",
+      "per_cell_decoder_effect_rms": {
+        "0:0": 0.0009367563761770725,
+        "180:0": 0.0006744978600181639,
+        "270:1": 0.0007294663228094578,
+        "90:1": 0.0006490715895779431
+      },
+      "source_decoder_effect_rms": 0.0007559555233456194
+    },
+    {
+      "finite": true,
+      "model_id": "011",
+      "per_cell_decoder_effect_rms": {
+        "0:0": 0.0008354260353371501,
+        "180:0": 0.0009939337614923716,
+        "270:1": 0.0009875026298686862,
+        "90:1": 0.000832041900139302
+      },
+      "source_decoder_effect_rms": 0.0009156003361567855
+    },
+    {
+      "finite": true,
+      "model_id": "012",
+      "per_cell_decoder_effect_rms": {
+        "0:0": 0.0008577777189202607,
+        "180:0": 0.0007936293259263039,
+        "270:1": 0.0012196650495752692,
+        "90:1": 0.0013708379119634628
+      },
+      "source_decoder_effect_rms": 0.0010877051390707493
+    }
+  ],
+  "runtime": {
+    "device": "cpu",
+    "max_rss_platform_units": 2468020224,
+    "seconds": 47.23942179098958
+  },
+  "schema_version": "0.1.0",
+  "status": "PASS"
+}

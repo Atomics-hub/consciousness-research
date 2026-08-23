@@ -1,0 +1,303 @@
+{
+  "boundary": "checkpoint-008 exploratory activity-impulse effect test; not a biological intervention",
+  "classification_counts": {
+    "G1": 6,
+    "G3": 1
+  },
+  "exact": {
+    "Mi1": {
+      "decoder_effect": {
+        "block_effect_nrmse": 0.0,
+        "candidate_effect_rms": 0.0005064899451099336,
+        "effect_cosine": 1.0,
+        "effect_nrmse": 0.0,
+        "effect_sign_agreement_nonzero_source": 1.0,
+        "max_abs_effect_error": 0.0,
+        "passes": true,
+        "source_effect_rms": 0.0005064899451099336
+      },
+      "neural_effect": {
+        "block_effect_nrmse": 0.0,
+        "candidate_effect_rms": 0.0005071134073659778,
+        "effect_cosine": 1.0,
+        "effect_nrmse": 0.0,
+        "effect_sign_agreement_nonzero_source": 1.0,
+        "max_abs_effect_error": 0.0,
+        "passes": true,
+        "source_effect_rms": 0.0005071134073659778
+      },
+      "ordinary_nrmse": 0.0
+    },
+    "T4a": {
+      "decoder_effect": {
+        "block_effect_nrmse": 0.0,
+        "candidate_effect_rms": 0.0006310148164629936,
+        "effect_cosine": 1.0,
+        "effect_nrmse": 0.0,
+        "effect_sign_agreement_nonzero_source": 1.0,
+        "max_abs_effect_error": 0.0,
+        "passes": true,
+        "source_effect_rms": 0.0006310148164629936
+      },
+      "neural_effect": {
+        "block_effect_nrmse": 0.0,
+        "candidate_effect_rms": 0.00016438814054708928,
+        "effect_cosine": 1.0,
+        "effect_nrmse": 0.0,
+        "effect_sign_agreement_nonzero_source": 1.0,
+        "max_abs_effect_error": 0.0,
+        "passes": true,
+        "source_effect_rms": 0.00016438814054708928
+      },
+      "ordinary_nrmse": 0.0
+    },
+    "T5a": {
+      "decoder_effect": {
+        "block_effect_nrmse": 0.0,
+        "candidate_effect_rms": 0.00037140812491998076,
+        "effect_cosine": 1.0,
+        "effect_nrmse": 0.0,
+        "effect_sign_agreement_nonzero_source": 1.0,
+        "max_abs_effect_error": 0.0,
+        "passes": true,
+        "source_effect_rms": 0.00037140812491998076
+      },
+      "neural_effect": {
+        "block_effect_nrmse": 0.0,
+        "candidate_effect_rms": 0.00016322483133990318,
+        "effect_cosine": 1.0,
+        "effect_nrmse": 0.0,
+        "effect_sign_agreement_nonzero_source": 1.0,
+        "max_abs_effect_error": 0.0,
+        "passes": true,
+        "source_effect_rms": 0.00016322483133990318
+      },
+      "ordinary_nrmse": 0.0
+    }
+  },
+  "frozen_design": {
+    "cells": [
+      [
+        0,
+        0
+      ],
+      [
+        90,
+        1
+      ],
+      [
+        180,
+        0
+      ],
+      [
+        270,
+        1
+      ]
+    ],
+    "decoder_effect_margin": 0.01,
+    "delta": 0.01,
+    "dt": 0.02,
+    "frame": 25,
+    "model": "008",
+    "neural_effect_margin": 0.01,
+    "time_seconds": 0.5
+  },
+  "gates": {
+    "at_least_one_eligible_candidate": true,
+    "exact_shams_zero": true,
+    "same_checkpoint_global_gate_pass": true,
+    "source_effects_nonzero": true,
+    "topology_unchanged": true
+  },
+  "outcomes": {
+    "Mi1": {
+      "shunt": {
+        "classification": "G1",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.0017076042713597417,
+          "candidate_effect_rms": 0.0005067660240456462,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.0017076042713597417,
+          "effect_sign_agreement_nonzero_source": 0.9964281320571899,
+          "max_abs_effect_error": 4.166364669799805e-05,
+          "passes": true,
+          "source_effect_rms": 0.0005064899451099336
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.001683984068222344,
+          "candidate_effect_rms": 0.0005070864572189748,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.001879655523225665,
+          "effect_sign_agreement_nonzero_source": 0.9960219860076904,
+          "max_abs_effect_error": 0.0002899169921875,
+          "passes": true,
+          "source_effect_rms": 0.0005071134073659778
+        },
+        "ordinary_nrmse": 8.710542897460982e-05
+      },
+      "timescale": {
+        "classification": "G3",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.02331274002790451,
+          "candidate_effect_rms": 0.000507707183714956,
+          "effect_cosine": 0.9998024702072144,
+          "effect_nrmse": 0.02331274002790451,
+          "effect_sign_agreement_nonzero_source": 0.9918351173400879,
+          "max_abs_effect_error": 0.000845491886138916,
+          "passes": false,
+          "source_effect_rms": 0.0005064899451099336
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.017525997012853622,
+          "candidate_effect_rms": 0.0005070617771707475,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.014840037561953068,
+          "effect_sign_agreement_nonzero_source": 0.9928770065307617,
+          "max_abs_effect_error": 0.0022754669189453125,
+          "passes": false,
+          "source_effect_rms": 0.0005071134073659778
+        },
+        "ordinary_nrmse": 0.0005338823539204895
+      },
+      "two_state": {
+        "classification": "NOT_TESTED",
+        "reason": "checkpoint-008 full-replacement ordinary/decoder result was not G1"
+      }
+    },
+    "T4a": {
+      "shunt": {
+        "classification": "G1",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.0007692637154832482,
+          "candidate_effect_rms": 0.0006309874588623643,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.0007692637154832482,
+          "effect_sign_agreement_nonzero_source": 0.9824333190917969,
+          "max_abs_effect_error": 7.152557373046875e-06,
+          "passes": true,
+          "source_effect_rms": 0.0006310148164629936
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.0008592187077738345,
+          "candidate_effect_rms": 0.0001643836876610294,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.0043637012131512165,
+          "effect_sign_agreement_nonzero_source": 0.973108172416687,
+          "max_abs_effect_error": 2.09808349609375e-05,
+          "passes": true,
+          "source_effect_rms": 0.00016438814054708928
+        },
+        "ordinary_nrmse": 7.3478627200529445e-06
+      },
+      "timescale": {
+        "classification": "G1",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.006201408337801695,
+          "candidate_effect_rms": 0.0006300768000073731,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.006201408337801695,
+          "effect_sign_agreement_nonzero_source": 0.9810376167297363,
+          "max_abs_effect_error": 0.00010454654693603516,
+          "passes": true,
+          "source_effect_rms": 0.0006310148164629936
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.004763259552419186,
+          "candidate_effect_rms": 0.00016431065159849823,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.006624455098062754,
+          "effect_sign_agreement_nonzero_source": 0.9713655710220337,
+          "max_abs_effect_error": 9.775161743164062e-05,
+          "passes": true,
+          "source_effect_rms": 0.00016438814054708928
+        },
+        "ordinary_nrmse": 9.698401117930189e-05
+      },
+      "two_state": {
+        "classification": "G1",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.006791825871914625,
+          "candidate_effect_rms": 0.0006301385001279414,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.006791825871914625,
+          "effect_sign_agreement_nonzero_source": 0.976296067237854,
+          "max_abs_effect_error": 0.00010657310485839844,
+          "passes": true,
+          "source_effect_rms": 0.0006310148164629936
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.005438861902803183,
+          "candidate_effect_rms": 0.00016420232714153826,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.007136126048862934,
+          "effect_sign_agreement_nonzero_source": 0.9704768061637878,
+          "max_abs_effect_error": 5.0902366638183594e-05,
+          "passes": true,
+          "source_effect_rms": 0.00016438814054708928
+        },
+        "ordinary_nrmse": 0.00010452482820255682
+      }
+    },
+    "T5a": {
+      "shunt": {
+        "classification": "G1",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.0012005079770460725,
+          "candidate_effect_rms": 0.00037134764716029167,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.0012005079770460725,
+          "effect_sign_agreement_nonzero_source": 0.934565007686615,
+          "max_abs_effect_error": 7.152557373046875e-06,
+          "passes": true,
+          "source_effect_rms": 0.00037140812491998076
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.0003233341849409044,
+          "candidate_effect_rms": 0.00016321343719027936,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.0037904975470155478,
+          "effect_sign_agreement_nonzero_source": 0.9265893697738647,
+          "max_abs_effect_error": 1.71661376953125e-05,
+          "passes": true,
+          "source_effect_rms": 0.00016322483133990318
+        },
+        "ordinary_nrmse": 7.476830887753749e-06
+      },
+      "timescale": {
+        "classification": "G1",
+        "decoder_effect": {
+          "block_effect_nrmse": 0.007692328654229641,
+          "candidate_effect_rms": 0.0003695818595588207,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.007692328654229641,
+          "effect_sign_agreement_nonzero_source": 0.9282717704772949,
+          "max_abs_effect_error": 5.6624412536621094e-05,
+          "passes": true,
+          "source_effect_rms": 0.00037140812491998076
+        },
+        "neural_effect": {
+          "block_effect_nrmse": 0.006504351738840342,
+          "candidate_effect_rms": 0.0001628582540433854,
+          "effect_cosine": 1.0,
+          "effect_nrmse": 0.007715423125773668,
+          "effect_sign_agreement_nonzero_source": 0.9213269948959351,
+          "max_abs_effect_error": 7.605552673339844e-05,
+          "passes": true,
+          "source_effect_rms": 0.00016322483133990318
+        },
+        "ordinary_nrmse": 3.223219027859159e-05
+      },
+      "two_state": {
+        "classification": "NOT_TESTED",
+        "reason": "checkpoint-008 full-replacement ordinary/decoder result was not G1"
+      }
+    }
+  },
+  "runtime": {
+    "device": "cpu",
+    "max_rss_platform_units": 2975072256,
+    "seconds": 116.57015270798001
+  },
+  "schema_version": "0.1.0",
+  "status": "PASS"
+}

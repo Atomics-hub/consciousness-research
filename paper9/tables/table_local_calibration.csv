@@ -1,0 +1,10 @@
+family,block,local_nrmse_percent,passes_complete_gate
+timescale,Mi1,0.9083962999284267,True
+timescale,T4a,0.7163937203586102,True
+timescale,T5a,0.9562643244862556,True
+two_state,Mi1,0.9849525988101959,True
+two_state,T4a,0.6129586603492498,True
+two_state,T5a,1.8639585003256798,False
+shunt,Mi1,0.16851400723680854,True
+shunt,T4a,0.035050351289100945,True
+shunt,T5a,0.521689048036933,True

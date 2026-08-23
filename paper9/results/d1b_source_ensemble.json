@@ -1,0 +1,3586 @@
+{
+  "boundary": "source-only checkpoints 005--007; source-model variation is model uncertainty, not biological repeatability or independent evidence",
+  "frozen_design": {
+    "angles": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330
+    ],
+    "authored_ceiling": 0.01,
+    "cell_types": [
+      "T4a",
+      "T5a",
+      "Mi1"
+    ],
+    "dt": 0.02,
+    "fraction_of_q10": 0.25,
+    "frames": 71,
+    "intensities": [
+      0,
+      1
+    ],
+    "models": [
+      "005",
+      "006",
+      "007"
+    ],
+    "samples": 24
+  },
+  "gates": {
+    "all_source_finite": true,
+    "expected_node_counts": true,
+    "fixed_decoder_architecture": true,
+    "margins_not_relaxed": true,
+    "positive_margins": true
+  },
+  "margins": {
+    "block_response": {
+      "authored_ceiling": 0.01,
+      "max": 1.953640052461852,
+      "median": 0.6024187532235882,
+      "min": 0.07688282948282507,
+      "n": 216,
+      "q10_source_srmse": 0.1948843034462162,
+      "quarter_q10": 0.04872107586155405,
+      "selected_margin": 0.01,
+      "ten_x_exact_floor": 0.0
+    },
+    "decoder": {
+      "authored_ceiling": 0.01,
+      "max": 1.1103551620249288,
+      "median": 0.864656411874738,
+      "min": 0.5850601938411446,
+      "n": 72,
+      "q10_source_srmse": 0.7235407601299628,
+      "quarter_q10": 0.1808851900324907,
+      "selected_margin": 0.01,
+      "ten_x_exact_floor": 0.0
+    },
+    "local_derivative": {
+      "authored_ceiling": 0.01,
+      "max": 1.531365947557996,
+      "median": 0.6177698248237153,
+      "min": 0.213981235024841,
+      "n": 216,
+      "q10_source_srmse": 0.3080492196204253,
+      "quarter_q10": 0.07701230490510633,
+      "selected_margin": 0.01,
+      "ten_x_exact_floor": 0.0
+    }
+  },
+  "pairwise_summaries": {
+    "decoder": [
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 0.8542589295350199
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 0.9519238077814977
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 0.9497214199119722
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 1.0151075763329662
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 1.0250340044526705
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 1.0592394550745914
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.8681993610031095
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 1.0347991839970596
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 0.8739755694716762
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 0.8165315476223057
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 0.8850927389446215
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 0.8934643179024966
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 0.7822066287563835
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 0.9440045928903504
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 0.7813624960209405
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 0.8649867711197758
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 0.862831865141597
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 0.8139234576362889
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.937004681003672
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 0.8306975325576876
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 0.9939856177336788
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 0.9418094947218327
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 0.8494448018856033
+      },
+      {
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 0.9026656560383043
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.9256737356342931
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.9478833735998329
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.979287719239529
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 1.0087317435626155
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.9954505745719991
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 1.04290430506792
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.9120399868757583
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 1.1103551620249288
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.8335306777569018
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.9321057314934919
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.8555900801938265
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.9119333073374677
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.8352675666263897
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.8925249422255587
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.8353929267860721
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.799291305511928
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.8375179435187475
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.7865310530800481
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.8149434164715059
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.8643260526297001
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.9571244228596631
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.912592064880766
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.925823744845784
+      },
+      {
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.8909595702614582
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.7118103582849886
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.8980733245524852
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.7810395451514568
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.968819223768741
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.7747300147108198
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.9321228482806719
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.7731844995379771
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.885351088919251
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.7646440651627368
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.70253731585705
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.7472542700486846
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.71315226017225
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.7724544906377455
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.6050505970151523
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.7350494302261745
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.5893668963451536
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.7370073767225132
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.5850601938411446
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.7725870010853781
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.7024596629360808
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.8799493941401794
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.77328843241526
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.7222620190081616
+      },
+      {
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.798777754194058
+      }
+    ],
+    "response": [
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 1.4342764991802754
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 1.8840516216095828
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 1.307822082727169
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 1.9310482922409464
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 0.5057014163181067
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 1.713127155966147
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.4911346117394497
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 0.7150168494022009
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 0.9627515088937717
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 1.6944398872021345
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 1.1877801845054632
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 1.7722102573035152
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 1.2189476079153547
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 1.824329118674793
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 1.2024465814913192
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 1.8523077897265
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 0.6641428826009173
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 1.2532852634925555
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.6958419794219631
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 1.126728631091246
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 1.2963101290265304
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 1.8914973003078235
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 1.3879221890345328
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 1.8781943633696023
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 0.3637481898298081
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 1.7286675424817144
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 0.34328744136752004
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 1.681610887093908
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 0.2629235670711714
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 1.8732348875793048
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.2776392155447837
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 1.953640052461852
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 0.506521388078165
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 1.8835895378335472
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 0.6521450370193588
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 1.8123755574857163
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 0.6429565871383166
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 1.8027510690245836
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 0.5926157050912915
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 1.8323915308733836
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 0.5325797822371902
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 1.878624650487055
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.31213172545096224
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 1.8697583586977449
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 0.22689029075496556
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 1.7683796744261118
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 0.30446035055785625
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 1.777925678041818
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 0.14632055794986495
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 0.26941545156651936
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 0.17484034667883575
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 0.2838548800849799
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 0.1489279301626551
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 0.26806687338041213
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.13893888762067422
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 0.2513539290195989
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 0.1656455844020936
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 0.24770377064512156
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 0.1987383103228623
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 0.22403152589262038
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 0.21261721517367277
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 0.2117525741361569
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 0.23645621238376166
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 0.23523636198358536
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 0.22372237850052912
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 0.19476973179609833
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.22012527094021572
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 0.17727875999253306
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 0.22573703006832582
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 0.21520050774148283
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 0.18974243530220344
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 0.23928787799919954
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 1.3404113092531673
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 1.5041670086230874
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 1.3415091076092536
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 1.7184168273445706
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 1.0635340890415692
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 1.762066591355508
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 1.0519645038170966
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 1.286903735453163
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 1.3023965539911007
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 1.6426414041432837
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 1.322905041316638
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 1.7331917186563546
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 1.3348340318961036
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 1.800048468402824
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 1.288038166276363
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 1.817587010360469
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.8092115969613983
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 1.227173046921693
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.584357839151246
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.5047492741000712
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.9214292224002847
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 1.1353001798038302
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 1.2183345251452482
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 1.4213269851354549
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.5627658217845335
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 1.6916449011705565
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.5270099075087369
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 1.6582881968713385
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.3275519495103663
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 1.8615506748722808
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.07688282948282507
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 1.903415015918666
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.23010250064785834
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 1.8030244172899208
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.3465545612205502
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 1.7993690805980198
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.34507485986488085
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 1.8036529278623301
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.2715265690342808
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 1.8165229471131246
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.21705078185338175
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 1.8379500572703058
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.1280059556426232
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 1.8739393637781308
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.3717303592052949
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 1.7551996620345844
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.5031290151422687
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 1.7366455443245254
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.6652488774535565
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.21812033958893004
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.6692843394209381
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.1923690637946248
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.6704718062505103
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.2091234374376195
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.6440909610864841
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.18725478687739222
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.611703986025479
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.14183702412995336
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.5983825065162991
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.15145316843456838
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.5930452428908345
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.1727112470735783
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.6008417659440625
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.17388226407345564
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.6336517331930852
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.19499887509633407
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.653760339068323
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.23918966473685713
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.6581246116559664
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.26294320242048264
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.6568235550531174
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.24651644875316955
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 1.2468176411248288
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 1.2448105271873338
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 1.2063075666163496
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.9798415625957329
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 1.0255238553693418
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.7581443584287888
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.7427278344129905
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 1.4196230871225883
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.6039957405031139
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 1.040771845526811
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.5399640767654847
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.7217233829907959
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.470940541436052
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.5192265480130394
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.49009859504692765
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.3120788069866719
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.48900541795640945
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.3853003652624165
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 1.0999158030725689
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 1.1894125179121364
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 1.557590764890838
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 1.7771301279569316
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 1.4924536628992757
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 1.5162812219611859
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.3476760987107314
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.179211249214794
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.3728126068389484
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.1678153784879624
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.34292117533031297
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.17771820495546356
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.3176335475587978
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.23820302365767926
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.3310403376260806
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.32060201845590475
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.3726360711913972
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.35235461340523716
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.3836674803035081
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.34759964827990913
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.4105673322687658
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.33866502544624005
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.4321117694175909
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.26982416532603043
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.4085819512079956
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.1828140787938727
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.3683752612476041
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.16798666648173774
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.3344700968549791
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.17733777256954242
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.7167148384282505
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.21640909023736596
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.7408159613743951
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.24329667031477614
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.7540803058631582
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.28571189123396934
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.7469215089597211
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.29663098867594156
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.7377377621410566
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.2647493061509601
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.7449402320428956
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.2626653884482791
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.7400483676372285
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.2563751144682807
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.7394250604427983
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.2875139755513998
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.752415751883677
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.2443528297886062
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.7314221832138731
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.20447261101532724
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.7196856868503198
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.20248085180254977
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.719606406910453
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.205355723669204
+      }
+    ],
+    "velocity": [
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 0.7326753170704858
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 0.7850971003808629
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 0.6898560404684452
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 0.7912578116236345
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 0.5515124974710055
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 0.5914032315131011
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.5349499121239424
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 0.5287729672670569
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 0.6982737554154792
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 0.6944108849793736
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 0.7688719258976662
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 0.8017334386956084
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 0.8030018267697687
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 0.8369135821387957
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 0.7258191315111859
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 0.7921630480075029
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 0.5376768972890317
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 0.5777525293570177
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.45859498279498806
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 0.482707749183449
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 0.6124193158084935
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 0.6347887408403955
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 0.6774122350442767
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 0.7367067777052764
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 1.040367970136647
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 1.2736497246508318
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 0.9749142931272425
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 1.2749699426416132
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 0.9595397580620275
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 1.2611085543548752
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.9238889942852333
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 1.2288199997707911
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 1.104112739107208
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 1.230824834001907
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 1.1863076298314492
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 1.2352214451028183
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 1.2054063793527539
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 1.237329547312457
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 1.1149963452708382
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 1.2302989018105013
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 1.0444199769949825
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 1.229239598226432
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.8669208254583924
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 1.2234692802093747
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 0.8929861073610703
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 1.2483373624428773
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 0.9586169464452341
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 1.2663963640228677
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 0,
+        "srmse": 0.2294823805268101
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 1,
+        "srmse": 0.3065418950289235
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 2,
+        "srmse": 0.2228200433204232
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 3,
+        "srmse": 0.30109418768594665
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 4,
+        "srmse": 0.21575034009131405
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 5,
+        "srmse": 0.29214206725021025
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 6,
+        "srmse": 0.213981235024841
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 7,
+        "srmse": 0.29483813493020994
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 8,
+        "srmse": 0.21569849400411129
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 9,
+        "srmse": 0.30822832765980757
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 10,
+        "srmse": 0.21958464001151798
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 11,
+        "srmse": 0.3094870949245236
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 12,
+        "srmse": 0.2224799924761226
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 13,
+        "srmse": 0.30605633966163187
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 14,
+        "srmse": 0.21879164560204087
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 15,
+        "srmse": 0.30787011158104305
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 16,
+        "srmse": 0.21619620140888743
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 17,
+        "srmse": 0.28473505037177793
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 18,
+        "srmse": 0.22843136324579075
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 19,
+        "srmse": 0.27274677288090854
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 20,
+        "srmse": 0.24582390488055234
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 21,
+        "srmse": 0.28805848840299964
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 22,
+        "srmse": 0.2358272618222413
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "006",
+        "sample": 23,
+        "srmse": 0.2948607633899677
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.703490370066016
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.8386650194110454
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.6574941288693917
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.849988460167908
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.548300596493778
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.7914039686259975
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.4613330096551127
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.7507149439240284
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.555172100159751
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.837333446052612
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.632720106056412
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.9132396278501697
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.6491244926059611
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.9459360571869662
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.6017521924855974
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.9387897628543193
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.4910088507226452
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.8012519236549631
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.45249389593835787
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.6888398917884446
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.5825838880531294
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.7408158037446202
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.6646052619490553
+      },
+      {
+        "cell_type": "T4a",
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.8056123566951783
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 1.0323533780229242
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 1.4945464990833417
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.9817115624942137
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 1.48235557602331
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.9336586524374143
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 1.4821415113109784
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.790474662456021
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 1.485075521652039
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.9590329026975583
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 1.5076029544567742
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 1.0272008346962562
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 1.5256621604813236
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 1.0274580678133272
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 1.531365947557996
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.972592144186491
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 1.5288875370284518
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.9251928294175505
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 1.523364190875873
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.7594094292704283
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 1.5170263584258536
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.8976844639992526
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 1.5089475843414049
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.9700269440053028
+      },
+      {
+        "cell_type": "T5a",
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 1.5029548616954527
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.4002893165018484
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.39243005677333737
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.4016137180950306
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.3789860193247752
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.41228652668399
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.38371294352512786
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.41968516427343716
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.3810735059037815
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.4218811388574303
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.3717206279966086
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.4144935256580699
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.38125018215894535
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.4131379250508901
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.38910517208259826
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.41797633030934106
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.38510198670594237
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.42766270324132577
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.38580619096602625
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.42140167440129034
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.38988380101536213
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.410436081693802
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.396518820556072
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.4021444123956502
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "005",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.3921131767882423
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.63045539883889
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.4594191784777543
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.5884008106978792
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.46354039617889936
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.6390727216688867
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.4182334680995765
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.5959417576197636
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.4333327542038204
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.6231203338389373
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.42568130244028796
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.5639403159634475
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.40204737713822236
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.5865523354883556
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.4047712537497098
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.553240980651779
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.3760390979396618
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.5734100168123886
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.4092771633095659
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.5497982875754875
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.44122046699238665
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.6294487106434747
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.44012928510460897
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.6006894285593232
+      },
+      {
+        "cell_type": "T4a",
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.43896941591403976
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.7724398075181251
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.6853760363093065
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.7819483488207639
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.6916705089375282
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.778748328087894
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.685235060229192
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.7768333286382973
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.6748671006116351
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.8080884311773514
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.6845007012838029
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.8364377762310518
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.6939366223713956
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.8686477489335015
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.691192905744543
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.8726946272638573
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.701779968545059
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.8534913473859689
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.6911594837826764
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.797602241023706
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.6698288177916587
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.7612783502197719
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.6687903018166083
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.7581051657689608
+      },
+      {
+        "cell_type": "T5a",
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.6791027800489352
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 0,
+        "srmse": 0.5457752233237365
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 1,
+        "srmse": 0.3971172224185652
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 2,
+        "srmse": 0.5467587666312437
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 3,
+        "srmse": 0.41513860940000624
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 4,
+        "srmse": 0.5508873268989044
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 5,
+        "srmse": 0.4318246900129326
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 6,
+        "srmse": 0.5559021157340684
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 7,
+        "srmse": 0.4387353050686302
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 8,
+        "srmse": 0.5573558231127002
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 9,
+        "srmse": 0.42065433785757833
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 10,
+        "srmse": 0.5539229247305213
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 11,
+        "srmse": 0.4187605546895102
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 12,
+        "srmse": 0.5548324378257093
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 13,
+        "srmse": 0.41422923393970895
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 14,
+        "srmse": 0.5555427649099102
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 15,
+        "srmse": 0.4248929998964955
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 16,
+        "srmse": 0.5564017935725023
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 17,
+        "srmse": 0.4110227684723432
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 18,
+        "srmse": 0.5601753687825308
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 19,
+        "srmse": 0.3976881594454325
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 20,
+        "srmse": 0.5588405014446728
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 21,
+        "srmse": 0.3873248234189258
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 22,
+        "srmse": 0.5500731254504054
+      },
+      {
+        "cell_type": "Mi1",
+        "left": "006",
+        "right": "007",
+        "sample": 23,
+        "srmse": 0.3921530463396047
+      }
+    ]
+  },
+  "runtime": {
+    "device": "cpu",
+    "max_rss_platform_units": 7499481088,
+    "seconds": 1939.6645870829816
+  },
+  "schema_version": "0.1.0",
+  "source_records": [
+    {
+      "activity_finite": true,
+      "decoder_finite": true,
+      "decoder_parameters": 7427,
+      "model_id": "005",
+      "node_counts": {
+        "Mi1": 721,
+        "T4a": 721,
+        "T5a": 721
+      }
+    },
+    {
+      "activity_finite": true,
+      "decoder_finite": true,
+      "decoder_parameters": 7427,
+      "model_id": "006",
+      "node_counts": {
+        "Mi1": 721,
+        "T4a": 721,
+        "T5a": 721
+      }
+    },
+    {
+      "activity_finite": true,
+      "decoder_finite": true,
+      "decoder_parameters": 7427,
+      "model_id": "007",
+      "node_counts": {
+        "Mi1": 721,
+        "T4a": 721,
+        "T5a": 721
+      }
+    }
+  ],
+  "status": "PASS"
+}

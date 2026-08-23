@@ -1,0 +1,48 @@
+{
+  "status": "upload-ready-doi-reserved",
+  "resource_type": "Publication / Preprint",
+  "title": "Stress-Testing Local Neural-Dynamics Equivalence in a Connectome-Constrained Visual System",
+  "publication_date": "2026-08-23",
+  "version": "v1.0.0",
+  "publisher": "Zenodo",
+  "language": "English",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright 2026 Thomas Ryan",
+  "creators": [
+    {
+      "family_name": "Ryan",
+      "given_names": "Thomas",
+      "role": "Researcher",
+      "affiliation": "Independent Researcher, San Francisco, CA"
+    }
+  ],
+  "orcid_asserted": false,
+  "doi": "10.5281/zenodo.22070302",
+  "upload_files": [
+    "ryan_2026_stress_testing_local_neural_dynamics_equivalence.pdf",
+    "paper9_reproducibility_package_v1.0.0.zip"
+  ],
+  "keywords": [
+    "connectome-constrained model",
+    "neural dynamics",
+    "compositional equivalence",
+    "Drosophila visual system",
+    "model substitution",
+    "perturbation effects",
+    "causal gain",
+    "null results",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {"relation": "References", "identifier": "10.5281/zenodo.19374628"},
+    {"relation": "References", "identifier": "10.5281/zenodo.19738204"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20480505"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20705654"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20852042"},
+    {"relation": "References", "identifier": "10.5281/zenodo.21342748"},
+    {"relation": "References", "identifier": "10.5281/zenodo.21782895"},
+    {"relation": "References", "identifier": "10.5281/zenodo.22020047"}
+  ],
+  "confirmatory_data": false,
+  "living_subjects": false
+}

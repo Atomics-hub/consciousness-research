@@ -108,6 +108,21 @@ The exact unpacked 108-payload reproducibility archive is available under
 [`paper8/reproducibility/`](paper8/reproducibility/). See
 [`paper8/README.md`](paper8/README.md) for scope and claim limitations.
 
+## Paper 9
+
+`paper9/` contains the staged local-equivalence stress test and its complete
+public reproducibility package:
+
+**Stress-Testing Local Neural-Dynamics Equivalence in a Connectome-Constrained Visual System**
+
+**[Read Paper 9 on Zenodo](https://doi.org/10.5281/zenodo.22070302)**
+
+The PDF is available in this repo:
+[`paper9/ryan_2026_stress_testing_local_neural_dynamics_equivalence.pdf`](paper9/ryan_2026_stress_testing_local_neural_dynamics_equivalence.pdf)
+
+See [`paper9/README.md`](paper9/README.md) for the exact reproduction commands,
+staged claim boundaries, null-result interpretation, and artifact inventory.
+
 ## Repository Contents
 
 ```
@@ -119,6 +134,7 @@ paper4/             Recurrent and perturbation stress-test follow-up
 paper5/             Causal-preservation and interchange-intervention follow-up
 paper6/             Blinded scaffold-lesion follow-up for persistent coding agents
 paper8/             Binding Test methods, PDF, and reproducibility release
+paper9/             Local neural-dynamics equivalence stress test and reproducibility release
 experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
@@ -203,6 +219,19 @@ Paper 6:
   author={Ryan, Thomas},
   year={2026},
   doi={10.5281/zenodo.21342748},
+  publisher={Zenodo},
+  note={Version v1.0.0}
+}
+```
+
+Paper 9:
+
+```bibtex
+@article{ryan2026localequivalence,
+  title={Stress-Testing Local Neural-Dynamics Equivalence in a Connectome-Constrained Visual System},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.22070302},
   publisher={Zenodo},
   note={Version v1.0.0}
 }

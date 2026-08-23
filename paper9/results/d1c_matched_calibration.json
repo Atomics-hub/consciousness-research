@@ -1,0 +1,193 @@
+{
+  "boundary": "checkpoint-012 Mi1 local-only error matching; no global or causal candidate outcome",
+  "frozen_design": {
+    "gamma_grid": [
+      0.01,
+      0.025,
+      0.05,
+      0.075,
+      0.1
+    ],
+    "margin": 0.01,
+    "match_ratio": [
+      0.8,
+      1.25
+    ],
+    "model": "012",
+    "timescale_alpha": 0.01
+  },
+  "gates": {
+    "matched_shunt_exists": false,
+    "source_effect_scale_pass": true,
+    "source_finite": true,
+    "timescale_passes": true
+  },
+  "runtime": {
+    "device": "cpu",
+    "max_rss_platform_units": 7480999936,
+    "seconds": 44.58561916695908
+  },
+  "schema_version": "0.1.0",
+  "selected_shunt": null,
+  "shunt_grid": [
+    {
+      "gamma": 0.01,
+      "ratio_to_timescale": 0.16728091362405964,
+      "result": {
+        "aggregate": {
+          "max_abs_error": 0.06802352517843246,
+          "nrmse": 0.0015210820129141212,
+          "p99_abs_error_ratio": 0.0006687428103759885,
+          "passes": true
+        },
+        "by_intensity": {
+          "0": {
+            "max_abs_error": 0.03141491115093231,
+            "nrmse": 0.0007934946333989501,
+            "p99_abs_error_ratio": 0.00028318591648712754,
+            "passes": true
+          },
+          "1": {
+            "max_abs_error": 0.06802352517843246,
+            "nrmse": 0.002054970245808363,
+            "p99_abs_error_ratio": 0.0007033738074824214,
+            "passes": true
+          }
+        },
+        "passes": true
+      }
+    },
+    {
+      "gamma": 0.025,
+      "ratio_to_timescale": 0.4182022904615335,
+      "result": {
+        "aggregate": {
+          "max_abs_error": 0.17005881667137146,
+          "nrmse": 0.003802705090492964,
+          "p99_abs_error_ratio": 0.0016718568513169885,
+          "passes": true
+        },
+        "by_intensity": {
+          "0": {
+            "max_abs_error": 0.07853728532791138,
+            "nrmse": 0.001983736641705036,
+            "p99_abs_error_ratio": 0.0007079648785293102,
+            "passes": true
+          },
+          "1": {
+            "max_abs_error": 0.17005881667137146,
+            "nrmse": 0.005137425847351551,
+            "p99_abs_error_ratio": 0.0017584344604983926,
+            "passes": true
+          }
+        },
+        "passes": true
+      }
+    },
+    {
+      "gamma": 0.05,
+      "ratio_to_timescale": 0.836404580923067,
+      "result": {
+        "aggregate": {
+          "max_abs_error": 0.3401176333427429,
+          "nrmse": 0.007605410180985928,
+          "p99_abs_error_ratio": 0.003343713702633977,
+          "passes": true
+        },
+        "by_intensity": {
+          "0": {
+            "max_abs_error": 0.15707457065582275,
+            "nrmse": 0.003967473283410072,
+            "p99_abs_error_ratio": 0.0014159297570586205,
+            "passes": true
+          },
+          "1": {
+            "max_abs_error": 0.3401176333427429,
+            "nrmse": 0.010274851694703102,
+            "p99_abs_error_ratio": 0.003516868920996785,
+            "passes": false
+          }
+        },
+        "passes": false
+      }
+    },
+    {
+      "gamma": 0.075,
+      "ratio_to_timescale": 1.254606922595676,
+      "result": {
+        "aggregate": {
+          "max_abs_error": 0.5101764798164368,
+          "nrmse": 0.011408115737140179,
+          "p99_abs_error_ratio": 0.005015570670366287,
+          "passes": false
+        },
+        "by_intensity": {
+          "0": {
+            "max_abs_error": 0.23561185598373413,
+            "nrmse": 0.005951210390776396,
+            "p99_abs_error_ratio": 0.0021238946355879307,
+            "passes": true
+          },
+          "1": {
+            "max_abs_error": 0.5101764798164368,
+            "nrmse": 0.015412278473377228,
+            "p99_abs_error_ratio": 0.005275303963571787,
+            "passes": false
+          }
+        },
+        "passes": false
+      }
+    },
+    {
+      "gamma": 0.1,
+      "ratio_to_timescale": 1.672809161846134,
+      "result": {
+        "aggregate": {
+          "max_abs_error": 0.6802352666854858,
+          "nrmse": 0.015210820361971855,
+          "p99_abs_error_ratio": 0.006687427405267954,
+          "passes": false
+        },
+        "by_intensity": {
+          "0": {
+            "max_abs_error": 0.3141491413116455,
+            "nrmse": 0.007934946566820145,
+            "p99_abs_error_ratio": 0.002831859514117241,
+            "passes": true
+          },
+          "1": {
+            "max_abs_error": 0.6802352666854858,
+            "nrmse": 0.020549703389406204,
+            "p99_abs_error_ratio": 0.00703373784199357,
+            "passes": false
+          }
+        },
+        "passes": false
+      }
+    }
+  ],
+  "status": "FAIL",
+  "timescale": {
+    "aggregate": {
+      "max_abs_error": 1.3907654285430908,
+      "nrmse": 0.009092980064451694,
+      "p99_abs_error_ratio": 0.008578219451010227,
+      "passes": true
+    },
+    "by_intensity": {
+      "0": {
+        "max_abs_error": 1.3907654285430908,
+        "nrmse": 0.00828907173126936,
+        "p99_abs_error_ratio": 0.007469331845641136,
+        "passes": true
+      },
+      "1": {
+        "max_abs_error": 1.3878272771835327,
+        "nrmse": 0.00992592889815569,
+        "p99_abs_error_ratio": 0.009968827478587627,
+        "passes": true
+      }
+    },
+    "passes": true
+  }
+}

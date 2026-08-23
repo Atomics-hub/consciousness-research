@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the Zenodo preprint."
+title: "Stress-Testing Local Neural-Dynamics Equivalence in a Connectome-Constrained Visual System"
+type: article
+authors:
+  - family-names: Ryan
+    given-names: Thomas
+    affiliation: "Independent Researcher, San Francisco, CA"
+date-released: 2026-08-23
+version: 1.0.0
+license: CC-BY-4.0
+doi: 10.5281/zenodo.22070302
+url: "https://doi.org/10.5281/zenodo.22070302"
+abstract: >-
+  A staged computational test of whether source-clamped local equivalence of
+  alternative neuron dynamics composes into preserved ordinary activity,
+  unchanged-decoder output, and perturbation effects in a public
+  connectome-constrained fly visual model.

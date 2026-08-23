@@ -1,0 +1,17 @@
+{
+  "local_status": "PASS",
+  "global_checkpoint_008": {
+    "G0": 2,
+    "G1": 21,
+    "G2": 0
+  },
+  "global_checkpoint_009": {
+    "G0": 1,
+    "G1": 24,
+    "G2": 0
+  },
+  "eligible_ordinary_cells": 45,
+  "ordinary_composition_failures": 0,
+  "d1c_status": "FAIL",
+  "d1c_selected_shunt": null
+}
