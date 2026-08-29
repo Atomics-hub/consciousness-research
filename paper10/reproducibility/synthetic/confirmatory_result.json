@@ -1,0 +1,180 @@
+{
+  "all_confirmatory_gates_pass": true,
+  "claim_ceiling": "Deterministic implementation transport only; the analytic proof, not repeated seeded fixtures, supports the general statement.",
+  "confirmatory_spec_sha256": "4dcc507a26d1e67e7ad9bce0b6784ea4bc9319d056d921798ec9495da31a7050",
+  "coverage_replications": [
+    {
+      "budget": 49,
+      "median_random_fill_distance_approx": 0.21213607266923434,
+      "passes": true,
+      "regular_fill_distance_approx": 0.08333333333333331,
+      "regular_to_median_random_ratio": 0.39282962244364666,
+      "seed": 1732,
+      "threshold": 0.75
+    },
+    {
+      "budget": 49,
+      "median_random_fill_distance_approx": 0.21774999292351055,
+      "passes": true,
+      "regular_fill_distance_approx": 0.08333333333333331,
+      "regular_to_median_random_ratio": 0.38270188767632235,
+      "seed": 2236,
+      "threshold": 0.75
+    },
+    {
+      "budget": 49,
+      "median_random_fill_distance_approx": 0.20979955038463993,
+      "passes": true,
+      "regular_fill_distance_approx": 0.08333333333333331,
+      "regular_to_median_random_ratio": 0.3972045372859598,
+      "seed": 2645,
+      "threshold": 0.75
+    },
+    {
+      "budget": 49,
+      "median_random_fill_distance_approx": 0.2084016952037928,
+      "passes": true,
+      "regular_fill_distance_approx": 0.08333333333333331,
+      "regular_to_median_random_ratio": 0.39986878826414024,
+      "seed": 3162,
+      "threshold": 0.75
+    },
+    {
+      "budget": 49,
+      "median_random_fill_distance_approx": 0.2122081380618671,
+      "passes": true,
+      "regular_fill_distance_approx": 0.08333333333333331,
+      "regular_to_median_random_ratio": 0.39269621841287883,
+      "seed": 3741,
+      "threshold": 0.75
+    }
+  ],
+  "independence_note": "Different deterministic seeds and parameters test implementation transport only. They are not independent empirical or biological replications.",
+  "packets": [
+    {
+      "approximate_fill_distance": 0.1273399777924038,
+      "battery_max_output_discrepancy": 0.0,
+      "battery_pass": true,
+      "center": [
+        -0.196,
+        0.34299999999999997
+      ],
+      "certificate_rejects": true,
+      "clearance": 0.09375333938862607,
+      "fill_distance_witness": [
+        0.4666666666666666,
+        0.35
+      ],
+      "lipschitz_certificate_upper_bound": 0.18109929541041658,
+      "packet_id": "C01",
+      "packet_pass": true,
+      "seed": 271828,
+      "support_radius": 0.08437800544976347,
+      "tested_state_input_pairs": 192,
+      "tested_trajectories": 32,
+      "unseen_max_output_discrepancy": 0.12,
+      "unseen_pass": true
+    },
+    {
+      "approximate_fill_distance": 0.20994063591926704,
+      "battery_max_output_discrepancy": 0.0,
+      "battery_pass": true,
+      "center": [
+        -0.12,
+        -0.4
+      ],
+      "certificate_rejects": true,
+      "clearance": 0.05638555989859173,
+      "fill_distance_witness": [
+        0.6666666666666667,
+        -0.4
+      ],
+      "lipschitz_certificate_upper_bound": 0.6205508298485195,
+      "packet_id": "C02",
+      "packet_pass": true,
+      "seed": 314159,
+      "support_radius": 0.05074700390873256,
+      "tested_state_input_pairs": 512,
+      "tested_trajectories": 64,
+      "unseen_max_output_discrepancy": 0.14999999999999997,
+      "unseen_pass": true
+    },
+    {
+      "approximate_fill_distance": 0.223666186284053,
+      "battery_max_output_discrepancy": 0.0,
+      "battery_pass": true,
+      "center": [
+        0.295,
+        -0.12
+      ],
+      "certificate_rejects": true,
+      "clearance": 0.04365557356694205,
+      "fill_distance_witness": [
+        -0.6666666666666667,
+        0.050000000000000044
+      ],
+      "lipschitz_certificate_upper_bound": 1.0246855922810414,
+      "packet_id": "C03",
+      "packet_pass": true,
+      "seed": 161803,
+      "support_radius": 0.03929001621024785,
+      "tested_state_input_pairs": 960,
+      "tested_trajectories": 96,
+      "unseen_max_output_discrepancy": 0.18,
+      "unseen_pass": true
+    },
+    {
+      "approximate_fill_distance": 0.2711767045298706,
+      "battery_max_output_discrepancy": 0.0,
+      "battery_pass": true,
+      "center": [
+        0.24285714285714283,
+        0.175
+      ],
+      "certificate_rejects": true,
+      "clearance": 0.02955065250436756,
+      "fill_distance_witness": [
+        0.7142857142857143,
+        -0.25
+      ],
+      "lipschitz_certificate_upper_bound": 2.039260888964134,
+      "packet_id": "C04",
+      "packet_pass": true,
+      "seed": 57721,
+      "support_radius": 0.026595587253930804,
+      "tested_state_input_pairs": 1536,
+      "tested_trajectories": 128,
+      "unseen_max_output_discrepancy": 0.20000000000000007,
+      "unseen_pass": true
+    },
+    {
+      "approximate_fill_distance": 0.12756435778112263,
+      "battery_max_output_discrepancy": 0.0,
+      "battery_pass": true,
+      "center": [
+        0.24181818181818182,
+        0.27363636363636357
+      ],
+      "certificate_rejects": true,
+      "clearance": 0.05284417788976653,
+      "fill_distance_witness": [
+        -0.5384615384615384,
+        -0.11454545454545456
+      ],
+      "lipschitz_certificate_upper_bound": 0.37550673198329626,
+      "packet_id": "C05",
+      "packet_pass": true,
+      "seed": 141421,
+      "support_radius": 0.047559760100789876,
+      "tested_state_input_pairs": 432,
+      "tested_trajectories": 48,
+      "unseen_max_output_discrepancy": 0.14,
+      "unseen_pass": true
+    }
+  ],
+  "primary_conjunctive_gate_passes": true,
+  "runner_sha256": "0663d496d7104d28ad7bbe9b8a720b02b4e533dce87803f3ca37c52ead5eadfd",
+  "schema_version": "1.0",
+  "secondary_conjunctive_gate_passes": true,
+  "status": "confirmatory_synthetic_result"
+}

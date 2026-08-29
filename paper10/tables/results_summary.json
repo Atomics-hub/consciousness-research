@@ -1,0 +1,8 @@
+{
+  "claim_ceiling": "Deterministic implementation transport only; the analytic proof, not repeated seeded fixtures, supports the general statement.",
+  "confirmatory_all_gates_pass": true,
+  "confirmatory_packet_count": 5,
+  "confirmatory_spec_sha256": "4dcc507a26d1e67e7ad9bce0b6784ea4bc9319d056d921798ec9495da31a7050",
+  "exploratory_all_gates_pass": true,
+  "exploratory_spec_sha256": "5fecc6bf14b1088f15c593fc8bf245fd3b2f33e0b1d6527c9066489ef94ce2d6"
+}

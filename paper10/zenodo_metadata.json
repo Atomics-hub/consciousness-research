@@ -1,0 +1,49 @@
+{
+  "status": "public-release-v1.0.0",
+  "resource_type": "Publication / Preprint",
+  "title": "The Intervention-Coverage Barrier: Why Finite Functional Tests Cannot Certify Neural Replacement Fidelity",
+  "publication_date": "2026-08-29",
+  "version": "v1.0.0",
+  "publisher": "Zenodo",
+  "language": "English",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright 2026 Thomas Ryan",
+  "creators": [
+    {
+      "family_name": "Ryan",
+      "given_names": "Thomas",
+      "role": "Researcher",
+      "affiliation": "Independent Researcher, San Francisco, CA"
+    }
+  ],
+  "orcid_asserted": false,
+  "doi": "10.5281/zenodo.22166381",
+  "github_release": "https://github.com/Atomics-hub/consciousness-research/releases/tag/paper10-v1.0.0",
+  "upload_files": [
+    "ryan_2026_intervention_coverage_barrier.pdf",
+    "paper10_reproducibility_package_v1.0.0.zip"
+  ],
+  "keywords": [
+    "neural replacement",
+    "whole-brain emulation",
+    "functional fidelity",
+    "intervention coverage",
+    "causal testing",
+    "system identification",
+    "formal verification",
+    "falsification",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {"relation": "References", "identifier": "10.5281/zenodo.19374628"},
+    {"relation": "References", "identifier": "10.5281/zenodo.19738204"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20480505"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20705654"},
+    {"relation": "References", "identifier": "10.5281/zenodo.20852042"},
+    {"relation": "References", "identifier": "10.5281/zenodo.21342748"},
+    {"relation": "References", "identifier": "10.5281/zenodo.21782895"},
+    {"relation": "References", "identifier": "10.5281/zenodo.22020047"},
+    {"relation": "References", "identifier": "10.5281/zenodo.22070302"}
+  ],
+  "living_subjects": false
+}

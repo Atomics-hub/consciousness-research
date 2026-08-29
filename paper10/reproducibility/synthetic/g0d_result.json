@@ -1,0 +1,119 @@
+{
+  "all_frozen_gates_pass": true,
+  "claim_ceiling": "Synthetic constructibility and an assumption audit only; no neural, biological, consciousness, identity, survival, or replaceability inference.",
+  "coverage_comparison": {
+    "budget": 64,
+    "dimension": 2,
+    "passes": true,
+    "random_fill_distance_median_approx": 0.19800093924270007,
+    "random_fill_distance_q05_q95_approx": [
+      0.1572401372672259,
+      0.2785584484664424
+    ],
+    "regular_fill_distance_approx": 0.0714285714285714,
+    "regular_to_median_random_ratio": 0.3607486494850293,
+    "regular_witness": [
+      0.0,
+      0.5
+    ],
+    "required_ratio": 0.75
+  },
+  "dimensional_burden": [
+    {
+      "dimension": 1,
+      "lipschitz_constant": 1.0,
+      "necessary_evaluation_lower_bound_unit_cube": 10,
+      "target_uniform_error": 0.05
+    },
+    {
+      "dimension": 2,
+      "lipschitz_constant": 1.0,
+      "necessary_evaluation_lower_bound_unit_cube": 100,
+      "target_uniform_error": 0.05
+    },
+    {
+      "dimension": 4,
+      "lipschitz_constant": 1.0,
+      "necessary_evaluation_lower_bound_unit_cube": 10000,
+      "target_uniform_error": 0.05
+    },
+    {
+      "dimension": 8,
+      "lipschitz_constant": 1.0,
+      "necessary_evaluation_lower_bound_unit_cube": 100000000,
+      "target_uniform_error": 0.05
+    },
+    {
+      "dimension": 12,
+      "lipschitz_constant": 1.0,
+      "necessary_evaluation_lower_bound_unit_cube": 1000000000000,
+      "target_uniform_error": 0.05
+    }
+  ],
+  "frozen_spec_sha256": "5fecc6bf14b1088f15c593fc8bf245fd3b2f33e0b1d6527c9066489ef94ce2d6",
+  "linear_controls": {
+    "delayed_mismatch_first_nonzero_index": 8,
+    "delayed_mismatch_markov_parameters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "delayed_mismatch_matched_markov_count": 8,
+    "similarity_realization_max_abs_markov_error": 8.326672684688674e-17
+  },
+  "schema_version": "1.0",
+  "sham_controls": {
+    "exact_replacement_max_output_error": 0.0,
+    "exact_replacement_passes": true,
+    "hidden_unobservable_max_output_error": 0.0,
+    "hidden_unobservable_passes": true,
+    "non_normal_amplification_ratio": 16.384000000000004,
+    "non_normal_passes": true,
+    "unreachable_mismatch_max_output_error": 0.0,
+    "unreachable_mismatch_passes": true,
+    "wrong_interface_fails_as_required": true,
+    "wrong_interface_max_output_error": 0.10000000000000003
+  },
+  "stateful_piecewise_linear_counterexample": {
+    "approximate_declared_domain_fill_distance": 0.27046528545207393,
+    "battery_indistinguishable": true,
+    "battery_max_output_discrepancy": 0.0,
+    "bump_amplitude": 0.2,
+    "bump_lipschitz_constant": 3.3385470971403226,
+    "center": [
+      0.40199999999999997,
+      0.45
+    ],
+    "certificate_passes": false,
+    "clearance_from_tests_and_lead_in": 0.06656255423581403,
+    "equivalence_threshold": 0.01,
+    "fill_distance_witness": [
+      0.8181818181818181,
+      -0.45
+    ],
+    "lipschitz_certificate_upper_bound": 0.9029610936232502,
+    "support_radius": 0.05990629881223263,
+    "tested_state_input_pairs": 512,
+    "tested_trajectories": 64,
+    "unseen_intervention": [
+      0.40199999999999997,
+      0.45,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unseen_max_output_divergence": 0.19999999999999996,
+    "unseen_witness_passes_minimum": true
+  },
+  "status": "exploratory_synthetic_result"
+}

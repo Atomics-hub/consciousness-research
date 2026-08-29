@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper."
+title: "The Intervention-Coverage Barrier: Why Finite Functional Tests Cannot Certify Neural Replacement Fidelity"
+type: article
+authors:
+  - family-names: Ryan
+    given-names: Thomas
+    affiliation: "Independent Researcher, San Francisco, CA"
+version: 1.0.0
+date-released: 2026-08-29
+abstract: >-
+  A methods and theory paper separating finite-battery falsification,
+  distributional validation, and worst-case certification for neural
+  replacement and brain-emulation fidelity claims.
+keywords:
+  - neural replacement
+  - whole-brain emulation
+  - functional fidelity
+  - interventions
+  - verification
+license: CC-BY-4.0
+doi: 10.5281/zenodo.22166381
+url: "https://doi.org/10.5281/zenodo.22166381"

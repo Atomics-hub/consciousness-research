@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "frozen_at": "2026-08-27T00:00:00-07:00",
+  "status": "frozen_before_confirmatory_execution",
+  "author": "Thomas Ryan",
+  "ai_role": "research assistance only; not an author",
+  "primary_estimand": "For each independently parameterized packet, whether a continuous piecewise-linear candidate can be exactly indistinguishable on the finite battery while exceeding the unseen causal-discrepancy threshold and being rejected by the sound coverage bound.",
+  "exact_tolerance": 1e-12,
+  "causal_discrepancy_threshold": 0.05,
+  "packets": [
+    {"packet_id": "C01", "seed": 271828, "test_trajectories": 32, "horizon": 6, "decay": 0.25, "input_bound": 0.35, "bump_amplitude": 0.12, "search_grid": 101},
+    {"packet_id": "C02", "seed": 314159, "test_trajectories": 64, "horizon": 8, "decay": 0.40, "input_bound": 0.40, "bump_amplitude": 0.15, "search_grid": 121},
+    {"packet_id": "C03", "seed": 161803, "test_trajectories": 96, "horizon": 10, "decay": 0.55, "input_bound": 0.30, "bump_amplitude": 0.18, "search_grid": 121},
+    {"packet_id": "C04", "seed": 57721, "test_trajectories": 128, "horizon": 12, "decay": 0.65, "input_bound": 0.25, "bump_amplitude": 0.20, "search_grid": 141},
+    {"packet_id": "C05", "seed": 141421, "test_trajectories": 48, "horizon": 9, "decay": -0.35, "input_bound": 0.35, "bump_amplitude": 0.14, "search_grid": 111}
+  ],
+  "coverage_replications": {
+    "seeds": [1732, 2236, 2645, 3162, 3741],
+    "dimension": 2,
+    "grid_points_per_axis": 7,
+    "random_repetitions_per_seed": 50,
+    "evaluation_grid_points_per_axis": 101,
+    "maximum_regular_to_median_random_ratio": 0.75
+  },
+  "primary_success_rule": "All five packets must have battery discrepancy <= 1e-12, unseen discrepancy >= 0.05, and coverage certificate bound > 0.01.",
+  "secondary_success_rule": "All five coverage replications must have a regular-to-median-random fill-distance ratio <= 0.75.",
+  "multiplicity": "Conjunctive gates; no pooled average can rescue a failed packet.",
+  "failure_language": "Any failed packet falsifies the claimed implementation generality but does not alter the analytic finite-set construction theorem.",
+  "independence_note": "Different deterministic seeds and parameters test implementation transport only. They are not independent empirical or biological replications.",
+  "forbidden_changes_after_execution": [
+    "no packet deletion",
+    "no seed replacement",
+    "no threshold relaxation",
+    "no search-grid expansion to rescue a failed witness",
+    "no pooled pass in place of the conjunctive rule"
+  ]
+}

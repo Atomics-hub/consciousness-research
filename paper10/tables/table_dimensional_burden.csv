@@ -1,0 +1,6 @@
+dimension,lipschitz_constant,necessary_evaluation_lower_bound_unit_cube,target_uniform_error
+1,1.0,10,0.05
+2,1.0,100,0.05
+4,1.0,10000,0.05
+8,1.0,100000000,0.05
+12,1.0,1000000000000,0.05

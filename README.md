@@ -123,6 +123,22 @@ The PDF is available in this repo:
 See [`paper9/README.md`](paper9/README.md) for the exact reproduction commands,
 staged claim boundaries, null-result interpretation, and artifact inventory.
 
+## Paper 10
+
+`paper10/` contains the intervention-coverage methods and theory preprint and
+its complete public reproducibility package:
+
+**The Intervention-Coverage Barrier: Why Finite Functional Tests Cannot Certify Neural Replacement Fidelity**
+
+**[Read Paper 10 on Zenodo](https://doi.org/10.5281/zenodo.22166381)**
+
+The main PDF is available in this repo:
+[`paper10/output/pdf/ryan_2026_intervention_coverage_barrier.pdf`](paper10/output/pdf/ryan_2026_intervention_coverage_barrier.pdf)
+
+See [`paper10/README.md`](paper10/README.md) for the claim ladder, frozen
+specifications, complete proof supplement, reproducibility commands, and exact
+claim boundaries.
+
 ## Repository Contents
 
 ```
@@ -135,6 +151,7 @@ paper5/             Causal-preservation and interchange-intervention follow-up
 paper6/             Blinded scaffold-lesion follow-up for persistent coding agents
 paper8/             Binding Test methods, PDF, and reproducibility release
 paper9/             Local neural-dynamics equivalence stress test and reproducibility release
+paper10/            Intervention-coverage barrier preprint and reproducibility release
 experiments/        Experiment code and saved results
 writeups/           Supporting analyses
   ├── theory_comparator.md        8-theory comparison matrix
@@ -232,6 +249,19 @@ Paper 9:
   author={Ryan, Thomas},
   year={2026},
   doi={10.5281/zenodo.22070302},
+  publisher={Zenodo},
+  note={Version v1.0.0}
+}
+```
+
+Paper 10:
+
+```bibtex
+@article{ryan2026interventioncoverage,
+  title={The Intervention-Coverage Barrier: Why Finite Functional Tests Cannot Certify Neural Replacement Fidelity},
+  author={Ryan, Thomas},
+  year={2026},
+  doi={10.5281/zenodo.22166381},
   publisher={Zenodo},
   note={Version v1.0.0}
 }

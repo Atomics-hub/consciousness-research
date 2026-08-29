@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "frozen_at": "2026-08-27T00:00:00-07:00",
+  "status": "exploratory_synthetic_gate",
+  "author": "Thomas Ryan",
+  "ai_role": "research assistance only; not an author",
+  "outcome_firewall": "No new FlyVis checkpoint or biological-model candidate outcome may be opened in this gate.",
+  "claim_target": "A finite black-box intervention battery can falsify but cannot certify uniform causal replacement fidelity over a continuous admissible domain unless structural, regularity-and-coverage, or distributional assumptions are added.",
+  "norm": "l_infinity",
+  "tolerances": {
+    "exact": 1e-12,
+    "causal_equivalence": 0.01
+  },
+  "coverage_comparison": {
+    "dimension": 2,
+    "regular_grid_points_per_axis": 8,
+    "random_repetitions": 100,
+    "evaluation_grid_points_per_axis": 121,
+    "seed": 20260827,
+    "success_ratio_regular_to_median_random": 0.75
+  },
+  "stateful_counterexample": {
+    "seed": 1001,
+    "number_of_test_trajectories": 64,
+    "horizon": 8,
+    "source_decay": 0.45,
+    "input_bound": 0.45,
+    "search_grid_points_per_axis": 151,
+    "bump_amplitude": 0.2,
+    "minimum_unseen_output_divergence": 0.1
+  },
+  "non_normal_control": {
+    "decay": 0.8,
+    "off_diagonal_gain": 8.0,
+    "local_impulse": 0.001,
+    "horizon": 20,
+    "minimum_amplification_ratio": 5.0
+  },
+  "frozen_falsifiers": [
+    "exact replacement must return zero discrepancy and certify",
+    "hidden output-unobservable mismatch must not inflate interface error",
+    "reachable but untested piecewise-linear region must match every battery trajectory yet force fail-closed coverage status",
+    "unreachable mismatch must not be treated as required evidence for the declared reachable domain",
+    "wrong-interface sham must fail",
+    "stable non-normal recurrence must amplify a small local discrepancy",
+    "regular coverage must beat an equal-budget random battery by the frozen fill-distance ratio",
+    "adversarial witness search must remain downstream of battery construction"
+  ],
+  "advance_rules": [
+    "all frozen falsifiers behave in their declared directions",
+    "the finite-test impossibility witness is continuous piecewise linear and exactly zero on every tested state-input pair",
+    "the Lipschitz fill-distance upper bound contains the adversarial witness and refuses the causal-equivalence threshold",
+    "the regular battery fill distance is no more than 0.75 times the median equal-budget random fill distance",
+    "the contribution is framed as an operational synthesis of inherited mathematics, not a new realization, bisimulation, verification, or optimal-recovery theorem"
+  ],
+  "kill_rules": [
+    "kill if the method claims universal equivalence from held-out empirical success",
+    "kill if source-reachable samples are silently treated as a candidate-inclusive invariant tube",
+    "kill if an estimated or local Lipschitz constant is presented as a sound global bound",
+    "kill if the paper implies consciousness, identity, survival, or biological replaceability",
+    "kill if exact prior art already states the same claim-audit framework for neural replacement or whole-brain-emulation fidelity"
+  ]
+}
